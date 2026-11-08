@@ -1,0 +1,31 @@
+{
+  "session_id": "e4081e4b-f0f6-40e6-be5d-4e5f4717e9a1",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "b1cd3752-d970-4933-8c06-7a07d717ca05",
+        "content": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。Use only verified external sources with working URLs; synthetic materials are not acceptable. 先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "1a64de53-01ea-45f2-be52-fabe07ca461d",
+        "processing_id": "436341b8-7a70-4381-975e-5bb5b48814e5",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "32d650df-22dd-4667-bf4c-af69b0635858",
+        "content": "开始",
+        "view_context": {
+          "plan_version_id": "4e986ac3-fe86-4cb6-a5be-c2c959a19543"
+        }
+      },
+      "response": {
+        "message_id": "65f9256b-7172-4375-9f07-1fb33786f88d",
+        "processing_id": "0110b3d0-6612-4f28-90b6-e5559b78e942",
+        "duplicate": false
+      }
+    }
+  ]
+}

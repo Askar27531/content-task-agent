@@ -1,0 +1,167 @@
+[
+  {
+    "name": "empty-message",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "消息内容不能为空。",
+        "details": [
+          {
+            "field": "content",
+            "message": "消息内容不能为空。"
+          }
+        ]
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "missing-client-id",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "消息标识不能为空。",
+        "details": [
+          {
+            "field": "client_message_id",
+            "message": "消息标识不能为空。"
+          }
+        ]
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "oversize-content",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "消息内容不能超过20000个字符。",
+        "details": [
+          {
+            "field": "content",
+            "message": "消息内容不能超过20000个字符。"
+          }
+        ]
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "wrong-view-type",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "计划版本编号必须为字符串。",
+        "details": [
+          {
+            "field": "plan_version_id",
+            "message": "计划版本编号必须为字符串。"
+          }
+        ]
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "bad-base64-cursor",
+    "method": "GET",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages?cursor=-",
+    "status": 422,
+    "response": {
+      "detail": "无效分页标识。"
+    },
+    "passed": true
+  },
+  {
+    "name": "negative-cursor",
+    "method": "GET",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages?cursor=LTI=",
+    "status": 422,
+    "response": {
+      "detail": "分页标识超出当前记录范围。"
+    },
+    "passed": true
+  },
+  {
+    "name": "unknown-session",
+    "method": "GET",
+    "path": "/sessions/not-a-real-session",
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "请求的会话或记录不存在。"
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "forged-status",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "status不符合接口格式。",
+        "details": [
+          {
+            "field": "status",
+            "message": "status不符合接口格式。"
+          }
+        ]
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "accept-once",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 202,
+    "response": {
+      "message_id": "3254df83-aa7e-4ddd-835d-d9eecbabbafb",
+      "processing_id": "58a7ddd9-870e-42ad-995c-11e2bd3f8bc2",
+      "duplicate": false
+    },
+    "passed": true
+  },
+  {
+    "name": "repeat-same-id",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 200,
+    "response": {
+      "message_id": "3254df83-aa7e-4ddd-835d-d9eecbabbafb",
+      "processing_id": "58a7ddd9-870e-42ad-995c-11e2bd3f8bc2",
+      "duplicate": true
+    },
+    "passed": true
+  },
+  {
+    "name": "same-id-other-content",
+    "method": "POST",
+    "path": "/sessions/88079308-e860-4457-abb2-41f40b724cb6/messages",
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "IDEMPOTENCY_CONFLICT",
+        "message": "同一消息标识不能用于不同内容。"
+      }
+    },
+    "passed": true
+  }
+]

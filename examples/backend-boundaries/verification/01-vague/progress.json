@@ -1,0 +1,17 @@
+{
+  "session_id": "8515047c-b2f5-4a6a-bf47-a82fb4238f0e",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "125eb908-5d57-4923-b863-6f8dbcc00e4c",
+        "content": "帮我搞一搞，差不多就行，尽快，钱别花多，先聊聊。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "2feb91cc-d13b-4b0b-bee2-398ed858d90f",
+        "processing_id": "b9248243-9fdb-4132-b32c-97fd51f8e6e3",
+        "duplicate": false
+      }
+    }
+  ]
+}

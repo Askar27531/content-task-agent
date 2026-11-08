@@ -1,0 +1,17 @@
+{
+  "session_id": "26f0b5b8-3aa9-4d98-961c-151be9d793ac",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "0e7cb0c6-d6e6-4651-a2b9-a0b0efad7d91",
+        "content": "读书会，预算10或20我还没决定，不要替我选；截止2030-12-03 18:00北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "55117c12-c3b0-405b-a3c2-283029453a37",
+        "processing_id": "57461699-7efb-46b1-8d66-86b46bf34e3f",
+        "duplicate": false
+      }
+    }
+  ]
+}

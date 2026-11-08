@@ -1,0 +1,20 @@
+{
+  "session_id": "7875e75e-468f-48bf-b7cf-56b28726a4a1",
+  "real_external_services": true,
+  "results": {
+    "tavily": {
+      "passed": false,
+      "errors": [
+        {
+          "type": "ConnectError",
+          "message": "ConnectError('')"
+        },
+        {
+          "type": "ConnectError",
+          "message": "ConnectError(BrokenResourceError())"
+        }
+      ]
+    }
+  },
+  "model_calls": []
+}

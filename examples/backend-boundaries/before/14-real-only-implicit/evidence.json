@@ -1,0 +1,257 @@
+{
+  "actual": true,
+  "name": "14-real-only-implicit",
+  "session_id": "571678c5-9e09-4ac0-b2e4-69ed1a41f138",
+  "url": "http://127.0.0.1:5173/sessions/571678c5-9e09-4ac0-b2e4-69ed1a41f138",
+  "checks": {
+    "no_test_exception": true,
+    "real_required": false,
+    "no_synthetic": true,
+    "not_saved": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": false,
+  "expected": {
+    "real_required": true,
+    "no_synthetic": true,
+    "not_saved": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "d013d203-70e0-4cc1-bbce-7b7cf2dadd71",
+        "content": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。只能引用真的来源、可点开的出处，不要编的，只用已有可信资料。先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "846d50f7-2713-4677-9868-50ad9b2ce475",
+        "processing_id": "ec2bf2c7-84c4-4d78-910b-a71f916475b4",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "bfe88df1-9145-457c-994f-6c14175575d2",
+        "content": "开始",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "0b9bc3e2-ef20-4068-890c-5109ca16d054",
+        "processing_id": "f9317bbf-3780-49c5-8d86-cac5200531de",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "新的内容活动",
+        "status": "draft",
+        "session_id": "571678c5-9e09-4ac0-b2e4-69ed1a41f138",
+        "last_user_activity_at": "2026-11-07T05:03:03.076424+00:00"
+      },
+      "requirements": {
+        "topic": null,
+        "budget": "10",
+        "deadline": "2030-12-03 18:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 690,
+        "model_output_tokens": 128,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 8,
+      "pending_changes": null,
+      "mode": "live"
+    },
+    {
+      "session": {
+        "title": "新的内容活动",
+        "status": "draft",
+        "session_id": "571678c5-9e09-4ac0-b2e4-69ed1a41f138",
+        "last_user_activity_at": "2026-11-07T05:03:18.564971+00:00"
+      },
+      "requirements": {
+        "topic": null,
+        "budget": "10",
+        "deadline": "2030-12-03 18:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 1353,
+        "model_output_tokens": 182,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 16,
+      "pending_changes": null,
+      "mode": "live"
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "571678c5-9e09-4ac0-b2e4-69ed1a41f138",
+      "last_user_activity_at": "2026-11-07T05:03:18.564971+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": "10",
+      "deadline": "2030-12-03 18:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 1353,
+      "model_output_tokens": 182,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 16,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。只能引用真的来源、可点开的出处，不要编的，只用已有可信资料。先给计划。",
+      "item_id": "846d50f7-2713-4677-9868-50ad9b2ce475",
+      "item_seq": 1,
+      "created_at": "2026-11-07T05:03:03.076424+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "活动主题已补充，请确认是否符合预期。",
+      "item_id": "29a45a67-30e0-444a-bbb3-8f74061e6838",
+      "item_seq": 2,
+      "created_at": "2026-11-07T05:03:13.553905+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "开始",
+      "item_id": "0b9bc3e2-ef20-4068-890c-5109ca16d054",
+      "item_seq": 3,
+      "created_at": "2026-11-07T05:03:18.564971+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "活动主题已补充，请确认是否符合预期。",
+      "item_id": "d6072fbb-6f0e-4035-957d-8d114269fd53",
+      "item_seq": 4,
+      "created_at": "2026-11-07T05:03:26.458837+00:00",
+      "processing": false
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T05:03:13.518593+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 612,
+        "output_tokens": 117
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03 18:00+08:00\"\n  },\n  \"evidence\": {\n    \"budget\": \"预算10\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"用户提供了预算和截止时间，因此更新了预算和截止时间字段。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "99d80dff-e3af-4b45-9619-c14270dda41a",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T05:03:18.398952+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 11
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "活动主题已补充，请确认是否符合预期。"
+      },
+      "request_id": "2022c8ce-c6cb-4f49-8193-b188a00fb4b3",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T05:03:26.427068+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 585,
+        "output_tokens": 43
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"execute\",\n  \"updates\": {},\n  \"evidence\": {\n    \"action\": \"开始\"\n  },\n  \"explanation\": \"按当前方案开始执行。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "af795c08-3286-4d08-a073-9dbbdee20042",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T05:03:31.285288+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 11
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "活动主题已补充，请确认是否符合预期。"
+      },
+      "request_id": "e6f79eda-7375-4d34-a8ea-1af4df44898e",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

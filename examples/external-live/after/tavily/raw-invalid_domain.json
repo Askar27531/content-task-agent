@@ -1,0 +1,17 @@
+{
+  "structured_content": {
+    "error": "Search failed",
+    "status": 400,
+    "detail": {
+      "error": "All domains in include_domains are invalid: ['no-content-boundary-7f13.invalid']. Domains must have a valid suffix (e.g., 'tavily.com' instead of 'tavily')."
+    },
+    "documentation": "https://docs.tavily.com/documentation/api-reference/endpoint/search"
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":\"Search failed\",\"status\":400,\"detail\":{\"error\":\"All domains in include_domains are invalid: ['no-content-boundary-7f13.invalid']. Domains must have a valid suffix (e.g., 'tavily.com' instead of 'tavily').\"},\"documentation\":\"https://docs.tavily.com/documentation/api-reference/endpoint/search\"}"
+    }
+  ],
+  "is_error": false
+}

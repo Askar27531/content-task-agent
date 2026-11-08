@@ -1,0 +1,31 @@
+{
+  "session_id": "5b121355-ac84-4dc3-88f6-22810ac9fa80",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "04f0aa81-b84b-4309-a844-2ff293eb089b",
+        "content": "读书会方案，精简视觉simple，预算7.999个模拟单位，截止2030-12-03 18:00北京时间，允许合成素材。先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "2bd1a062-3d1c-4ee8-964f-f782dc24d2ac",
+        "processing_id": "fef8b749-0837-4255-8035-42568aa10179",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "b97a0dfe-f733-453b-b61e-eceda09ba1a0",
+        "content": "开始",
+        "view_context": {
+          "plan_version_id": "be20dd90-6046-433e-b26b-ef496c22c486"
+        }
+      },
+      "response": {
+        "message_id": "cee304e3-344f-4fe1-9fe3-74476368fff1",
+        "processing_id": "d245d5a8-5833-4603-9332-a2ef70eb842c",
+        "duplicate": false
+      }
+    }
+  ]
+}

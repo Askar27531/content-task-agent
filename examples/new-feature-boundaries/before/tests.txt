@@ -1,0 +1,152 @@
+FFFFFF........FF..FFFFFFFF...FFF.....                                    [100%]
+================================== FAILURES ===================================
+________________ test_reuse_respects_increased_minimum_sources ________________
+tests\backend\test_new_feature_boundaries.py:38: in test_reuse_respects_increased_minimum_sources
+    assert reusable(state,new) is None
+E   AssertionError: assert {'materials': [{'material_id': 'web-fixture', 'source_type': 'web', 'title': '协议夹具', 'summary': '非真实资料', ...}], 'scrip...d': 'old', 'script': '前置文字夹具'}, 'source_run_id': 'old', 'plan_version_id': '02954fe0-4e08-499a-aa13-216fee60e123', ...} is None
+E    +  where {'materials': [{'material_id': 'web-fixture', 'source_type': 'web', 'title': '协议夹具', 'summary': '非真实资料', ...}], 'scrip...d': 'old', 'script': '前置文字夹具'}, 'source_run_id': 'old', 'plan_version_id': '02954fe0-4e08-499a-aa13-216fee60e123', ...} = reusable({'plans': [{'plan_version_id': '02954fe0-4e08-499a-aa13-216fee60e123', 'version': 1, 'label': '精简制作方案', 'production_sp... ...}, 'materials': [{'material_id': 'web-fixture', 'source_type': 'web', 'title': '协议夹具', 'summary': '非真实资料', ...}]}}}, {'run_id': 'new', 'requirements': {'topic': '边界测试夹具', 'budget': '20', 'deadline': '2030-12-03T18:00:00+08:00', 'start_..._attempts': 3, 'max_business_calls': 30, 'max_context_calls': 12, 'max_replans': 3, ...}, ...}, 'writing_hash': 'same'})
+__________ test_failed_script_step_does_not_reuse_unconfirmed_script __________
+tests\backend\test_new_feature_boundaries.py:44: in test_failed_script_step_does_not_reuse_unconfirmed_script
+    assert result and result['script'] is None
+E   AssertionError: assert ({'materials': [{'material_id': 'web-fixture', 'source_type': 'web', 'title': '协议夹具', 'summary': '非真实资料', ...}], 'scrip...d': 'old', 'script': '前置文字夹具'}, 'source_run_id': 'old', 'plan_version_id': '5a619aee-51d8-4ea1-b0bf-f5120ae3f720', ...} and {'script_id': 'script', 'run_id': 'old', 'script': '前置文字夹具'} is None)
+_ test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[invalid] _
+tests\backend\test_new_feature_boundaries.py:50: in test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing
+    assert reusable(state,new) is None
+           ^^^^^^^^^^^^^^^^^^^
+src\backend\app\reuse.py:50: in reusable
+    if any(m['source_type']=='web' and (now-datetime.fromisoformat(m['retrieved_at'])).total_seconds()>ttl for m in materials):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\backend\app\reuse.py:50: in <genexpr>
+    if any(m['source_type']=='web' and (now-datetime.fromisoformat(m['retrieved_at'])).total_seconds()>ttl for m in materials):
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ValueError: Invalid isoformat string: 'invalid'
+_ test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[None] _
+tests\backend\test_new_feature_boundaries.py:50: in test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing
+    assert reusable(state,new) is None
+           ^^^^^^^^^^^^^^^^^^^
+src\backend\app\reuse.py:50: in reusable
+    if any(m['source_type']=='web' and (now-datetime.fromisoformat(m['retrieved_at'])).total_seconds()>ttl for m in materials):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\backend\app\reuse.py:50: in <genexpr>
+    if any(m['source_type']=='web' and (now-datetime.fromisoformat(m['retrieved_at'])).total_seconds()>ttl for m in materials):
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: fromisoformat: argument must be str
+_ test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[2030-01-01T00:00:00] _
+tests\backend\test_new_feature_boundaries.py:50: in test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing
+    assert reusable(state,new) is None
+           ^^^^^^^^^^^^^^^^^^^
+src\backend\app\reuse.py:50: in reusable
+    if any(m['source_type']=='web' and (now-datetime.fromisoformat(m['retrieved_at'])).total_seconds()>ttl for m in materials):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\backend\app\reuse.py:50: in <genexpr>
+    if any(m['source_type']=='web' and (now-datetime.fromisoformat(m['retrieved_at'])).total_seconds()>ttl for m in materials):
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: can't subtract offset-naive and offset-aware datetimes
+_ test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[2099-01-01T00:00:00+00:00] _
+tests\backend\test_new_feature_boundaries.py:50: in test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing
+    assert reusable(state,new) is None
+E   AssertionError: assert {'materials': [{'material_id': 'web-fixture', 'source_type': 'web', 'title': '协议夹具', 'summary': '非真实资料', ...}], 'script': None, 'source_run_id': 'old', 'plan_version_id': 'aeed088d-4a5d-4b10-a82d-4f9d4b0a0ecb', ...} is None
+E    +  where {'materials': [{'material_id': 'web-fixture', 'source_type': 'web', 'title': '协议夹具', 'summary': '非真实资料', ...}], 'script': None, 'source_run_id': 'old', 'plan_version_id': 'aeed088d-4a5d-4b10-a82d-4f9d4b0a0ecb', ...} = reusable({'plans': [{'plan_version_id': 'aeed088d-4a5d-4b10-a82d-4f9d4b0a0ecb', 'version': 1, 'label': '精简制作方案', 'production_sp... ...}, 'materials': [{'material_id': 'web-fixture', 'source_type': 'web', 'title': '协议夹具', 'summary': '非真实资料', ...}]}}}, {'run_id': 'new', 'requirements': {'topic': '边界测试夹具', 'budget': '20', 'deadline': '2030-12-03T18:00:00+08:00', 'start_..._attempts': 3, 'max_business_calls': 30, 'max_context_calls': 12, 'max_replans': 3, ...}, ...}, 'writing_hash': 'same'})
+_ test_one_malformed_url_cannot_discard_other_usable_results[http://[invalid] _
+tests\backend\test_new_feature_boundaries.py:74: in test_one_malformed_url_cannot_discard_other_usable_results
+    result=normalize_search(data,'query',requested=4)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\backend\app\contracts.py:57: in normalize_search
+    if not isinstance(url, str) or urlparse(url).scheme not in {'http', 'https'} or not urlparse(url).netloc or not isinstance(summary, str) or not summary.strip():
+                                   ^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:395: in urlparse
+    splitresult = urlsplit(url, scheme, allow_fragments)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:497: in urlsplit
+    raise ValueError("Invalid IPv6 URL")
+E   ValueError: Invalid IPv6 URL
+__ test_one_malformed_url_cannot_discard_other_usable_results[https://[::1] ___
+tests\backend\test_new_feature_boundaries.py:74: in test_one_malformed_url_cannot_discard_other_usable_results
+    result=normalize_search(data,'query',requested=4)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\backend\app\contracts.py:57: in normalize_search
+    if not isinstance(url, str) or urlparse(url).scheme not in {'http', 'https'} or not urlparse(url).netloc or not isinstance(summary, str) or not summary.strip():
+                                   ^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:395: in urlparse
+    splitresult = urlsplit(url, scheme, allow_fragments)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:497: in urlsplit
+    raise ValueError("Invalid IPv6 URL")
+E   ValueError: Invalid IPv6 URL
+________ test_non_text_search_title_is_not_forwarded_to_react[title0] _________
+tests\backend\test_new_feature_boundaries.py:81: in test_non_text_search_title_is_not_forwarded_to_react
+    assert not result['materials'] and result['empty'] and result['missing']
+E   AssertionError: assert (not [{'material_id': 'web-dd9ceb3ba1', 'title': 'https://example.invalid/a', 'summary': '协议文字', 'url': 'https://example.invalid/a', ...}])
+________ test_non_text_search_title_is_not_forwarded_to_react[title1] _________
+tests\backend\test_new_feature_boundaries.py:81: in test_non_text_search_title_is_not_forwarded_to_react
+    assert not result['materials'] and result['empty'] and result['missing']
+E   AssertionError: assert (not [{'material_id': 'web-dd9ceb3ba1', 'title': 'https://example.invalid/a', 'summary': '协议文字', 'url': 'https://example.invalid/a', ...}])
+_________ test_non_text_search_title_is_not_forwarded_to_react[True] __________
+tests\backend\test_new_feature_boundaries.py:81: in test_non_text_search_title_is_not_forwarded_to_react
+    assert not result['materials'] and result['empty'] and result['missing']
+E   AssertionError: assert (not [{'material_id': 'web-dd9ceb3ba1', 'title': True, 'summary': '协议文字', 'url': 'https://example.invalid/a', ...}])
+__________ test_non_text_search_title_is_not_forwarded_to_react[42] ___________
+tests\backend\test_new_feature_boundaries.py:81: in test_non_text_search_title_is_not_forwarded_to_react
+    assert not result['materials'] and result['empty'] and result['missing']
+E   AssertionError: assert (not [{'material_id': 'web-dd9ceb3ba1', 'title': 42, 'summary': '协议文字', 'url': 'https://example.invalid/a', ...}])
+___ test_existing_cache_is_not_reused_when_new_policy_forbids_it[disabled] ____
+tests\backend\test_new_feature_boundaries.py:95: in test_existing_cache_is_not_reused_when_new_policy_forbids_it
+    assert search.cached(snapshot,query) is None
+E   AssertionError: assert {'materials': [{'material_id': 'fixture', 'retrieved_at': '2026-11-07T16:18:31.216475+00:00'}], 'reused': True} is None
+E    +  where {'materials': [{'material_id': 'fixture', 'retrieved_at': '2026-11-07T16:18:31.216475+00:00'}], 'reused': True} = <function cached at 0x0000019093688180>({'active_model': 'local_qwen3', 'models': {'local_qwen3': {'provider': 'ollama', 'base_url': 'http://127.0.0.1:11434',...Y'}, 'limits': {'max_tool_attempts': 3, 'max_business_calls': 30, 'max_context_calls': 12, 'max_replans': 3, ...}, ...}, 'cache-policy-7a288db2-ff4e-49ee-99ba-59919dffbf92')
+E    +    where <function cached at 0x0000019093688180> = <module 'app.search' from 'D:\\Agent\\Content-task\\src\\backend\\app\\search.py'>.cached
+__ test_existing_cache_is_not_reused_when_new_policy_forbids_it[min_results] __
+tests\backend\test_new_feature_boundaries.py:95: in test_existing_cache_is_not_reused_when_new_policy_forbids_it
+    assert search.cached(snapshot,query) is None
+E   AssertionError: assert {'materials': [{'material_id': 'fixture', 'retrieved_at': '2026-11-07T16:18:31.271290+00:00'}], 'reused': True} is None
+E    +  where {'materials': [{'material_id': 'fixture', 'retrieved_at': '2026-11-07T16:18:31.271290+00:00'}], 'reused': True} = <function cached at 0x0000019093688180>({'active_model': 'local_qwen3', 'models': {'local_qwen3': {'provider': 'ollama', 'base_url': 'http://127.0.0.1:11434',...Y'}, 'limits': {'max_tool_attempts': 3, 'max_business_calls': 30, 'max_context_calls': 12, 'max_replans': 3, ...}, ...}, 'cache-policy-9bcf1aa1-23a5-4cc9-936d-62a57e913dac')
+E    +    where <function cached at 0x0000019093688180> = <module 'app.search' from 'D:\\Agent\\Content-task\\src\\backend\\app\\search.py'>.cached
+_ test_existing_cache_is_not_reused_when_new_policy_forbids_it[material_expired] _
+tests\backend\test_new_feature_boundaries.py:95: in test_existing_cache_is_not_reused_when_new_policy_forbids_it
+    assert search.cached(snapshot,query) is None
+E   AssertionError: assert {'materials': [{'material_id': 'fixture', 'retrieved_at': '2026-11-07T16:18:31.293788+00:00'}], 'reused': True} is None
+E    +  where {'materials': [{'material_id': 'fixture', 'retrieved_at': '2026-11-07T16:18:31.293788+00:00'}], 'reused': True} = <function cached at 0x0000019093688180>({'active_model': 'local_qwen3', 'models': {'local_qwen3': {'provider': 'ollama', 'base_url': 'http://127.0.0.1:11434',...Y'}, 'limits': {'max_tool_attempts': 3, 'max_business_calls': 30, 'max_context_calls': 12, 'max_replans': 3, ...}, ...}, 'cache-policy-7cd8267d-24ca-46d1-ad17-914e3f8d7168')
+E    +    where <function cached at 0x0000019093688180> = <module 'app.search' from 'D:\\Agent\\Content-task\\src\\backend\\app\\search.py'>.cached
+_____ test_terminal_model_request_cannot_be_regressed_by_replayed_intent ______
+tests\backend\test_new_feature_boundaries.py:104: in test_terminal_model_request_cannot_be_regressed_by_replayed_intent
+    assert len(state['model_calls'])==1 and state['cost_summary']['model_input_tokens']==10
+E   AssertionError: assert (1 == 1 and None == 10)
+E    +  where 1 = len([{'at': '2026-11-07T16:19:01.334470+00:00', 'kind': 'fixture', 'model': 'fixture', 'usage': {'input_tokens': None, 'output_tokens': None}, ...}])
+__________ test_provider_empty_choices_records_error_and_keeps_usage __________
+tests\backend\test_provider_protocol.py:29: in test_provider_empty_choices_records_error_and_keeps_usage
+    await llm.invoke('s','r',{'provider':'deepseek','model':'fixture','base_url':'https://fixture.invalid','api_key_env':'TEST_DEEPSEEK_KEY'},'fixture',[])
+src\backend\app\llm.py:66: in invoke
+    native = data.get("message") if provider == "ollama" else data["choices"][0]["message"]
+                                                              ^^^^^^^^^^^^^^^^^^
+E   IndexError: list index out of range
+_____ test_stream_length_termination_is_not_a_successful_reply[deepseek] ______
+tests\backend\test_provider_protocol.py:40: in test_stream_length_termination_is_not_a_successful_reply
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+______ test_stream_length_termination_is_not_a_successful_reply[ollama] _______
+tests\backend\test_provider_protocol.py:40: in test_stream_length_termination_is_not_a_successful_reply
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+=========================== short test summary info ===========================
+FAILED tests/backend/test_new_feature_boundaries.py::test_reuse_respects_increased_minimum_sources
+FAILED tests/backend/test_new_feature_boundaries.py::test_failed_script_step_does_not_reuse_unconfirmed_script
+FAILED tests/backend/test_new_feature_boundaries.py::test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[invalid]
+FAILED tests/backend/test_new_feature_boundaries.py::test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[None]
+FAILED tests/backend/test_new_feature_boundaries.py::test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[2030-01-01T00:00:00]
+FAILED tests/backend/test_new_feature_boundaries.py::test_reuse_rejects_unusable_or_future_source_timestamp_without_crashing[2099-01-01T00:00:00+00:00]
+FAILED tests/backend/test_new_feature_boundaries.py::test_one_malformed_url_cannot_discard_other_usable_results[http://[invalid]
+FAILED tests/backend/test_new_feature_boundaries.py::test_one_malformed_url_cannot_discard_other_usable_results[https://[::1]
+FAILED tests/backend/test_new_feature_boundaries.py::test_non_text_search_title_is_not_forwarded_to_react[title0]
+FAILED tests/backend/test_new_feature_boundaries.py::test_non_text_search_title_is_not_forwarded_to_react[title1]
+FAILED tests/backend/test_new_feature_boundaries.py::test_non_text_search_title_is_not_forwarded_to_react[True]
+FAILED tests/backend/test_new_feature_boundaries.py::test_non_text_search_title_is_not_forwarded_to_react[42]
+FAILED tests/backend/test_new_feature_boundaries.py::test_existing_cache_is_not_reused_when_new_policy_forbids_it[disabled]
+FAILED tests/backend/test_new_feature_boundaries.py::test_existing_cache_is_not_reused_when_new_policy_forbids_it[min_results]
+FAILED tests/backend/test_new_feature_boundaries.py::test_existing_cache_is_not_reused_when_new_policy_forbids_it[material_expired]
+FAILED tests/backend/test_new_feature_boundaries.py::test_terminal_model_request_cannot_be_regressed_by_replayed_intent
+FAILED tests/backend/test_provider_protocol.py::test_provider_empty_choices_records_error_and_keeps_usage
+FAILED tests/backend/test_provider_protocol.py::test_stream_length_termination_is_not_a_successful_reply[deepseek]
+FAILED tests/backend/test_provider_protocol.py::test_stream_length_termination_is_not_a_successful_reply[ollama]
+19 failed, 18 passed in 1.27s

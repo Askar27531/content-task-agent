@@ -1,0 +1,147 @@
+{
+  "actual": true,
+  "name": "07-reversed-dates",
+  "session_id": "02f81bf6-6640-4cc0-8a73-a81a1e1171c9",
+  "url": "http://127.0.0.1:5173/sessions/02f81bf6-6640-4cc0-8a73-a81a1e1171c9",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "f6aec8c8-8baf-48dd-ba44-bfbbca5659b8",
+        "content": "读书会，预算10，开始2030-12-05 08:00，截止2030-12-03 18:00，北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "04ef7349-63da-40b7-8e27-abef55b3b600",
+        "processing_id": "ecbac15c-fed7-45cd-8474-2ff9676e1923",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书会",
+        "status": "draft",
+        "session_id": "02f81bf6-6640-4cc0-8a73-a81a1e1171c9",
+        "last_user_activity_at": "2026-11-07T05:39:18.161453+00:00"
+      },
+      "requirements": {
+        "topic": "读书会",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-05T08:00:00+08:00",
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 843,
+        "model_output_tokens": 154,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "制作开始时间必须早于活动截止时间。"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "02f81bf6-6640-4cc0-8a73-a81a1e1171c9",
+      "last_user_activity_at": "2026-11-07T05:39:18.161453+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-05T08:00:00+08:00",
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 843,
+      "model_output_tokens": 154,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "制作开始时间必须早于活动截止时间。"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书会，预算10，开始2030-12-05 08:00，截止2030-12-03 18:00，北京时间。",
+      "item_id": "04ef7349-63da-40b7-8e27-abef55b3b600",
+      "item_seq": 1,
+      "created_at": "2026-11-07T05:39:18.161453+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "还需要补充：制作开始时间必须早于活动截止时间。。请直接在聊天中补充。",
+      "item_id": "fd3e4893-bbef-49da-a777-60272d6705d6",
+      "item_seq": 2,
+      "created_at": "2026-11-07T05:39:23.882277+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T05:39:23.848222+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 843,
+        "output_tokens": 154
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03T18:00+08:00\",\n    \"start_at\": null\n  },\n  \"evidence\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"预算10\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算和截止日期，但未明确提供开始时间。开始时间未指定，因此保持为null。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "d33bba6a-1a5f-475c-ae76-359e93e431e6",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

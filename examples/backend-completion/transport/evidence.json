@@ -1,0 +1,159 @@
+{
+  "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+  "fixture_messages_only": true,
+  "actual_http_sse": true,
+  "checks": {
+    "snapshot_subscription_gap": true,
+    "last_event_id_precedence": true,
+    "stable_replay_ids": true,
+    "no_duplicate_messages": true,
+    "future_resync": true,
+    "wrong_session_rejected": true,
+    "expired_cursor_resync": true,
+    "all_events_expired_resync": true,
+    "read_only_replay_has_no_jobs_tools_costs": true
+  },
+  "passed": true,
+  "captured_frames": {
+    "snapshot_subscription_gap": [
+      {
+        "event_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17:1",
+        "session_seq": 1,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "type": "message.completed",
+        "occurred_at": "2026-11-07T15:12:56.506763+00:00",
+        "run_id": null,
+        "payload": {
+          "changed": true
+        },
+        "entity_version": 1
+      }
+    ],
+    "header_reconnect": [
+      {
+        "event_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17:2",
+        "session_seq": 2,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "type": "message.completed",
+        "occurred_at": "2026-11-07T15:12:56.536075+00:00",
+        "run_id": null,
+        "payload": {
+          "changed": true
+        },
+        "entity_version": 2
+      },
+      {
+        "event_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17:3",
+        "session_seq": 3,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "type": "message.completed",
+        "occurred_at": "2026-11-07T15:12:56.541560+00:00",
+        "run_id": null,
+        "payload": {
+          "changed": true
+        },
+        "entity_version": 3
+      }
+    ],
+    "repeated_replay": [
+      {
+        "event_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17:2",
+        "session_seq": 2,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "type": "message.completed",
+        "occurred_at": "2026-11-07T15:12:56.536075+00:00",
+        "run_id": null,
+        "payload": {
+          "changed": true
+        },
+        "entity_version": 2
+      },
+      {
+        "event_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17:3",
+        "session_seq": 3,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "type": "message.completed",
+        "occurred_at": "2026-11-07T15:12:56.541560+00:00",
+        "run_id": null,
+        "payload": {
+          "changed": true
+        },
+        "entity_version": 3
+      }
+    ],
+    "future_cursor": [
+      {
+        "type": "resync_required",
+        "session_seq": 3,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "payload": {}
+      }
+    ],
+    "wrong_session": {
+      "error": {
+        "code": "HTTP_409",
+        "message": "事件标识不属于当前会话。"
+      }
+    },
+    "expired_cursor": [
+      {
+        "type": "resync_required",
+        "session_seq": 3,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "payload": {}
+      }
+    ],
+    "all_events_expired": [
+      {
+        "type": "resync_required",
+        "session_seq": 3,
+        "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+        "payload": {}
+      }
+    ]
+  },
+  "counts": {
+    "studio_jobs": 0,
+    "studio_operations": 0,
+    "studio_cost_entries": 0
+  },
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "7a5b2a17-1647-4cd9-b5d0-53ab8f38bc17",
+      "last_user_activity_at": "2026-11-07T15:12:56.429863+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": null,
+      "model_output_tokens": null,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 3,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动主题",
+      "内容制作预算（模拟单位）",
+      "活动截止日期与时间"
+    ]
+  }
+}

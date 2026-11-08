@@ -1,0 +1,348 @@
+{
+  "actual": true,
+  "scope": "Trace correctness, not scenario completion",
+  "results": [
+    {
+      "case": "01-vague",
+      "scenario_passed": false,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "02-budget-undecided",
+      "scenario_passed": true,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "03-date-only",
+      "scenario_passed": true,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "04-range",
+      "scenario_passed": false,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "05-negative-budget",
+      "scenario_passed": true,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "06-infinite-budget",
+      "scenario_passed": true,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "07-reversed-dates",
+      "scenario_passed": true,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "08-withdraw-brief",
+      "scenario_passed": false,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "09-ambiguous-ack",
+      "scenario_passed": true,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "10-quoted-command",
+      "scenario_passed": true,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "11-conditional",
+      "scenario_passed": false,
+      "run_status": "stopped",
+      "native_selection_count": 1,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "12-bypass-save",
+      "scenario_passed": false,
+      "run_status": "stopped",
+      "native_selection_count": 1,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "13-unsupported",
+      "scenario_passed": false,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "14-real-only-implicit",
+      "scenario_passed": false,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "15-real-only-english",
+      "scenario_passed": false,
+      "run_status": null,
+      "native_selection_count": 0,
+      "business_operation_count": 0,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "16-zero-budget",
+      "scenario_passed": true,
+      "run_status": "incomplete",
+      "native_selection_count": 9,
+      "business_operation_count": 4,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "17-decimal-budget",
+      "scenario_passed": true,
+      "run_status": "incomplete",
+      "native_selection_count": 8,
+      "business_operation_count": 4,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    },
+    {
+      "case": "18-short-schedule",
+      "scenario_passed": true,
+      "run_status": "incomplete",
+      "native_selection_count": 8,
+      "business_operation_count": 4,
+      "checks": {
+        "actual_trace": true,
+        "model_selected_only_offered_tools": true,
+        "actual_operations_link_to_native_model_calls": true,
+        "successful_steps_have_actual_business_results": true,
+        "successful_step_dependencies_satisfied": true,
+        "tool_fee_matches_success_ledger": true,
+        "production_matches_actual_estimate": true,
+        "saved_only_with_feasible_estimate_and_valid_check": true,
+        "completed_requires_actual_save": true
+      },
+      "audit_passed": true
+    }
+  ]
+}

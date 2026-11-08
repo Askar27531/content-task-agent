@@ -1,0 +1,246 @@
+{
+  "recorded_at": "2026-11-08T08:36:23.556936+00:00",
+  "scope": "offline audit of local delivery materials; no live requests or database access",
+  "local_delivery_complete": true,
+  "repository_metadata_present": true,
+  "github_publication_verified": false,
+  "remote_ci_executed_by_this_check": false,
+  "passed": true,
+  "checks": [
+    {
+      "name": "required_files_nonempty",
+      "passed": true,
+      "details": [
+        "README.md",
+        "docs/01-requirements.md",
+        "docs/02-solution.md",
+        "docs/03-evaluation.md",
+        "docs/04-ai-usage.md",
+        "docs/05-retrospective.md",
+        "requirements.txt",
+        "requirements.lock.txt",
+        "package.json",
+        "package-lock.json",
+        ".env.example",
+        "config/app.example.yaml"
+      ]
+    },
+    {
+      "name": "required_directories_have_materials",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "local_configuration_and_generated_directories_ignored",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "required_files_are_submission_candidates",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "verification_materials_not_ignored",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "actual_case:combined-replan-repeat",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual_case:deepseek-vague",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual_case:combined-failure-resume",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual_case:audit-auto-failure-replan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual_case:deepseek-low-budget",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "at_least_three_actual_cases",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_required_acceptance_points_covered",
+      "passed": true,
+      "details": [
+        "actual_status",
+        "automatic_recovery",
+        "budget_exceeded",
+        "dependencies",
+        "incomplete_reason",
+        "missing_budget",
+        "missing_deadline",
+        "no_feasible_proposal",
+        "normal",
+        "repeated_execution",
+        "replanning",
+        "resume",
+        "successful_results_retained",
+        "tool_failure"
+      ]
+    },
+    {
+      "name": "recorded_core_review_all_passed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_eight_real_scenarios_and_fact_audits_passed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "recorded_backend_results_170_without_failures_or_skips",
+      "passed": true,
+      "details": {
+        "tests": 170,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "audited_business_code_matches_real_test_snapshot",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "framework_versions_documented_and_locked",
+      "passed": true,
+      "details": {
+        "fastapi": "0.162.0",
+        "pydantic": "2.14.3",
+        "SQLAlchemy": "2.1.8",
+        "psycopg": "3.3.8",
+        "alembic": "1.20.1",
+        "langgraph": "1.2.20",
+        "langgraph-checkpoint-postgres": "3.2.0",
+        "mcp": "2.3.0",
+        "pytest": "9.2.0",
+        "react": "19.3.1",
+        "vite": "8.3.6",
+        "typescript": "7.0.2",
+        "antd": "6.7.0",
+        "react-router-dom": "7.18.5",
+        "@tanstack/react-query": "5.106.1",
+        "@playwright/test": "1.65.0"
+      }
+    },
+    {
+      "name": "local_document_links_resolve",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "credential_template_has_empty_keys",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "configured_credentials_absent_from_candidates_and_zip_members",
+      "passed": true,
+      "details": {
+        "credentials_checked": 2,
+        "files": [],
+        "scope": "current configured API keys only; not a general secret scanner"
+      }
+    },
+    {
+      "name": "individual_candidate_files_below_100_mib",
+      "passed": true,
+      "details": []
+    }
+  ],
+  "cases": [
+    {
+      "name": "combined-replan-repeat",
+      "actual_status": "completed",
+      "input_count": 3,
+      "tool_attempt_count": 16,
+      "event_count": 134,
+      "saved_count": 1,
+      "passed": true,
+      "evidence_sha256": "b2c65c56ad9d2cb86d2a7dc2533bde0e83245fdaf4d567c224569553d7080460"
+    },
+    {
+      "name": "deepseek-vague",
+      "actual_status": "no_run",
+      "input_count": 1,
+      "tool_attempt_count": 0,
+      "event_count": 5,
+      "saved_count": 0,
+      "passed": true,
+      "evidence_sha256": "b69358fba52deb5961ab0f05654a7869dd6b9f6847533011c1cd49e18189fd54"
+    },
+    {
+      "name": "combined-failure-resume",
+      "actual_status": "completed",
+      "input_count": 3,
+      "tool_attempt_count": 18,
+      "event_count": 147,
+      "saved_count": 1,
+      "passed": true,
+      "evidence_sha256": "9bb39da3633e8b31492d2ceec1b40636cfb64856b7170d9659c5c5a9b949088f"
+    },
+    {
+      "name": "audit-auto-failure-replan",
+      "actual_status": "completed",
+      "input_count": 2,
+      "tool_attempt_count": 17,
+      "event_count": 133,
+      "saved_count": 1,
+      "passed": true,
+      "evidence_sha256": "32fe8ce455c50e75e0612afd2c53e051a8eb5919a54f11955b5f287d93de69fe"
+    },
+    {
+      "name": "deepseek-low-budget",
+      "actual_status": "incomplete",
+      "input_count": 2,
+      "tool_attempt_count": 10,
+      "event_count": 81,
+      "saved_count": 0,
+      "passed": true,
+      "evidence_sha256": "9e131ead44d6d70be048650ba682427cad6323ba1a2f2523a71f02283eefa1d0"
+    }
+  ],
+  "candidate_file_count": 957,
+  "candidate_bytes": 160321190,
+  "largest_candidates": [
+    {
+      "path": "examples/ui-label-audit/test-results/artifacts/live-labels-new-real-brows-293d8-ve-labels-replans-and-saves/trace.zip",
+      "bytes": 15810516
+    },
+    {
+      "path": "examples/ui-label-audit/test-results/html/data/a7a9f29dc7f0ceefdf46e1e02093e462666531a9.zip",
+      "bytes": 15810516
+    },
+    {
+      "path": "examples/ui-label-audit/before/missing-timezone-trace.zip",
+      "bytes": 6999357
+    },
+    {
+      "path": "examples/ui-label-audit/test-results/artifacts/live-labels-real-responsiv-5ac53-top-narrow-and-phone-widths/trace.zip",
+      "bytes": 5247779
+    },
+    {
+      "path": "examples/ui-label-audit/test-results/html/data/3cfe7d8dabdfcf752968cf1ac127f31fdcf32bc9.zip",
+      "bytes": 5247779
+    }
+  ]
+}

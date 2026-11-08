@@ -1,0 +1,57 @@
+[
+  {
+    "name": "20-video-script-supported",
+    "session_id": "9694ca61-522e-46b6-bdad-bab300e1383c",
+    "url": "http://127.0.0.1:5173/sessions/9694ca61-522e-46b6-bdad-bab300e1383c",
+    "passed": true,
+    "checks": {
+      "original_evidence_incomplete": true,
+      "same_run": true,
+      "completed": true,
+      "script_id_preserved": true,
+      "estimate_id_preserved": true,
+      "materials_preserved": true,
+      "material_once": true,
+      "script_once": true,
+      "all_steps_success": true,
+      "saved_once": true,
+      "repeat_execute_same_run": true,
+      "production_8": true
+    }
+  },
+  {
+    "name": "23-stop-resume",
+    "session_id": "436a333e-ef3f-4101-93a2-84b70c800885",
+    "url": "http://127.0.0.1:5173/sessions/436a333e-ef3f-4101-93a2-84b70c800885",
+    "passed": true,
+    "checks": {
+      "original_evidence_incomplete": true,
+      "same_run": true,
+      "completed": true,
+      "script_id_preserved": true,
+      "estimate_id_preserved": true,
+      "materials_preserved": true,
+      "material_once": true,
+      "script_once": true,
+      "all_steps_success": true,
+      "saved_once": true,
+      "repeat_execute_same_run": true,
+      "production_8": true
+    }
+  },
+  {
+    "name": "24-replan-delivery",
+    "session_id": "e0b207e6-cf03-4285-9e0c-cfc022d17992",
+    "url": "http://127.0.0.1:5173/sessions/e0b207e6-cf03-4285-9e0c-cfc022d17992",
+    "checks": {
+      "no_test_exception": true,
+      "completed": true,
+      "all_recorded_tools_are_registered": true,
+      "real_12_then_8": true,
+      "same_material_once": true,
+      "script_once": true,
+      "saved_once": true
+    },
+    "passed": true
+  }
+]

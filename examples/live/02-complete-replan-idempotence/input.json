@@ -1,0 +1,56 @@
+[
+  [
+    {
+      "content": "为咖啡新品做内容推广，先采用高规格视觉 premium。制作预算 10 个模拟单位，开始时间2030-12-01 08:00，截止2030-12-03 18:00，均为北京时间，允许合成素材。先展示计划。",
+      "client_message_id": "a87ccb96-74c1-4a9e-8ad9-3ca1ba3d3cf1",
+      "view_context": {}
+    },
+    {
+      "message_id": "c94b2318-e9d3-4884-994e-3d0e5186a8ce",
+      "processing_id": "85df6448-93ba-4124-83ae-cac8649733e3",
+      "duplicate": false
+    }
+  ],
+  [
+    {
+      "content": "先别开始，解释一下执行过程。",
+      "client_message_id": "cd388a29-ef58-4286-8cb7-a93ca4b12aac",
+      "view_context": {
+        "plan_version_id": "4702cf7b-0dd1-4743-a356-0f747fa39650"
+      }
+    },
+    {
+      "message_id": "c81df313-9bc8-4f83-a002-1e3e99162263",
+      "processing_id": "018adb71-b4f1-4c01-8669-7f813bec01e4",
+      "duplicate": false
+    }
+  ],
+  [
+    {
+      "content": "按这份计划开始执行。",
+      "client_message_id": "5ddc283b-8c25-4ee0-a285-6b50e9506672",
+      "view_context": {
+        "plan_version_id": "4702cf7b-0dd1-4743-a356-0f747fa39650"
+      }
+    },
+    {
+      "message_id": "b3aeb5af-74b0-4449-b186-980027fc3e45",
+      "processing_id": "5dcbede2-15e2-423c-9e03-77961c9cc281",
+      "duplicate": false
+    }
+  ],
+  [
+    {
+      "content": "开始",
+      "client_message_id": "3c756bab-441d-4b6e-8ed4-85fe1940451a",
+      "view_context": {
+        "plan_version_id": "e5664ca7-7eb5-489f-817d-f645df0fd1b1"
+      }
+    },
+    {
+      "message_id": "6bb19d06-cc8c-4d9a-8928-4c1d24b3629f",
+      "processing_id": "44ad1209-310e-4628-b364-c34817c55292",
+      "duplicate": false
+    }
+  ]
+]

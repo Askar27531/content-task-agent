@@ -1,0 +1,31 @@
+{
+  "session_id": "3603dba8-2245-4b5f-a295-d851c7b8369a",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "23853464-f58a-4b59-8f7c-8de8050c89d9",
+        "content": "读书会方案，高规格premium，预算20，开始2030-12-01 08:00，必须2030-12-01 09:00前全部完成，北京时间，允许合成素材。先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "226d7a78-3f59-430c-aa7b-d9724cd47c77",
+        "processing_id": "0d2d9cc1-34c1-4d15-9eff-f1ee8648a06c",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "cfb68d44-659c-41b1-963d-aec3594674be",
+        "content": "开始",
+        "view_context": {
+          "plan_version_id": "10a3e85c-05bc-49a5-90d7-1f587bb812f6"
+        }
+      },
+      "response": {
+        "message_id": "39ad0bde-6490-43f2-82f0-4d2d3301cca3",
+        "processing_id": "d7c32c12-7aa6-459e-9b12-205629f84f1d",
+        "duplicate": false
+      }
+    }
+  ]
+}

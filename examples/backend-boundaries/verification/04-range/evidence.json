@@ -1,0 +1,152 @@
+{
+  "actual": true,
+  "name": "04-range",
+  "session_id": "185ba9b8-8acf-4a37-b48a-6a8ab676b14d",
+  "url": "http://127.0.0.1:5173/sessions/185ba9b8-8acf-4a37-b48a-6a8ab676b14d",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "budget_unset": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "budget_unset": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "2e33d31f-19d1-4841-afe4-ce51de35f191",
+        "content": "读书会，预算10或20我还没决定，不要替我选；截止2030-12-03 18:00北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "309ce82e-7e68-408f-91f2-ec9c9bb5bf3b",
+        "processing_id": "a5c69fb5-d2db-4570-82a2-f50b18e52708",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书会",
+        "status": "draft",
+        "session_id": "185ba9b8-8acf-4a37-b48a-6a8ab676b14d",
+        "last_user_activity_at": "2026-11-07T06:26:17.301094+00:00"
+      },
+      "requirements": {
+        "topic": "读书会",
+        "budget": null,
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": null,
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 835,
+        "model_output_tokens": 177,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "内容制作预算（模拟单位）",
+        "制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "185ba9b8-8acf-4a37-b48a-6a8ab676b14d",
+      "last_user_activity_at": "2026-11-07T06:26:17.301094+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": null,
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 835,
+      "model_output_tokens": 177,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "内容制作预算（模拟单位）",
+      "制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书会，预算10或20我还没决定，不要替我选；截止2030-12-03 18:00北京时间。",
+      "item_id": "309ce82e-7e68-408f-91f2-ec9c9bb5bf3b",
+      "item_seq": 1,
+      "created_at": "2026-11-07T06:26:17.301094+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "还需要补充：内容制作预算（模拟单位）、制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。。请直接在聊天中补充。",
+      "item_id": "be41807f-4011-4313-926e-7bff5a189610",
+      "item_seq": 2,
+      "created_at": "2026-11-07T06:26:24.434366+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T06:26:24.398460+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 835,
+        "output_tokens": 177
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"budget\": \"10或20\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"evidence\": {\n    \"budget\": \"预算10或20我还没决定\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"用户提供了预算范围和截止日期，但未明确选择具体数值，因此将预算字段更新为'10或20'，并记录截止日期为'2030-12-03 18:00'（已转换为带+08:00的ISO时间格式）。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "ced42fa9-053a-43c7-b5a0-02c43e8438d5",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

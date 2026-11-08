@@ -1,0 +1,126 @@
+{
+  "real_tavily_metadata_only": true,
+  "paid_search_called": false,
+  "results": [
+    {
+      "loop": "proactor",
+      "attempt": 0,
+      "passed": false,
+      "errors": [
+        "C",
+        "o",
+        "n",
+        "n",
+        "e",
+        "c",
+        "t",
+        "E",
+        "r",
+        "r",
+        "o",
+        "r"
+      ],
+      "duration_ms": 359
+    },
+    {
+      "loop": "proactor",
+      "attempt": 1,
+      "passed": false,
+      "errors": [
+        "C",
+        "o",
+        "n",
+        "n",
+        "e",
+        "c",
+        "t",
+        "E",
+        "r",
+        "r",
+        "o",
+        "r"
+      ],
+      "duration_ms": 280
+    },
+    {
+      "loop": "proactor",
+      "attempt": 2,
+      "passed": false,
+      "errors": [
+        "C",
+        "o",
+        "n",
+        "n",
+        "e",
+        "c",
+        "t",
+        "E",
+        "r",
+        "r",
+        "o",
+        "r"
+      ],
+      "duration_ms": 234
+    },
+    {
+      "loop": "selector",
+      "attempt": 0,
+      "passed": false,
+      "errors": [
+        "C",
+        "o",
+        "n",
+        "n",
+        "e",
+        "c",
+        "t",
+        "E",
+        "r",
+        "r",
+        "o",
+        "r"
+      ],
+      "duration_ms": 234
+    },
+    {
+      "loop": "selector",
+      "attempt": 1,
+      "passed": false,
+      "errors": [
+        "C",
+        "o",
+        "n",
+        "n",
+        "e",
+        "c",
+        "t",
+        "E",
+        "r",
+        "r",
+        "o",
+        "r"
+      ],
+      "duration_ms": 250
+    },
+    {
+      "loop": "selector",
+      "attempt": 2,
+      "passed": false,
+      "errors": [
+        "C",
+        "o",
+        "n",
+        "n",
+        "e",
+        "c",
+        "t",
+        "E",
+        "r",
+        "r",
+        "o",
+        "r"
+      ],
+      "duration_ms": 219
+    }
+  ]
+}

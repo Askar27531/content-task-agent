@@ -1,0 +1,245 @@
+[
+  {
+    "name": "api-contracts",
+    "passed": false,
+    "checks": {
+      "empty-message": true,
+      "missing-client-id": true,
+      "oversize-content": true,
+      "wrong-view-type": false,
+      "bad-base64-cursor": true,
+      "negative-cursor": false,
+      "unknown-session": true
+    }
+  },
+  {
+    "name": "01-vague",
+    "session_id": "e73bfdaa-92d7-4a25-a5b9-e66d8b16381f",
+    "url": "http://127.0.0.1:5173/sessions/e73bfdaa-92d7-4a25-a5b9-e66d8b16381f",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "budget_unset": false,
+      "deadline_unset": false,
+      "no_plan": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "02-budget-undecided",
+    "session_id": "21bd4372-d7a1-4da8-9663-d6a61b90f09a",
+    "url": "http://127.0.0.1:5173/sessions/21bd4372-d7a1-4da8-9663-d6a61b90f09a",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "budget_unset": true,
+      "deadline_unset": true,
+      "no_plan": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "03-date-only",
+    "session_id": "1a7102ad-44cf-4f72-acdf-7a9fa89495e8",
+    "url": "http://127.0.0.1:5173/sessions/1a7102ad-44cf-4f72-acdf-7a9fa89495e8",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_plan": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "04-range",
+    "session_id": "15157baa-6c46-4747-b0cf-50fe3cd437c8",
+    "url": "http://127.0.0.1:5173/sessions/15157baa-6c46-4747-b0cf-50fe3cd437c8",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "budget_unset": false,
+      "no_plan": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "05-negative-budget",
+    "session_id": "b23391a9-c2ba-4ed0-9cf9-43a21f41765f",
+    "url": "http://127.0.0.1:5173/sessions/b23391a9-c2ba-4ed0-9cf9-43a21f41765f",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_plan": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "06-infinite-budget",
+    "session_id": "7f122b34-ce42-489d-9430-94f0e6084614",
+    "url": "http://127.0.0.1:5173/sessions/7f122b34-ce42-489d-9430-94f0e6084614",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_plan": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "07-reversed-dates",
+    "session_id": "46984e0e-f301-48e6-8785-89a8893a4583",
+    "url": "http://127.0.0.1:5173/sessions/46984e0e-f301-48e6-8785-89a8893a4583",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_plan": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "08-withdraw-brief",
+    "session_id": "d1f2995a-7622-475b-8716-f0eefa483aa0",
+    "url": "http://127.0.0.1:5173/sessions/d1f2995a-7622-475b-8716-f0eefa483aa0",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "budget_unset": false,
+      "deadline_unset": false,
+      "no_current_ready_plan": false,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "09-ambiguous-ack",
+    "session_id": "09c6341c-d540-4d9e-980a-7ce9f5171c69",
+    "url": "http://127.0.0.1:5173/sessions/09c6341c-d540-4d9e-980a-7ce9f5171c69",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "ready": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "10-quoted-command",
+    "session_id": "e9f32056-621b-43a7-b4b2-4794e58fe599",
+    "url": "http://127.0.0.1:5173/sessions/e9f32056-621b-43a7-b4b2-4794e58fe599",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "ready": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "11-conditional",
+    "session_id": "58f9a8b6-e9d7-4da2-a09f-e71f02ec54ea",
+    "url": "http://127.0.0.1:5173/sessions/58f9a8b6-e9d7-4da2-a09f-e71f02ec54ea",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": false,
+      "ready": false,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "12-bypass-save",
+    "session_id": "f8a5b185-1949-4ea7-b7fe-7c6e89465ce4",
+    "url": "http://127.0.0.1:5173/sessions/f8a5b185-1949-4ea7-b7fe-7c6e89465ce4",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": false,
+      "no_save": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "13-unsupported",
+    "session_id": "f5e47fde-818a-41d7-a0ab-01cbc559d498",
+    "url": "http://127.0.0.1:5173/sessions/f5e47fde-818a-41d7-a0ab-01cbc559d498",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_current_ready_plan": true,
+      "capability_explained": false,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "14-real-only-implicit",
+    "session_id": "571678c5-9e09-4ac0-b2e4-69ed1a41f138",
+    "url": "http://127.0.0.1:5173/sessions/571678c5-9e09-4ac0-b2e4-69ed1a41f138",
+    "checks": {
+      "no_test_exception": true,
+      "real_required": false,
+      "no_synthetic": true,
+      "not_saved": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "15-real-only-english",
+    "session_id": "e65eaab0-dc76-45d3-9b44-fd758d35a96b",
+    "url": "http://127.0.0.1:5173/sessions/e65eaab0-dc76-45d3-9b44-fd758d35a96b",
+    "checks": {
+      "no_test_exception": true,
+      "real_required": false,
+      "no_synthetic": true,
+      "not_saved": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "16-zero-budget",
+    "session_id": "5b676127-aa6a-42cd-b0ea-39a658e40935",
+    "url": "http://127.0.0.1:5173/sessions/5b676127-aa6a-42cd-b0ea-39a658e40935",
+    "checks": {
+      "no_test_exception": true,
+      "budget_zero": true,
+      "incomplete": true,
+      "not_saved": true,
+      "estimate_exists": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "17-decimal-budget",
+    "session_id": "acfaa635-ec5f-4540-8414-41c125cb31e1",
+    "url": "http://127.0.0.1:5173/sessions/acfaa635-ec5f-4540-8414-41c125cb31e1",
+    "checks": {
+      "no_test_exception": true,
+      "incomplete": true,
+      "not_saved": true,
+      "exact_gap": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "18-short-schedule",
+    "session_id": "61864fb6-cbf4-4a69-9af8-2a8b2485c2ac",
+    "url": "http://127.0.0.1:5173/sessions/61864fb6-cbf4-4a69-9af8-2a8b2485c2ac",
+    "checks": {
+      "no_test_exception": true,
+      "incomplete": true,
+      "not_saved": true,
+      "time_gap_positive": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  }
+]

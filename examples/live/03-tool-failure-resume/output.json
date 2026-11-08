@@ -1,0 +1,481 @@
+{
+  "workspace": {
+    "session": {
+      "title": "读书分享活动",
+      "status": "draft",
+      "session_id": "3cc5ac58-f3bf-47e7-8327-a01bf8deb831",
+      "last_user_activity_at": "2026-11-06T19:37:09.302221+00:00"
+    },
+    "requirements": {
+      "topic": "读书分享活动",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "8c226dd6-5dcb-46fb-a563-bbf87eda09ad",
+            "dependencies": [],
+            "tool_call_ids": [
+              "8494f941-1b6e-413d-b6c1-bca475747389",
+              "301599ae-4a7d-4e92-b2ae-e1f45d5c9eba",
+              "235dd840-e0b5-48a5-aa4b-f79330e6ba68"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "success",
+            "step_id": "7db774c1-3c41-4c49-8b50-b85746a3e575",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [
+              "eecc2dc3-9368-425b-bcc3-8784db77e22e",
+              "b70d3ab5-6cbe-4155-89d5-912fcdece506",
+              "c66b457f-cf1a-4e14-969c-7e850ace90a0",
+              "5ba4b65b-aed0-4848-b12a-f7bcfa88add4"
+            ]
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "success",
+            "step_id": "21fada8e-3c33-4ca4-8919-4cbd2037e1cf",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [
+              "bebe6a64-7fc4-4e6f-9379-1a94b1d50acb"
+            ]
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "success",
+            "step_id": "2351828c-cc86-4e58-87d6-ce12fb5b27a6",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": [
+              "254eaef8-2f3e-4555-9b00-0234663d9186"
+            ]
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "success",
+            "step_id": "af1992ec-51b6-4580-a44e-a2ff5f6e8f53",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": [
+              "3aebc414-e920-461f-af8b-cb341ac86d35"
+            ]
+          }
+        ],
+        "status": "completed",
+        "summary": "读书分享活动内容方案计划，采用精简视觉风格，预算10个模拟单位，截止时间2030-12-03 18:00北京时间。计划包括活动目标、受众假设、内容组合及传播主张。",
+        "version": 1,
+        "requirements": {
+          "topic": "读书分享活动",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00+08:00",
+          "start_at": null,
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "使用精简视觉风格以符合预算限制",
+          "计划内容涵盖活动目标、受众假设、内容组合及传播主张",
+          "确保活动方案符合用户需求并允许合成资料"
+        ],
+        "estimated_cost": "8",
+        "plan_version_id": "3e28fd5d-cda3-4180-8dca-2664204fd696",
+        "production_spec": "simple"
+      }
+    ],
+    "active_run": {
+      "phase": "delivery",
+      "reason": null,
+      "run_id": "45e2c406-5c4d-419b-a5bb-06acd7f40886",
+      "status": "completed",
+      "replans": 0,
+      "script_id": "script-4e7e2fbe",
+      "created_at": "2026-11-06T19:36:59.939384+00:00",
+      "last_error": null,
+      "estimate_id": "946d893e-dbde-4839-a914-01c8e65df88b",
+      "model_rounds": 10,
+      "requirements": {
+        "topic": "读书分享活动",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "context_calls": 4,
+      "loaded_skills": [
+        "campaign-planning",
+        "script-writing",
+        "proposal-delivery"
+      ],
+      "validation_id": "e37132a5-90cb-409d-b286-0ea386d92a99",
+      "business_calls": 6,
+      "control_status": null,
+      "elapsed_seconds": 34.46900000004098,
+      "plan_version_id": "3e28fd5d-cda3-4180-8dca-2664204fd696",
+      "delivery_repairs": 0,
+      "last_tool_failed": false,
+      "effective_start_at": "2026-11-06T19:36:59.939384+00:00"
+    },
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": "8",
+      "estimate_stale": false,
+      "tool_simulated": "0.45",
+      "estimated_finish": "2026-11-07T03:37:38.483448+00:00",
+      "model_input_tokens": 20426,
+      "model_output_tokens": 1077,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [
+      {
+        "url": null,
+        "title": "两条连贯内容的策划骨架",
+        "summary": "项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。",
+        "material_id": "synthetic-series",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-06T19:37:04.870028+00:00"
+      },
+      {
+        "url": null,
+        "title": "从日常场景提炼传播切入点",
+        "summary": "项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。",
+        "material_id": "synthetic-scene",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-06T19:37:04.870028+00:00"
+      },
+      {
+        "url": null,
+        "title": "精简视觉的内容制作方案",
+        "summary": "项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。",
+        "material_id": "synthetic-lean",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-06T19:37:04.870028+00:00"
+      }
+    ],
+    "proposals": [
+      {
+        "title": "读书分享活动交付说明",
+        "version": 1,
+        "saved_at": "2026-11-06T19:37:38.484496+00:00",
+        "proposal_id": "2a6eeca8-8fcd-4c2f-bdae-b8e1f31d4666",
+        "plan_version_id": "3e28fd5d-cda3-4180-8dca-2664204fd696"
+      }
+    ],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 88,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "messages": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "为读书分享活动做内容方案，用精简视觉 simple，预算10个模拟单位，截止2030-12-03 18:00北京时间，允许合成资料。先给计划。",
+      "item_id": "2e48c626-8ae2-4746-a234-a428828b87d3",
+      "item_seq": 1,
+      "created_at": "2026-11-06T19:36:37.363708+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "c9bb1fd0-0c1a-4ab8-876d-0580aae10b8a",
+      "item_seq": 2,
+      "created_at": "2026-11-06T19:36:47.037072+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "开始",
+      "item_id": "4602c4cd-ea67-4b35-b288-a739b8ad2432",
+      "item_seq": 3,
+      "created_at": "2026-11-06T19:36:52.551858+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "开始执行这份计划。工具的实际输入、输出、费用和状态会逐项更新。",
+      "item_id": "f1d33942-3974-4385-8ae1-1d41c31ad4af",
+      "item_seq": 4,
+      "created_at": "2026-11-06T19:36:59.952454+00:00"
+    },
+    {
+      "kind": "tool",
+      "item_id": "b81180ac-7089-4831-aa16-358b36db051f",
+      "item_seq": 5,
+      "created_at": "2026-11-06T19:37:01.408446+00:00",
+      "tool_call_id": "8494f941-1b6e-413d-b6c1-bca475747389"
+    },
+    {
+      "kind": "tool",
+      "item_id": "4bf15226-ffe1-4466-936b-e483b599a4f6",
+      "item_seq": 6,
+      "created_at": "2026-11-06T19:37:03.245356+00:00",
+      "tool_call_id": "301599ae-4a7d-4e92-b2ae-e1f45d5c9eba"
+    },
+    {
+      "kind": "tool",
+      "item_id": "2db60d7d-f861-41f2-884b-583b539284ca",
+      "item_seq": 7,
+      "created_at": "2026-11-06T19:37:04.844999+00:00",
+      "tool_call_id": "235dd840-e0b5-48a5-aa4b-f79330e6ba68"
+    },
+    {
+      "kind": "tool",
+      "item_id": "8bf4e753-1f01-4720-ac47-6892cfb94ac2",
+      "item_seq": 8,
+      "created_at": "2026-11-06T19:37:06.278992+00:00",
+      "tool_call_id": "eecc2dc3-9368-425b-bcc3-8784db77e22e"
+    },
+    {
+      "kind": "tool",
+      "item_id": "61d34ec9-0ab6-4aca-a2bd-7e784d67d383",
+      "item_seq": 9,
+      "created_at": "2026-11-06T19:37:08.895732+00:00",
+      "tool_call_id": "b70d3ab5-6cbe-4155-89d5-912fcdece506"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "本次任务未完成：INJECTED_ONCE: generate_script 的单次验证故障，成功产物已保留。\n\n已成功的素材和脚本仍保留。你可以补充要求，或明确回复“从失败处继续”。",
+      "item_id": "a92e09df-c2aa-4534-8575-caf296056c7e",
+      "item_seq": 10,
+      "created_at": "2026-11-06T19:37:08.987187+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "从失败处继续，保留已经取得的素材。",
+      "item_id": "8f81c565-cfad-443a-b9b6-df84f59203e7",
+      "item_seq": 11,
+      "created_at": "2026-11-06T19:37:09.302221+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "已安排从未完成处继续，保留有效的素材和文案，原失败记录仍可查看。",
+      "item_id": "686edcc0-1731-480d-bbc2-5f92d74c281d",
+      "item_seq": 12,
+      "created_at": "2026-11-06T19:37:12.676448+00:00"
+    },
+    {
+      "kind": "tool",
+      "item_id": "4efb09be-baa4-49c4-889d-1df02850d859",
+      "item_seq": 13,
+      "created_at": "2026-11-06T19:37:14.418971+00:00",
+      "tool_call_id": "c66b457f-cf1a-4e14-969c-7e850ace90a0"
+    },
+    {
+      "kind": "tool",
+      "item_id": "afecea64-8d17-4f0d-a0cc-2ce1248478a1",
+      "item_seq": 14,
+      "created_at": "2026-11-06T19:37:16.988104+00:00",
+      "tool_call_id": "5ba4b65b-aed0-4848-b12a-f7bcfa88add4"
+    },
+    {
+      "kind": "tool",
+      "item_id": "e53a398d-cb82-4968-943a-1d530cb8d00c",
+      "item_seq": 15,
+      "created_at": "2026-11-06T19:37:25.181328+00:00",
+      "tool_call_id": "bebe6a64-7fc4-4e6f-9379-1a94b1d50acb"
+    },
+    {
+      "kind": "tool",
+      "item_id": "9a8b442f-f387-4b15-a165-81f45912c10e",
+      "item_seq": 16,
+      "created_at": "2026-11-06T19:37:32.842694+00:00",
+      "tool_call_id": "254eaef8-2f3e-4555-9b00-0234663d9186"
+    },
+    {
+      "kind": "tool",
+      "item_id": "0dc94c8b-575c-40f8-aacb-5c5ac90427b9",
+      "item_seq": 17,
+      "created_at": "2026-11-06T19:37:38.447412+00:00",
+      "tool_call_id": "3aebc414-e920-461f-af8b-cb341ac86d35"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "方案已保存。制作成本为 **8 个模拟单位**；完整方案、排期与来源已在右侧保留，可放大阅读或导出。",
+      "item_id": "849a0eeb-794d-4b5f-89a7-872dc12b3600",
+      "item_seq": 18,
+      "created_at": "2026-11-06T19:37:38.531016+00:00"
+    }
+  ],
+  "proposals": [
+    {
+      "title": "读书分享活动交付说明",
+      "run_id": "45e2c406-5c4d-419b-a5bb-06acd7f40886",
+      "version": 1,
+      "markdown": "# 读书分享活动交付说明\n\n## 活动目标\n通过读书分享活动，促进参与者在日常生活中通过阅读建立情感共鸣与思想交流。\n\n## 受众与渠道假设\n热爱阅读的普通用户、文学爱好者、寻求灵感的个体，以及希望在阅读中找到共鸣的群体。\n\n## 内容策略\n写作：以真实场景和故事为核心，围绕‘日常中的阅读时刻’展开，强调真实分享与情感共鸣。发布：通过自有渠道进行内容发布，确保内容触达目标受众。评论互动：鼓励用户在评论区留言，分享自己最近读到的书或阅读瞬间，增强参与感与互动性。\n\n## 内容与脚本\n# 读书分享活动：让思想在日常中流动\n\n你是否也曾在通勤或午休时，渴望找到一本能触动心灵的书？读书分享活动即将开启，我们邀请你用阅读点亮生活，用故事连接彼此。无论你是热爱文学的书迷，还是正在寻找灵感的普通人，这里都有属于你的声音。\n\n活动将围绕“日常中的阅读时刻”展开，从通勤、午休到睡前，我们用真实场景引发共鸣，用真实分享传递价值。你只需分享一本你最近读过的书，或讲述一个与书有关的小故事，就能成为我们故事的一部分。\n\n如果你也期待在阅读中找到共鸣，欢迎在评论区留言，告诉我们你最近读到的书，或你最想分享的阅读瞬间。让我们一起在文字中相遇，让思想在日常中流动。\n\n## 制作与活动执行排期\n自然小时、单团队串行；预计完成：2026-11-07T03:37:38.483448+00:00。\n\n| 制作项 | 工期（小时） | 制作成本 |\n| --- | --- | --- |\n| 策划 | 2 | 1 |\n| 文案 | 2 | 2 |\n| 精简视觉 | 3 | 5 |\n| 自有渠道发布与互动执行 | 1 | 0 |\n\n## 制作成本与预算\n制作成本 **8 个模拟单位**；制作预算 **10**。工具和模型开销独立记录，不计入制作预算。\n\n## 素材与来源\n- 两条连贯内容的策划骨架（项目合成素材）：项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。\n- 从日常场景提炼传播切入点（项目合成素材）：项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。\n- 精简视觉的内容制作方案（项目合成素材）：项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。\n\n## 调整与限制\n制作成本和工期采用项目规则估算，活动尚未在现实中执行。合成资料用于创意，不作为真实市场数据。",
+      "saved_at": "2026-11-06T19:37:38.484496+00:00",
+      "materials": [
+        {
+          "url": null,
+          "title": "两条连贯内容的策划骨架",
+          "summary": "项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。",
+          "material_id": "synthetic-series",
+          "source_type": "synthetic",
+          "retrieved_at": "2026-11-06T19:37:04.870028+00:00"
+        },
+        {
+          "url": null,
+          "title": "从日常场景提炼传播切入点",
+          "summary": "项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。",
+          "material_id": "synthetic-scene",
+          "source_type": "synthetic",
+          "retrieved_at": "2026-11-06T19:37:04.870028+00:00"
+        },
+        {
+          "url": null,
+          "title": "精简视觉的内容制作方案",
+          "summary": "项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。",
+          "material_id": "synthetic-lean",
+          "source_type": "synthetic",
+          "retrieved_at": "2026-11-06T19:37:04.870028+00:00"
+        }
+      ],
+      "structured": {
+        "title": "读书分享活动交付说明",
+        "budget": {
+          "budget": "10",
+          "production_cost": "8"
+        },
+        "content": "# 读书分享活动：让思想在日常中流动\n\n你是否也曾在通勤或午休时，渴望找到一本能触动心灵的书？读书分享活动即将开启，我们邀请你用阅读点亮生活，用故事连接彼此。无论你是热爱文学的书迷，还是正在寻找灵感的普通人，这里都有属于你的声音。\n\n活动将围绕“日常中的阅读时刻”展开，从通勤、午休到睡前，我们用真实场景引发共鸣，用真实分享传递价值。你只需分享一本你最近读过的书，或讲述一个与书有关的小故事，就能成为我们故事的一部分。\n\n如果你也期待在阅读中找到共鸣，欢迎在评论区留言，告诉我们你最近读到的书，或你最想分享的阅读瞬间。让我们一起在文字中相遇，让思想在日常中流动。",
+        "audience": "热爱阅读的普通用户、文学爱好者、寻求灵感的个体，以及希望在阅读中找到共鸣的群体。",
+        "schedule": {
+          "unit": "模拟单位",
+          "hours": "8",
+          "items": [
+            {
+              "cost": "1",
+              "name": "策划",
+              "hours": "2"
+            },
+            {
+              "cost": "2",
+              "name": "文案",
+              "hours": "2"
+            },
+            {
+              "cost": "5",
+              "name": "精简视觉",
+              "hours": "3"
+            },
+            {
+              "cost": "0",
+              "name": "自有渠道发布与互动执行",
+              "hours": "1"
+            }
+          ],
+          "budget": "10",
+          "cost_gap": "0",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2026-11-06T19:37:38.483448+00:00",
+          "checked_at": "2026-11-06T19:37:38.483448+00:00",
+          "estimate_id": "c7bf4f0d-184d-4ae8-bacc-0aedbc084d85",
+          "is_feasible": true,
+          "rules_version": "2026-11-07.2",
+          "time_gap_hours": "0",
+          "production_cost": "8",
+          "production_spec": "simple",
+          "estimated_finish": "2026-11-07T03:37:38.483448+00:00"
+        },
+        "strategy": "写作：以真实场景和故事为核心，围绕‘日常中的阅读时刻’展开，强调真实分享与情感共鸣。发布：通过自有渠道进行内容发布，确保内容触达目标受众。评论互动：鼓励用户在评论区留言，分享自己最近读到的书或阅读瞬间，增强参与感与互动性。",
+        "objective": "通过读书分享活动，促进参与者在日常生活中通过阅读建立情感共鸣与思想交流。",
+        "source_ids": [
+          "synthetic-series",
+          "synthetic-scene",
+          "synthetic-lean"
+        ]
+      },
+      "proposal_id": "2a6eeca8-8fcd-4c2f-bdae-b8e1f31d4666",
+      "requirements": {
+        "topic": "读书分享活动",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "save_estimate": {
+        "unit": "模拟单位",
+        "hours": "8",
+        "items": [
+          {
+            "cost": "1",
+            "name": "策划",
+            "hours": "2"
+          },
+          {
+            "cost": "2",
+            "name": "文案",
+            "hours": "2"
+          },
+          {
+            "cost": "5",
+            "name": "精简视觉",
+            "hours": "3"
+          },
+          {
+            "cost": "0",
+            "name": "自有渠道发布与互动执行",
+            "hours": "1"
+          }
+        ],
+        "budget": "10",
+        "cost_gap": "0",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2026-11-06T19:37:38.483448+00:00",
+        "checked_at": "2026-11-06T19:37:38.483448+00:00",
+        "estimate_id": "c7bf4f0d-184d-4ae8-bacc-0aedbc084d85",
+        "is_feasible": true,
+        "rules_version": "2026-11-07.2",
+        "time_gap_hours": "0",
+        "production_cost": "8",
+        "production_spec": "simple",
+        "estimated_finish": "2026-11-07T03:37:38.483448+00:00"
+      },
+      "plan_version_id": "3e28fd5d-cda3-4180-8dca-2664204fd696",
+      "production_cost": "8",
+      "estimated_finish": "2026-11-07T03:37:38.483448+00:00",
+      "final_validation": {
+        "is_valid": true,
+        "content_hash": "2fd775ec98438c1dbe46124606742dcc6dbeed87784e8e29b673b85ea4f90b3d",
+        "validation_id": "eaa567fe-52b9-4e42-9291-15c6d3e5ebe2",
+        "missing_fields": [],
+        "invalid_references": []
+      },
+      "validated_draft_hash": "d2610173d9e74c9ade87a58deca57342417819897b2cc9f5ea10656ecff8c9ae"
+    }
+  ]
+}

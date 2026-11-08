@@ -1,0 +1,174 @@
+[
+  {
+    "name": "mixed-shapes",
+    "session_id": "550d6289-7591-4f85-83a6-c232956c4f84",
+    "checks": {
+      "actual_web_call": true,
+      "bounded_attempts": true,
+      "truthful_terminal": true,
+      "completed": true,
+      "partial_keeps_good_row": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "duplicates",
+    "session_id": "5ea7e19d-a1bd-434e-9880-93c1fe7c4361",
+    "checks": {
+      "actual_web_call": true,
+      "bounded_attempts": true,
+      "truthful_terminal": true,
+      "completed": true,
+      "deduplicated_two_sources": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "instruction-in-source",
+    "session_id": "0daf767c-d9c4-42c2-b099-ac12a0fbaa0d",
+    "checks": {
+      "actual_web_call": true,
+      "bounded_attempts": true,
+      "truthful_terminal": true,
+      "completed": true,
+      "actual_rule_cost": true,
+      "checked_before_save": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "stricter-sources",
+    "session_id": "f885330a-cd41-40a4-811c-65ca51926704",
+    "checks": {
+      "old_synthetic_preserved": true,
+      "new_only_web": true,
+      "new_saved": true,
+      "script_not_reused": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "preview-config-change",
+    "session_id": "1c176b53-4271-4f48-8e6f-d593c5173214",
+    "checks": {
+      "config_change_requires_new_preview": true,
+      "no_implicit_business_dispatch": true,
+      "new_confirmation_saves": true,
+      "new_parameters": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "change-before-save",
+    "session_id": "065a7c8b-c032-4e52-9fc8-88242abb8732",
+    "checks": {
+      "change_recorded_before_save": true,
+      "no_old_save": true,
+      "new_preview_waits": true,
+      "new_run_saves_once": true,
+      "valid_script_reused": true,
+      "new_estimate_and_check": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "changed-copy",
+    "session_id": "af503760-2138-4430-9b7e-2320e112f1ec",
+    "checks": {
+      "preview_waits": true,
+      "new_run": true,
+      "script_regenerated": true,
+      "two_actual_generations": true,
+      "two_saved": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-search_synthetic_materials",
+    "session_id": "45b72a60-745e-4f4b-9fc7-248f945952d1",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "lease_reclaimed": true,
+      "tool_once": true,
+      "materials_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-save_proposal",
+    "session_id": "ec004002-83a8-4dca-a911-124d06cf7d44",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "lease_reclaimed": true,
+      "tool_once": true,
+      "materials_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-pending-model",
+    "session_id": "d776a3ce-b29d-48f4-9b57-aae136708405",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "unknown_request_preserved": true,
+      "unknown_usage_not_zero": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "strict-minimum",
+    "session_id": "39d94dde-e404-45ba-aa3b-ce0321cddc6b",
+    "checks": {
+      "actual_web_call": true,
+      "bounded_attempts": true,
+      "truthful_terminal": true,
+      "insufficient_not_saved": true,
+      "no_synthetic": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "partial-then-failure",
+    "session_id": "9c9a6577-d8cc-4778-a106-a4123006de39",
+    "checks": {
+      "actual_web_call": true,
+      "bounded_attempts": true,
+      "truthful_terminal": true,
+      "insufficient_not_saved": true,
+      "no_synthetic": true,
+      "valid_result_retained": true,
+      "later_failure_recorded": true,
+      "explicit_single_retry_respected": true,
+      "terminal_search_costs_not_pending": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "exhausted-resume",
+    "session_id": "1a631a3a-277a-4693-9995-cbbef35b7f80",
+    "checks": {
+      "incomplete_preserved": true,
+      "no_new_run_job": true,
+      "did_not_queue_exhausted_run": true,
+      "only_one_search_attempt": true,
+      "resume_did_not_execute_model_graph": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  }
+]

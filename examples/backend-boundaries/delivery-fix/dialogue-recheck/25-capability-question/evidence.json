@@ -1,0 +1,157 @@
+{
+  "actual": true,
+  "name": "25-capability-question",
+  "session_id": "6fe7d9b2-a411-4b7f-b36d-73c14825e2b3",
+  "url": "http://127.0.0.1:5173/sessions/6fe7d9b2-a411-4b7f-b36d-73c14825e2b3",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_plan": true,
+    "topic_unset": true,
+    "budget_unset": true,
+    "deadline_unset": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "no_plan": true,
+    "topic_unset": true,
+    "budget_unset": true,
+    "deadline_unset": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "263b73bc-a260-4c5e-a483-47e8d68804e0",
+        "content": "你有付款或登录抖音的工具吗？只询问能力，不改活动需求，不要创建计划或启动任务。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "22c47710-de57-4a62-baaf-84c13c7d02dd",
+        "processing_id": "b1def948-a15a-4a9c-af26-70c98c56c38f",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "新的内容活动",
+        "status": "draft",
+        "session_id": "6fe7d9b2-a411-4b7f-b36d-73c14825e2b3",
+        "last_user_activity_at": "2026-11-07T10:19:39.394136+00:00"
+      },
+      "requirements": {
+        "topic": null,
+        "budget": null,
+        "deadline": null,
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": null,
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 824,
+        "model_output_tokens": 103,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 3,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "活动主题",
+        "内容制作预算（模拟单位）",
+        "活动截止日期与时间"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "6fe7d9b2-a411-4b7f-b36d-73c14825e2b3",
+      "last_user_activity_at": "2026-11-07T10:19:39.394136+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 824,
+      "model_output_tokens": 103,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 3,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动主题",
+      "内容制作预算（模拟单位）",
+      "活动截止日期与时间"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "你有付款或登录抖音的工具吗？只询问能力，不改活动需求，不要创建计划或启动任务。",
+      "item_id": "22c47710-de57-4a62-baaf-84c13c7d02dd",
+      "item_seq": 1,
+      "created_at": "2026-11-07T10:19:39.394136+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "当前需求仍待确认：活动主题；内容制作预算（模拟单位）；活动截止日期与时间。没有启动新任务，旧方案或成功产物不会因本条消息被删除。",
+      "item_id": "00e44e30-69a2-4164-8da5-09ada7923e88",
+      "item_seq": 2,
+      "created_at": "2026-11-07T10:19:43.746661+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T10:19:43.718558+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 824,
+        "output_tokens": 103
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"question\",\n  \"updates\": {},\n  \"evidence\": {\n    \"question\": \"你有付款或登录抖音的工具吗？\"\n  },\n  \"explanation\": \"用户询问系统是否具备付款或登录抖音的功能，但根据系统可用能力，这些实际动作无法执行，因此需要明确告知用户当前系统的功能限制。\",\n  \"capability_evidence\": \"你有付款或登录抖音的工具吗？\",\n  \"resolve_capabilities\": true\n}",
+        "tool_calls": []
+      },
+      "request_id": "b3d4ffe7-4e56-4dd1-82a4-4fe6ada10fbe",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

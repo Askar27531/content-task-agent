@@ -1,0 +1,49 @@
+{
+  "actual": true,
+  "executes_tools": false,
+  "probe": "one-tool-minimal-prompt",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "validate_proposal",
+        "description": "运行方案交付 Skill 的确定性脚本，检查指定交付草稿的必需字段和素材引用，返回 is_valid 及实际检查记录。",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "draft_id": {
+              "title": "Draft Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "draft_id"
+          ],
+          "title": "validate_proposalArguments"
+        }
+      }
+    }
+  ],
+  "http_status": 200,
+  "message_keys": [
+    "role",
+    "content",
+    "tool_calls"
+  ],
+  "content_length": 0,
+  "thinking_length": 0,
+  "tool_calls": [
+    {
+      "id": "call_sz6431vn",
+      "function": {
+        "index": 0,
+        "name": "validate_proposal",
+        "arguments": {
+          "draft_id": "draft-d9d6572b"
+        }
+      }
+    }
+  ],
+  "output_tokens": 30,
+  "done_reason": "stop"
+}

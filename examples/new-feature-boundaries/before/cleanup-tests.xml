@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.572" timestamp="2026-11-08T00:23:47.279180+08:00" hostname="DESKTOP-KUO0FGI"><testcase classname="tests.backend.test_new_feature_boundaries" name="test_cleanup_error_after_committed_save_cannot_announce_task_incomplete" time="0.967"><failure message="AssertionError: assert ('completed' == 'completed'&#10;  &#10;    completed and not [{'kind': 'message', 'role': 'assistant', 'content': '本次处理未完成：测试夹具：保存后的连接清理异常。已取得结果保留，请修正条件或明确续跑。', 'item_id': 'c43ea628-2b94-4667-8aff-92ce896bd8c1', ...}])">tests\backend\test_new_feature_boundaries.py:172: in test_cleanup_error_after_committed_save_cannot_announce_task_incomplete
+    assert state['active_run']['status']=='completed' and not state['timeline']
+E   AssertionError: assert ('completed' == 'completed'
+E     
+E       completed and not [{'kind': 'message', 'role': 'assistant', 'content': '本次处理未完成：测试夹具：保存后的连接清理异常。已取得结果保留，请修正条件或明确续跑。', 'item_id': 'c43ea628-2b94-4667-8aff-92ce896bd8c1', ...}])</failure></testcase></testsuite></testsuites>

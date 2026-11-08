@@ -1,0 +1,107 @@
+[
+  {
+    "name": "cross-run-reuse",
+    "session_id": "526c1d26-08e2-436a-9a8f-578b330bc4dd",
+    "checks": {
+      "both_saved": true,
+      "new_run": true,
+      "script_reused": true,
+      "materials_once": true,
+      "script_once": true,
+      "estimate_recalculated": true,
+      "new_fee_015": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-search_synthetic_materials",
+    "session_id": "fbb4bb0f-7103-4680-8397-37d7e6ffd3d7",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "lease_reclaimed": true,
+      "tool_once": true,
+      "materials_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-save_proposal",
+    "session_id": "4a518ff7-eff0-4ce0-b529-7a719dbf951a",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "lease_reclaimed": true,
+      "tool_once": true,
+      "materials_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-normal",
+    "session_id": "45e283a0-130f-4fa7-9987-1ff06e224756",
+    "checks": {
+      "no_harness_error": false
+    },
+    "passed": false
+  },
+  {
+    "name": "search-empty",
+    "session_id": "8ccc12a4-5e5b-4367-80d8-a6fbb8c6b4dc",
+    "checks": {
+      "no_harness_error": false
+    },
+    "passed": false
+  },
+  {
+    "name": "search-partial",
+    "session_id": "c12915fb-d3e9-4b1d-af71-90298efcb26f",
+    "checks": {
+      "no_harness_error": false
+    },
+    "passed": false
+  },
+  {
+    "name": "search-failure",
+    "session_id": "3f39fcb7-244a-4db3-b7b2-027c78faf1be",
+    "checks": {
+      "no_harness_error": false
+    },
+    "passed": false
+  },
+  {
+    "name": "search-timeout",
+    "session_id": "3b9b4a2c-7ba2-4f4e-a66d-2d6961c0b5ec",
+    "checks": {
+      "no_harness_error": false
+    },
+    "passed": false
+  },
+  {
+    "name": "strict-real-empty",
+    "session_id": "6e72c436-2442-41fa-95ab-f36181504f4e",
+    "checks": {
+      "no_harness_error": false
+    },
+    "passed": false
+  },
+  {
+    "name": "failure-resume-config",
+    "session_id": "df993504-2b5b-4b6b-a842-d7371066456a",
+    "checks": {
+      "first_failed": true,
+      "resumed_saved": true,
+      "same_run_on_resume": true,
+      "old_snapshot_unchanged": true,
+      "old_failed_attempt_preserved": true,
+      "new_run_new_mode": true,
+      "new_mode_parameters": true,
+      "both_saved": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  }
+]

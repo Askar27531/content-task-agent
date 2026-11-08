@@ -1,0 +1,9 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____ test_old_run_cost_endpoint_matches_its_declared_session_model_scope _____
+tests\backend\test_new_feature_boundaries.py:202: in test_old_run_cost_endpoint_matches_its_declared_session_model_scope
+    assert body['model_input_tokens']==40 and body['model_output_tokens']==60
+E   assert (10 == 40)
+=========================== short test summary info ===========================
+FAILED tests/backend/test_new_feature_boundaries.py::test_old_run_cost_endpoint_matches_its_declared_session_model_scope
+1 failed, 36 deselected in 1.58s

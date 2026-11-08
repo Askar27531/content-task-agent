@@ -1,0 +1,14 @@
+.FF.........                                                             [100%]
+================================== FAILURES ===================================
+_____ test_stream_length_termination_is_not_a_successful_reply[deepseek] ______
+tests\backend\test_provider_protocol.py:43: in test_stream_length_termination_is_not_a_successful_reply
+    assert '截断的测试草稿' in calls[-1]['response']['content']
+E   AssertionError: assert '截断的测试草稿' in ''
+______ test_stream_length_termination_is_not_a_successful_reply[ollama] _______
+tests\backend\test_provider_protocol.py:43: in test_stream_length_termination_is_not_a_successful_reply
+    assert '截断的测试草稿' in calls[-1]['response']['content']
+E   AssertionError: assert '截断的测试草稿' in ''
+=========================== short test summary info ===========================
+FAILED tests/backend/test_provider_protocol.py::test_stream_length_termination_is_not_a_successful_reply[deepseek]
+FAILED tests/backend/test_provider_protocol.py::test_stream_length_termination_is_not_a_successful_reply[ollama]
+2 failed, 10 passed in 0.71s

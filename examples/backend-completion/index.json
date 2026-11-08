@@ -1,0 +1,184 @@
+[
+  {
+    "name": "cross-run-reuse",
+    "session_id": "526c1d26-08e2-436a-9a8f-578b330bc4dd",
+    "checks": {
+      "both_saved": true,
+      "new_run": true,
+      "script_reused": true,
+      "materials_once": true,
+      "script_once": true,
+      "estimate_recalculated": true,
+      "new_fee_015": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-search_synthetic_materials",
+    "session_id": "fbb4bb0f-7103-4680-8397-37d7e6ffd3d7",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "lease_reclaimed": true,
+      "tool_once": true,
+      "materials_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-save_proposal",
+    "session_id": "4a518ff7-eff0-4ce0-b529-7a719dbf951a",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "lease_reclaimed": true,
+      "tool_once": true,
+      "materials_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-normal",
+    "session_id": "c8f57c8c-9919-44af-be8a-e62fa1e1b365",
+    "checks": {
+      "web_called": true,
+      "no_fake_save": true,
+      "completed": true,
+      "truthful_terminal": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty",
+    "session_id": "5a98bb8b-9463-4a14-a506-8a350c1ba5c5",
+    "checks": {
+      "web_called": true,
+      "no_fake_save": true,
+      "empty_recorded": true,
+      "truthful_terminal": true,
+      "source_warning_retained": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-partial",
+    "session_id": "5120561b-e2d4-4e2d-ad67-790a6ebfd9db",
+    "checks": {
+      "web_called": true,
+      "no_fake_save": true,
+      "partial_recorded": true,
+      "truthful_terminal": true,
+      "source_warning_retained": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-failure",
+    "session_id": "d66a6090-1c77-4522-9a57-d9d9a5591a49",
+    "checks": {
+      "web_called": true,
+      "no_fake_save": true,
+      "failed_recorded": true,
+      "truthful_terminal": true,
+      "source_warning_retained": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "strict-real-empty",
+    "session_id": "b9f3366a-0bfd-4232-9fb8-8b92c6e3b0af",
+    "checks": {
+      "incomplete": true,
+      "not_saved": true,
+      "no_synthetic": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "failure-resume-config",
+    "session_id": "09f0d5c0-db71-4b88-a3ef-e6bbbc703512",
+    "checks": {
+      "first_failed": true,
+      "resumed_saved": true,
+      "same_run_on_resume": true,
+      "old_snapshot_unchanged": true,
+      "old_failed_attempt_preserved": true,
+      "new_run_new_mode": true,
+      "new_mode_parameters": true,
+      "both_saved": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-cache-protocol",
+    "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+    "checks": {
+      "first_actual_result": true,
+      "second_cached": true,
+      "external_once": true,
+      "cache_not_recharged": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "delivery-invalid-repair",
+    "session_id": "76c267af-0cda-41d0-ba7b-365c3d095dbe",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "check_call_success_but_invalid": true,
+      "new_draft_checked": true,
+      "no_repeat_script": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-pending-model",
+    "session_id": "70ceae6a-9153-4203-bbdc-92b2b29d4ce2",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "unknown_request_preserved": true,
+      "unknown_usage_not_zero": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "stop-before-save",
+    "session_id": "691ccc52-ce5b-49e7-a8d8-2dbf7ec8719a",
+    "checks": {
+      "stop_received_before_save": true,
+      "stopped_without_save": true,
+      "resumed_same_run": true,
+      "completed": true,
+      "saved_once": true,
+      "check_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-timeout",
+    "session_id": "1f1dfb8c-c59d-4d9f-9253-af7a3243d6ea",
+    "checks": {
+      "web_called": true,
+      "no_fake_save": true,
+      "failed_recorded": true,
+      "truthful_terminal": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  }
+]

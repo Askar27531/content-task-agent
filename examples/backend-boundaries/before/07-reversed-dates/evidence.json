@@ -1,0 +1,158 @@
+{
+  "actual": true,
+  "name": "07-reversed-dates",
+  "session_id": "46984e0e-f301-48e6-8785-89a8893a4583",
+  "url": "http://127.0.0.1:5173/sessions/46984e0e-f301-48e6-8785-89a8893a4583",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "bedc7525-0702-4503-848e-5263261a779e",
+        "content": "读书会，预算10，开始2030-12-05 08:00，截止2030-12-03 18:00，北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "0500eb6c-5210-442f-aae0-cc9ecc7c02f9",
+        "processing_id": "82b01a39-836b-48ad-b2db-08cea155b7a2",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书会",
+        "status": "draft",
+        "session_id": "46984e0e-f301-48e6-8785-89a8893a4583",
+        "last_user_activity_at": "2026-11-07T04:59:24.004544+00:00"
+      },
+      "requirements": {
+        "topic": "读书会",
+        "budget": "10",
+        "deadline": null,
+        "start_at": "2030-12-05T08:00+08:00",
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 686,
+        "model_output_tokens": 203,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 8,
+      "pending_changes": null,
+      "mode": "live"
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "46984e0e-f301-48e6-8785-89a8893a4583",
+      "last_user_activity_at": "2026-11-07T04:59:24.004544+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": "10",
+      "deadline": null,
+      "start_at": "2030-12-05T08:00+08:00",
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 686,
+      "model_output_tokens": 203,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 8,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书会，预算10，开始2030-12-05 08:00，截止2030-12-03 18:00，北京时间。",
+      "item_id": "0500eb6c-5210-442f-aae0-cc9ecc7c02f9",
+      "item_seq": 1,
+      "created_at": "2026-11-07T04:59:24.004544+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "活动截止日期与时间尚未提供，请补充完整信息。",
+      "item_id": "966eb649-761e-4a16-a4e6-6e6388e01534",
+      "item_seq": 2,
+      "created_at": "2026-11-07T04:59:36.954611+00:00",
+      "processing": false
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T04:59:36.923419+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 605,
+        "output_tokens": 190
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03T18:00+08:00\",\n    \"start_at\": \"2030-12-05T08:00+08:00\"\n  },\n  \"evidence\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"预算10\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\",\n    \"start_at\": \"开始2030-12-05 08:00\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算、开始时间和截止时间，这些信息被更新到需求中。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "4d44a6dc-5b24-4754-be36-a3011d3b7497",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T04:59:41.777697+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 13
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "活动截止日期与时间尚未提供，请补充完整信息。"
+      },
+      "request_id": "504c8c22-ef12-4e0c-add4-3e56051c1081",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

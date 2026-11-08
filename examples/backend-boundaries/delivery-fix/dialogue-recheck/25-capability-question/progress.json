@@ -1,0 +1,17 @@
+{
+  "session_id": "6fe7d9b2-a411-4b7f-b36d-73c14825e2b3",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "263b73bc-a260-4c5e-a483-47e8d68804e0",
+        "content": "你有付款或登录抖音的工具吗？只询问能力，不改活动需求，不要创建计划或启动任务。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "22c47710-de57-4a62-baaf-84c13c7d02dd",
+        "processing_id": "b1def948-a15a-4a9c-af26-70c98c56c38f",
+        "duplicate": false
+      }
+    }
+  ]
+}

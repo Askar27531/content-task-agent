@@ -1,0 +1,150 @@
+{
+  "actual": true,
+  "name": "05-negative-budget",
+  "session_id": "2b3bb440-223b-470e-9b7f-eb9799bfe0aa",
+  "url": "http://127.0.0.1:5173/sessions/2b3bb440-223b-470e-9b7f-eb9799bfe0aa",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "52031e54-f077-46e3-ba8a-147c6d582de8",
+        "content": "读书会，预算负1个模拟单位，截止2030-12-03 18:00北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "ec53dcba-d73c-4456-ba15-767620bf89db",
+        "processing_id": "7294cb4f-25eb-4f2e-b8aa-1823349dd513",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书会",
+        "status": "draft",
+        "session_id": "2b3bb440-223b-470e-9b7f-eb9799bfe0aa",
+        "last_user_activity_at": "2026-11-07T06:26:24.681407+00:00"
+      },
+      "requirements": {
+        "topic": "读书会",
+        "budget": null,
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": null,
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 827,
+        "model_output_tokens": 160,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "内容制作预算（模拟单位）",
+        "制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "2b3bb440-223b-470e-9b7f-eb9799bfe0aa",
+      "last_user_activity_at": "2026-11-07T06:26:24.681407+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": null,
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 827,
+      "model_output_tokens": 160,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "内容制作预算（模拟单位）",
+      "制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书会，预算负1个模拟单位，截止2030-12-03 18:00北京时间。",
+      "item_id": "ec53dcba-d73c-4456-ba15-767620bf89db",
+      "item_seq": 1,
+      "created_at": "2026-11-07T06:26:24.681407+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "还需要补充：内容制作预算（模拟单位）、制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。。请直接在聊天中补充。",
+      "item_id": "50f0fc25-a5cf-4bb5-83c1-227e7023bbd7",
+      "item_seq": 2,
+      "created_at": "2026-11-07T06:26:30.640664+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T06:26:30.611794+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 827,
+        "output_tokens": 160
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"-1\",\n    \"deadline\": \"2030-12-03T18:00+08:00\"\n  },\n  \"evidence\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"预算负1个模拟单位\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"已更新活动主题为'读书会'，预算为-1个模拟单位，截止日期为2030-12-03 18:00北京时间。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "0a9f22c2-b6ba-4431-8dc0-79beb8deeee9",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

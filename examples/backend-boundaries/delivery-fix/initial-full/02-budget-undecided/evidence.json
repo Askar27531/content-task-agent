@@ -1,0 +1,154 @@
+{
+  "actual": true,
+  "name": "02-budget-undecided",
+  "session_id": "7791d537-cc6b-4035-98f5-96821c832458",
+  "url": "http://127.0.0.1:5173/sessions/7791d537-cc6b-4035-98f5-96821c832458",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "budget_unset": true,
+    "deadline_unset": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "budget_unset": true,
+    "deadline_unset": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "08946442-68ca-434c-9f63-7a2697f714f2",
+        "content": "做个读书活动方案，预算你先别定，我也不知道多少，时间还没想好。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "aa2e3fe5-044e-4d60-b16e-cd47c3729137",
+        "processing_id": "4bdb673f-7506-4890-b659-2b002c940fec",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书活动",
+        "status": "draft",
+        "session_id": "7791d537-cc6b-4035-98f5-96821c832458",
+        "last_user_activity_at": "2026-11-07T09:45:26.690458+00:00"
+      },
+      "requirements": {
+        "topic": "读书活动",
+        "budget": null,
+        "deadline": null,
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": null,
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 818,
+        "model_output_tokens": 68,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "内容制作预算（模拟单位）",
+        "活动截止日期与时间"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书活动",
+      "status": "draft",
+      "session_id": "7791d537-cc6b-4035-98f5-96821c832458",
+      "last_user_activity_at": "2026-11-07T09:45:26.690458+00:00"
+    },
+    "requirements": {
+      "topic": "读书活动",
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 818,
+      "model_output_tokens": 68,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "内容制作预算（模拟单位）",
+      "活动截止日期与时间"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "做个读书活动方案，预算你先别定，我也不知道多少，时间还没想好。",
+      "item_id": "aa2e3fe5-044e-4d60-b16e-cd47c3729137",
+      "item_seq": 1,
+      "created_at": "2026-11-07T09:45:26.690458+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "还需要补充：内容制作预算（模拟单位）、活动截止日期与时间。请直接在聊天中补充。",
+      "item_id": "e3249e0e-21f5-46d0-af39-0a48d46c0fa5",
+      "item_seq": 2,
+      "created_at": "2026-11-07T09:45:32.231476+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T09:45:32.194258+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 818,
+        "output_tokens": 68
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书活动\"\n  },\n  \"evidence\": {\n    \"topic\": \"做个读书活动方案\"\n  },\n  \"explanation\": \"用户明确表达了活动主题为读书活动，因此更新了topic字段。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "afe528fb-843e-4b7b-8379-c9d0bcb99e54",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

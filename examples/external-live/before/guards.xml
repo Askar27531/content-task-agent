@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.644" timestamp="2026-11-08T01:59:45.625120+08:00" hostname="DESKTOP-KUO0FGI"><testcase classname="tests.backend.test_external_configuration" name="test_logical_search_rejects_unimplemented_parameters_before_billed_dispatch" time="0.001"><failure message="Failed: DID NOT RAISE ValidationError">tests\backend\test_external_configuration.py:8: in test_logical_search_rejects_unimplemented_parameters_before_billed_dispatch
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError</failure></testcase></testsuite></testsuites>

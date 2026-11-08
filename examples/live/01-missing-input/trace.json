@@ -1,0 +1,148 @@
+{
+  "actual": true,
+  "model": "qwen3:latest · 本地",
+  "model_calls": [
+    {
+      "at": "2026-11-06T19:35:07.316600+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 573,
+        "output_tokens": 70
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"咖啡新品\"\n  },\n  \"evidence\": {\n    \"topic\": \"为咖啡新品做一场内容推广\"\n  },\n  \"explanation\": \"用户明确表达了活动主题为'咖啡新品'，因此更新了topic字段。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "0c10142b-2c7c-4238-850c-7458d05faea1",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-06T19:35:12.246314+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 21
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "内容制作预算（模拟单位）：待补充。活动截止日期与时间：待补充。"
+      },
+      "request_id": "758c2f5e-1ecc-44ff-95dc-0af4997432a3",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "events": [
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:1",
+      "session_seq": 1,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "message.accepted",
+      "occurred_at": "2026-11-06T19:34:59.452498+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 1
+    },
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:2",
+      "session_seq": 2,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-06T19:35:07.316600+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 2
+    },
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:3",
+      "session_seq": 3,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "requirements.updated",
+      "occurred_at": "2026-11-06T19:35:07.334103+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 3
+    },
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:4",
+      "session_seq": 4,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "message.processing",
+      "occurred_at": "2026-11-06T19:35:07.347697+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 4
+    },
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:5",
+      "session_seq": 5,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "message.delta",
+      "occurred_at": "2026-11-06T19:35:11.934030+00:00",
+      "run_id": null,
+      "payload": {
+        "message_id": "55f8b20f-b397-4b56-b74e-dcf4969263e6"
+      },
+      "entity_version": 5
+    },
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:6",
+      "session_seq": 6,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "message.delta",
+      "occurred_at": "2026-11-06T19:35:12.097750+00:00",
+      "run_id": null,
+      "payload": {
+        "message_id": "55f8b20f-b397-4b56-b74e-dcf4969263e6"
+      },
+      "entity_version": 6
+    },
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:7",
+      "session_seq": 7,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-06T19:35:12.246314+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 7
+    },
+    {
+      "event_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3:8",
+      "session_seq": 8,
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "type": "message.completed",
+      "occurred_at": "2026-11-06T19:35:12.253728+00:00",
+      "run_id": null,
+      "payload": {
+        "message_id": "55f8b20f-b397-4b56-b74e-dcf4969263e6"
+      },
+      "entity_version": 8
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "d1aa67f1-75dd-4696-a50f-02d22c16670e",
+      "kind": "message",
+      "status": "done",
+      "lease_epoch": 1,
+      "error": null
+    }
+  ]
+}

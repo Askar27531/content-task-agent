@@ -1,0 +1,252 @@
+{
+  "actual_model": true,
+  "actual_business_mcp": true,
+  "external_service_fixture": false,
+  "real_external_tavily": false,
+  "name": "deepseek-vague",
+  "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+  "checks": {
+    "no_execution": true,
+    "budget_not_invented": true,
+    "deadline_not_invented": true,
+    "no_business_calls": true,
+    "clarification_present": true,
+    "no_harness_error": true
+  },
+  "passed": true,
+  "inputs": [
+    {
+      "content": "帮读书会做点内容，预算你看着办吧，最近做完就行。先聊聊，不要执行。",
+      "receipt": {
+        "message_id": "b04dfeba-f26d-497e-86fe-d9f73e0ff131",
+        "processing_id": "54fa52eb-a40e-41ff-a1d3-e65425d983ab",
+        "duplicate": false
+      },
+      "queue": "test-c66e8923:message",
+      "view_context": {}
+    }
+  ],
+  "before": null,
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+      "last_user_activity_at": "2026-11-07T18:01:58.540243+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 1117,
+      "model_cost_currency": null,
+      "model_output_tokens": 84,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 5,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "内容制作预算（模拟单位）",
+      "活动截止日期与时间"
+    ]
+  },
+  "state": {
+    "runs": {},
+    "draft": null,
+    "plans": [],
+    "scripts": {},
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+      "last_user_activity_at": "2026-11-07T18:01:58.540243+00:00"
+    },
+    "timeline": [
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "帮读书会做点内容，预算你看着办吧，最近做完就行。先聊聊，不要执行。",
+        "item_id": "b04dfeba-f26d-497e-86fe-d9f73e0ff131",
+        "item_seq": 1,
+        "created_at": "2026-11-07T18:01:58.540243+00:00",
+        "resource_only_update": false,
+        "is_requirement_update": true
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "还需要补充：内容制作预算（模拟单位）、活动截止日期与时间。请直接在聊天中补充。",
+        "item_id": "1d5cd86e-40cf-4a87-bbcc-6e7d5da48114",
+        "item_seq": 2,
+        "created_at": "2026-11-07T18:02:02.169327+00:00"
+      }
+    ],
+    "estimates": {},
+    "materials": [],
+    "proposals": [],
+    "active_run": null,
+    "model_calls": [
+      {
+        "at": "2026-11-07T18:02:02.130362+00:00",
+        "kind": "understand_message",
+        "model": "deepseek-chat",
+        "usage": {
+          "input_tokens": 1117,
+          "output_tokens": 84
+        },
+        "run_id": null,
+        "provider": "deepseek",
+        "response": {
+          "role": "assistant",
+          "content": "{\"action\":\"update\",\"updates\":{\"topic\":\"读书会\"},\"evidence\":{\"topic\":\"帮读书会做点内容\"},\"uncertain_fields\":[\"budget\",\"deadline\"],\"explanation\":\"用户明确要求先讨论、不执行，因此为update；主题为读书会；预算“你看着办”和截止“最近”均模糊，不替用户取值，列入uncertain_fields。\"}",
+          "tool_calls": [],
+          "finish_reason": "stop"
+        },
+        "request_id": "669b288e-2f16-4314-bf30-65bc1a42ac8c",
+        "available_tools": []
+      }
+    ],
+    "skill_loads": [],
+    "validations": {},
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 1117,
+      "model_cost_currency": null,
+      "model_output_tokens": 84,
+      "model_unknown_usage_calls": 0
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "model_display": "qwen3:latest · 本地",
+    "pending_patch": null,
+    "fault_consumed": [],
+    "client_messages": {
+      "6f6654ea-8052-4bd0-b000-ee248322ed92": {
+        "hash": "646e612c8b3d39def57a2e3e543a127019614a3baccefb89af32ed1fca602a79",
+        "job_id": "54fa52eb-a40e-41ff-a1d3-e65425d983ab",
+        "message_id": "b04dfeba-f26d-497e-86fe-d9f73e0ff131"
+      }
+    },
+    "pending_changes": null,
+    "input_field_issues": {},
+    "last_event_seq": 5
+  },
+  "tool_calls": [],
+  "cost_entries": [
+    {
+      "entry_id": "1d693ec2-3e98-4970-ab2e-67670f8676f2",
+      "charge_key": "model:669b288e-2f16-4314-bf30-65bc1a42ac8c",
+      "run_id": null,
+      "kind": "understand_message",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 1117,
+        "output_tokens": 84
+      },
+      "created_at": "2026-11-07T18:02:00.701391+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "304a541f-e325-4963-af17-e4d0d8ecf170:1",
+      "session_seq": 1,
+      "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+      "type": "message.accepted",
+      "occurred_at": "2026-11-07T18:01:58.540243+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 1
+    },
+    {
+      "event_id": "304a541f-e325-4963-af17-e4d0d8ecf170:2",
+      "session_seq": 2,
+      "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T18:02:00.704464+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "669b288e-2f16-4314-bf30-65bc1a42ac8c"
+      },
+      "entity_version": 2
+    },
+    {
+      "event_id": "304a541f-e325-4963-af17-e4d0d8ecf170:3",
+      "session_seq": 3,
+      "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T18:02:02.134118+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "669b288e-2f16-4314-bf30-65bc1a42ac8c"
+      },
+      "entity_version": 3
+    },
+    {
+      "event_id": "304a541f-e325-4963-af17-e4d0d8ecf170:4",
+      "session_seq": 4,
+      "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+      "type": "requirements.updated",
+      "occurred_at": "2026-11-07T18:02:02.154190+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 4
+    },
+    {
+      "event_id": "304a541f-e325-4963-af17-e4d0d8ecf170:5",
+      "session_seq": 5,
+      "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+      "type": "message.completed",
+      "occurred_at": "2026-11-07T18:02:02.169327+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 5
+    }
+  ],
+  "jobs": [
+    {
+      "id": "54fa52eb-a40e-41ff-a1d3-e65425d983ab",
+      "kind": "test-c66e8923:message",
+      "status": "done",
+      "lease_epoch": 1,
+      "error": null
+    }
+  ],
+  "harness_error": null,
+  "real_external_deepseek": true
+}

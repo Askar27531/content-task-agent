@@ -1,0 +1,213 @@
+{
+  "finding": "Model invented start_at on a control-only message; added literal evidence validation and structured-output schema validation.",
+  "actual_timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "为读书分享活动做内容方案，用精简视觉 simple，预算10个模拟单位，截止2030-12-03 18:00北京时间，允许合成资料。先给计划。",
+      "item_id": "f1117634-bc18-484a-bd74-c47049243c7d",
+      "item_seq": 1,
+      "created_at": "2026-11-06T19:15:44.911225+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "4d03509d-53ac-4142-b02a-9f0f5fc9394d",
+      "item_seq": 2,
+      "created_at": "2026-11-06T19:15:52.240689+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "开始",
+      "item_id": "70501aeb-5b4e-4652-94d4-a571a1292689",
+      "item_seq": 3,
+      "created_at": "2026-11-06T19:15:58.104001+00:00"
+    },
+    {
+      "kind": "tool",
+      "item_id": "b4d97f10-369d-4b49-ad79-64b4de2be26a",
+      "item_seq": 4,
+      "created_at": "2026-11-06T19:16:09.118714+00:00",
+      "tool_call_id": "fd58e8c8-6bd0-4184-83fb-10d16966883d"
+    },
+    {
+      "kind": "tool",
+      "item_id": "fc3f88cf-db12-4962-814f-6b649dd906e1",
+      "item_seq": 5,
+      "created_at": "2026-11-06T19:16:10.761429+00:00",
+      "tool_call_id": "990fc739-6d7c-4e40-a414-a1eecb75bca7"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "本次处理未完成：unhandled errors in a TaskGroup (1 sub-exception)。已取得结果保留，请修正条件或明确续跑。",
+      "item_id": "9966750c-b8fa-46e4-92ee-6ed04d568901",
+      "item_seq": 6,
+      "created_at": "2026-11-06T19:16:15.053096+00:00"
+    }
+  ],
+  "actual_model_calls": [
+    {
+      "at": "2026-11-06T19:15:49.108016+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 481,
+        "output_tokens": 107
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书分享活动\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03T18:00+08:00\",\n    \"real_sources_required\": false\n  },\n  \"explanation\": \"用户提供了活动主题、预算、截止时间，并要求先给计划。根据规则，当用户提供或修改需求时，必须执行update操作。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "026e010b-061f-4073-8efd-6cfb47089bb1",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-06T19:15:52.216356+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 720,
+        "output_tokens": 75
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"production_spec\": \"simple\",\n  \"summary\": \"读书分享活动内容方案计划，采用精简视觉风格，预算10个模拟单位，截止时间2030-12-03 18:00北京时间。计划包括活动目标、受众假设、内容组合和传播主张。\",\n  \"changes\": []\n}",
+        "tool_calls": []
+      },
+      "request_id": "18741733-43dd-468f-9cdc-57c3d4da3820",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-06T19:15:57.654652+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+      },
+      "request_id": "7a03b520-258e-464e-b126-9b64e63f218e",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-06T19:16:07.808864+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 461,
+        "output_tokens": 111
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\"action\": \"execute\", \"updates\": { \"start_at\": \"2030-11-01T08:00+08:00\" }, \"explanation\": \"按当前方案开始执行读书分享活动，预算为10，截止时间为2030-12-03T18:00+08:00，活动开始时间为2030-11-01T08:00+08:00。\"}",
+        "tool_calls": []
+      },
+      "request_id": "9faf58b0-2648-466d-beec-08aea2f0d75f",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-06T19:16:09.108598+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 695,
+        "output_tokens": 23
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_y4rn83r3",
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "arguments": {
+                "skill_id": "campaign-planning"
+              }
+            }
+          }
+        ]
+      },
+      "request_id": "47c75038-924e-4be5-af7f-f047dbde7877",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-06T19:16:10.749964+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 1069,
+        "output_tokens": 35
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_17wue3u8",
+            "type": "function",
+            "function": {
+              "name": "read_skill_resource",
+              "arguments": {
+                "skill_id": "campaign-planning",
+                "resource_id": "references/content-patterns.md"
+              }
+            }
+          }
+        ]
+      },
+      "request_id": "7692be09-df0b-4218-8fe0-021d09a0d07c",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-06T19:16:15.013361+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 1371,
+        "output_tokens": 107
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"production_spec\": \"premium\",\n    \"summary\": \"读书分享活动计划初稿：目标为促进书籍交流与知识分享，受众假设为对阅读有兴趣的群体。内容组合包括高规格视觉与文案，具体细节待后续工具核验。\",\n    \"changes\": [\"根据用户要求选择高规格视觉\", \"内容组合思路参考内容模式\"]\n  },\n  \"required\": [\"production_spec\", \"summary\", \"changes\"]\n}",
+        "tool_calls": []
+      },
+      "request_id": "9e58eebf-8a2b-4b1c-816e-d0f220f0ea53",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    }
+  ]
+}

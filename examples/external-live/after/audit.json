@@ -1,0 +1,146 @@
+[
+  {
+    "name": "deepseek-vague",
+    "proposal_count": 0,
+    "model_calls": 1,
+    "tool_calls": 0,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "combined-failure-resume",
+    "proposal_count": 1,
+    "model_calls": 19,
+    "tool_calls": 18,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "tavily-timeout-strict",
+    "proposal_count": 0,
+    "model_calls": 8,
+    "tool_calls": 5,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "tavily-timeout-fallback",
+    "proposal_count": 1,
+    "model_calls": 20,
+    "tool_calls": 19,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "real-tavily-cache-guards",
+    "proposal_count": 0,
+    "model_calls": 0,
+    "tool_calls": 2,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "combined-replan-repeat",
+    "proposal_count": 1,
+    "model_calls": 20,
+    "tool_calls": 16,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "deepseek-low-budget",
+    "proposal_count": 0,
+    "model_calls": 12,
+    "tool_calls": 10,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "audit-auto-failure-replan",
+    "proposal_count": 1,
+    "model_calls": 18,
+    "tool_calls": 17,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  }
+]

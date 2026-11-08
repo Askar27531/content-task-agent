@@ -1,0 +1,324 @@
+{
+  "session_id": "2acca2cd-0152-4bcc-8125-5d9e80dac465",
+  "actual_mcp": true,
+  "llm_selection_test": false,
+  "fixture_preconditions": true,
+  "checks": {
+    "old_skill_body_preserved": true,
+    "old_reference_preserved": true,
+    "missing_reference_fails": true,
+    "missing_checker_version_blocks": true,
+    "changed_content_rejects_old_validation": true,
+    "old_plan_estimate_rejected": true,
+    "server_rechecks_phase": true,
+    "schema_mismatch_blocks_resume": true,
+    "no_proposal_saved": true
+  },
+  "passed": true,
+  "results": [
+    {
+      "status": "success",
+      "data": {
+        "body": "旧版 Skill 正文：冻结快照协议测试夹具。",
+        "version": "6c22330900cd41a65bfc66d3866879b8d6784368acbd786361da777d694cc3e3",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "error": null,
+      "tool_call_id": "4ada5bd5-4f0f-4c6a-bc99-b534c21e6b8d"
+    },
+    {
+      "status": "success",
+      "data": {
+        "body": "旧版参考：冻结快照协议测试夹具。",
+        "version": "6c22330900cd41a65bfc66d3866879b8d6784368acbd786361da777d694cc3e3",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "error": null,
+      "tool_call_id": "aa9452af-5e5c-47fb-bc0d-8842581ff20d"
+    },
+    {
+      "status": "failed",
+      "data": {
+        "error": "Skill 资源未注册。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "Skill 资源未注册。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "error": "Skill 资源未注册。",
+      "tool_call_id": "6f549e38-a36d-419c-9c51-74743c589321"
+    },
+    {
+      "status": "failed",
+      "data": {
+        "error": "交付检查代码与运行快照不兼容，未伪造新版检查结果。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "交付检查代码与运行快照不兼容，未伪造新版检查结果。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "error": "交付检查代码与运行快照不兼容，未伪造新版检查结果。",
+      "tool_call_id": "2350bf41-af2f-49e0-8429-39331cd4ede8"
+    },
+    {
+      "status": "success",
+      "data": {
+        "draft_id": "guard-draft",
+        "is_valid": true,
+        "content_hash": "131c53bc3e3c00cc67f7f28d0f3bd5da50db210bc8a7fd340f0d791e62754394",
+        "validation_id": "c5da893a-d3ce-4e41-8add-6c79aa076b85",
+        "missing_fields": [],
+        "plan_version_id": "916edfad-20b6-406b-bdfe-5a0ecc747f0b",
+        "invalid_references": []
+      },
+      "error": null,
+      "tool_call_id": "f241f8f4-5d4c-451d-92f0-f23a7d6c6662"
+    },
+    {
+      "status": "failed",
+      "data": {
+        "error": "缺少匹配当前内容、已通过的交付检查。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "缺少匹配当前内容、已通过的交付检查。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "error": "缺少匹配当前内容、已通过的交付检查。",
+      "tool_call_id": "fcd9e7ca-a550-4196-8675-6ab9c554d5bc"
+    },
+    {
+      "status": "failed",
+      "data": {
+        "error": "检查或估算已过期，必须针对当前计划重新校验。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "检查或估算已过期，必须针对当前计划重新校验。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "error": "检查或估算已过期，必须针对当前计划重新校验。",
+      "tool_call_id": "0f8e1212-af84-4480-b2ce-04bf5a638cec"
+    },
+    {
+      "status": "failed",
+      "data": {
+        "error": "Error executing tool save_proposal: 当前运行阶段不允许该业务工具。",
+        "result_unknown": true
+      },
+      "error": "Error executing tool save_proposal: 当前运行阶段不允许该业务工具。",
+      "tool_call_id": "0f9442eb-b9bd-4820-b20a-b727f6da5d25"
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_call_id": "0f9442eb-b9bd-4820-b20a-b727f6da5d25",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "13e5a0fb-f074-483e-8375-4f5e29b500da",
+      "tool_name": "save_proposal",
+      "display_name": "保存活动方案",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "estimate_id": "af66643b-5452-4de5-83d4-e4643aa5865c",
+        "validation_id": "c5da893a-d3ce-4e41-8add-6c79aa076b85"
+      },
+      "output": {
+        "error": "Error executing tool save_proposal: 当前运行阶段不允许该业务工具。",
+        "result_unknown": true
+      },
+      "started_at": "2026-11-07T15:23:51.136568+00:00",
+      "duration_ms": 30,
+      "error": "Error executing tool save_proposal: 当前运行阶段不允许该业务工具。",
+      "attempt": 3
+    },
+    {
+      "tool_call_id": "4ada5bd5-4f0f-4c6a-bc99-b534c21e6b8d",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "f4d84a50-0fbf-48b2-ae95-c8f1c0c9e608",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "旧版 Skill 正文：冻结快照协议测试夹具。",
+        "version": "6c22330900cd41a65bfc66d3866879b8d6784368acbd786361da777d694cc3e3",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T15:23:50.607739+00:00",
+      "duration_ms": 60,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "aa9452af-5e5c-47fb-bc0d-8842581ff20d",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "f4d84a50-0fbf-48b2-ae95-c8f1c0c9e608",
+      "tool_name": "read_skill_resource",
+      "display_name": "读取 Skill 参考",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "output": {
+        "body": "旧版参考：冻结快照协议测试夹具。",
+        "version": "6c22330900cd41a65bfc66d3866879b8d6784368acbd786361da777d694cc3e3",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "started_at": "2026-11-07T15:23:50.708356+00:00",
+      "duration_ms": 25,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "6f549e38-a36d-419c-9c51-74743c589321",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "f4d84a50-0fbf-48b2-ae95-c8f1c0c9e608",
+      "tool_name": "read_skill_resource",
+      "display_name": "读取 Skill 参考",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "skill_id": "campaign-planning",
+        "resource_id": "references/unavailable.md"
+      },
+      "output": {
+        "error": "Skill 资源未注册。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "Skill 资源未注册。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "started_at": "2026-11-07T15:23:50.766512+00:00",
+      "duration_ms": 25,
+      "error": "Skill 资源未注册。",
+      "attempt": 2
+    },
+    {
+      "tool_call_id": "2350bf41-af2f-49e0-8429-39331cd4ede8",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "f4d84a50-0fbf-48b2-ae95-c8f1c0c9e608",
+      "tool_name": "validate_proposal",
+      "display_name": "检查方案完整性",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "draft_id": "guard-draft"
+      },
+      "output": {
+        "error": "交付检查代码与运行快照不兼容，未伪造新版检查结果。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "交付检查代码与运行快照不兼容，未伪造新版检查结果。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "started_at": "2026-11-07T15:23:50.843048+00:00",
+      "duration_ms": 27,
+      "error": "交付检查代码与运行快照不兼容，未伪造新版检查结果。",
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "f241f8f4-5d4c-451d-92f0-f23a7d6c6662",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "f4d84a50-0fbf-48b2-ae95-c8f1c0c9e608",
+      "tool_name": "validate_proposal",
+      "display_name": "检查方案完整性",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "draft_id": "guard-draft"
+      },
+      "output": {
+        "draft_id": "guard-draft",
+        "is_valid": true,
+        "content_hash": "131c53bc3e3c00cc67f7f28d0f3bd5da50db210bc8a7fd340f0d791e62754394",
+        "validation_id": "c5da893a-d3ce-4e41-8add-6c79aa076b85",
+        "missing_fields": [],
+        "plan_version_id": "916edfad-20b6-406b-bdfe-5a0ecc747f0b",
+        "invalid_references": []
+      },
+      "started_at": "2026-11-07T15:23:50.916368+00:00",
+      "duration_ms": 26,
+      "error": null,
+      "attempt": 2
+    },
+    {
+      "tool_call_id": "fcd9e7ca-a550-4196-8675-6ab9c554d5bc",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "13e5a0fb-f074-483e-8375-4f5e29b500da",
+      "tool_name": "save_proposal",
+      "display_name": "保存活动方案",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "estimate_id": "af66643b-5452-4de5-83d4-e4643aa5865c",
+        "validation_id": "c5da893a-d3ce-4e41-8add-6c79aa076b85"
+      },
+      "output": {
+        "error": "缺少匹配当前内容、已通过的交付检查。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "缺少匹配当前内容、已通过的交付检查。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "started_at": "2026-11-07T15:23:50.986028+00:00",
+      "duration_ms": 31,
+      "error": "缺少匹配当前内容、已通过的交付检查。",
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "0f8e1212-af84-4480-b2ce-04bf5a638cec",
+      "run_id": "75b95b4c-092c-408a-a47d-4a35da98c8d1",
+      "step_id": "13e5a0fb-f074-483e-8375-4f5e29b500da",
+      "tool_name": "save_proposal",
+      "display_name": "保存活动方案",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "estimate_id": "af66643b-5452-4de5-83d4-e4643aa5865c",
+        "validation_id": "c5da893a-d3ce-4e41-8add-6c79aa076b85"
+      },
+      "output": {
+        "error": "检查或估算已过期，必须针对当前计划重新校验。",
+        "error_details": {
+          "code": "TOOL_ERROR",
+          "message": "检查或估算已过期，必须针对当前计划重新校验。",
+          "retryable": false,
+          "result_unknown": false
+        }
+      },
+      "started_at": "2026-11-07T15:23:51.060194+00:00",
+      "duration_ms": 30,
+      "error": "检查或估算已过期，必须针对当前计划重新校验。",
+      "attempt": 2
+    }
+  ],
+  "schema_error": "MCP工具schema与运行固定版本不兼容，恢复受阻；已有产物保留。"
+}

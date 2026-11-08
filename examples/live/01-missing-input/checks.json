@@ -1,0 +1,6 @@
+{
+  "no_run": true,
+  "no_plan": true,
+  "asks_budget_and_deadline": true,
+  "no_business_calls": true
+}

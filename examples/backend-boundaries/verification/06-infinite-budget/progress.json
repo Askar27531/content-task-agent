@@ -1,0 +1,17 @@
+{
+  "session_id": "8a92e7be-b3f5-4ab4-84db-717801763ec0",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "ef25432a-6f90-465d-ba9d-44a4eddb1830",
+        "content": "读书会，制作预算Infinity，截止2030-12-03 18:00北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "8d2ee22c-af6f-4071-a4d8-3d284754e92e",
+        "processing_id": "9fc8e2e0-2363-4b41-97d1-9067152315be",
+        "duplicate": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "actual": true,
+  "name": "07-reversed-dates",
+  "session_id": "f1597105-2fa4-49cd-95ce-b629faaf498f",
+  "url": "http://127.0.0.1:5173/sessions/f1597105-2fa4-49cd-95ce-b629faaf498f",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_plan": false,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": false,
+  "expected": {
+    "no_run": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "c31e9e29-a42a-4b6b-8b39-65183f878cea",
+        "content": "读书会，预算10，开始2030-12-05 08:00，截止2030-12-03 18:00，北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "71065677-3407-4f33-9e3e-25dedf4d0447",
+        "processing_id": "e33f8682-192c-4530-b2c5-cbb6ff4767da",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书会",
+        "status": "draft",
+        "session_id": "f1597105-2fa4-49cd-95ce-b629faaf498f",
+        "last_user_activity_at": "2026-11-07T05:24:56.765756+00:00"
+      },
+      "requirements": {
+        "topic": "读书会",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [
+        {
+          "label": "高规格内容方案",
+          "steps": [
+            {
+              "key": "materials",
+              "goal": "取得适合主题的资料，并保留可追溯来源",
+              "tool": "search_synthetic_materials",
+              "title": "检索活动素材",
+              "status": "pending",
+              "step_id": "9e44f2d4-c602-4cd2-abc8-029fc0e67bfd",
+              "dependencies": [],
+              "tool_call_ids": []
+            },
+            {
+              "key": "script",
+              "goal": "使用真实取得的资料形成可用文案",
+              "tool": "generate_script",
+              "title": "生成内容脚本",
+              "status": "pending",
+              "step_id": "7d9f045a-c5ed-4b57-a402-03ee58b36af2",
+              "dependencies": [
+                "materials"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "estimate",
+              "goal": "由规则核验制作预算与活动完成期限",
+              "tool": "estimate_proposal",
+              "title": "核算制作成本与排期",
+              "status": "pending",
+              "step_id": "5d5487cf-69b4-4ae8-ac37-c7987ca3850c",
+              "dependencies": [
+                "script"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "validate",
+              "goal": "核对必要章节、字段与合法素材引用",
+              "tool": "validate_proposal",
+              "title": "检查方案完整性",
+              "status": "pending",
+              "step_id": "ae7ff71e-555d-4724-86f4-85d876cbfbcb",
+              "dependencies": [
+                "estimate"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "save",
+              "goal": "事务保存当前已检查且可行的方案",
+              "tool": "save_proposal",
+              "title": "保存活动方案",
+              "status": "pending",
+              "step_id": "7c61edcd-28f8-4c8a-abd2-dbbe83aa17d0",
+              "dependencies": [
+                "validate"
+              ],
+              "tool_call_ids": []
+            }
+          ],
+          "status": "ready",
+          "summary": "读书会活动计划初稿：目标为促进阅读交流，受众为对书籍感兴趣的群体，内容组合采用高规格视觉。活动开始时间为2030-12-05 08:00，截止时间为2030-12-03 18:00，预算为10。内容组合思路参考了内容模式，具体细节需进一步核验。",
+          "version": 1,
+          "requirements": {
+            "topic": "读书会",
+            "budget": "10",
+            "deadline": "2030-12-03T18:00+08:00",
+            "start_at": null,
+            "real_sources_required": false
+          },
+          "change_summary": [
+            "根据用户要求选择高规格视觉",
+            "活动时间与截止时间已明确",
+            "内容组合思路已参考内容模式"
+          ],
+          "plan_version_id": "d7d30422-5bb2-4915-94e2-228cca95a3c9",
+          "production_spec": "premium"
+        }
+      ],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 2787,
+        "model_output_tokens": 339,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 15,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": []
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "f1597105-2fa4-49cd-95ce-b629faaf498f",
+      "last_user_activity_at": "2026-11-07T05:24:56.765756+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [
+      {
+        "label": "高规格内容方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "pending",
+            "step_id": "9e44f2d4-c602-4cd2-abc8-029fc0e67bfd",
+            "dependencies": [],
+            "tool_call_ids": []
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "7d9f045a-c5ed-4b57-a402-03ee58b36af2",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "5d5487cf-69b4-4ae8-ac37-c7987ca3850c",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "ae7ff71e-555d-4724-86f4-85d876cbfbcb",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "7c61edcd-28f8-4c8a-abd2-dbbe83aa17d0",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "ready",
+        "summary": "读书会活动计划初稿：目标为促进阅读交流，受众为对书籍感兴趣的群体，内容组合采用高规格视觉。活动开始时间为2030-12-05 08:00，截止时间为2030-12-03 18:00，预算为10。内容组合思路参考了内容模式，具体细节需进一步核验。",
+        "version": 1,
+        "requirements": {
+          "topic": "读书会",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00+08:00",
+          "start_at": null,
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "根据用户要求选择高规格视觉",
+          "活动时间与截止时间已明确",
+          "内容组合思路已参考内容模式"
+        ],
+        "plan_version_id": "d7d30422-5bb2-4915-94e2-228cca95a3c9",
+        "production_spec": "premium"
+      }
+    ],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 2787,
+      "model_output_tokens": 339,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 15,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书会，预算10，开始2030-12-05 08:00，截止2030-12-03 18:00，北京时间。",
+      "item_id": "71065677-3407-4f33-9e3e-25dedf4d0447",
+      "item_seq": 1,
+      "created_at": "2026-11-07T05:24:56.765756+00:00"
+    },
+    {
+      "kind": "tool",
+      "item_id": "5914664d-370a-4f73-901c-0d621595b408",
+      "item_seq": 2,
+      "created_at": "2026-11-07T05:25:04.079258+00:00",
+      "tool_call_id": "bce12a8b-a971-40c6-88f0-64f5ae125a4c"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "1e86c1db-3ece-4105-8b0b-4c61530e6d92",
+      "item_seq": 3,
+      "created_at": "2026-11-07T05:25:09.223619+00:00",
+      "processing": false
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T05:25:02.653201+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 843,
+        "output_tokens": 152
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03T18:00+08:00\",\n    \"start_at\": null\n  },\n  \"evidence\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"预算10\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算和截止日期，但未明确开始时间。开始时间未提供，因此保持为null。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "462314f8-955d-4c00-8f19-d0e95e986145",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T05:25:04.067541+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 735,
+        "output_tokens": 23
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_qyt70qoi",
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "arguments": {
+                "skill_id": "campaign-planning"
+              }
+            }
+          }
+        ]
+      },
+      "request_id": "dae50e9d-9631-45d9-b05c-64bf2c5bbcd9",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T05:25:09.196645+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 1109,
+        "output_tokens": 133
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"production_spec\": \"premium\",\n  \"summary\": \"读书会活动计划初稿：目标为促进阅读交流，受众为对书籍感兴趣的群体，内容组合采用高规格视觉。活动开始时间为2030-12-05 08:00，截止时间为2030-12-03 18:00，预算为10。内容组合思路参考了内容模式，具体细节需进一步核验。\",\n  \"changes\": [\"根据用户要求选择高规格视觉\", \"活动时间与截止时间已明确\", \"内容组合思路已参考内容模式\"]\n}",
+        "tool_calls": []
+      },
+      "request_id": "c0c5b1d9-cf11-4ddb-9b83-eb17a0b4dadc",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T05:25:14.255808+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+      },
+      "request_id": "595fb436-46c2-48a8-9851-472d9afeee04",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_call_id": "bce12a8b-a971-40c6-88f0-64f5ae125a4c",
+      "run_id": null,
+      "step_id": "context-e33f8682",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T05:25:04.086447+00:00",
+      "duration_ms": 65,
+      "error": null,
+      "attempt": 1
+    }
+  ],
+  "test_error": null
+}

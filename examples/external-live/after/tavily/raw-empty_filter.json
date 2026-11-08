@@ -1,0 +1,19 @@
+{
+  "structured_content": {
+    "query": "World Book and Copyright Day",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [],
+    "response_time": 0.74,
+    "request_id": "141ed270-9be7-411f-ae04-cb432a8a5e2b",
+    "auth_mode": "keyed"
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"query\":\"World Book and Copyright Day\",\"follow_up_questions\":null,\"answer\":null,\"images\":[],\"results\":[],\"response_time\":0.74,\"request_id\":\"141ed270-9be7-411f-ae04-cb432a8a5e2b\",\"auth_mode\":\"keyed\"}"
+    }
+  ],
+  "is_error": false
+}

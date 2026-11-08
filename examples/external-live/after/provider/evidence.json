@@ -1,0 +1,179 @@
+{
+  "session_id": "780a5e98-d410-44ca-a976-1bf95c34942e",
+  "real_deepseek": true,
+  "local_echo_tool_explicit": true,
+  "checks": {
+    "native_tool_call": true,
+    "tool_result_replayed": true,
+    "real_stream_deltas": true,
+    "bad_model_rejected": true,
+    "truncated_rejected": true,
+    "invalid_auth_rejected": true,
+    "real_usage_recorded": true,
+    "truncation_usage_retained": true
+  },
+  "passed": true,
+  "responses": {
+    "tool_selection": {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_00_YhhR4lV4VxOBEAoB4A0o1649",
+          "type": "function",
+          "function": {
+            "name": "boundary_echo",
+            "arguments": {
+              "value": "external-boundary-ok"
+            }
+          }
+        }
+      ],
+      "finish_reason": "tool_calls"
+    },
+    "tool_replay": {
+      "role": "assistant",
+      "content": "工具调用成功，返回结果为：`external-boundary-ok`。",
+      "tool_calls": [],
+      "finish_reason": "stop"
+    },
+    "bad_model": [
+      {
+        "type": "HTTPStatusError",
+        "message": "Client error '400 Bad Request' for url 'https://api.deepseek.com/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+      }
+    ],
+    "truncated": [
+      {
+        "type": "ValueError",
+        "message": "模型输出达到长度限制，未把截断内容当作有效交付。"
+      }
+    ],
+    "invalid_auth": [
+      {
+        "type": "HTTPStatusError",
+        "message": "Client error '401 Authorization Required' for url 'https://api.deepseek.com/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      }
+    ]
+  },
+  "model_calls": [
+    {
+      "at": "2026-11-07T17:58:25.692360+00:00",
+      "kind": "real_native_tool_selection",
+      "model": "deepseek-chat",
+      "usage": {
+        "input_tokens": 291,
+        "output_tokens": 43
+      },
+      "run_id": null,
+      "provider": "deepseek",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_00_YhhR4lV4VxOBEAoB4A0o1649",
+            "type": "function",
+            "function": {
+              "name": "boundary_echo",
+              "arguments": {
+                "value": "external-boundary-ok"
+              }
+            }
+          }
+        ],
+        "finish_reason": "tool_calls"
+      },
+      "request_id": "99c46487-adb0-4f82-ae7d-3432fbc59d9f",
+      "available_tools": [
+        "boundary_echo"
+      ]
+    },
+    {
+      "at": "2026-11-07T17:58:26.307150+00:00",
+      "kind": "real_native_tool_replay",
+      "model": "deepseek-chat",
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 15
+      },
+      "run_id": null,
+      "provider": "deepseek",
+      "response": {
+        "role": "assistant",
+        "content": "工具调用成功，返回结果为：`external-boundary-ok`。",
+        "tool_calls": [],
+        "finish_reason": "stop"
+      },
+      "request_id": "5d747e40-8349-4cc6-a725-74b817961db9",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T17:58:26.824009+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "deepseek-chat",
+      "usage": {
+        "input_tokens": 18,
+        "output_tokens": 5
+      },
+      "run_id": null,
+      "provider": "deepseek",
+      "response": {
+        "content": "实时流式验证成功"
+      },
+      "request_id": "ccb76c58-061d-4dae-9a10-2bf4cb792486",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T17:58:27.109784+00:00",
+      "kind": "real_bad_model",
+      "model": "nonexistent-content-boundary-model",
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null
+      },
+      "run_id": null,
+      "provider": "deepseek",
+      "response": {
+        "error": "Client error '400 Bad Request' for url 'https://api.deepseek.com/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400",
+        "attempt": 1
+      },
+      "request_id": "15440772-acb0-4c61-8540-8cec135aef5a",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T17:58:27.830253+00:00",
+      "kind": "real_truncated",
+      "model": "deepseek-chat",
+      "usage": {
+        "input_tokens": 15,
+        "output_tokens": 1
+      },
+      "run_id": null,
+      "provider": "deepseek",
+      "response": {
+        "error": "模型输出达到长度限制，未把截断内容当作有效交付。",
+        "attempt": 1
+      },
+      "request_id": "4046e02d-41c3-4c89-ad7b-4becb1283095",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T17:58:28.098999+00:00",
+      "kind": "real_invalid_auth",
+      "model": "deepseek-chat",
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null
+      },
+      "run_id": null,
+      "provider": "deepseek",
+      "response": {
+        "error": "Client error '401 Authorization Required' for url 'https://api.deepseek.com/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401",
+        "attempt": 1
+      },
+      "request_id": "37ad55fa-1a70-4e63-9379-24e34d7d9d6b",
+      "available_tools": []
+    }
+  ]
+}

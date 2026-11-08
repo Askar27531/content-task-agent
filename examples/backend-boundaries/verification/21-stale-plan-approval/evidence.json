@@ -1,0 +1,629 @@
+{
+  "actual": true,
+  "name": "21-stale-plan-approval",
+  "session_id": "6a5706a0-6e22-4e48-a20b-834b2fdb27a8",
+  "url": "http://127.0.0.1:5173/sessions/6a5706a0-6e22-4e48-a20b-834b2fdb27a8",
+  "passed": true,
+  "checks": {
+    "new_version_created": true,
+    "new_budget_8": true,
+    "stale_intent_not_run": true,
+    "not_saved": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "499e3760-53ac-4c6b-bdf2-30e09fc75a08",
+        "content": "为社区读书会写内容活动方案，制作预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00，均北京时间，精简视觉simple，允许合成素材。先给计划，不要执行。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "795c94b5-9b41-4d91-bb12-377285a732d0",
+        "processing_id": "8ec60eb7-e167-436c-a13d-7920c8bfa6ae",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "95f076b5-6f50-4379-9246-0e83df074f35",
+        "content": "预算改为8个模拟单位，请先给新计划，不要执行。",
+        "view_context": {
+          "plan_version_id": "cbdb4c46-0d07-4add-9f27-4f5616f6dbc6"
+        }
+      },
+      "response": {
+        "message_id": "a5c867f8-bb87-4f6f-b526-0eff14294368",
+        "processing_id": "cb0e49b3-b136-4656-8e2f-da828be283c1",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "27018437-6568-4a50-b33c-297139c9fa1b",
+        "content": "按计划开始执行。",
+        "view_context": {
+          "plan_version_id": "cbdb4c46-0d07-4add-9f27-4f5616f6dbc6"
+        }
+      },
+      "response": {
+        "message_id": "525a9ba5-7598-47b1-a204-4644f93a027c",
+        "processing_id": "8e1d7221-b306-43f7-9939-242423719e61",
+        "duplicate": false
+      }
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "社区读书会",
+      "status": "draft",
+      "session_id": "6a5706a0-6e22-4e48-a20b-834b2fdb27a8",
+      "last_user_activity_at": "2026-11-07T06:35:55.953909+00:00"
+    },
+    "requirements": {
+      "topic": "社区读书会",
+      "budget": "8",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-01T08:00:00+08:00",
+      "real_sources_required": false
+    },
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "pending",
+            "step_id": "93d96d1a-1730-4d69-a8e9-dfe3a946894f",
+            "dependencies": [],
+            "tool_call_ids": []
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "fd3310b2-29fc-42fe-b590-8b48f173e296",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "1c3c331e-5224-41da-a03a-a246d75fac28",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "6ed52b4d-c8dd-4e49-9363-55314362e3fe",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "58b9547e-1d4a-4657-b8f7-a2f6debc4f66",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "superseded",
+        "summary": "为社区读书会制定内容活动方案，采用精简视觉。活动开始于2030-12-01 08:00，截止于2030-12-03 18:00，预算为10个模拟单位。方案包含目标、受众假设和内容组合，未包含具体制作成本和工期，由后续工具核验。",
+        "version": 1,
+        "brief_hash": "76807f440e0315b0856bf4e0acf482dc4654956db517090b09eddd6f064b2f52",
+        "requirements": {
+          "topic": "社区读书会",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "确认使用精简视觉",
+          "明确活动时间范围",
+          "确认预算为10个模拟单位"
+        ],
+        "plan_version_id": "cbdb4c46-0d07-4add-9f27-4f5616f6dbc6",
+        "production_spec": "simple"
+      },
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "pending",
+            "step_id": "8b462216-fdbf-4d21-b021-f4623ebd18c2",
+            "dependencies": [],
+            "tool_call_ids": []
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "427ba59c-215b-4629-b6e7-d68cc0da43bf",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "a235b6f3-54a6-43a3-8e67-af55042e6e84",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "71c53076-94e6-410c-b881-8d589db84e5d",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "dc682af0-1dff-43eb-9ea9-2d96adfe8026",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "ready",
+        "summary": "社区读书会活动计划初稿：目标为促进社区成员之间的交流与阅读兴趣，受众假设为社区居民，内容组合包括文案、互动邀请和活动时间安排。视觉规格为精简，预算8个模拟单位，时间安排从2030-12-01 08:00至2030-12-03 18:00。",
+        "version": 2,
+        "brief_hash": "8f70d123d9ddf78036436bc5fee615fde2367a5f9a88882862189457ed971d2f",
+        "requirements": {
+          "topic": "社区读书会",
+          "budget": "8",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "预算调整为8个模拟单位",
+          "视觉规格设定为simple"
+        ],
+        "plan_version_id": "280c8193-1d7e-43b8-90f9-195696ba2ce1",
+        "production_spec": "simple"
+      }
+    ],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "8",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": true,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 8399,
+      "model_output_tokens": 729,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 38,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "为社区读书会写内容活动方案，制作预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00，均北京时间，精简视觉simple，允许合成素材。先给计划，不要执行。",
+      "item_id": "795c94b5-9b41-4d91-bb12-377285a732d0",
+      "item_seq": 1,
+      "created_at": "2026-11-07T06:35:14.079009+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "tool",
+      "item_id": "c82cc27a-a78a-445f-bf47-688e17ff8d1c",
+      "item_seq": 2,
+      "created_at": "2026-11-07T06:35:23.802519+00:00",
+      "tool_call_id": "88e676f8-5ec1-4447-aaaf-f603142694af"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "602f8d1e-ef7f-4531-a441-c32e84cf4e55",
+      "item_seq": 3,
+      "created_at": "2026-11-07T06:35:28.495509+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "预算改为8个模拟单位，请先给新计划，不要执行。",
+      "item_id": "a5c867f8-bb87-4f6f-b526-0eff14294368",
+      "item_seq": 4,
+      "created_at": "2026-11-07T06:35:33.987424+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "tool",
+      "item_id": "5e5554d5-8c58-4cd2-b77e-1c5461a341b3",
+      "item_seq": 5,
+      "created_at": "2026-11-07T06:35:44.129701+00:00",
+      "tool_call_id": "efa31fb0-c3b6-42ef-935d-1e7978368829"
+    },
+    {
+      "kind": "tool",
+      "item_id": "723fda13-50b4-41f1-89ee-d943899be12e",
+      "item_seq": 6,
+      "created_at": "2026-11-07T06:35:45.628671+00:00",
+      "tool_call_id": "a49f86ce-6036-4624-b959-4b4fd8ec03a1"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "e4f662f4-7ff7-45f2-8b19-c35389361608",
+      "item_seq": 7,
+      "created_at": "2026-11-07T06:35:50.387480+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "按计划开始执行。",
+      "item_id": "525a9ba5-7598-47b1-a204-4644f93a027c",
+      "item_seq": 8,
+      "created_at": "2026-11-07T06:35:55.953909+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "你看到的计划版本已经不是最新版本。请先核对右侧新版，再明确告诉我执行。",
+      "item_id": "bd15cbaa-ef98-4bff-a783-1d9bb738e9fe",
+      "item_seq": 9,
+      "created_at": "2026-11-07T06:36:03.514445+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T06:35:22.430158+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 870,
+        "output_tokens": 231
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"社区读书会\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03 18:00+08:00\",\n    \"start_at\": \"2030-12-01 08:00+08:00\"\n  },\n  \"evidence\": {\n    \"topic\": \"为社区读书会写内容活动方案\",\n    \"budget\": \"制作预算10个模拟单位\",\n    \"deadline\": \"截止2030-12-03 18:00\",\n    \"start_at\": \"开始2030-12-01 08:00\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算、开始时间和截止时间，并要求先给计划，不要执行。因此，需要更新这些信息。\",\n  \"uncertain_fields\": [],\n  \"capability_gaps\": [],\n  \"resolve_capabilities\": false\n}",
+        "tool_calls": []
+      },
+      "request_id": "a421a266-5b4f-4113-9fde-f9d8f165f81e",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T06:35:23.792497+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 869,
+        "output_tokens": 23
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_mio4st1m",
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "arguments": {
+                "skill_id": "campaign-planning"
+              }
+            }
+          }
+        ]
+      },
+      "request_id": "9681afc7-eea6-49ad-9b99-54b6da6c4f55",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T06:35:28.472275+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 1241,
+        "output_tokens": 124
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\"production_spec\": \"simple\", \"summary\": \"为社区读书会制定内容活动方案，采用精简视觉。活动开始于2030-12-01 08:00，截止于2030-12-03 18:00，预算为10个模拟单位。方案包含目标、受众假设和内容组合，未包含具体制作成本和工期，由后续工具核验。\", \"changes\": [\"确认使用精简视觉\", \"明确活动时间范围\", \"确认预算为10个模拟单位\"]}",
+        "tool_calls": []
+      },
+      "request_id": "9a4524f7-3238-4d04-914d-b409bb15e074",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T06:35:33.634776+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+      },
+      "request_id": "51846270-1c39-4baf-98b5-42e52d109a33",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T06:35:42.764553+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 849,
+        "output_tokens": 72
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"budget\": \"8\"\n  },\n  \"evidence\": {\n    \"budget\": \"预算改为8个模拟单位\"\n  },\n  \"explanation\": \"用户要求将预算改为8个模拟单位，并要求先提供新计划，不执行。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "2a5c2138-ac65-44cf-a6cd-36a9df618d39",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T06:35:44.118643+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 828,
+        "output_tokens": 23
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_aedd3d1f",
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "arguments": {
+                "skill_id": "campaign-planning"
+              }
+            }
+          }
+        ]
+      },
+      "request_id": "904825d2-c61a-4706-8c1c-f7884724643d",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T06:35:45.617265+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 1200,
+        "output_tokens": 33
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_0umn0mdt",
+            "type": "function",
+            "function": {
+              "name": "read_skill_resource",
+              "arguments": {
+                "skill_id": "campaign-planning",
+                "resource_id": "references/content-patterns.md"
+              }
+            }
+          }
+        ]
+      },
+      "request_id": "796b3fb2-2908-4d17-82ad-4189c09dc82b",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T06:35:50.352964+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 1504,
+        "output_tokens": 118
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\"production_spec\": \"simple\", \"summary\": \"社区读书会活动计划初稿：目标为促进社区成员之间的交流与阅读兴趣，受众假设为社区居民，内容组合包括文案、互动邀请和活动时间安排。视觉规格为精简，预算8个模拟单位，时间安排从2030-12-01 08:00至2030-12-03 18:00。\", \"changes\": [\"预算调整为8个模拟单位\", \"视觉规格设定为simple\"]}",
+        "tool_calls": []
+      },
+      "request_id": "d083295c-1ea3-451c-b7fb-f2cf844a9982",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T06:35:55.483652+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+      },
+      "request_id": "8c478b7a-507f-4e1a-bec8-d23c80981dc9",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T06:36:03.483732+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 838,
+        "output_tokens": 43
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"execute\",\n  \"updates\": {},\n  \"evidence\": {},\n  \"explanation\": \"用户明确表示'按计划开始执行'，符合execute的条件。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "69ef49c6-e05e-48b6-a835-78c97192b740",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_call_id": "88e676f8-5ec1-4447-aaaf-f603142694af",
+      "run_id": null,
+      "step_id": "context-8ec60eb7",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T06:35:23.803702+00:00",
+      "duration_ms": 24,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "efa31fb0-c3b6-42ef-935d-1e7978368829",
+      "run_id": null,
+      "step_id": "context-cb0e49b3",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T06:35:44.131268+00:00",
+      "duration_ms": 27,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "a49f86ce-6036-4624-b959-4b4fd8ec03a1",
+      "run_id": null,
+      "step_id": "context-cb0e49b3",
+      "tool_name": "read_skill_resource",
+      "display_name": "读取 Skill 参考",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "output": {
+        "body": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "started_at": "2026-11-07T06:35:45.630182+00:00",
+      "duration_ms": 25,
+      "error": null,
+      "attempt": 1
+    }
+  ]
+}

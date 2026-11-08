@@ -1,0 +1,254 @@
+[
+  {
+    "name": "cross-run-reuse",
+    "proposal_count": 2,
+    "model_calls": 27,
+    "tool_calls": 15,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-search_synthetic_materials",
+    "proposal_count": 1,
+    "model_calls": 15,
+    "tool_calls": 9,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-after-save_proposal",
+    "proposal_count": 1,
+    "model_calls": 15,
+    "tool_calls": 9,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-normal",
+    "proposal_count": 1,
+    "model_calls": 16,
+    "tool_calls": 10,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty",
+    "proposal_count": 1,
+    "model_calls": 21,
+    "tool_calls": 14,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-partial",
+    "proposal_count": 1,
+    "model_calls": 21,
+    "tool_calls": 13,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-failure",
+    "proposal_count": 1,
+    "model_calls": 22,
+    "tool_calls": 14,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "strict-real-empty",
+    "proposal_count": 0,
+    "model_calls": 11,
+    "tool_calls": 5,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "failure-resume-config",
+    "proposal_count": 2,
+    "model_calls": 33,
+    "tool_calls": 20,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-cache-protocol",
+    "proposal_count": 0,
+    "model_calls": 0,
+    "tool_calls": 2,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "delivery-invalid-repair",
+    "proposal_count": 1,
+    "model_calls": 17,
+    "tool_calls": 10,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "crash-pending-model",
+    "proposal_count": 1,
+    "model_calls": 16,
+    "tool_calls": 9,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "stop-before-save",
+    "proposal_count": 1,
+    "model_calls": 17,
+    "tool_calls": 9,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  },
+  {
+    "name": "search-timeout",
+    "proposal_count": 0,
+    "model_calls": 21,
+    "tool_calls": 11,
+    "checks": {
+      "scenario_checks_pass": true,
+      "one_ledger_entry_per_charge": true,
+      "actual_tool_fees_match_run_and_ledger": true,
+      "usable_steps_have_actual_results": true,
+      "dependencies_satisfied": true,
+      "saved_budget_valid": true,
+      "saved_schedule_valid": true,
+      "model_attempts_recorded_unknown_not_zero": true,
+      "completed_means_actual_saved_row": true
+    },
+    "passed": true
+  }
+]

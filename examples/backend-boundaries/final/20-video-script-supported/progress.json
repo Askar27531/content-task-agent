@@ -1,0 +1,31 @@
+{
+  "session_id": "e7a86bef-a3dc-407c-bb52-7436c517017d",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "00cb21e4-28c9-4d33-a50c-aef83461680b",
+        "content": "为社区读书会，只要3条短视频脚本，提供文字分镜即可，不要生成视频文件。每条用脚本1、脚本2、脚本3分别作为标题。预算10个模拟单位，截止2030-12-03 18:00北京时间，精简视觉simple，允许合成资料，先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "47296955-54d0-4dca-b177-1e627438b02b",
+        "processing_id": "338f9287-9bee-4fd5-8208-122b317059e0",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "e8b25985-07e5-4879-9edc-34171abd2384",
+        "content": "按当前计划开始执行。",
+        "view_context": {
+          "plan_version_id": "b7f9fbdf-6731-4b43-ac90-ccdf21432305"
+        }
+      },
+      "response": {
+        "message_id": "0a86a96f-ff60-4c03-89e5-e3620cd40568",
+        "processing_id": "87081c08-b7a9-4121-b343-5a181de441b3",
+        "duplicate": false
+      }
+    }
+  ]
+}

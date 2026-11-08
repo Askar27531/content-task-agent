@@ -1,0 +1,41 @@
+{
+  "before_ids": [
+    10292,
+    20936,
+    22288,
+    49252
+  ],
+  "after_ids": [
+    10292,
+    20936,
+    22288,
+    49252
+  ],
+  "output": [
+    " Container content-studio-postgres-1 Running ",
+    "2026-11-08 01:07:02,825 INFO alembic.runtime.plugins setup plugin alembic.autogenerate.schemas",
+    "2026-11-08 01:07:02,825 INFO alembic.runtime.plugins setup plugin alembic.autogenerate.tables",
+    "2026-11-08 01:07:02,825 INFO alembic.runtime.plugins setup plugin alembic.autogenerate.types",
+    "2026-11-08 01:07:02,825 INFO alembic.runtime.plugins setup plugin alembic.autogenerate.constraints",
+    "2026-11-08 01:07:02,825 INFO alembic.runtime.plugins setup plugin alembic.autogenerate.defaults",
+    "2026-11-08 01:07:02,825 INFO alembic.runtime.plugins setup plugin alembic.autogenerate.comments",
+    "2026-11-08 01:07:02,825 INFO alembic.runtime.plugins setup plugin alembic.ext.checkconstraint_byname",
+    "2026-11-08 01:07:04,365 INFO alembic.runtime.migration Context impl PostgresqlImpl.",
+    "2026-11-08 01:07:04,365 INFO alembic.runtime.migration Will assume transactional DDL.",
+    "Database and PostgreSQL graph checkpoints initialized.",
+    "mcp: already running",
+    "api: already running",
+    "message: already running",
+    "run: already running",
+    "Workspace: http://127.0.0.1:5173/",
+    "API docs: http://127.0.0.1:8000/docs",
+    "Process logs: .runtime/*.log"
+  ],
+  "default_processes_unchanged": true,
+  "health": {
+    "status": "ok",
+    "storage": "postgresql",
+    "mode": "live",
+    "model": "configured-per-run"
+  }
+}

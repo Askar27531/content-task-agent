@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.env
+**/.env.local
+config/app.yaml
+.runtime/
+/test-results/
+/playwright-report/
+*.log
+*.tsbuildinfo
+

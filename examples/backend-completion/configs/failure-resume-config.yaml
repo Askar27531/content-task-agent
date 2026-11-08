@@ -1,0 +1,59 @@
+active_model: local_new_mode
+models:
+  local_qwen3:
+    provider: ollama
+    base_url: http://127.0.0.1:11434
+    model: qwen3:latest
+    api_key_env: null
+    timeout_seconds: 180
+    temperature: 0.0
+    max_tokens: 1600
+    input_cost_per_million: null
+    output_cost_per_million: null
+    currency: USD
+  deepseek:
+    provider: deepseek
+    base_url: https://api.deepseek.com
+    model: deepseek-chat
+    api_key_env: DEEPSEEK_API_KEY
+    timeout_seconds: 180
+    temperature: 0.0
+    max_tokens: 1600
+    input_cost_per_million: null
+    output_cost_per_million: null
+    currency: USD
+  local_new_mode:
+    provider: ollama
+    base_url: http://127.0.0.1:11434
+    model: qwen3:latest
+    api_key_env: null
+    timeout_seconds: 180
+    temperature: 0.0
+    max_tokens: 1800
+    input_cost_per_million: null
+    output_cost_per_million: null
+    currency: USD
+mcp:
+  business_url: http://127.0.0.1:55908/mcp
+  tavily_url: https://mcp.tavily.com/mcp/
+  tavily_key_env: UNCONFIGURED_BACKEND_TEST_KEY
+  external_timeout_seconds: 10
+limits:
+  max_tool_attempts: 3
+  max_business_calls: 30
+  max_context_calls: 12
+  max_replans: 3
+  run_timeout_seconds: 900
+  max_model_rounds: 24
+fault_injection:
+  once_tool: null
+  pause_after_failure: false
+worker:
+  poll_seconds: 0.5
+  lease_seconds: 60
+  heartbeat_seconds: 10
+search:
+  max_results: 4
+  cache_ttl_seconds: 3600
+  material_ttl_seconds: 86400
+  min_results: 1

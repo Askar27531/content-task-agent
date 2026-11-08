@@ -1,0 +1,80 @@
+{
+  "recorded_at": "2026-11-07T19:49:36.172145+00:00",
+  "client_date": "2026-11-08",
+  "requested_model": "deepseek-chat",
+  "tavily_proxy": "http://127.0.0.1:7890",
+  "tls_verification_enabled": true,
+  "system_dns_changed": false,
+  "backend": {
+    "tests": 170,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "real_scenarios": 8,
+  "scenarios_passed": 8,
+  "generic_audits_passed": 8,
+  "review_checks": 27,
+  "review_passed": true,
+  "provider_checks": 8,
+  "provider_passed": true,
+  "tavily_checks": 4,
+  "tavily_passed": true,
+  "real_stream_truncation_checks": 3,
+  "real_stream_truncation_passed": true,
+  "external_service_fixture": false,
+  "ui": {
+    "startTime": "2026-11-07T19:41:15.499Z",
+    "duration": 9678.292,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "existing_feature_ui": {
+    "startTime": "2026-11-07T19:42:50.112Z",
+    "duration": 12000.495,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "costs": {
+    "budget": "10",
+    "observed_estimates": [
+      "12",
+      "8"
+    ],
+    "saved_production": "8",
+    "production_gap_before": "2",
+    "tool_simulated": "0.55",
+    "model_price": null,
+    "external_search_price": null
+  },
+  "actual_automatic_run": {
+    "session_id": "9eff2773-fb50-41a5-86e4-a18e6c2606af",
+    "input_message_count": 2,
+    "plan_versions": 2,
+    "failed_script_attempts": 1,
+    "actual_model_replan": true
+  },
+  "secret_leak_files": [],
+  "health": {
+    "status": "ok",
+    "storage": "postgresql",
+    "mode": "live",
+    "model": "configured-per-run"
+  },
+  "typescript": "passed",
+  "vite_build": "passed; main JS 989.09KB size warning",
+  "ruff": "passed E9,F63,F7,F82",
+  "source_hashes": {
+    "src/backend/app/graphs.py": "c72f3f086a7b208f575df74756e421417365a2f3d6537cdfe47c3e37041dcb28",
+    "src/backend/app/llm.py": "d8e4fd31e85cc07b058c2d0508d7d7e29b90c9ece316ce2229251915d75704f2",
+    "src/backend/app/gateway.py": "ab13cee90d27c88d9d3f1fd3b7103ca448a9eaa42dcdd4b9a2a539f1dcd1a8e9",
+    "src/backend/app/search.py": "0b0b920741633849f18ee816d9a20d7a5833695ece3120dea067bf6a88528f66",
+    "src/backend/app/contracts.py": "1fb5ef028d27f25db0c16710f92b5e62329282f664f393662a2474ded57452fc",
+    "src/frontend/src/components/Content.tsx": "ce1f42742fbb6bda3c34f1860a68587c135d8603e943bc5a5a75f83811fc9b01"
+  },
+  "missing_document_links": []
+}

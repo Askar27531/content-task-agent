@@ -1,0 +1,408 @@
+{
+  "actual": true,
+  "name": "20-video-script-supported",
+  "session_id": "e5c1c4d2-af1a-4a6a-9769-374cf6067a7b",
+  "url": "http://127.0.0.1:5173/sessions/e5c1c4d2-af1a-4a6a-9769-374cf6067a7b",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "ready": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "ready": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "29edfd35-d6be-4b16-8803-852ecaf1b2e2",
+        "content": "为社区读书会，只要3条短视频脚本，提供文字分镜即可，不要生成视频文件。预算10个模拟单位，截止2030-12-03 18:00北京时间，精简视觉simple，允许合成资料，先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "ef8132bd-3791-4c1c-8001-f0d19a93441b",
+        "processing_id": "24b9973b-67a8-47d4-a85b-33db0f76d08d",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "社区读书会",
+        "status": "draft",
+        "session_id": "e5c1c4d2-af1a-4a6a-9769-374cf6067a7b",
+        "last_user_activity_at": "2026-11-07T05:45:45.162705+00:00"
+      },
+      "requirements": {
+        "topic": "社区读书会",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [
+        {
+          "label": "精简制作方案",
+          "steps": [
+            {
+              "key": "materials",
+              "goal": "取得适合主题的资料，并保留可追溯来源",
+              "tool": "search_synthetic_materials",
+              "title": "检索活动素材",
+              "status": "pending",
+              "step_id": "8d9e1201-bf29-4d0c-921e-55356eb4a867",
+              "dependencies": [],
+              "tool_call_ids": []
+            },
+            {
+              "key": "script",
+              "goal": "使用真实取得的资料形成可用文案",
+              "tool": "generate_script",
+              "title": "生成内容脚本",
+              "status": "pending",
+              "step_id": "f3e2a809-ddcf-4b68-9b32-6f9e1223f95f",
+              "dependencies": [
+                "materials"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "estimate",
+              "goal": "由规则核验制作预算与活动完成期限",
+              "tool": "estimate_proposal",
+              "title": "核算制作成本与排期",
+              "status": "pending",
+              "step_id": "36a4088f-358c-4c0d-843a-fcec72ce188c",
+              "dependencies": [
+                "script"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "validate",
+              "goal": "核对必要章节、字段与合法素材引用",
+              "tool": "validate_proposal",
+              "title": "检查方案完整性",
+              "status": "pending",
+              "step_id": "134dc368-215d-4760-ab0a-6a0601ed645c",
+              "dependencies": [
+                "estimate"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "save",
+              "goal": "事务保存当前已检查且可行的方案",
+              "tool": "save_proposal",
+              "title": "保存活动方案",
+              "status": "pending",
+              "step_id": "b45d4a44-2746-49e4-8861-09d47354254a",
+              "dependencies": [
+                "validate"
+              ],
+              "tool_call_ids": []
+            }
+          ],
+          "status": "ready",
+          "summary": "为社区读书会活动生成3条短视频脚本，提供文字分镜，采用精简视觉。内容组合基于读书会主题，目标为吸引社区成员参与，受众假设为对阅读感兴趣的社区居民。内容将通过短视频平台传播，无需生成视频文件，仅提供文字分镜。",
+          "version": 1,
+          "requirements": {
+            "topic": "社区读书会",
+            "budget": "10",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": null,
+            "real_sources_required": false
+          },
+          "change_summary": [
+            "根据用户要求选择精简视觉",
+            "生成3条短视频脚本的文字分镜",
+            "不生成视频文件"
+          ],
+          "plan_version_id": "59166633-9d85-4b57-be7d-836a910854bd",
+          "production_spec": "simple"
+        }
+      ],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 2848,
+        "model_output_tokens": 330,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 15,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": []
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "社区读书会",
+      "status": "draft",
+      "session_id": "e5c1c4d2-af1a-4a6a-9769-374cf6067a7b",
+      "last_user_activity_at": "2026-11-07T05:45:45.162705+00:00"
+    },
+    "requirements": {
+      "topic": "社区读书会",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "pending",
+            "step_id": "8d9e1201-bf29-4d0c-921e-55356eb4a867",
+            "dependencies": [],
+            "tool_call_ids": []
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "f3e2a809-ddcf-4b68-9b32-6f9e1223f95f",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "36a4088f-358c-4c0d-843a-fcec72ce188c",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "134dc368-215d-4760-ab0a-6a0601ed645c",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "b45d4a44-2746-49e4-8861-09d47354254a",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "ready",
+        "summary": "为社区读书会活动生成3条短视频脚本，提供文字分镜，采用精简视觉。内容组合基于读书会主题，目标为吸引社区成员参与，受众假设为对阅读感兴趣的社区居民。内容将通过短视频平台传播，无需生成视频文件，仅提供文字分镜。",
+        "version": 1,
+        "requirements": {
+          "topic": "社区读书会",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": null,
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "根据用户要求选择精简视觉",
+          "生成3条短视频脚本的文字分镜",
+          "不生成视频文件"
+        ],
+        "plan_version_id": "59166633-9d85-4b57-be7d-836a910854bd",
+        "production_spec": "simple"
+      }
+    ],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 2848,
+      "model_output_tokens": 330,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 15,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "为社区读书会，只要3条短视频脚本，提供文字分镜即可，不要生成视频文件。预算10个模拟单位，截止2030-12-03 18:00北京时间，精简视觉simple，允许合成资料，先给计划。",
+      "item_id": "ef8132bd-3791-4c1c-8001-f0d19a93441b",
+      "item_seq": 1,
+      "created_at": "2026-11-07T05:45:45.162705+00:00"
+    },
+    {
+      "kind": "tool",
+      "item_id": "b141dc9b-05de-4389-a6ff-bab1b33cbc27",
+      "item_seq": 2,
+      "created_at": "2026-11-07T05:45:58.452028+00:00",
+      "tool_call_id": "6857e211-ba4f-43d3-837c-16f93275336c"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "802d711e-41e0-40c5-93c5-a13482e59cbe",
+      "item_seq": 3,
+      "created_at": "2026-11-07T05:46:02.574392+00:00",
+      "processing": false
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T05:45:57.099563+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 860,
+        "output_tokens": 167
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"execute\",\n  \"updates\": {\n    \"topic\": \"社区读书会\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03T18:00+08:00\"\n  },\n  \"evidence\": {\n    \"topic\": \"为社区读书会\",\n    \"budget\": \"预算10个模拟单位\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"根据用户提供的信息，已生成短视频脚本的文字分镜计划，符合要求的精简视觉风格，并允许使用合成资料。计划已准备好，等待用户确认开始执行。\",\n  \"capability_gaps\": []\n}",
+        "tool_calls": []
+      },
+      "request_id": "0cec40b7-b5c3-4726-925e-8af4ae772e78",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T05:45:58.442554+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 756,
+        "output_tokens": 23
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_erkq09ks",
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "arguments": {
+                "skill_id": "campaign-planning"
+              }
+            }
+          }
+        ]
+      },
+      "request_id": "7e8d4e6b-c398-4f10-a51e-c3c406b12981",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T05:46:02.544129+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 1132,
+        "output_tokens": 109
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"production_spec\": \"simple\",\n  \"summary\": \"为社区读书会活动生成3条短视频脚本，提供文字分镜，采用精简视觉。内容组合基于读书会主题，目标为吸引社区成员参与，受众假设为对阅读感兴趣的社区居民。内容将通过短视频平台传播，无需生成视频文件，仅提供文字分镜。\",\n  \"changes\": [\"根据用户要求选择精简视觉\", \"生成3条短视频脚本的文字分镜\", \"不生成视频文件\"]\n}",
+        "tool_calls": []
+      },
+      "request_id": "38d8ebf5-68f8-461b-9ab6-94bfc87fada0",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T05:46:07.747802+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+      },
+      "request_id": "439e3974-08bc-4466-82dd-21074bb39625",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_call_id": "6857e211-ba4f-43d3-837c-16f93275336c",
+      "run_id": null,
+      "step_id": "context-24b9973b",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T05:45:58.453513+00:00",
+      "duration_ms": 25,
+      "error": null,
+      "attempt": 1
+    }
+  ],
+  "test_error": null
+}

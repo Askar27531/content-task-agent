@@ -1,0 +1,17 @@
+{
+  "session_id": "f653077f-98dd-4e9c-915b-aa823201f59b",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "0582067e-c69c-445a-a200-a8593b6f2458",
+        "content": "我不要方案或文案，要你直接生成3条4K成片，登录抖音发出去并付款买广告。预算10，截止2030-12-03 18:00北京时间。做不到就说做不到，别换成文案。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "5367dcaa-3e15-4971-bf61-830362b337e3",
+        "processing_id": "f81bded5-006e-4217-a91e-0f79ac17d768",
+        "duplicate": false
+      }
+    }
+  ]
+}

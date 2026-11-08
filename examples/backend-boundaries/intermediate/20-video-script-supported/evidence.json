@@ -1,0 +1,147 @@
+{
+  "actual": true,
+  "name": "20-video-script-supported",
+  "session_id": "65dfe99b-8ace-49ae-9da1-77a90c81f9de",
+  "url": "http://127.0.0.1:5173/sessions/65dfe99b-8ace-49ae-9da1-77a90c81f9de",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "ready": false,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": false,
+  "expected": {
+    "no_run": true,
+    "ready": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "2d949c3a-1279-4550-b432-927f4b904685",
+        "content": "只要3条短视频脚本，提供文字分镜即可，不要生成视频文件。预算10个模拟单位，截止2030-12-03 18:00北京时间，精简视觉simple，允许合成资料，先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "ae5df676-ec7f-45c1-b50a-de79cc8a25b7",
+        "processing_id": "87e96676-c056-4e3c-8edc-2a382d12d2c1",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "新的内容活动",
+        "status": "draft",
+        "session_id": "65dfe99b-8ace-49ae-9da1-77a90c81f9de",
+        "last_user_activity_at": "2026-11-07T05:31:00.692119+00:00"
+      },
+      "requirements": {
+        "topic": null,
+        "budget": "10",
+        "deadline": "2030-12-03 18:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 855,
+        "model_output_tokens": 143,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "活动主题"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "65dfe99b-8ace-49ae-9da1-77a90c81f9de",
+      "last_user_activity_at": "2026-11-07T05:31:00.692119+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": "10",
+      "deadline": "2030-12-03 18:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 855,
+      "model_output_tokens": 143,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动主题"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "只要3条短视频脚本，提供文字分镜即可，不要生成视频文件。预算10个模拟单位，截止2030-12-03 18:00北京时间，精简视觉simple，允许合成资料，先给计划。",
+      "item_id": "ae5df676-ec7f-45c1-b50a-de79cc8a25b7",
+      "item_seq": 1,
+      "created_at": "2026-11-07T05:31:00.692119+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "还需要补充：活动主题。请直接在聊天中补充。",
+      "item_id": "de95dba5-9f50-42f3-bb6b-de4076df62a2",
+      "item_seq": 2,
+      "created_at": "2026-11-07T05:31:11.593579+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T05:31:11.559700+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 855,
+        "output_tokens": 143
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"execute\",\n  \"updates\": {\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03 18:00+08:00\"\n  },\n  \"evidence\": {\n    \"budget\": \"预算10个模拟单位\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"根据用户提供的需求，已生成包含3条短视频脚本的文字分镜方案，符合'精简视觉simple'和'允许合成资料'的要求，且未生成视频文件。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "cfb0f9c9-9946-4437-b2e3-b0cad9cb039a",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

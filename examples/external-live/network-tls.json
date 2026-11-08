@@ -1,0 +1,24 @@
+{
+  "host": "mcp.tavily.com",
+  "tls_verification": true,
+  "system_dns_unchanged": true,
+  "results": [
+    {
+      "address": "184.193.183.22",
+      "tls": "TLSv1.3",
+      "passed": true
+    },
+    {
+      "address": "18.210.67.251",
+      "passed": false,
+      "error_type": "ConnectionResetError",
+      "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。"
+    },
+    {
+      "address": "44.218.30.122",
+      "passed": false,
+      "error_type": "ConnectionResetError",
+      "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。"
+    }
+  ]
+}

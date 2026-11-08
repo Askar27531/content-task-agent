@@ -1,0 +1,89 @@
+{
+  "actual": true,
+  "recorded_at": "2026-11-07T10:22:38.065807+00:00",
+  "latest_stage": "delivery-fix/final",
+  "provider": "ollama",
+  "model": "qwen3:latest",
+  "model_switched": false,
+  "fixes": [
+    "phase-specific delivery context with native tool calls",
+    "clear stale blocked reason on actual tool restart",
+    "persist capability gaps for explicit unsupported brief classified as question",
+    "clause-scoped negation and capability-only questions without requirement changes"
+  ],
+  "live_scenarios": {
+    "total": 34,
+    "passed": 34,
+    "groups_total": 24,
+    "groups_passed": 24,
+    "script_exit_code": 0,
+    "failures": []
+  },
+  "trace_audit": {
+    "total": 23,
+    "passed": 23,
+    "scope": "actual model tool correspondence, step dependencies, cost arithmetic and ledger; separate from task completion"
+  },
+  "fresh_targeted_runs": {
+    "total": 2,
+    "passed": 2
+  },
+  "original_recovery_and_12_to_8_replan": {
+    "total": 3,
+    "passed": 3
+  },
+  "capability_dialogue_recheck_after_worker_reload": {
+    "total": 2,
+    "passed": 2,
+    "cases": [
+      "13-unsupported",
+      "25-capability-question"
+    ]
+  },
+  "mcp_guards": {
+    "total": 9,
+    "passed": 9,
+    "llm_selection_evidence": false
+  },
+  "backend_regression": {
+    "tests": 65,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "browser_boundaries": {
+    "total": 11,
+    "passed": 11,
+    "unexpected": 0,
+    "skipped": 0,
+    "fixture_stages": [
+      "delivery-fix/final",
+      "delivery-fix/recovery"
+    ],
+    "scope": "real persisted result, recovered original failures, exports and labels"
+  },
+  "browser_regression": {
+    "total": 5,
+    "passed": 5,
+    "unexpected": 0,
+    "demo_tests": 4,
+    "real_persisted_result_tests": 1
+  },
+  "historical_failures_preserved": {
+    "before_summary": "delivery-fix/before-summary.json",
+    "initial_full_ui_unexpected": 1,
+    "initial_full_ui_report": "delivery-fix/initial-full/ui/report.json",
+    "original_failed_snapshots": "verification/20-video-script-supported and verification/23-stop-resume"
+  },
+  "build_baseline": {
+    "passed": true,
+    "log": "build.txt",
+    "note": "Frontend production source unchanged in this fix; previously verified build retained."
+  },
+  "unverified": [
+    "Tavily successful external search",
+    "DeepSeek real requests",
+    "worker hard crash recovery",
+    "SSE forced disconnect recovery"
+  ]
+}

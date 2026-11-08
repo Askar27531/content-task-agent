@@ -1,0 +1,42 @@
+{
+  "session_id": "f2ff26d6-d967-4cda-8d0f-2f74b8144d31",
+  "real_external_services": true,
+  "results": {
+    "deepseek": {
+      "passed": true,
+      "configured_model": "deepseek-chat",
+      "response": {
+        "role": "assistant",
+        "content": "连接成功",
+        "tool_calls": [],
+        "finish_reason": "stop"
+      }
+    },
+    "tavily": {
+      "passed": false,
+      "error_type": "ExceptionGroup",
+      "error": "unhandled errors in a TaskGroup (1 sub-exception)"
+    }
+  },
+  "model_calls": [
+    {
+      "at": "2026-11-07T17:53:04.105369+00:00",
+      "kind": "external_connection_probe",
+      "model": "deepseek-chat",
+      "usage": {
+        "input_tokens": 21,
+        "output_tokens": 2
+      },
+      "run_id": null,
+      "provider": "deepseek",
+      "response": {
+        "role": "assistant",
+        "content": "连接成功",
+        "tool_calls": [],
+        "finish_reason": "stop"
+      },
+      "request_id": "fcec0be9-8d84-4d66-90ca-01924554ddff",
+      "available_tools": []
+    }
+  ]
+}

@@ -1,0 +1,1861 @@
+{
+  "actual_model": false,
+  "actual_business_mcp": true,
+  "external_service_fixture": false,
+  "real_external_tavily": true,
+  "name": "real-tavily-cache-guards",
+  "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+  "checks": {
+    "bad_arguments_rejected_before_dispatch": true,
+    "real_result": true,
+    "cached_second": true,
+    "one_actual_external_charge": true,
+    "only_two_operations": true,
+    "cached_not_recharged": true,
+    "no_harness_error": true
+  },
+  "passed": true,
+  "inputs": [],
+  "before": null,
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "last_user_activity_at": "2026-11-07T18:25:40.303838+00:00"
+    },
+    "requirements": {
+      "topic": "真实Tavily网关协议测试",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": true
+    },
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_web_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+            "dependencies": [],
+            "tool_call_ids": [
+              "8c7275a1-0767-4851-868a-7a88e88dfda6",
+              "03bdff84-8921-4e85-91e2-53eceecf36bb"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "6afc8bb8-b579-4c4f-abca-1940aad43031",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "44eb2278-320f-4d61-83ef-937d90b85bab",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "08e1f59d-4c35-4431-903e-9343d7620531",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "a7e37979-6014-4874-a5ec-ffc99931e4d5",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "ready",
+        "summary": "真实网关测试，非完整活动执行",
+        "version": 1,
+        "requirements": {
+          "topic": "真实Tavily网关协议测试",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": null,
+          "real_sources_required": true
+        },
+        "change_summary": [],
+        "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d",
+        "production_spec": "simple"
+      }
+    ],
+    "active_run": {
+      "phase": "research",
+      "reason": "真实网关协议测试结束，不代表完整活动保存。",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "status": "incomplete",
+      "last_error": null,
+      "requirements": {
+        "topic": "真实Tavily网关协议测试",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": true
+      },
+      "context_calls": 0,
+      "loaded_skills": [],
+      "business_calls": 2,
+      "control_status": null,
+      "research_force": false,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d",
+      "last_tool_failed": false
+    },
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.10",
+      "estimated_finish": null,
+      "model_input_tokens": null,
+      "model_output_tokens": null,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [
+      {
+        "url": "https://www.unesco.org/en/articles/world-book-and-copyright-day-2017-celebrated-unesco",
+        "title": "World Book and Copyright Day 2017 celebrated at UNESCO | UNESCO",
+        "summary": "“World Book and Copyright Day is an opportunity to highlight the power of books to promote our vision of knowledge societies that are inclusive, pluralistic, equitable, open and participatory for all citizens,” UNESCO Director-General, Irina Bokova said in her message given on the occasion of the World Book and Copyright Day 2017. [...] World Book and Copyright Day is celebrated every year on 23 April, the date on which both William Shakespeare and Miguel de Cervantes died. On this occasion, publishing houses, bookstores, libraries, cultural institutions and associations of authors mobilize across the world to promote reading, publishing, and protection of intellectual property.",
+        "material_id": "web-cae0200a09",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+      },
+      {
+        "url": "https://www.unesco.org/en/fieldoffice/brasilia/expertise/book-day",
+        "title": "About the World Book and Copyright Day in Brazil | UNESCO",
+        "summary": "World Book and Copyright Day is a celebration to promote the enjoyment of books and reading. Each year, on 23 April, celebrations take place all over the world to recognize the scope of books - a link between the past and the future, a bridge between generations and across cultures. On this occasion, UNESCO and the international organizations representing the three major sectors of the book industry - publishers, booksellers and libraries, select the World Book Capital for a year to maintain, [...] In 1995, the UNESCO’s General Conference declared the 23 April as World Book and Copyright Day to pay a tribute to books and authors worldwide, encouraging everyone to have access to books and read. 23 April is a is the date on which several prominent authors, William Shakespeare, Miguel de Cervantes, and Inca Garcilaso de la Vega all died. Thus, it is a symbolic date in world literature.\n\n## What is World Book and Copyright Day [...] Information and communication\n Culture\n Books\n World Book and Copyright Day\n World Book Capital Cities\n Creativity\n Multilingualism\n Indigenous Languages Decade (2022-2032)\n Indigenous peoples\n Country page: Brazil\n Region: Latin America and the Caribbean\n UNESCO Office in Brasilia\n SDG: SDG 16 - Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels\n See moreadd",
+        "material_id": "web-e9b59e1e83",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+      }
+    ],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 11,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "state": {
+    "runs": {
+      "dfbb5aac-7779-455a-ac96-a8975e1a7eaa": {
+        "run": {
+          "phase": "research",
+          "reason": "真实网关协议测试结束，不代表完整活动保存。",
+          "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+          "status": "incomplete",
+          "snapshot": {
+            "mcp": {
+              "proxy_url": "http://127.0.0.1:7890",
+              "tavily_url": "https://mcp.tavily.com/mcp/",
+              "business_url": "http://127.0.0.1:53622/mcp",
+              "tavily_key_env": "TAVILY_API_KEY",
+              "call_timeout_seconds": 240,
+              "external_timeout_seconds": 60
+            },
+            "limits": {
+              "max_replans": 3,
+              "max_model_rounds": 24,
+              "max_context_calls": 12,
+              "max_tool_attempts": 3,
+              "max_business_calls": 30,
+              "run_timeout_seconds": 900
+            },
+            "models": {
+              "deepseek": {
+                "model": "deepseek-chat",
+                "base_url": "https://api.deepseek.com",
+                "currency": "USD",
+                "provider": "deepseek",
+                "max_tokens": 1600,
+                "api_key_env": "DEEPSEEK_API_KEY",
+                "temperature": 0.0,
+                "timeout_seconds": 180,
+                "input_cost_per_million": null,
+                "output_cost_per_million": null
+              },
+              "local_qwen3": {
+                "model": "qwen3:latest",
+                "base_url": "http://127.0.0.1:11434",
+                "currency": "USD",
+                "provider": "ollama",
+                "max_tokens": 1600,
+                "api_key_env": null,
+                "temperature": 0.0,
+                "timeout_seconds": 180,
+                "input_cost_per_million": null,
+                "output_cost_per_million": null
+              }
+            },
+            "search": {
+              "max_results": 2,
+              "min_results": 1,
+              "cache_ttl_seconds": 600,
+              "material_ttl_seconds": 86400
+            },
+            "skills": [
+              {
+                "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+                "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+                "skill_id": "campaign-planning",
+                "resources": {
+                  "references/content-patterns.md": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n"
+                },
+                "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。",
+                "script_hashes": {}
+              },
+              {
+                "body": "---\nname: constrained-replanning\ndescription: 根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。\n---\n\n先检查真实返回：哪些结果有效、缺少什么、失败是否可重试、预算或排期缺口多少。\n\n根据原因提出有内容意义的替代，例如降低视觉规格、减少制作项、换用允许的素材。解释改变及损失，保留不受影响的素材和脚本。\n\n候选改变后调用 estimate_proposal，未取得新结果前不声称已经满足预算。准确估算返回不可行，不等于估算工具失败。\n\n首个闭环只支持 premium / simple 两个制作规格：差异只在视觉复杂度；在需求、来源和文字交付范围没有变化时，素材与核心文案可保留，视觉成本和排期必须重新估算。不能声称已实现任意数量的海报或视频组合调整。\n\n用户预算、截止时间和必须真实素材的条件不因重规划自动改变。有限尝试内没有可行候选时如实说明当前缺口和已取得结果。\n\n可选参考：`references/tradeoffs.md`。\n",
+                "version": "e969a626d3399db74f771aeb7256dc9074ed7427adc5cead1dd18b6a64508c0e",
+                "skill_id": "constrained-replanning",
+                "resources": {
+                  "references/tradeoffs.md": "# 替代与复用\n\n高规格视觉可换为统一模板，但应保留内容主张，并向用户说明视觉制作范围变化。合成素材可以替代检索失败的真实素材，仅在用户未要求必须真实素材时适用。\n\n主题或事实变化可能使原脚本失效；只调整视觉规格时可继续复用仍匹配的文案。每个替代都用实际估算验证，不能靠修改展示数字完成任务。\n"
+                },
+                "description": "根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。",
+                "script_hashes": {}
+              },
+              {
+                "body": "---\nname: proposal-delivery\ndescription: 将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。\n---\n\n方案需要目标、受众假设、内容策略、完整脚本、制作排期、制作成本及素材来源。使用实际工具返回的费用和日期，不再虚构一次生成或保存。\n\n可按需读取 `assets/proposal-outline.md`。通过 MCP validate_proposal 调用固定脚本检查章节、字段和素材引用，取得与当前内容指纹匹配的检查结果；若缺项，修正后重新检查。\n\n只有实际保存成功才说明已保存；未完成则列出已有产物、失败或不足、费用及下一步。保存的硬性预算、排期、状态及幂等条件由业务服务再次验证。\n",
+                "version": "04e5235079ac1bc22f347f7e4654178897a34799da558546a72541677d0bcf38",
+                "skill_id": "proposal-delivery",
+                "resources": {
+                  "assets/proposal-outline.md": "# 活动主题\n\n## 活动目标\n## 受众与渠道假设\n## 内容策略\n## 内容与脚本\n## 制作及活动执行排期\n## 制作成本与预算\n## 素材与来源\n## 调整、限制与后续建议\n"
+                },
+                "description": "将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。",
+                "script_hashes": {
+                  "scripts/check_required_sections.py": "4cb039306c318bf579336bc512011d237632f31f976698fd71f9f75f70df9916"
+                }
+              },
+              {
+                "body": "---\nname: script-writing\ndescription: 根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。\n---\n\n围绕用户的主题、目标和语气生成可直接阅读的脚本。明确标题、开场、正文和互动收尾；若用户给出渠道或篇幅要求，优先遵守。\n\n首个闭环的 premium / simple 仅改变视觉制作复杂度，核心文案相同。生成适合自有渠道发布的标题、主文与互动话术，不在正文强制绑定昂贵拍摄或高规格视觉，以便降级视觉时仍可复用文字。\n\n资料是事实边界：使用给定素材标识，不虚构链接、数据、产品功能、用户评价或已执行的活动。合成资料用于创意结构，不写成真实市场证据。\n\n输入通常只有活动主题，不包含产品详情。此时只能写场景、情绪与普通互动；未知品牌、工艺、成分、性能、价格均用【待确认：具体信息】占位，不能自行填值。例如只有“咖啡新品”不能写“采用冷萃工艺、减少苦涩、快速冲泡”，可写“在通勤或阅读时，你期待怎样的一杯咖啡？”\n\n本轮制作规则仅包括自有渠道文字与视觉发布、无奖励评论互动。不得承诺折扣、抽奖、赠品、免费试饮或购买优惠；这些没有已确认的执行条件与成本。结尾只能邀请评论、关注或了解【待确认：官方入口】，不自拟促销机制。\n\n直接输出正文，不输出调用工具的指令、模型思考或“已保存”声明。素材不足时说明缺少的具体事实。\n\n可选参考：`references/channel-guide.md`。生成器自身不调用其他工具，进一步取材交回外层执行图。\n",
+                "version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41",
+                "skill_id": "script-writing",
+                "resources": {
+                  "references/channel-guide.md": "# 渠道表达参考\n\n短内容使用一个核心主张，以场景、价值和互动组织段落。长图文可增加清晰的小标题；视频脚本可标示场景和旁白。\n\n没有明确渠道时按通用社交图文起草并说明假设。不要虚构平台流量规则、强制字数或推广效果。\n"
+                },
+                "description": "根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。",
+                "script_hashes": {}
+              }
+            ],
+            "worker": {
+              "poll_seconds": 0.5,
+              "lease_seconds": 60,
+              "heartbeat_seconds": 10
+            },
+            "config_hash": "f8d44038a465040dad633859359fdb655031d36411bcdf570e9e9a374c690ced",
+            "active_model": "deepseek",
+            "tool_catalog": {
+              "load_skill": {
+                "type": "function",
+                "function": {
+                  "name": "load_skill",
+                  "parameters": {
+                    "type": "object",
+                    "title": "load_skillArguments",
+                    "required": [
+                      "skill_id"
+                    ],
+                    "properties": {
+                      "skill_id": {
+                        "type": "string",
+                        "title": "Skill Id"
+                      }
+                    }
+                  },
+                  "description": "读取已注册 Skill 的正文和资源目录。可从四类目录自由选择；加载不增加业务工具权限。"
+                }
+              },
+              "save_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "save_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "save_proposalArguments",
+                    "required": [
+                      "validation_id",
+                      "estimate_id"
+                    ],
+                    "properties": {
+                      "estimate_id": {
+                        "type": "string",
+                        "title": "Estimate Id"
+                      },
+                      "validation_id": {
+                        "type": "string",
+                        "title": "Validation Id"
+                      }
+                    }
+                  },
+                  "description": "仅保存已经通过有效结构检查和成本排期估算的当前方案。事务再次检查状态、引用和幂等条件，提交后返回方案标识。"
+                }
+              },
+              "generate_script": {
+                "type": "function",
+                "function": {
+                  "name": "generate_script",
+                  "parameters": {
+                    "type": "object",
+                    "title": "generate_scriptArguments",
+                    "required": [
+                      "material_ids",
+                      "direction"
+                    ],
+                    "properties": {
+                      "direction": {
+                        "type": "string",
+                        "title": "Direction"
+                      },
+                      "material_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "title": "Material Ids"
+                      }
+                    }
+                  },
+                  "description": "依据已检索素材生成真实 LLM 文案，使用本运行固定模型和文案 Skill；生成器不调用其他工具。"
+                }
+              },
+              "estimate_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "estimate_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "estimate_proposalArguments",
+                    "required": [
+                      "production_spec"
+                    ],
+                    "properties": {
+                      "production_spec": {
+                        "enum": [
+                          "premium",
+                          "simple"
+                        ],
+                        "type": "string",
+                        "title": "Production Spec"
+                      }
+                    }
+                  },
+                  "description": "联合估算制作成本、自然小时串行排期、可行性和缺口。premium 为高规格视觉，simple 为精简视觉。返回不可行是准确估算，不是工具失败。"
+                }
+              },
+              "validate_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "validate_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "validate_proposalArguments",
+                    "required": [
+                      "draft_id"
+                    ],
+                    "properties": {
+                      "draft_id": {
+                        "type": "string",
+                        "title": "Draft Id"
+                      }
+                    }
+                  },
+                  "description": "运行方案交付 Skill 的确定性脚本，检查指定交付草稿的必需字段和素材引用，返回 is_valid 及实际检查记录。"
+                }
+              },
+              "read_skill_resource": {
+                "type": "function",
+                "function": {
+                  "name": "read_skill_resource",
+                  "parameters": {
+                    "type": "object",
+                    "title": "read_skill_resourceArguments",
+                    "required": [
+                      "skill_id",
+                      "resource_id"
+                    ],
+                    "properties": {
+                      "skill_id": {
+                        "type": "string",
+                        "title": "Skill Id"
+                      },
+                      "resource_id": {
+                        "type": "string",
+                        "title": "Resource Id"
+                      }
+                    }
+                  },
+                  "description": "按注册资源标识读取 Skill 参考或文本模板，不接受任意文件路径。"
+                }
+              },
+              "search_synthetic_materials": {
+                "type": "function",
+                "function": {
+                  "name": "search_synthetic_materials",
+                  "parameters": {
+                    "type": "object",
+                    "title": "search_synthetic_materialsArguments",
+                    "required": [
+                      "query"
+                    ],
+                    "properties": {
+                      "query": {
+                        "type": "string",
+                        "title": "Query"
+                      }
+                    }
+                  },
+                  "description": "检索项目合成内容素材，返回可使用的真实存在的内部素材标识；不是联网检索。"
+                }
+              }
+            },
+            "selected_model": {
+              "model": "deepseek-chat",
+              "base_url": "https://api.deepseek.com",
+              "currency": "USD",
+              "provider": "deepseek",
+              "max_tokens": 1600,
+              "api_key_env": "DEEPSEEK_API_KEY",
+              "temperature": 0.0,
+              "timeout_seconds": 180,
+              "input_cost_per_million": null,
+              "output_cost_per_million": null
+            },
+            "tavily_enabled": true,
+            "fault_injection": {
+              "once_tool": null,
+              "pause_after_failure": false
+            },
+            "production_rules": {
+              "unit": "模拟单位",
+              "version": "2026-11-07.2",
+              "specifications": {
+                "simple": {
+                  "items": [
+                    {
+                      "cost": "1",
+                      "name": "策划",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "2",
+                      "name": "文案",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "5",
+                      "name": "精简视觉",
+                      "hours": "3"
+                    },
+                    {
+                      "cost": "0",
+                      "name": "自有渠道发布与互动执行",
+                      "hours": "1"
+                    }
+                  ],
+                  "label": "精简视觉"
+                },
+                "premium": {
+                  "items": [
+                    {
+                      "cost": "1",
+                      "name": "策划",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "2",
+                      "name": "文案",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "9",
+                      "name": "高规格视觉",
+                      "hours": "6"
+                    },
+                    {
+                      "cost": "0",
+                      "name": "自有渠道发布与互动执行",
+                      "hours": "1"
+                    }
+                  ],
+                  "label": "高规格视觉"
+                }
+              },
+              "tool_simulated_fees": {
+                "load_skill": "0.00",
+                "save_proposal": "0.00",
+                "generate_script": "0.20",
+                "estimate_proposal": "0.10",
+                "validate_proposal": "0.05",
+                "read_skill_resource": "0.00",
+                "search_web_materials": "0.10",
+                "search_synthetic_materials": "0.10"
+              }
+            },
+            "remote_tool_catalog": {
+              "name": "tavily_search",
+              "schema": {
+                "type": "object",
+                "required": [
+                  "query"
+                ],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "description": "Search query. Keep it short and specific, in the words the page itself would use; one idea per query."
+                  },
+                  "topic": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "general",
+                          "news"
+                        ],
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Search category. Use 'general' for almost all searches, including current events and requests that combine news with other information. Use 'news' only when the user explicitly asks for news, headlines, or news coverage."
+                  },
+                  "country": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Boost search results from a specific country. Must be a full country name (e.g., 'United States', 'Japan', 'Germany'). ISO country codes (e.g., 'us', 'jp') are not supported. Available only if topic is general. See https://docs.tavily.com/documentation/api-reference/search for the full list of supported countries."
+                  },
+                  "end_date": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Will return all results before the specified end date. Required to be written in the format YYYY-MM-DD. Filters by publish date, not by when events happened; leave it empty when looking for facts about past events."
+                  },
+                  "start_date": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Will return all results after the specified start date. Required to be written in the format YYYY-MM-DD. Filters by publish date, not by when events happened; leave it empty when looking for facts about past events."
+                  },
+                  "time_range": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "day",
+                          "week",
+                          "month",
+                          "year"
+                        ],
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "The time range back from the current date to include in the search results. Filters by when a page was published, not by when the events it describes happened."
+                  },
+                  "exact_match": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Only return results containing the exact phrase(s) in quotes in your query"
+                  },
+                  "max_results": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "The maximum number of search results to return. Ask for 10 when looking for a specific fact, page or entity."
+                  },
+                  "search_depth": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "basic",
+                          "advanced",
+                          "fast",
+                          "ultra-fast"
+                        ],
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "The depth of the search. 'basic' for generic results, 'advanced' for more thorough search, 'fast' for optimized low latency with high relevance, 'ultra-fast' for prioritizing latency above all else. Use 'advanced' when looking for a specific fact, page or entity, or when 'basic' did not find it."
+                  },
+                  "include_images": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Include a list of query-related images in the response"
+                  },
+                  "exclude_domains": {
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "List of domains to specifically exclude, if the user asks to exclude a domain set this to the domain of the site"
+                  },
+                  "include_domains": {
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "A list of domains to specifically include in the search results, if the user asks to search on specific sites set this to the domain of the site. Use full domains such as 'en.wikipedia.org' or 'sec.gov', not suffixes such as 'edu'. This is a hard filter: if results come back empty or thin, search again without it."
+                  },
+                  "include_favicon": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Whether to include the favicon URL for each result"
+                  },
+                  "include_raw_content": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Include the cleaned and parsed HTML content of each search result. Whole pages can make the response too large to read; to read one page, use tavily_extract with a query instead."
+                  },
+                  "include_published_date": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Include detected publication dates (beta)"
+                  },
+                  "filter_by_published_date": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Filter results to the requested date window and exclude results with no detected publication date"
+                  },
+                  "include_image_descriptions": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null,
+                    "description": "Include a list of query-related images and their descriptions in the response"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "material_catalog_hash": "995f3ae1bbfdb080e2431fdc838c8684332d97932b9be29858f5a9c34555dc7d"
+          },
+          "last_error": null,
+          "requirements": {
+            "topic": "真实Tavily网关协议测试",
+            "budget": "10",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": null,
+            "real_sources_required": true
+          },
+          "context_calls": 0,
+          "loaded_skills": [],
+          "business_calls": 2,
+          "control_status": null,
+          "research_force": false,
+          "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d",
+          "last_tool_failed": false
+        },
+        "materials": [
+          {
+            "url": "https://www.unesco.org/en/articles/world-book-and-copyright-day-2017-celebrated-unesco",
+            "title": "World Book and Copyright Day 2017 celebrated at UNESCO | UNESCO",
+            "summary": "“World Book and Copyright Day is an opportunity to highlight the power of books to promote our vision of knowledge societies that are inclusive, pluralistic, equitable, open and participatory for all citizens,” UNESCO Director-General, Irina Bokova said in her message given on the occasion of the World Book and Copyright Day 2017. [...] World Book and Copyright Day is celebrated every year on 23 April, the date on which both William Shakespeare and Miguel de Cervantes died. On this occasion, publishing houses, bookstores, libraries, cultural institutions and associations of authors mobilize across the world to promote reading, publishing, and protection of intellectual property.",
+            "material_id": "web-cae0200a09",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+          },
+          {
+            "url": "https://www.unesco.org/en/fieldoffice/brasilia/expertise/book-day",
+            "title": "About the World Book and Copyright Day in Brazil | UNESCO",
+            "summary": "World Book and Copyright Day is a celebration to promote the enjoyment of books and reading. Each year, on 23 April, celebrations take place all over the world to recognize the scope of books - a link between the past and the future, a bridge between generations and across cultures. On this occasion, UNESCO and the international organizations representing the three major sectors of the book industry - publishers, booksellers and libraries, select the World Book Capital for a year to maintain, [...] In 1995, the UNESCO’s General Conference declared the 23 April as World Book and Copyright Day to pay a tribute to books and authors worldwide, encouraging everyone to have access to books and read. 23 April is a is the date on which several prominent authors, William Shakespeare, Miguel de Cervantes, and Inca Garcilaso de la Vega all died. Thus, it is a symbolic date in world literature.\n\n## What is World Book and Copyright Day [...] Information and communication\n Culture\n Books\n World Book and Copyright Day\n World Book Capital Cities\n Creativity\n Multilingualism\n Indigenous Languages Decade (2022-2032)\n Indigenous peoples\n Country page: Brazil\n Region: Latin America and the Caribbean\n UNESCO Office in Brasilia\n SDG: SDG 16 - Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels\n See moreadd",
+            "material_id": "web-e9b59e1e83",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+          }
+        ],
+        "cost_summary": {
+          "budget": null,
+          "model_cost": null,
+          "production": null,
+          "estimate_stale": false,
+          "tool_simulated": "0.10",
+          "estimated_finish": null,
+          "model_input_tokens": null,
+          "model_output_tokens": null,
+          "model_unknown_usage_calls": 0
+        }
+      }
+    },
+    "draft": null,
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_web_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+            "dependencies": [],
+            "tool_call_ids": [
+              "8c7275a1-0767-4851-868a-7a88e88dfda6",
+              "03bdff84-8921-4e85-91e2-53eceecf36bb"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "6afc8bb8-b579-4c4f-abca-1940aad43031",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "44eb2278-320f-4d61-83ef-937d90b85bab",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "08e1f59d-4c35-4431-903e-9343d7620531",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "a7e37979-6014-4874-a5ec-ffc99931e4d5",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "ready",
+        "summary": "真实网关测试，非完整活动执行",
+        "version": 1,
+        "requirements": {
+          "topic": "真实Tavily网关协议测试",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": null,
+          "real_sources_required": true
+        },
+        "change_summary": [],
+        "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d",
+        "production_spec": "simple"
+      }
+    ],
+    "scripts": {},
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "last_user_activity_at": "2026-11-07T18:25:40.303838+00:00"
+    },
+    "timeline": [
+      {
+        "kind": "tool",
+        "item_id": "450ad78d-c9f3-47ad-813d-e7b6c8a85b61",
+        "item_seq": 1,
+        "created_at": "2026-11-07T18:25:40.425735+00:00",
+        "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6"
+      },
+      {
+        "kind": "tool",
+        "item_id": "b1fb6e6e-7b78-4531-a60a-c204b801a520",
+        "item_seq": 2,
+        "created_at": "2026-11-07T18:25:58.222359+00:00",
+        "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb"
+      }
+    ],
+    "estimates": {},
+    "materials": [
+      {
+        "url": "https://www.unesco.org/en/articles/world-book-and-copyright-day-2017-celebrated-unesco",
+        "title": "World Book and Copyright Day 2017 celebrated at UNESCO | UNESCO",
+        "summary": "“World Book and Copyright Day is an opportunity to highlight the power of books to promote our vision of knowledge societies that are inclusive, pluralistic, equitable, open and participatory for all citizens,” UNESCO Director-General, Irina Bokova said in her message given on the occasion of the World Book and Copyright Day 2017. [...] World Book and Copyright Day is celebrated every year on 23 April, the date on which both William Shakespeare and Miguel de Cervantes died. On this occasion, publishing houses, bookstores, libraries, cultural institutions and associations of authors mobilize across the world to promote reading, publishing, and protection of intellectual property.",
+        "material_id": "web-cae0200a09",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+      },
+      {
+        "url": "https://www.unesco.org/en/fieldoffice/brasilia/expertise/book-day",
+        "title": "About the World Book and Copyright Day in Brazil | UNESCO",
+        "summary": "World Book and Copyright Day is a celebration to promote the enjoyment of books and reading. Each year, on 23 April, celebrations take place all over the world to recognize the scope of books - a link between the past and the future, a bridge between generations and across cultures. On this occasion, UNESCO and the international organizations representing the three major sectors of the book industry - publishers, booksellers and libraries, select the World Book Capital for a year to maintain, [...] In 1995, the UNESCO’s General Conference declared the 23 April as World Book and Copyright Day to pay a tribute to books and authors worldwide, encouraging everyone to have access to books and read. 23 April is a is the date on which several prominent authors, William Shakespeare, Miguel de Cervantes, and Inca Garcilaso de la Vega all died. Thus, it is a symbolic date in world literature.\n\n## What is World Book and Copyright Day [...] Information and communication\n Culture\n Books\n World Book and Copyright Day\n World Book Capital Cities\n Creativity\n Multilingualism\n Indigenous Languages Decade (2022-2032)\n Indigenous peoples\n Country page: Brazil\n Region: Latin America and the Caribbean\n UNESCO Office in Brasilia\n SDG: SDG 16 - Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels\n See moreadd",
+        "material_id": "web-e9b59e1e83",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+      }
+    ],
+    "proposals": [],
+    "active_run": {
+      "phase": "research",
+      "reason": "真实网关协议测试结束，不代表完整活动保存。",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "status": "incomplete",
+      "snapshot": {
+        "mcp": {
+          "proxy_url": "http://127.0.0.1:7890",
+          "tavily_url": "https://mcp.tavily.com/mcp/",
+          "business_url": "http://127.0.0.1:53622/mcp",
+          "tavily_key_env": "TAVILY_API_KEY",
+          "call_timeout_seconds": 240,
+          "external_timeout_seconds": 60
+        },
+        "limits": {
+          "max_replans": 3,
+          "max_model_rounds": 24,
+          "max_context_calls": 12,
+          "max_tool_attempts": 3,
+          "max_business_calls": 30,
+          "run_timeout_seconds": 900
+        },
+        "models": {
+          "deepseek": {
+            "model": "deepseek-chat",
+            "base_url": "https://api.deepseek.com",
+            "currency": "USD",
+            "provider": "deepseek",
+            "max_tokens": 1600,
+            "api_key_env": "DEEPSEEK_API_KEY",
+            "temperature": 0.0,
+            "timeout_seconds": 180,
+            "input_cost_per_million": null,
+            "output_cost_per_million": null
+          },
+          "local_qwen3": {
+            "model": "qwen3:latest",
+            "base_url": "http://127.0.0.1:11434",
+            "currency": "USD",
+            "provider": "ollama",
+            "max_tokens": 1600,
+            "api_key_env": null,
+            "temperature": 0.0,
+            "timeout_seconds": 180,
+            "input_cost_per_million": null,
+            "output_cost_per_million": null
+          }
+        },
+        "search": {
+          "max_results": 2,
+          "min_results": 1,
+          "cache_ttl_seconds": 600,
+          "material_ttl_seconds": 86400
+        },
+        "skills": [
+          {
+            "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+            "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+            "skill_id": "campaign-planning",
+            "resources": {
+              "references/content-patterns.md": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n"
+            },
+            "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。",
+            "script_hashes": {}
+          },
+          {
+            "body": "---\nname: constrained-replanning\ndescription: 根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。\n---\n\n先检查真实返回：哪些结果有效、缺少什么、失败是否可重试、预算或排期缺口多少。\n\n根据原因提出有内容意义的替代，例如降低视觉规格、减少制作项、换用允许的素材。解释改变及损失，保留不受影响的素材和脚本。\n\n候选改变后调用 estimate_proposal，未取得新结果前不声称已经满足预算。准确估算返回不可行，不等于估算工具失败。\n\n首个闭环只支持 premium / simple 两个制作规格：差异只在视觉复杂度；在需求、来源和文字交付范围没有变化时，素材与核心文案可保留，视觉成本和排期必须重新估算。不能声称已实现任意数量的海报或视频组合调整。\n\n用户预算、截止时间和必须真实素材的条件不因重规划自动改变。有限尝试内没有可行候选时如实说明当前缺口和已取得结果。\n\n可选参考：`references/tradeoffs.md`。\n",
+            "version": "e969a626d3399db74f771aeb7256dc9074ed7427adc5cead1dd18b6a64508c0e",
+            "skill_id": "constrained-replanning",
+            "resources": {
+              "references/tradeoffs.md": "# 替代与复用\n\n高规格视觉可换为统一模板，但应保留内容主张，并向用户说明视觉制作范围变化。合成素材可以替代检索失败的真实素材，仅在用户未要求必须真实素材时适用。\n\n主题或事实变化可能使原脚本失效；只调整视觉规格时可继续复用仍匹配的文案。每个替代都用实际估算验证，不能靠修改展示数字完成任务。\n"
+            },
+            "description": "根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。",
+            "script_hashes": {}
+          },
+          {
+            "body": "---\nname: proposal-delivery\ndescription: 将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。\n---\n\n方案需要目标、受众假设、内容策略、完整脚本、制作排期、制作成本及素材来源。使用实际工具返回的费用和日期，不再虚构一次生成或保存。\n\n可按需读取 `assets/proposal-outline.md`。通过 MCP validate_proposal 调用固定脚本检查章节、字段和素材引用，取得与当前内容指纹匹配的检查结果；若缺项，修正后重新检查。\n\n只有实际保存成功才说明已保存；未完成则列出已有产物、失败或不足、费用及下一步。保存的硬性预算、排期、状态及幂等条件由业务服务再次验证。\n",
+            "version": "04e5235079ac1bc22f347f7e4654178897a34799da558546a72541677d0bcf38",
+            "skill_id": "proposal-delivery",
+            "resources": {
+              "assets/proposal-outline.md": "# 活动主题\n\n## 活动目标\n## 受众与渠道假设\n## 内容策略\n## 内容与脚本\n## 制作及活动执行排期\n## 制作成本与预算\n## 素材与来源\n## 调整、限制与后续建议\n"
+            },
+            "description": "将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。",
+            "script_hashes": {
+              "scripts/check_required_sections.py": "4cb039306c318bf579336bc512011d237632f31f976698fd71f9f75f70df9916"
+            }
+          },
+          {
+            "body": "---\nname: script-writing\ndescription: 根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。\n---\n\n围绕用户的主题、目标和语气生成可直接阅读的脚本。明确标题、开场、正文和互动收尾；若用户给出渠道或篇幅要求，优先遵守。\n\n首个闭环的 premium / simple 仅改变视觉制作复杂度，核心文案相同。生成适合自有渠道发布的标题、主文与互动话术，不在正文强制绑定昂贵拍摄或高规格视觉，以便降级视觉时仍可复用文字。\n\n资料是事实边界：使用给定素材标识，不虚构链接、数据、产品功能、用户评价或已执行的活动。合成资料用于创意结构，不写成真实市场证据。\n\n输入通常只有活动主题，不包含产品详情。此时只能写场景、情绪与普通互动；未知品牌、工艺、成分、性能、价格均用【待确认：具体信息】占位，不能自行填值。例如只有“咖啡新品”不能写“采用冷萃工艺、减少苦涩、快速冲泡”，可写“在通勤或阅读时，你期待怎样的一杯咖啡？”\n\n本轮制作规则仅包括自有渠道文字与视觉发布、无奖励评论互动。不得承诺折扣、抽奖、赠品、免费试饮或购买优惠；这些没有已确认的执行条件与成本。结尾只能邀请评论、关注或了解【待确认：官方入口】，不自拟促销机制。\n\n直接输出正文，不输出调用工具的指令、模型思考或“已保存”声明。素材不足时说明缺少的具体事实。\n\n可选参考：`references/channel-guide.md`。生成器自身不调用其他工具，进一步取材交回外层执行图。\n",
+            "version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41",
+            "skill_id": "script-writing",
+            "resources": {
+              "references/channel-guide.md": "# 渠道表达参考\n\n短内容使用一个核心主张，以场景、价值和互动组织段落。长图文可增加清晰的小标题；视频脚本可标示场景和旁白。\n\n没有明确渠道时按通用社交图文起草并说明假设。不要虚构平台流量规则、强制字数或推广效果。\n"
+            },
+            "description": "根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。",
+            "script_hashes": {}
+          }
+        ],
+        "worker": {
+          "poll_seconds": 0.5,
+          "lease_seconds": 60,
+          "heartbeat_seconds": 10
+        },
+        "config_hash": "f8d44038a465040dad633859359fdb655031d36411bcdf570e9e9a374c690ced",
+        "active_model": "deepseek",
+        "tool_catalog": {
+          "load_skill": {
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "parameters": {
+                "type": "object",
+                "title": "load_skillArguments",
+                "required": [
+                  "skill_id"
+                ],
+                "properties": {
+                  "skill_id": {
+                    "type": "string",
+                    "title": "Skill Id"
+                  }
+                }
+              },
+              "description": "读取已注册 Skill 的正文和资源目录。可从四类目录自由选择；加载不增加业务工具权限。"
+            }
+          },
+          "save_proposal": {
+            "type": "function",
+            "function": {
+              "name": "save_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "save_proposalArguments",
+                "required": [
+                  "validation_id",
+                  "estimate_id"
+                ],
+                "properties": {
+                  "estimate_id": {
+                    "type": "string",
+                    "title": "Estimate Id"
+                  },
+                  "validation_id": {
+                    "type": "string",
+                    "title": "Validation Id"
+                  }
+                }
+              },
+              "description": "仅保存已经通过有效结构检查和成本排期估算的当前方案。事务再次检查状态、引用和幂等条件，提交后返回方案标识。"
+            }
+          },
+          "generate_script": {
+            "type": "function",
+            "function": {
+              "name": "generate_script",
+              "parameters": {
+                "type": "object",
+                "title": "generate_scriptArguments",
+                "required": [
+                  "material_ids",
+                  "direction"
+                ],
+                "properties": {
+                  "direction": {
+                    "type": "string",
+                    "title": "Direction"
+                  },
+                  "material_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "title": "Material Ids"
+                  }
+                }
+              },
+              "description": "依据已检索素材生成真实 LLM 文案，使用本运行固定模型和文案 Skill；生成器不调用其他工具。"
+            }
+          },
+          "estimate_proposal": {
+            "type": "function",
+            "function": {
+              "name": "estimate_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "estimate_proposalArguments",
+                "required": [
+                  "production_spec"
+                ],
+                "properties": {
+                  "production_spec": {
+                    "enum": [
+                      "premium",
+                      "simple"
+                    ],
+                    "type": "string",
+                    "title": "Production Spec"
+                  }
+                }
+              },
+              "description": "联合估算制作成本、自然小时串行排期、可行性和缺口。premium 为高规格视觉，simple 为精简视觉。返回不可行是准确估算，不是工具失败。"
+            }
+          },
+          "validate_proposal": {
+            "type": "function",
+            "function": {
+              "name": "validate_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "validate_proposalArguments",
+                "required": [
+                  "draft_id"
+                ],
+                "properties": {
+                  "draft_id": {
+                    "type": "string",
+                    "title": "Draft Id"
+                  }
+                }
+              },
+              "description": "运行方案交付 Skill 的确定性脚本，检查指定交付草稿的必需字段和素材引用，返回 is_valid 及实际检查记录。"
+            }
+          },
+          "read_skill_resource": {
+            "type": "function",
+            "function": {
+              "name": "read_skill_resource",
+              "parameters": {
+                "type": "object",
+                "title": "read_skill_resourceArguments",
+                "required": [
+                  "skill_id",
+                  "resource_id"
+                ],
+                "properties": {
+                  "skill_id": {
+                    "type": "string",
+                    "title": "Skill Id"
+                  },
+                  "resource_id": {
+                    "type": "string",
+                    "title": "Resource Id"
+                  }
+                }
+              },
+              "description": "按注册资源标识读取 Skill 参考或文本模板，不接受任意文件路径。"
+            }
+          },
+          "search_synthetic_materials": {
+            "type": "function",
+            "function": {
+              "name": "search_synthetic_materials",
+              "parameters": {
+                "type": "object",
+                "title": "search_synthetic_materialsArguments",
+                "required": [
+                  "query"
+                ],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "title": "Query"
+                  }
+                }
+              },
+              "description": "检索项目合成内容素材，返回可使用的真实存在的内部素材标识；不是联网检索。"
+            }
+          }
+        },
+        "selected_model": {
+          "model": "deepseek-chat",
+          "base_url": "https://api.deepseek.com",
+          "currency": "USD",
+          "provider": "deepseek",
+          "max_tokens": 1600,
+          "api_key_env": "DEEPSEEK_API_KEY",
+          "temperature": 0.0,
+          "timeout_seconds": 180,
+          "input_cost_per_million": null,
+          "output_cost_per_million": null
+        },
+        "tavily_enabled": true,
+        "fault_injection": {
+          "once_tool": null,
+          "pause_after_failure": false
+        },
+        "production_rules": {
+          "unit": "模拟单位",
+          "version": "2026-11-07.2",
+          "specifications": {
+            "simple": {
+              "items": [
+                {
+                  "cost": "1",
+                  "name": "策划",
+                  "hours": "2"
+                },
+                {
+                  "cost": "2",
+                  "name": "文案",
+                  "hours": "2"
+                },
+                {
+                  "cost": "5",
+                  "name": "精简视觉",
+                  "hours": "3"
+                },
+                {
+                  "cost": "0",
+                  "name": "自有渠道发布与互动执行",
+                  "hours": "1"
+                }
+              ],
+              "label": "精简视觉"
+            },
+            "premium": {
+              "items": [
+                {
+                  "cost": "1",
+                  "name": "策划",
+                  "hours": "2"
+                },
+                {
+                  "cost": "2",
+                  "name": "文案",
+                  "hours": "2"
+                },
+                {
+                  "cost": "9",
+                  "name": "高规格视觉",
+                  "hours": "6"
+                },
+                {
+                  "cost": "0",
+                  "name": "自有渠道发布与互动执行",
+                  "hours": "1"
+                }
+              ],
+              "label": "高规格视觉"
+            }
+          },
+          "tool_simulated_fees": {
+            "load_skill": "0.00",
+            "save_proposal": "0.00",
+            "generate_script": "0.20",
+            "estimate_proposal": "0.10",
+            "validate_proposal": "0.05",
+            "read_skill_resource": "0.00",
+            "search_web_materials": "0.10",
+            "search_synthetic_materials": "0.10"
+          }
+        },
+        "remote_tool_catalog": {
+          "name": "tavily_search",
+          "schema": {
+            "type": "object",
+            "required": [
+              "query"
+            ],
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Search query. Keep it short and specific, in the words the page itself would use; one idea per query."
+              },
+              "topic": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "general",
+                      "news"
+                    ],
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Search category. Use 'general' for almost all searches, including current events and requests that combine news with other information. Use 'news' only when the user explicitly asks for news, headlines, or news coverage."
+              },
+              "country": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Boost search results from a specific country. Must be a full country name (e.g., 'United States', 'Japan', 'Germany'). ISO country codes (e.g., 'us', 'jp') are not supported. Available only if topic is general. See https://docs.tavily.com/documentation/api-reference/search for the full list of supported countries."
+              },
+              "end_date": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Will return all results before the specified end date. Required to be written in the format YYYY-MM-DD. Filters by publish date, not by when events happened; leave it empty when looking for facts about past events."
+              },
+              "start_date": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Will return all results after the specified start date. Required to be written in the format YYYY-MM-DD. Filters by publish date, not by when events happened; leave it empty when looking for facts about past events."
+              },
+              "time_range": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "day",
+                      "week",
+                      "month",
+                      "year"
+                    ],
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "The time range back from the current date to include in the search results. Filters by when a page was published, not by when the events it describes happened."
+              },
+              "exact_match": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Only return results containing the exact phrase(s) in quotes in your query"
+              },
+              "max_results": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "The maximum number of search results to return. Ask for 10 when looking for a specific fact, page or entity."
+              },
+              "search_depth": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "basic",
+                      "advanced",
+                      "fast",
+                      "ultra-fast"
+                    ],
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "The depth of the search. 'basic' for generic results, 'advanced' for more thorough search, 'fast' for optimized low latency with high relevance, 'ultra-fast' for prioritizing latency above all else. Use 'advanced' when looking for a specific fact, page or entity, or when 'basic' did not find it."
+              },
+              "include_images": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Include a list of query-related images in the response"
+              },
+              "exclude_domains": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "List of domains to specifically exclude, if the user asks to exclude a domain set this to the domain of the site"
+              },
+              "include_domains": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "A list of domains to specifically include in the search results, if the user asks to search on specific sites set this to the domain of the site. Use full domains such as 'en.wikipedia.org' or 'sec.gov', not suffixes such as 'edu'. This is a hard filter: if results come back empty or thin, search again without it."
+              },
+              "include_favicon": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Whether to include the favicon URL for each result"
+              },
+              "include_raw_content": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Include the cleaned and parsed HTML content of each search result. Whole pages can make the response too large to read; to read one page, use tavily_extract with a query instead."
+              },
+              "include_published_date": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Include detected publication dates (beta)"
+              },
+              "filter_by_published_date": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Filter results to the requested date window and exclude results with no detected publication date"
+              },
+              "include_image_descriptions": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Include a list of query-related images and their descriptions in the response"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "material_catalog_hash": "995f3ae1bbfdb080e2431fdc838c8684332d97932b9be29858f5a9c34555dc7d"
+      },
+      "last_error": null,
+      "requirements": {
+        "topic": "真实Tavily网关协议测试",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": true
+      },
+      "context_calls": 0,
+      "loaded_skills": [],
+      "business_calls": 2,
+      "control_status": null,
+      "research_force": false,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d",
+      "last_tool_failed": false
+    },
+    "model_calls": [],
+    "skill_loads": [],
+    "validations": {},
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.10",
+      "estimated_finish": null,
+      "model_input_tokens": null,
+      "model_output_tokens": null,
+      "model_unknown_usage_calls": 0
+    },
+    "requirements": {
+      "topic": "真实Tavily网关协议测试",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": true
+    },
+    "model_display": "qwen3:latest · 本地",
+    "pending_patch": null,
+    "fault_consumed": [],
+    "client_messages": {},
+    "pending_changes": null,
+    "last_event_seq": 11
+  },
+  "tool_calls": [
+    {
+      "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_name": "search_web_materials",
+      "display_name": "检索真实素材",
+      "server_name": "tavily-remote",
+      "status": "success",
+      "input": {
+        "query": "site:unesco.org World Book and Copyright Day official"
+      },
+      "output": {
+        "empty": false,
+        "query": "site:unesco.org World Book and Copyright Day official",
+        "missing": [],
+        "partial": false,
+        "materials": [
+          {
+            "url": "https://www.unesco.org/en/articles/world-book-and-copyright-day-2017-celebrated-unesco",
+            "title": "World Book and Copyright Day 2017 celebrated at UNESCO | UNESCO",
+            "summary": "“World Book and Copyright Day is an opportunity to highlight the power of books to promote our vision of knowledge societies that are inclusive, pluralistic, equitable, open and participatory for all citizens,” UNESCO Director-General, Irina Bokova said in her message given on the occasion of the World Book and Copyright Day 2017. [...] World Book and Copyright Day is celebrated every year on 23 April, the date on which both William Shakespeare and Miguel de Cervantes died. On this occasion, publishing houses, bookstores, libraries, cultural institutions and associations of authors mobilize across the world to promote reading, publishing, and protection of intellectual property.",
+            "material_id": "web-cae0200a09",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+          },
+          {
+            "url": "https://www.unesco.org/en/fieldoffice/brasilia/expertise/book-day",
+            "title": "About the World Book and Copyright Day in Brazil | UNESCO",
+            "summary": "World Book and Copyright Day is a celebration to promote the enjoyment of books and reading. Each year, on 23 April, celebrations take place all over the world to recognize the scope of books - a link between the past and the future, a bridge between generations and across cultures. On this occasion, UNESCO and the international organizations representing the three major sectors of the book industry - publishers, booksellers and libraries, select the World Book Capital for a year to maintain, [...] In 1995, the UNESCO’s General Conference declared the 23 April as World Book and Copyright Day to pay a tribute to books and authors worldwide, encouraging everyone to have access to books and read. 23 April is a is the date on which several prominent authors, William Shakespeare, Miguel de Cervantes, and Inca Garcilaso de la Vega all died. Thus, it is a symbolic date in world literature.\n\n## What is World Book and Copyright Day [...] Information and communication\n Culture\n Books\n World Book and Copyright Day\n World Book Capital Cities\n Creativity\n Multilingualism\n Indigenous Languages Decade (2022-2032)\n Indigenous peoples\n Country page: Brazil\n Region: Latin America and the Caribbean\n UNESCO Office in Brasilia\n SDG: SDG 16 - Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels\n See moreadd",
+            "material_id": "web-e9b59e1e83",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+          }
+        ],
+        "source_type": "web",
+        "available_count": 2,
+        "requested_count": 2
+      },
+      "started_at": "2026-11-07T18:25:40.426751+00:00",
+      "duration_ms": 17757,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_name": "search_web_materials",
+      "display_name": "检索真实素材",
+      "server_name": "tavily-result-cache",
+      "status": "success",
+      "input": {
+        "query": "site:unesco.org World Book and Copyright Day official"
+      },
+      "output": {
+        "empty": false,
+        "query": "site:unesco.org World Book and Copyright Day official",
+        "reused": true,
+        "missing": [],
+        "partial": false,
+        "materials": [
+          {
+            "url": "https://www.unesco.org/en/articles/world-book-and-copyright-day-2017-celebrated-unesco",
+            "title": "World Book and Copyright Day 2017 celebrated at UNESCO | UNESCO",
+            "summary": "“World Book and Copyright Day is an opportunity to highlight the power of books to promote our vision of knowledge societies that are inclusive, pluralistic, equitable, open and participatory for all citizens,” UNESCO Director-General, Irina Bokova said in her message given on the occasion of the World Book and Copyright Day 2017. [...] World Book and Copyright Day is celebrated every year on 23 April, the date on which both William Shakespeare and Miguel de Cervantes died. On this occasion, publishing houses, bookstores, libraries, cultural institutions and associations of authors mobilize across the world to promote reading, publishing, and protection of intellectual property.",
+            "material_id": "web-cae0200a09",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+          },
+          {
+            "url": "https://www.unesco.org/en/fieldoffice/brasilia/expertise/book-day",
+            "title": "About the World Book and Copyright Day in Brazil | UNESCO",
+            "summary": "World Book and Copyright Day is a celebration to promote the enjoyment of books and reading. Each year, on 23 April, celebrations take place all over the world to recognize the scope of books - a link between the past and the future, a bridge between generations and across cultures. On this occasion, UNESCO and the international organizations representing the three major sectors of the book industry - publishers, booksellers and libraries, select the World Book Capital for a year to maintain, [...] In 1995, the UNESCO’s General Conference declared the 23 April as World Book and Copyright Day to pay a tribute to books and authors worldwide, encouraging everyone to have access to books and read. 23 April is a is the date on which several prominent authors, William Shakespeare, Miguel de Cervantes, and Inca Garcilaso de la Vega all died. Thus, it is a symbolic date in world literature.\n\n## What is World Book and Copyright Day [...] Information and communication\n Culture\n Books\n World Book and Copyright Day\n World Book Capital Cities\n Creativity\n Multilingualism\n Indigenous Languages Decade (2022-2032)\n Indigenous peoples\n Country page: Brazil\n Region: Latin America and the Caribbean\n UNESCO Office in Brasilia\n SDG: SDG 16 - Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels\n See moreadd",
+            "material_id": "web-e9b59e1e83",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T18:25:58.171587+00:00"
+          }
+        ],
+        "source_type": "web",
+        "available_count": 2,
+        "requested_count": 2
+      },
+      "started_at": "2026-11-07T18:25:58.222878+00:00",
+      "duration_ms": 20,
+      "error": null,
+      "attempt": 2
+    }
+  ],
+  "cost_entries": [
+    {
+      "entry_id": "2ec95dfe-844e-4b4e-84ee-70b278eb97af",
+      "charge_key": "external:8c7275a1-0767-4851-868a-7a88e88dfda6",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "kind": "external_search",
+      "amount": null,
+      "unit": "Tavily credits",
+      "status": "unknown",
+      "usage": {
+        "result_received": true
+      },
+      "created_at": "2026-11-07T18:25:52.531639+00:00"
+    },
+    {
+      "entry_id": "aec84b39-3f4d-4a96-88d6-b4643d631cb6",
+      "charge_key": "tool:8c7275a1-0767-4851-868a-7a88e88dfda6",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "kind": "tool_simulated",
+      "amount": "0.100000000000",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "search_web_materials",
+        "reused": false
+      },
+      "created_at": "2026-11-07T18:25:58.187312+00:00"
+    },
+    {
+      "entry_id": "4aafa120-6308-4e8d-8231-2a84ec6dc6af",
+      "charge_key": "tool:03bdff84-8921-4e85-91e2-53eceecf36bb",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "kind": "tool_simulated",
+      "amount": "0E-12",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "search_web_materials",
+        "reused": true
+      },
+      "created_at": "2026-11-07T18:25:58.246700+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:1",
+      "session_seq": 1,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "workspace.updated",
+      "occurred_at": "2026-11-07T18:25:40.327680+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 1,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:2",
+      "session_seq": 2,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "capabilities.frozen",
+      "occurred_at": "2026-11-07T18:25:40.411904+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 2,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:3",
+      "session_seq": 3,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T18:25:40.431476+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6"
+      },
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6",
+      "entity_version": 3,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:4",
+      "session_seq": 4,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "capabilities.frozen",
+      "occurred_at": "2026-11-07T18:25:52.504923+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 4,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:5",
+      "session_seq": 5,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "external_call.started",
+      "occurred_at": "2026-11-07T18:25:52.534943+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6"
+      },
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6",
+      "entity_version": 5,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:6",
+      "session_seq": 6,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T18:25:58.194643+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6"
+      },
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6",
+      "entity_version": 6,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:7",
+      "session_seq": 7,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T18:25:58.209964+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6"
+      },
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_call_id": "8c7275a1-0767-4851-868a-7a88e88dfda6",
+      "entity_version": 7,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:8",
+      "session_seq": 8,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T18:25:58.231159+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb"
+      },
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb",
+      "entity_version": 8,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:9",
+      "session_seq": 9,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T18:25:58.249349+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb"
+      },
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb",
+      "entity_version": 9,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:10",
+      "session_seq": 10,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T18:25:58.262967+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb"
+      },
+      "step_id": "7b28b9da-f495-46b7-96f7-5e8ebdf0b339",
+      "tool_call_id": "03bdff84-8921-4e85-91e2-53eceecf36bb",
+      "entity_version": 10,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    },
+    {
+      "event_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7:11",
+      "session_seq": 11,
+      "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+      "type": "workspace.updated",
+      "occurred_at": "2026-11-07T18:25:58.279443+00:00",
+      "run_id": "dfbb5aac-7779-455a-ac96-a8975e1a7eaa",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 11,
+      "plan_version_id": "c859add1-54b5-4eef-8c19-abd582a30e0d"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "ffa36dae-893b-4669-9e08-5114a1f1d5d2",
+      "kind": "test-ecdc9a2a:probe",
+      "status": "done",
+      "lease_epoch": 1,
+      "error": null
+    }
+  ],
+  "harness_error": null,
+  "real_external_deepseek": false
+}

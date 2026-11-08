@@ -1,0 +1,31 @@
+{
+  "session_id": "e0b207e6-cf03-4285-9e0c-cfc022d17992",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "37b1cf5e-0ef3-469f-a37d-0644468c0def",
+        "content": "为社区读书会写内容活动方案，制作预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00，均北京时间，高规格premium，允许合成素材。先给计划，不要执行。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "3a4d56a0-fad1-4f30-b1e7-60a89867950f",
+        "processing_id": "317c3671-a7af-48b9-ac9e-ab6b512acd1f",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "0fb1faed-bd76-4b7e-9a40-c645e0351274",
+        "content": "按当前计划开始执行。",
+        "view_context": {
+          "plan_version_id": "01e19077-aba2-4cb0-aead-f0f1739bfc9a"
+        }
+      },
+      "response": {
+        "message_id": "d057a094-a34d-4ceb-bed1-6236756cc4fd",
+        "processing_id": "40e71b90-d425-4dcc-bb83-c9214be964bf",
+        "duplicate": false
+      }
+    }
+  ]
+}

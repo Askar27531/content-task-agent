@@ -1,0 +1,296 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Agent\\Content-task\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.ui-audit.config.ts",
+      "--grep-invert",
+      "new real browser",
+      "--output",
+      "examples/ui-label-audit/recheck/artifacts",
+      "--reporter=json"
+    ],
+    "configFile": "D:\\Agent\\Content-task\\playwright.ui-audit.config.ts",
+    "rootDir": "D:/Agent/Content-task/tests/ui-audit",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Agent/Content-task/examples/ui-label-audit/recheck/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/Agent/Content-task/tests/ui-audit",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Agent\\Content-task\\examples\\ui-label-audit\\recheck\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\Agent\\Content-task\\tests\\ui-audit",
+        "snapshotDir": "D:\\Agent\\Content-task\\tests\\ui-audit",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 300000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "browserName": "chromium",
+          "trace": "on",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "live-labels.spec.ts",
+      "file": "live-labels.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real completed and historical plans have accurate Chinese labels, costs, scope and dates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2707,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T04:38:12.514Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-console",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\ui-label-audit\\recheck\\artifacts\\live-labels-real-completed-ecd19-abels-costs-scope-and-dates\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf275d36d4cb396b367d-288e6a636f1dd91c6c42",
+          "file": "live-labels.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "real incomplete run does not leak a completed proposal or call an infeasible estimate a failed tool",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2104,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T04:38:15.603Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-console",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\ui-label-audit\\recheck\\artifacts\\live-labels-real-incomplet-54257-ible-estimate-a-failed-tool\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf275d36d4cb396b367d-a8d2b176629298d14e61",
+          "file": "live-labels.spec.ts",
+          "line": 90,
+          "column": 1
+        },
+        {
+          "title": "real resumed run preserves failed attempt labels alongside a completed latest plan",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1328,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T04:38:17.787Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-console",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\ui-label-audit\\recheck\\artifacts\\live-labels-real-resumed-r-f3b68-ide-a-completed-latest-plan\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf275d36d4cb396b367d-5f09860c96a1de74d5d2",
+          "file": "live-labels.spec.ts",
+          "line": 107,
+          "column": 1
+        },
+        {
+          "title": "real responsive tags and version options fit desktop, narrow and phone widths",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4670,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T04:38:19.171Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-console",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\ui-label-audit\\recheck\\artifacts\\live-labels-real-responsiv-5ac53-top-narrow-and-phone-widths\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf275d36d4cb396b367d-21851766701ac978323c",
+          "file": "live-labels.spec.ts",
+          "line": 119,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-07T04:38:12.134Z",
+    "duration": 12165.809000000001,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

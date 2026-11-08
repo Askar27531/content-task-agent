@@ -1,0 +1,74 @@
+[
+  {
+    "name": "api-contracts",
+    "passed": true,
+    "checks": {
+      "empty-message": true,
+      "missing-client-id": true,
+      "oversize-content": true,
+      "wrong-view-type": true,
+      "bad-base64-cursor": true,
+      "negative-cursor": true,
+      "unknown-session": true,
+      "forged-status": true,
+      "accept-once": true,
+      "repeat-same-id": true,
+      "same-id-other-content": true
+    }
+  },
+  {
+    "name": "20-video-script-supported",
+    "session_id": "e7a86bef-a3dc-407c-bb52-7436c517017d",
+    "url": "http://127.0.0.1:5173/sessions/e7a86bef-a3dc-407c-bb52-7436c517017d",
+    "checks": {
+      "no_test_exception": true,
+      "completed": false,
+      "uses_script_tool": true,
+      "writing_request_preserved": true,
+      "three_scripts": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": false
+  },
+  {
+    "name": "21-stale-plan-approval",
+    "session_id": "b973ea36-7892-41c1-bf0c-4f00b8d57ad6",
+    "url": "http://127.0.0.1:5173/sessions/b973ea36-7892-41c1-bf0c-4f00b8d57ad6",
+    "passed": true,
+    "checks": {
+      "new_version_created": true,
+      "new_budget_8": true,
+      "stale_intent_not_run": true,
+      "not_saved": true
+    }
+  },
+  {
+    "name": "22-change-during-tool",
+    "session_id": "927d42e9-fd63-40b5-895c-eb23eecb1e82",
+    "url": "http://127.0.0.1:5173/sessions/927d42e9-fd63-40b5-895c-eb23eecb1e82",
+    "passed": true,
+    "checks": {
+      "control_sent_during_real_tool": true,
+      "old_run_stopped": true,
+      "new_plan_waits": true,
+      "new_budget_8": true,
+      "success_materials_preserved": true,
+      "not_saved": true
+    }
+  },
+  {
+    "name": "23-stop-resume",
+    "session_id": "f2da9283-9ce0-4cb4-a468-477d26d27b22",
+    "url": "http://127.0.0.1:5173/sessions/f2da9283-9ce0-4cb4-a468-477d26d27b22",
+    "passed": false,
+    "checks": {
+      "control_sent_during_real_tool": true,
+      "stopped": true,
+      "same_run": true,
+      "completed": false,
+      "material_once": true,
+      "script_once": true,
+      "saved_once": false
+    }
+  }
+]

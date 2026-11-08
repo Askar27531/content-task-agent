@@ -1,0 +1,17 @@
+{
+  "session_id": "0aa44c91-3575-47cc-a06d-23f91598e8bc",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "a388a368-3511-48f2-a329-71d2cf865c1d",
+        "content": "读书会，预算10，开始2030-12-05 08:00，截止2030-12-03 18:00，北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "3b95b05b-607b-4785-9b51-ee845ea0b8a7",
+        "processing_id": "ab6b68ad-f1ff-4cb6-b09e-bf60f2cc725f",
+        "duplicate": false
+      }
+    }
+  ]
+}

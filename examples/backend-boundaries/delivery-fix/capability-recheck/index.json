@@ -1,0 +1,16 @@
+[
+  {
+    "name": "13-unsupported",
+    "session_id": "f653077f-98dd-4e9c-915b-aa823201f59b",
+    "url": "http://127.0.0.1:5173/sessions/f653077f-98dd-4e9c-915b-aa823201f59b",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_current_ready_plan": true,
+      "capability_explained": true,
+      "capability_recorded": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-11-07T17:11:01.380997+00:00",
+  "client_date": "2026-11-08",
+  "backend": {
+    "tests": 159,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_backend_cases": 54,
+  "real_qwen_scenarios": 13,
+  "scenario_passed": 13,
+  "new_combination_scenarios": 10,
+  "hard_crash_rechecks": 3,
+  "audit_passed": 13,
+  "completed_scenarios": 10,
+  "actual_saved_documents": 12,
+  "pg_contention_rounds": 40,
+  "workers_per_round": 8,
+  "pg_contention_passed": true,
+  "same_model_response_concurrent_replays": 20,
+  "sse_http_checks": 13,
+  "sse_http_passed": true,
+  "new_browser": {
+    "startTime": "2026-11-07T17:05:53.918Z",
+    "duration": 12064.232,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "previous_feature_browser": {
+    "startTime": "2026-11-07T17:04:23.833Z",
+    "duration": 15224.197,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typescript": "passed",
+  "ruff": "passed E9,F63,F7,F82",
+  "real_tavily_tested": false,
+  "real_deepseek_tested": false,
+  "external_search": "labeled local Streamable HTTP MCP fixture",
+  "production_packages": [
+    "premium",
+    "simple"
+  ],
+  "code_hashes": {
+    "src/backend/app/api.py": "184b06de2654dc97b72edef76e2cd4e91b7a42c1b2885a48bc2de3bbfc413574",
+    "src/backend/app/store.py": "bd81d161a0288cc9f1119ae18ea2a5f8aef0d8bc538015621f34347a6d867c2b",
+    "src/backend/app/graphs.py": "3f18cad45185d6309349682f67dd3bfedfbc78eb27ccb366956616a605720d0b",
+    "src/backend/app/gateway.py": "b124b0f4e51546ee2a98bb9cc5416829ee99fe7751f5ada79e2455c824e6d87e",
+    "src/backend/app/reuse.py": "9b113b7bb296269a8d2773c67961b8a2cbd3ef00b5ee5322fbb584c10b60f04a",
+    "src/backend/app/search.py": "e4d073b59d5890f3e3b706247272c8a2a471ee5589991649a41489bdf92d6d3d",
+    "src/backend/app/llm.py": "e39f4a30e9159ce7994619bab4dc0ba286fcc0e85e40194ab6f172c8fbed4891",
+    "src/backend/app/contracts.py": "85e29c31968d6a692d3b1bb62d9b146d365e87275d8f65c2c1594a9c49e46e43",
+    "scripts/start.ps1": "bb38093ba443cd16cf64db33d8d85d6343845c188ee19dff6bec114d69e2921a"
+  },
+  "missing_document_links": []
+}

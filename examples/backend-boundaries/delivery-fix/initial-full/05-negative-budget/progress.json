@@ -1,0 +1,17 @@
+{
+  "session_id": "980dede3-5192-4f3d-8747-e986b5ab5c8d",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "54e6f0ac-6b50-4e50-8fc8-49347d918ef0",
+        "content": "读书会，预算负1个模拟单位，截止2030-12-03 18:00北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "4ccc509b-aa17-4622-9a6e-c976d2963987",
+        "processing_id": "572a82e6-c539-4828-80cf-778a62f1b801",
+        "duplicate": false
+      }
+    }
+  ]
+}

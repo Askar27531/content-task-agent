@@ -1,0 +1,126 @@
+[
+  {
+    "name": "deepseek-vague",
+    "session_id": "304a541f-e325-4963-af17-e4d0d8ecf170",
+    "checks": {
+      "no_execution": true,
+      "budget_not_invented": true,
+      "deadline_not_invented": true,
+      "no_business_calls": true,
+      "clarification_present": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "combined-failure-resume",
+    "session_id": "a19f95ba-540b-4606-977f-158bb6f298aa",
+    "checks": {
+      "first_incomplete": true,
+      "real_sources_kept": true,
+      "search_once": true,
+      "failed_attempt_preserved": true,
+      "resumed_same_run": true,
+      "completed": true,
+      "saved_once": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "tavily-timeout-strict",
+    "session_id": "fe30ff75-ac81-45cf-bba2-d2502e4bb3d0",
+    "checks": {
+      "real_search_attempt": true,
+      "bounded_search": true,
+      "timeout_is_failed": true,
+      "no_fake_web_sources": true,
+      "timeout_error_code": true,
+      "incomplete": true,
+      "not_saved": true,
+      "no_synthetic": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "tavily-timeout-fallback",
+    "session_id": "9c287997-2aaf-4145-af5f-f748210e2f2c",
+    "checks": {
+      "real_search_attempt": true,
+      "bounded_search": true,
+      "timeout_is_failed": true,
+      "no_fake_web_sources": true,
+      "timeout_error_code": true,
+      "completed": true,
+      "saved_once": true,
+      "source_warning": true,
+      "synthetic_used": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "real-tavily-cache-guards",
+    "session_id": "1fa9f4e3-deee-4c2e-9ec4-96bd02b642f7",
+    "checks": {
+      "bad_arguments_rejected_before_dispatch": true,
+      "real_result": true,
+      "cached_second": true,
+      "one_actual_external_charge": true,
+      "only_two_operations": true,
+      "cached_not_recharged": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "combined-replan-repeat",
+    "session_id": "446a2a16-4827-40d5-8d30-1a5898731127",
+    "checks": {
+      "saved_once": true,
+      "completed": true,
+      "real_web_success": true,
+      "only_real_sources": true,
+      "reestimated_12_to_8": true,
+      "repeat_no_new_business": true,
+      "same_completed_run": true,
+      "provider_not_switched": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "deepseek-low-budget",
+    "session_id": "086269d2-11eb-4556-bd48-aad505a8170f",
+    "checks": {
+      "incomplete": true,
+      "not_saved": true,
+      "known_gap": true,
+      "gap_in_final_reason": true,
+      "no_pointless_upgrade": true,
+      "results_retained": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  },
+  {
+    "name": "audit-auto-failure-replan",
+    "session_id": "9eff2773-fb50-41a5-86e4-a18e6c2606af",
+    "checks": {
+      "completed": true,
+      "saved_once": true,
+      "single_injected_failure": true,
+      "retry_is_new_attempt": true,
+      "no_manual_resume": true,
+      "real_sources_not_repeated": true,
+      "actual_12_to_8": true,
+      "changed_plan": true,
+      "script_preserved_through_replan": true,
+      "source_ids_preserved": true,
+      "production_is_8": true,
+      "no_harness_error": true
+    },
+    "passed": true
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "clipboard_matches_saved": false,
+  "console": [
+    "Warning: [antd: message] Static function can not consume context like dynamic theme. Please use 'App' component instead."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "session_id": "5e646b82-f224-4f98-a335-8d5855444819",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "57450991-18de-44bd-aecf-60cf6acb3a81",
+        "content": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。只能引用真的来源、可点开的出处，不要编的，只用已有可信资料。先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "b9ba452a-62a0-4d3b-b7a4-5f4aab87a255",
+        "processing_id": "82da97fa-2121-45b8-be97-3ff17325702b",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "aab1d770-8848-4964-b0dc-1a11fc02d5aa",
+        "content": "开始",
+        "view_context": {
+          "plan_version_id": "17bfc53b-0d7a-4c11-be09-ae4a90cc00f0"
+        }
+      },
+      "response": {
+        "message_id": "9d34b908-aa8d-46b7-b93d-81c9f89e406c",
+        "processing_id": "6de8ee96-dda1-48fc-9e00-0bed80449652",
+        "duplicate": false
+      }
+    }
+  ]
+}

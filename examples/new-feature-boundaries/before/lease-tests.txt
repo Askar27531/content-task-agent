@@ -1,0 +1,144 @@
+...........................F.FFFF                                        [100%]
+================================== FAILURES ===================================
+_____ test_concurrent_workers_cannot_claim_two_jobs_in_same_session_role ______
+.venv\Lib\site-packages\sqlalchemy\engine\base.py:1977: in _exec_single_context
+    self.dialect.do_execute(
+.venv\Lib\site-packages\sqlalchemy\engine\default.py:1192: in do_execute
+    cursor.execute(statement, parameters)
+.venv\Lib\site-packages\psycopg\cursor.py:117: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "uq_studio_jobs_active_session_kind"
+E   DETAIL:  Key (session_id, kind)=(2449add1-f270-497c-aa6f-b006fadefb32, test-454b14ef:run) already exists.
+
+The above exception was the direct cause of the following exception:
+tests\backend\test_new_feature_boundaries.py:126: in test_concurrent_workers_cannot_claim_two_jobs_in_same_session_role
+    claims=list(pool.map(lambda n:claim_job(queue,'worker-'+str(n)),range(8)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py:619: in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py:317: in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py:401: in __get_result
+    raise self._exception
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\backend\test_new_feature_boundaries.py:126: in <lambda>
+    claims=list(pool.map(lambda n:claim_job(queue,'worker-'+str(n)),range(8)))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\backend\app\store.py:265: in claim_job
+    with db_factory.begin() as db:
+         ^^^^^^^^^^^^^^^^^^
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\contextlib.py:144: in __exit__
+    next(self.gen)
+.venv\Lib\site-packages\sqlalchemy\orm\session.py:1961: in _maker_context_manager
+    with self.begin():
+         ^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\engine\util.py:144: in __exit__
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py:166: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+.venv\Lib\site-packages\sqlalchemy\engine\util.py:142: in __exit__
+    self.commit()
+<sqlalchemy generated _go() wrapper for sqlalchemy.orm.session.SessionTransaction.commit>:2: in commit
+    return target(fn, self, _to_root=_to_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\orm\session.py:1412: in commit
+    self._prepare_impl()
+<sqlalchemy generated _go() wrapper for sqlalchemy.orm.session.SessionTransaction._prepare_impl>:2: in _prepare_impl
+    return target(fn, self)
+           ^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\orm\session.py:1386: in _prepare_impl
+    self.session.flush()
+.venv\Lib\site-packages\sqlalchemy\orm\session.py:4626: in flush
+    self._flush(objects)
+<sqlalchemy generated warned() wrapper for sqlalchemy.orm.session.Session._flush>:2: in _flush
+    return target(fn, self, objects=objects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\util\deprecations.py:281: in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\orm\session.py:4769: in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py:166: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+.venv\Lib\site-packages\sqlalchemy\orm\session.py:4730: in _flush
+    flush_context.execute()
+.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py:467: in execute
+    rec.execute(self)
+.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py:643: in execute
+    util.preloaded.orm_persistence._save_obj(
+.venv\Lib\site-packages\sqlalchemy\orm\persistence.py:84: in _save_obj
+    _emit_update_statements(
+.venv\Lib\site-packages\sqlalchemy\orm\persistence.py:929: in _emit_update_statements
+    c = connection.execute(
+.venv\Lib\site-packages\sqlalchemy\engine\base.py:1494: in execute
+    return meth(
+.venv\Lib\site-packages\sqlalchemy\sql\elements.py:534: in _execute_on_connection
+    return connection._execute_clauseelement(
+.venv\Lib\site-packages\sqlalchemy\engine\base.py:1714: in _execute_clauseelement
+    ret = self._execute_context(
+.venv\Lib\site-packages\sqlalchemy\engine\base.py:1868: in _execute_context
+    return self._exec_single_context(
+.venv\Lib\site-packages\sqlalchemy\engine\base.py:1996: in _exec_single_context
+    self._handle_dbapi_exception(
+.venv\Lib\site-packages\sqlalchemy\engine\base.py:2351: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+.venv\Lib\site-packages\sqlalchemy\engine\base.py:1977: in _exec_single_context
+    self.dialect.do_execute(
+.venv\Lib\site-packages\sqlalchemy\engine\default.py:1192: in do_execute
+    cursor.execute(statement, parameters)
+.venv\Lib\site-packages\psycopg\cursor.py:117: in execute
+    raise ex.with_traceback(None)
+E   sqlalchemy.exc.IntegrityError: (psycopg.errors.UniqueViolation) duplicate key value violates unique constraint "uq_studio_jobs_active_session_kind"
+E   DETAIL:  Key (session_id, kind)=(2449add1-f270-497c-aa6f-b006fadefb32, test-454b14ef:run) already exists.
+E   [SQL: UPDATE studio_jobs SET status=%(status)s::VARCHAR, owner=%(owner)s::VARCHAR, lease_until=%(lease_until)s::TIMESTAMP WITH TIME ZONE, lease_epoch=%(lease_epoch)s::INTEGER WHERE studio_jobs.id = %(studio_jobs_id)s::VARCHAR]
+E   [parameters: {'status': 'running', 'owner': 'worker-5', 'lease_until': datetime.datetime(2026, 11, 7, 16, 23, 54, 652377, tzinfo=datetime.timezone.utc), 'lease_epoch': 1, 'studio_jobs_id': 'fc50d7fb-468c-41ae-9468-2f73be7b5a9f'}]
+E   (Background on this error at: https://sqlalche.me/e/21/gkpj)
+___ test_expired_or_terminal_worker_cannot_renew_or_rewrite_job[heartbeat] ____
+tests\backend\test_new_feature_boundaries.py:155: in test_expired_or_terminal_worker_cannot_renew_or_rewrite_job
+    if action=='heartbeat':assert heartbeat(job) is False
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert True is False
+E    +  where True = heartbeat({'job_id': '057f751f-a4d8-4f3e-9a7a-bfc3da3bfb7e', 'session_id': '348add96-57ea-47ae-a2c0-82cfc940f371', 'kind': 'test-6208f32b', 'payload': {}, ...})
+_____ test_expired_or_terminal_worker_cannot_renew_or_rewrite_job[finish] _____
+tests\backend\test_new_feature_boundaries.py:160: in test_expired_or_terminal_worker_cannot_renew_or_rewrite_job
+    assert row.status==('done' if action=='finish_again' else 'running') and row.error is None
+E   AssertionError: assert ('failed' == 'running'
+E     
+E     - running
+E     + failed)
+__ test_expired_or_terminal_worker_cannot_renew_or_rewrite_job[finish_again] __
+tests\backend\test_new_feature_boundaries.py:160: in test_expired_or_terminal_worker_cannot_renew_or_rewrite_job
+    assert row.status==('done' if action=='finish_again' else 'running') and row.error is None
+E   AssertionError: assert ('failed' == 'done'
+E     
+E     - done
+E     + failed)
+___ test_cleanup_error_after_committed_save_cannot_announce_task_incomplete ___
+tests\backend\test_new_feature_boundaries.py:169: in test_cleanup_error_after_committed_save_cannot_announce_task_incomplete
+    mutate(sid,lambda state,_:state.update(active_run={'run_id':'saved-fixture','status':'completed'}))
+src\backend\app\store.py:156: in mutate
+    if run:references['plan_version_id']=run['plan_version_id']
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'plan_version_id'
+=========================== short test summary info ===========================
+FAILED tests/backend/test_new_feature_boundaries.py::test_concurrent_workers_cannot_claim_two_jobs_in_same_session_role
+FAILED tests/backend/test_new_feature_boundaries.py::test_expired_or_terminal_worker_cannot_renew_or_rewrite_job[heartbeat]
+FAILED tests/backend/test_new_feature_boundaries.py::test_expired_or_terminal_worker_cannot_renew_or_rewrite_job[finish]
+FAILED tests/backend/test_new_feature_boundaries.py::test_expired_or_terminal_worker_cannot_renew_or_rewrite_job[finish_again]
+FAILED tests/backend/test_new_feature_boundaries.py::test_cleanup_error_after_committed_save_cannot_announce_task_incomplete
+5 failed, 28 passed in 2.24s

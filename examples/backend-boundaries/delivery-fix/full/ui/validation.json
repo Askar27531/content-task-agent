@@ -1,0 +1,12 @@
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "计划版本编号必须为字符串。",
+    "details": [
+      {
+        "field": "plan_version_id",
+        "message": "计划版本编号必须为字符串。"
+      }
+    ]
+  }
+}

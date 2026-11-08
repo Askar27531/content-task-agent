@@ -1,0 +1,42 @@
+[
+  [
+    {
+      "content": "为读书分享活动做内容方案，用精简视觉 simple，预算10个模拟单位，截止2030-12-03 18:00北京时间，允许合成资料。先给计划。",
+      "client_message_id": "bb6d7551-a167-4840-a0c6-7c3488338316",
+      "view_context": {}
+    },
+    {
+      "message_id": "2e48c626-8ae2-4746-a234-a428828b87d3",
+      "processing_id": "00d8ac8a-f279-42ad-8f15-9ff56377f207",
+      "duplicate": false
+    }
+  ],
+  [
+    {
+      "content": "开始",
+      "client_message_id": "68fab298-f258-4f3e-9f26-840b7040c5d6",
+      "view_context": {
+        "plan_version_id": "3e28fd5d-cda3-4180-8dca-2664204fd696"
+      }
+    },
+    {
+      "message_id": "4602c4cd-ea67-4b35-b288-a739b8ad2432",
+      "processing_id": "5d6c92bc-d0d7-4a9e-bd86-6f849285c8e6",
+      "duplicate": false
+    }
+  ],
+  [
+    {
+      "content": "从失败处继续，保留已经取得的素材。",
+      "client_message_id": "29d39485-39e6-4adc-8e1e-564c47d844eb",
+      "view_context": {
+        "plan_version_id": "3e28fd5d-cda3-4180-8dca-2664204fd696"
+      }
+    },
+    {
+      "message_id": "8f81c565-cfad-443a-b9b6-df84f59203e7",
+      "processing_id": "785b0974-5cbc-420b-a763-f970d9c832d5",
+      "duplicate": false
+    }
+  ]
+]

@@ -1,0 +1,150 @@
+{
+  "actual": true,
+  "name": "03-date-only",
+  "session_id": "1d4d60a9-f297-4590-8f9e-34ac135cc0b1",
+  "url": "http://127.0.0.1:5173/sessions/1d4d60a9-f297-4590-8f9e-34ac135cc0b1",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "945c9ce4-d1d8-4e22-ac1b-d010aa5b139f",
+        "content": "主题读书会，预算10，截止2030-12-03，具体几点还没定，不要替我选时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "1b15be74-9c0f-49f5-80ee-c55c0a551da8",
+        "processing_id": "d7581d12-c1ff-4703-9ce5-9aeceb611578",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书会",
+        "status": "draft",
+        "session_id": "1d4d60a9-f297-4590-8f9e-34ac135cc0b1",
+        "last_user_activity_at": "2026-11-07T10:05:48.168899+00:00"
+      },
+      "requirements": {
+        "topic": "读书会",
+        "budget": "10",
+        "deadline": null,
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 829,
+        "model_output_tokens": 125,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "活动截止日期与时间",
+        "请明确活动截止日期及具体时刻，不会自动把‘尽快’或仅有日期补成某个时间。"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "1d4d60a9-f297-4590-8f9e-34ac135cc0b1",
+      "last_user_activity_at": "2026-11-07T10:05:48.168899+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": "10",
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 829,
+      "model_output_tokens": 125,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动截止日期与时间",
+      "请明确活动截止日期及具体时刻，不会自动把‘尽快’或仅有日期补成某个时间。"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "主题读书会，预算10，截止2030-12-03，具体几点还没定，不要替我选时间。",
+      "item_id": "1b15be74-9c0f-49f5-80ee-c55c0a551da8",
+      "item_seq": 1,
+      "created_at": "2026-11-07T10:05:48.168899+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "还需要补充：活动截止日期与时间、请明确活动截止日期及具体时刻，不会自动把‘尽快’或仅有日期补成某个时间。。请直接在聊天中补充。",
+      "item_id": "cc5c82d9-eede-45fa-bafe-5feed9329c77",
+      "item_seq": 2,
+      "created_at": "2026-11-07T10:05:52.912661+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T10:05:52.881577+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 829,
+        "output_tokens": 125
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03\"\n  },\n  \"evidence\": {\n    \"topic\": \"主题读书会\",\n    \"budget\": \"预算10\",\n    \"deadline\": \"截止2030-12-03\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算和截止日期，但未指定具体时间，因此未补start_at字段。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "50085149-eff3-42bc-92aa-353d3f20989e",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

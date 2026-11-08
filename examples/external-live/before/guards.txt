@@ -1,0 +1,10 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_logical_search_rejects_unimplemented_parameters_before_billed_dispatch _
+tests\backend\test_external_configuration.py:8: in test_logical_search_rejects_unimplemented_parameters_before_billed_dispatch
+    with pytest.raises(ValidationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValidationError
+=========================== short test summary info ===========================
+FAILED tests/backend/test_external_configuration.py::test_logical_search_rejects_unimplemented_parameters_before_billed_dispatch
+1 failed in 0.64s

@@ -1,0 +1,5 @@
+# Preserve source fingerprints and recorded evidence across platforms.
+* -text
+*.png binary
+*.zip binary
+*.webm binary

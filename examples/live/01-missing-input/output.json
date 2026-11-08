@@ -1,0 +1,56 @@
+{
+  "workspace": {
+    "session": {
+      "title": "咖啡新品",
+      "status": "draft",
+      "session_id": "fb9c7913-fc6b-47e1-9991-0fd996fb3ba3",
+      "last_user_activity_at": "2026-11-06T19:34:59.452498+00:00"
+    },
+    "requirements": {
+      "topic": "咖啡新品",
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 661,
+      "model_output_tokens": 91,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 8,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "messages": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "为咖啡新品做一场内容推广，只先讨论需求。",
+      "item_id": "6f169601-78f7-47eb-b202-8d56070905c7",
+      "item_seq": 1,
+      "created_at": "2026-11-06T19:34:59.452498+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "内容制作预算（模拟单位）：待补充。活动截止日期与时间：待补充。",
+      "item_id": "55f8b20f-b397-4b56-b74e-dcf4969263e6",
+      "item_seq": 2,
+      "created_at": "2026-11-06T19:35:07.347697+00:00",
+      "processing": false
+    }
+  ],
+  "proposals": []
+}

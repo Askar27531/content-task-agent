@@ -1,0 +1,17 @@
+{
+  "session_id": "31946471-1e5c-45a5-9933-4821bee41e0d",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "5452aa79-0f71-40a1-aff8-24300bb9021b",
+        "content": "做个读书活动方案，预算你先别定，我也不知道多少，时间还没想好。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "fb381cf6-718c-40e2-aab9-7af6b5c0aaec",
+        "processing_id": "fb79ade7-354b-4684-8dd3-63b3fa6a345f",
+        "duplicate": false
+      }
+    }
+  ]
+}

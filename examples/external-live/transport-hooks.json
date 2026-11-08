@@ -1,0 +1,12 @@
+[
+  {
+    "method": "POST",
+    "host": "mcp.tavily.com",
+    "path": "/mcp/",
+    "rpc": "server/discover",
+    "version": null
+  },
+  {
+    "error_type": "ExceptionGroup"
+  }
+]

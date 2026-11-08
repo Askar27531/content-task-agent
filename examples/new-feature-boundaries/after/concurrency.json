@@ -1,0 +1,412 @@
+{
+  "real_postgresql": true,
+  "llm_called": false,
+  "worker_claims": [
+    {
+      "round": 0,
+      "session_id": "959f0a53-e2fb-4b9f-b17b-428f86947ac2",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 1,
+      "session_id": "e2fb1d48-1743-4ba5-b778-7cb1b378803b",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 2,
+      "session_id": "5b71a2c5-0f1d-42c6-b5c6-221c5c301fb1",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 3,
+      "session_id": "7235cbc6-ba28-4910-a1b7-f43b18459cf2",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 4,
+      "session_id": "678da08d-3d9f-4ba1-8e0d-8a2b5363767b",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 5,
+      "session_id": "085c5edf-7a4e-4a71-8834-674600b37b39",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 6,
+      "session_id": "9eee748b-ed79-4e21-b329-db300b184208",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 7,
+      "session_id": "760700a2-6f73-4e60-a519-afc31b5041d4",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 8,
+      "session_id": "843966fd-deaf-4bd8-a107-4f1d42142392",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 9,
+      "session_id": "f76e137e-72df-4862-9f71-2fa8b8415370",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 10,
+      "session_id": "b3daa403-778f-4a39-925c-421d7d5872bc",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 11,
+      "session_id": "4da05e4d-d9b6-48fc-ab20-1b0aa157af4c",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 12,
+      "session_id": "d2c52fa9-859e-4cbe-8537-572b664ba114",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 13,
+      "session_id": "66922f53-1a2a-4af8-88c2-e596462443af",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 14,
+      "session_id": "a5cc60de-1e90-47e6-98de-a0ac5c68e116",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 15,
+      "session_id": "f79227b5-a0a9-4d98-aea8-b390bda7fbf5",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 16,
+      "session_id": "d8db06d8-a256-41a1-9f79-ce19d0b028cb",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 17,
+      "session_id": "90c99360-a7c0-4d8f-8514-b56632991f71",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 18,
+      "session_id": "7eac83ac-ec5d-4a4b-82b6-30e16577f143",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 19,
+      "session_id": "16cf4ad1-af07-4218-91f7-e59aba331e69",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 20,
+      "session_id": "edd01ecf-7e0a-442b-94cf-4c1eaf11d7ab",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 21,
+      "session_id": "eb33b807-7091-458b-a3c8-98af2cc7688b",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 22,
+      "session_id": "4ca1d3de-122a-4ffa-a944-524e482be390",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 23,
+      "session_id": "50ffd3ef-c4ac-4216-a3a5-aa2f0adeb4c3",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 24,
+      "session_id": "f921739c-f2de-4fd6-9895-027c9cc289cc",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 25,
+      "session_id": "816059ab-b721-4d83-b755-ad6befd6d9cd",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 26,
+      "session_id": "70951ddd-b5c2-4e62-87e8-b4abc4615b83",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 27,
+      "session_id": "51b9a9da-a3bc-4f19-8b79-98ddec7a1661",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 28,
+      "session_id": "0fbcfafe-fc15-4755-8873-57a06fbc7152",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 29,
+      "session_id": "f2ec526f-214b-467e-985d-ba993ed9f2c6",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 30,
+      "session_id": "1d330cf8-c2f3-4f16-8eba-26420ea4fe08",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 31,
+      "session_id": "16dedf67-a99e-4bfd-a739-8851f3f6c69a",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 32,
+      "session_id": "87421f8c-73f5-4562-b1c1-5443582d9160",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 33,
+      "session_id": "c5ddbe73-b075-46d6-9af0-cb442e6dee22",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 34,
+      "session_id": "278e79ce-5516-445d-b3b3-37a78e125abf",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 35,
+      "session_id": "da431627-c4c4-40a9-a554-9ecc6e427f04",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 36,
+      "session_id": "5fc74846-aee2-47ae-83ab-f38c5530d66b",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 37,
+      "session_id": "c78145f9-1099-46b1-80f2-e3ecfd94eb84",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 38,
+      "session_id": "b5b513d3-7a3b-4391-875e-f63979a184b5",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    },
+    {
+      "round": 39,
+      "session_id": "81b286a7-8129-442d-90f1-78ebe0a680a9",
+      "claims": 1,
+      "errors": [],
+      "checks": {
+        "one_claim": true,
+        "no_worker_exception": true
+      }
+    }
+  ],
+  "duplicate_charge_checks": {
+    "one_attempt": true,
+    "one_charge": true,
+    "tokens_once": true
+  },
+  "passed": true
+}

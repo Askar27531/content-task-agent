@@ -1,0 +1,46 @@
+{
+  "actual_local_validation": true,
+  "backend_tests": 105,
+  "backend_tests_failed": 0,
+  "new_integration_cases": 14,
+  "new_integration_passed": 14,
+  "actual_qwen_cases": 13,
+  "external_search_fixture_cases_explicitly_labeled": true,
+  "audit_passed": 14,
+  "http_sse_checks": 9,
+  "mcp_guard_checks": 9,
+  "new_browser_stats": {
+    "startTime": "2026-11-07T15:19:58.964Z",
+    "duration": 15029.187,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "existing_browser_mapping_passed": 11,
+  "base_browser_passed": 5,
+  "typescript_and_build": "passed; main JS 988.97KB, size warning retained",
+  "ruff": "passed E9,F63,F7,F82",
+  "historical_ledger_backfill_last_two_counts": [
+    11,
+    0
+  ],
+  "docs_missing_links": [],
+  "workflow_jobs": [
+    "backend",
+    "frontend"
+  ],
+  "remote_ci_executed": false,
+  "real_deepseek_tested": false,
+  "real_tavily_tested": false,
+  "production_packages": [
+    "premium",
+    "simple"
+  ],
+  "health": {
+    "status": "ok",
+    "storage": "postgresql",
+    "mode": "live",
+    "model": "configured-per-run"
+  }
+}

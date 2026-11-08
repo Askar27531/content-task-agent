@@ -1,0 +1,28 @@
+[
+  [
+    {
+      "content": "做一份读书活动推广方案，精简视觉 simple，预算5个模拟单位，截止2030-12-03 18:00北京时间，允许合成素材。先展示计划。",
+      "client_message_id": "04737f55-447e-49aa-a5a0-4cce7078e04b",
+      "view_context": {}
+    },
+    {
+      "message_id": "8239b66f-ac39-4e99-8c45-893f80226280",
+      "processing_id": "7551ef2a-fbd7-4a74-89fd-532d6bdd6216",
+      "duplicate": false
+    }
+  ],
+  [
+    {
+      "content": "开始",
+      "client_message_id": "51096fd8-6845-4667-aaf6-1a9e61579c5a",
+      "view_context": {
+        "plan_version_id": "f7d7f785-7458-40ea-bfdb-e8808fbb8f1a"
+      }
+    },
+    {
+      "message_id": "cf013e04-ef51-4f3c-b903-cf5a7e6c8d2c",
+      "processing_id": "59294ac5-7ac5-4019-b889-2dd1589ee645",
+      "duplicate": false
+    }
+  ]
+]

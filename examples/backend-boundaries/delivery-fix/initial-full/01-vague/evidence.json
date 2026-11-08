@@ -1,0 +1,158 @@
+{
+  "actual": true,
+  "name": "01-vague",
+  "session_id": "564fddb8-ded3-4187-8fd1-5642ca07ace6",
+  "url": "http://127.0.0.1:5173/sessions/564fddb8-ded3-4187-8fd1-5642ca07ace6",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "budget_unset": true,
+    "deadline_unset": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "budget_unset": true,
+    "deadline_unset": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "feefd445-7c8a-44e1-8355-6e5d2de14640",
+        "content": "帮我搞一搞，差不多就行，尽快，钱别花多，先聊聊。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "05d9fc9b-84f8-4eca-8071-28b3fce04c37",
+        "processing_id": "b21d389f-c0cc-4469-8a0a-7a0207bbd245",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "新的内容活动",
+        "status": "draft",
+        "session_id": "564fddb8-ded3-4187-8fd1-5642ca07ace6",
+        "last_user_activity_at": "2026-11-07T09:45:22.969984+00:00"
+      },
+      "requirements": {
+        "topic": null,
+        "budget": null,
+        "deadline": null,
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": null,
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 816,
+        "model_output_tokens": 74,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "活动主题",
+        "内容制作预算（模拟单位）",
+        "活动截止日期与时间",
+        "制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "564fddb8-ded3-4187-8fd1-5642ca07ace6",
+      "last_user_activity_at": "2026-11-07T09:45:22.969984+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 816,
+      "model_output_tokens": 74,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动主题",
+      "内容制作预算（模拟单位）",
+      "活动截止日期与时间",
+      "制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "帮我搞一搞，差不多就行，尽快，钱别花多，先聊聊。",
+      "item_id": "05d9fc9b-84f8-4eca-8071-28b3fce04c37",
+      "item_seq": 1,
+      "created_at": "2026-11-07T09:45:22.969984+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "还需要补充：活动主题、内容制作预算（模拟单位）、活动截止日期与时间、制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。。请直接在聊天中补充。",
+      "item_id": "b4fc110a-21bc-4097-9498-1a774cc54cab",
+      "item_seq": 2,
+      "created_at": "2026-11-07T09:45:26.577354+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T09:45:26.545351+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 816,
+        "output_tokens": 74
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"budget\": \"钱别花多\"\n  },\n  \"evidence\": {\n    \"budget\": \"钱别花多\"\n  },\n  \"explanation\": \"用户明确表示预算不要花多，因此更新预算字段为'钱别花多'。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "404c9ad4-410d-4896-968f-cbfe273e88e1",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

@@ -1,0 +1,50 @@
+{
+  "actual": true,
+  "executes_tools": false,
+  "session_id": "e7a86bef-a3dc-407c-bb52-7436c517017d",
+  "ollama_version": {
+    "version": "0.40.2"
+  },
+  "results": [
+    {
+      "label": "baseline",
+      "http_status": 200,
+      "message_keys": [
+        "role",
+        "content",
+        "tool_calls"
+      ],
+      "content_length": 0,
+      "thinking_length": 0,
+      "tool_calls": [
+        {
+          "id": "call_av431bn9",
+          "function": {
+            "index": 0,
+            "name": "load_skill",
+            "arguments": {
+              "skill_id": "script-writing"
+            }
+          }
+        }
+      ],
+      "done_reason": "stop",
+      "input_tokens": 1661,
+      "output_tokens": 22
+    },
+    {
+      "label": "authorization-context",
+      "http_status": 200,
+      "message_keys": [
+        "role",
+        "content"
+      ],
+      "content_length": 0,
+      "thinking_length": 0,
+      "tool_calls": [],
+      "done_reason": "stop",
+      "input_tokens": 1730,
+      "output_tokens": 116
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "session_id": "e303e8ba-ccc8-46c9-b140-ed1d33f30df1",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "75e56601-bf11-4d1d-81bc-11f27a9efe59",
+        "content": "为读书会做文字内容方案，制作预算十个模拟单位，开始2030年12月1日上午八点，截止2030年12月3日下午六点，允许合成素材。先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "94031e69-f687-4f8e-8f9c-61ef623dcccc",
+        "processing_id": "656226ea-b9bb-448d-b1c4-3b9a063e16b0",
+        "duplicate": false
+      }
+    }
+  ]
+}

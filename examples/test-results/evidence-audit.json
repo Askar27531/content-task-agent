@@ -1,0 +1,70 @@
+[
+  {
+    "example": "01-missing-input",
+    "rules_version": null,
+    "proposal_count": 0,
+    "model_call_count": 2,
+    "tool_call_count": 0,
+    "checks": {
+      "acceptance_checks_pass": true,
+      "actual_trace": true,
+      "success_steps_have_tool_facts": true,
+      "step_dependencies_satisfied": true,
+      "tool_fees_match_ledger": true,
+      "saved_production_cost_valid": true,
+      "saved_deadline_valid": true,
+      "failed_attempts_preserved": true
+    }
+  },
+  {
+    "example": "02-complete-replan-idempotence",
+    "rules_version": "2026-11-07.2",
+    "proposal_count": 1,
+    "model_call_count": 19,
+    "tool_call_count": 9,
+    "checks": {
+      "acceptance_checks_pass": true,
+      "actual_trace": true,
+      "success_steps_have_tool_facts": true,
+      "step_dependencies_satisfied": true,
+      "tool_fees_match_ledger": true,
+      "saved_production_cost_valid": true,
+      "saved_deadline_valid": true,
+      "failed_attempts_preserved": true
+    }
+  },
+  {
+    "example": "03-tool-failure-resume",
+    "rules_version": "2026-11-07.2",
+    "proposal_count": 1,
+    "model_call_count": 17,
+    "tool_call_count": 10,
+    "checks": {
+      "acceptance_checks_pass": true,
+      "actual_trace": true,
+      "success_steps_have_tool_facts": true,
+      "step_dependencies_satisfied": true,
+      "tool_fees_match_ledger": true,
+      "saved_production_cost_valid": true,
+      "saved_deadline_valid": true,
+      "failed_attempts_preserved": true
+    }
+  },
+  {
+    "example": "04-no-feasible-budget",
+    "rules_version": "2026-11-07.2",
+    "proposal_count": 0,
+    "model_call_count": 14,
+    "tool_call_count": 7,
+    "checks": {
+      "acceptance_checks_pass": true,
+      "actual_trace": true,
+      "success_steps_have_tool_facts": true,
+      "step_dependencies_satisfied": true,
+      "tool_fees_match_ledger": true,
+      "saved_production_cost_valid": true,
+      "saved_deadline_valid": true,
+      "failed_attempts_preserved": true
+    }
+  }
+]

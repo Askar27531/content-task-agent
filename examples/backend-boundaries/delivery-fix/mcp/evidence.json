@@ -1,0 +1,145 @@
+{
+  "actual_mcp": true,
+  "llm_selection_test": false,
+  "session_id": "0d462afb-2b6e-42cc-91f8-da9a8081488e",
+  "results": [
+    {
+      "case": "registered-tools",
+      "passed": true,
+      "tools": [
+        "load_skill",
+        "read_skill_resource",
+        "search_synthetic_materials",
+        "generate_script",
+        "estimate_proposal",
+        "validate_proposal",
+        "save_proposal"
+      ]
+    },
+    {
+      "case": "save_proposal",
+      "arguments": {
+        "validation_id": "forged",
+        "estimate_id": "forged"
+      },
+      "registered_test_context": false,
+      "is_error": true,
+      "message": "Error executing tool save_proposal: 工具操作上下文与已登记调用不匹配。",
+      "passed": true
+    },
+    {
+      "case": "save_proposal",
+      "arguments": {
+        "validation_id": "stale-check",
+        "estimate_id": "stale-estimate"
+      },
+      "registered_test_context": true,
+      "is_error": true,
+      "message": "Error executing tool save_proposal: 缺少匹配当前内容、已通过的交付检查。",
+      "passed": true
+    },
+    {
+      "case": "load_skill",
+      "arguments": {
+        "skill_id": "not-registered"
+      },
+      "registered_test_context": true,
+      "is_error": true,
+      "message": "Error executing tool load_skill: Skill 未注册。",
+      "passed": true
+    },
+    {
+      "case": "read_skill_resource",
+      "arguments": {
+        "skill_id": "campaign-planning",
+        "resource_id": "../../.env"
+      },
+      "registered_test_context": true,
+      "is_error": true,
+      "message": "Error executing tool read_skill_resource: Skill 资源未注册。",
+      "passed": true
+    },
+    {
+      "case": "failed-attempt-replay",
+      "passed": true,
+      "is_error": true
+    },
+    {
+      "case": "phase-or-context-guard-save_proposal",
+      "passed": true,
+      "error": "当前阶段未开放工具 save_proposal，未实际派发 MCP 调用。",
+      "actual_dispatches": 0
+    },
+    {
+      "case": "phase-or-context-guard-load_skill",
+      "passed": true,
+      "error": "执行上下文只能由后端注入。",
+      "actual_dispatches": 0
+    },
+    {
+      "case": "no-save-no-charge",
+      "passed": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_call_id": "d47652bb-31e7-4c14-b984-2ee429f42edb",
+      "run_id": "732a68ac-a0ad-4707-ab3d-cfc781b00212",
+      "step_id": "boundary-probe",
+      "tool_name": "save_proposal",
+      "display_name": "save_proposal",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "estimate_id": "stale-estimate",
+        "validation_id": "stale-check"
+      },
+      "output": {
+        "error": "缺少匹配当前内容、已通过的交付检查。"
+      },
+      "started_at": "2026-11-07T09:54:53.141284+00:00",
+      "duration_ms": 59,
+      "error": "缺少匹配当前内容、已通过的交付检查。",
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "a911f38c-9eac-4ec6-a48a-5d73349cb9b2",
+      "run_id": "732a68ac-a0ad-4707-ab3d-cfc781b00212",
+      "step_id": "boundary-probe",
+      "tool_name": "load_skill",
+      "display_name": "load_skill",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "skill_id": "not-registered"
+      },
+      "output": {
+        "error": "Skill 未注册。"
+      },
+      "started_at": "2026-11-07T09:54:53.218629+00:00",
+      "duration_ms": 36,
+      "error": "Skill 未注册。",
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "5f4e8e78-f59c-4719-a54d-b93040d68242",
+      "run_id": "732a68ac-a0ad-4707-ab3d-cfc781b00212",
+      "step_id": "boundary-probe",
+      "tool_name": "read_skill_resource",
+      "display_name": "read_skill_resource",
+      "server_name": "content-studio-business",
+      "status": "failed",
+      "input": {
+        "skill_id": "campaign-planning",
+        "resource_id": "../../.env"
+      },
+      "output": {
+        "error": "Skill 资源未注册。"
+      },
+      "started_at": "2026-11-07T09:54:53.269770+00:00",
+      "duration_ms": 39,
+      "error": "Skill 资源未注册。",
+      "attempt": 1
+    }
+  ]
+}

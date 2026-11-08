@@ -1,0 +1,4 @@
+campaign-planning: exit=0 Skill is valid!
+constrained-replanning: exit=0 Skill is valid!
+proposal-delivery: exit=0 Skill is valid!
+script-writing: exit=0 Skill is valid!

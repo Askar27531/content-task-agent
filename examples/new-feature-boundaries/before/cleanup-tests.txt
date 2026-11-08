@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_cleanup_error_after_committed_save_cannot_announce_task_incomplete ___
+tests\backend\test_new_feature_boundaries.py:172: in test_cleanup_error_after_committed_save_cannot_announce_task_incomplete
+    assert state['active_run']['status']=='completed' and not state['timeline']
+E   AssertionError: assert ('completed' == 'completed'
+E     
+E       completed and not [{'kind': 'message', 'role': 'assistant', 'content': '本次处理未完成：测试夹具：保存后的连接清理异常。已取得结果保留，请修正条件或明确续跑。', 'item_id': 'c43ea628-2b94-4667-8aff-92ce896bd8c1', ...}])
+=========================== short test summary info ===========================
+FAILED tests/backend/test_new_feature_boundaries.py::test_cleanup_error_after_committed_save_cannot_announce_task_incomplete
+1 failed, 32 deselected in 1.57s

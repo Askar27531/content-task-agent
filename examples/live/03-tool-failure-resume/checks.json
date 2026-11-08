@@ -1,0 +1,8 @@
+{
+  "completed_after_resume": true,
+  "same_run": true,
+  "material_call_once": true,
+  "failed_attempt_preserved": true,
+  "new_script_attempt_success": true,
+  "saved_once": true
+}

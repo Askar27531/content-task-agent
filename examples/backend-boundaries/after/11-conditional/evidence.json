@@ -1,0 +1,507 @@
+{
+  "actual": true,
+  "name": "11-conditional",
+  "session_id": "05e4425c-554a-4306-887f-83b4189ab881",
+  "url": "http://127.0.0.1:5173/sessions/05e4425c-554a-4306-887f-83b4189ab881",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "ready": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "ready": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "b47e51e9-67a1-44c8-8064-1e2ec905d8d2",
+        "content": "为社区读书会写内容活动方案，制作预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00，均北京时间，精简视觉simple，允许合成素材。先给计划，不要执行。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "6c944f99-9242-430e-bd0b-de62d2b8493c",
+        "processing_id": "bce30f19-0525-4c5c-8bcc-3589906e0437",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "d861a7ee-0415-4f72-a9a6-3cbe9f7827eb",
+        "content": "如果我下一条说开始你再执行，现在只讨论，别动。",
+        "view_context": {
+          "plan_version_id": "c961bd18-a052-42dc-89a8-c6bbf1141a30"
+        }
+      },
+      "response": {
+        "message_id": "6c09f10f-ebc2-4948-9d13-879f7dc667e6",
+        "processing_id": "c79dce89-ab5e-42da-86a0-b6f06816f84d",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "社区读书会",
+        "status": "draft",
+        "session_id": "05e4425c-554a-4306-887f-83b4189ab881",
+        "last_user_activity_at": "2026-11-07T05:40:53.822386+00:00"
+      },
+      "requirements": {
+        "topic": "社区读书会",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "real_sources_required": false
+      },
+      "plans": [
+        {
+          "label": "精简制作方案",
+          "steps": [
+            {
+              "key": "materials",
+              "goal": "取得适合主题的资料，并保留可追溯来源",
+              "tool": "search_synthetic_materials",
+              "title": "检索活动素材",
+              "status": "pending",
+              "step_id": "3b5a823f-54b1-48eb-88f3-dfeaea8c77b4",
+              "dependencies": [],
+              "tool_call_ids": []
+            },
+            {
+              "key": "script",
+              "goal": "使用真实取得的资料形成可用文案",
+              "tool": "generate_script",
+              "title": "生成内容脚本",
+              "status": "pending",
+              "step_id": "b3dea811-148d-462c-b0b3-020008de40f3",
+              "dependencies": [
+                "materials"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "estimate",
+              "goal": "由规则核验制作预算与活动完成期限",
+              "tool": "estimate_proposal",
+              "title": "核算制作成本与排期",
+              "status": "pending",
+              "step_id": "a1df8bcf-e50c-4014-a048-5664aaede6e7",
+              "dependencies": [
+                "script"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "validate",
+              "goal": "核对必要章节、字段与合法素材引用",
+              "tool": "validate_proposal",
+              "title": "检查方案完整性",
+              "status": "pending",
+              "step_id": "a6927c5f-1a67-4d4a-9b5d-da24473d8dc3",
+              "dependencies": [
+                "estimate"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "save",
+              "goal": "事务保存当前已检查且可行的方案",
+              "tool": "save_proposal",
+              "title": "保存活动方案",
+              "status": "pending",
+              "step_id": "b00b3cdb-0c83-487a-b183-3029f9635a34",
+              "dependencies": [
+                "validate"
+              ],
+              "tool_call_ids": []
+            }
+          ],
+          "status": "ready",
+          "summary": "为社区读书会制定一个精简视觉的内容活动方案，包含活动目标、受众假设、内容组合及传播主张。活动预算为10个模拟单位，开始时间为2030-12-01 08:00，截止时间为2030-12-03 18:00，均北京时间。活动方案将基于内容需求生成，不涉及执行或保存授权。",
+          "version": 1,
+          "requirements": {
+            "topic": "社区读书会",
+            "budget": "10",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": "2030-12-01T08:00:00+08:00",
+            "real_sources_required": false
+          },
+          "change_summary": [
+            "使用精简视觉方案",
+            "不涉及执行或保存授权",
+            "活动方案基于内容需求生成"
+          ],
+          "plan_version_id": "c961bd18-a052-42dc-89a8-c6bbf1141a30",
+          "production_spec": "simple"
+        }
+      ],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 1761,
+        "model_output_tokens": 388,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 11,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": []
+    },
+    {
+      "session": {
+        "title": "社区读书会",
+        "status": "draft",
+        "session_id": "05e4425c-554a-4306-887f-83b4189ab881",
+        "last_user_activity_at": "2026-11-07T05:41:12.096000+00:00"
+      },
+      "requirements": {
+        "topic": "社区读书会",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "real_sources_required": false
+      },
+      "plans": [
+        {
+          "label": "精简制作方案",
+          "steps": [
+            {
+              "key": "materials",
+              "goal": "取得适合主题的资料，并保留可追溯来源",
+              "tool": "search_synthetic_materials",
+              "title": "检索活动素材",
+              "status": "pending",
+              "step_id": "3b5a823f-54b1-48eb-88f3-dfeaea8c77b4",
+              "dependencies": [],
+              "tool_call_ids": []
+            },
+            {
+              "key": "script",
+              "goal": "使用真实取得的资料形成可用文案",
+              "tool": "generate_script",
+              "title": "生成内容脚本",
+              "status": "pending",
+              "step_id": "b3dea811-148d-462c-b0b3-020008de40f3",
+              "dependencies": [
+                "materials"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "estimate",
+              "goal": "由规则核验制作预算与活动完成期限",
+              "tool": "estimate_proposal",
+              "title": "核算制作成本与排期",
+              "status": "pending",
+              "step_id": "a1df8bcf-e50c-4014-a048-5664aaede6e7",
+              "dependencies": [
+                "script"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "validate",
+              "goal": "核对必要章节、字段与合法素材引用",
+              "tool": "validate_proposal",
+              "title": "检查方案完整性",
+              "status": "pending",
+              "step_id": "a6927c5f-1a67-4d4a-9b5d-da24473d8dc3",
+              "dependencies": [
+                "estimate"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "save",
+              "goal": "事务保存当前已检查且可行的方案",
+              "tool": "save_proposal",
+              "title": "保存活动方案",
+              "status": "pending",
+              "step_id": "b00b3cdb-0c83-487a-b183-3029f9635a34",
+              "dependencies": [
+                "validate"
+              ],
+              "tool_call_ids": []
+            }
+          ],
+          "status": "ready",
+          "summary": "为社区读书会制定一个精简视觉的内容活动方案，包含活动目标、受众假设、内容组合及传播主张。活动预算为10个模拟单位，开始时间为2030-12-01 08:00，截止时间为2030-12-03 18:00，均北京时间。活动方案将基于内容需求生成，不涉及执行或保存授权。",
+          "version": 1,
+          "requirements": {
+            "topic": "社区读书会",
+            "budget": "10",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": "2030-12-01T08:00:00+08:00",
+            "real_sources_required": false
+          },
+          "change_summary": [
+            "使用精简视觉方案",
+            "不涉及执行或保存授权",
+            "活动方案基于内容需求生成"
+          ],
+          "plan_version_id": "c961bd18-a052-42dc-89a8-c6bbf1141a30",
+          "production_spec": "simple"
+        }
+      ],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 2612,
+        "model_output_tokens": 464,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 14,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": []
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "社区读书会",
+      "status": "draft",
+      "session_id": "05e4425c-554a-4306-887f-83b4189ab881",
+      "last_user_activity_at": "2026-11-07T05:41:12.096000+00:00"
+    },
+    "requirements": {
+      "topic": "社区读书会",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-01T08:00:00+08:00",
+      "real_sources_required": false
+    },
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "pending",
+            "step_id": "3b5a823f-54b1-48eb-88f3-dfeaea8c77b4",
+            "dependencies": [],
+            "tool_call_ids": []
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "b3dea811-148d-462c-b0b3-020008de40f3",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "a1df8bcf-e50c-4014-a048-5664aaede6e7",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "a6927c5f-1a67-4d4a-9b5d-da24473d8dc3",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "b00b3cdb-0c83-487a-b183-3029f9635a34",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "ready",
+        "summary": "为社区读书会制定一个精简视觉的内容活动方案，包含活动目标、受众假设、内容组合及传播主张。活动预算为10个模拟单位，开始时间为2030-12-01 08:00，截止时间为2030-12-03 18:00，均北京时间。活动方案将基于内容需求生成，不涉及执行或保存授权。",
+        "version": 1,
+        "requirements": {
+          "topic": "社区读书会",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "使用精简视觉方案",
+          "不涉及执行或保存授权",
+          "活动方案基于内容需求生成"
+        ],
+        "plan_version_id": "c961bd18-a052-42dc-89a8-c6bbf1141a30",
+        "production_spec": "simple"
+      }
+    ],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 2612,
+      "model_output_tokens": 464,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 14,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "为社区读书会写内容活动方案，制作预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00，均北京时间，精简视觉simple，允许合成素材。先给计划，不要执行。",
+      "item_id": "6c944f99-9242-430e-bd0b-de62d2b8493c",
+      "item_seq": 1,
+      "created_at": "2026-11-07T05:40:53.822386+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "dfab7f74-2d18-4dec-ac7f-a85d67e81b03",
+      "item_seq": 2,
+      "created_at": "2026-11-07T05:41:06.696754+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "如果我下一条说开始你再执行，现在只讨论，别动。",
+      "item_id": "6c09f10f-ebc2-4948-9d13-879f7dc667e6",
+      "item_seq": 3,
+      "created_at": "2026-11-07T05:41:12.096000+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "当前状态：尚未执行。没有明确执行授权时不会开始。我可以检索资料、生成文字方案/脚本、估算制作成本与排期并本地保存；不能生成真实媒体、代发布或付款。你可以补充要求或查看右侧计划。",
+      "item_id": "1d3cdcdc-81d1-4e51-a434-517fca577b67",
+      "item_seq": 4,
+      "created_at": "2026-11-07T05:41:21.017794+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T05:41:01.824703+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 870,
+        "output_tokens": 227
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"社区读书会\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03 18:00+08:00\",\n    \"start_at\": \"2030-12-01 08:00+08:00\"\n  },\n  \"evidence\": {\n    \"topic\": \"为社区读书会写内容活动方案\",\n    \"budget\": \"制作预算10个模拟单位\",\n    \"deadline\": \"截止2030-12-03 18:00\",\n    \"start_at\": \"开始2030-12-01 08:00\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算、开始时间和截止时间，并要求先给计划，不要执行。因此，更新了这些字段。\",\n  \"uncertain_fields\": [],\n  \"capability_gaps\": [],\n  \"resolve_capabilities\": false\n}",
+        "tool_calls": []
+      },
+      "request_id": "9ded3804-d97f-4c2f-aedc-3440fa5e5389",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T05:41:06.668110+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 791,
+        "output_tokens": 130
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\"production_spec\": \"simple\", \"summary\": \"为社区读书会制定一个精简视觉的内容活动方案，包含活动目标、受众假设、内容组合及传播主张。活动预算为10个模拟单位，开始时间为2030-12-01 08:00，截止时间为2030-12-03 18:00，均北京时间。活动方案将基于内容需求生成，不涉及执行或保存授权。\", \"changes\": [\"使用精简视觉方案\", \"不涉及执行或保存授权\", \"活动方案基于内容需求生成\"]}",
+        "tool_calls": []
+      },
+      "request_id": "e805c7b6-ac13-4fb1-bf2f-39419c3efa82",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T05:41:11.865788+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+      },
+      "request_id": "c309534e-89c1-4d05-986a-9d74e71e21c3",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T05:41:20.996985+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 851,
+        "output_tokens": 76
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"question\",\n  \"updates\": {},\n  \"evidence\": {\n    \"question\": \"如果我下一条说开始你再执行，现在只讨论，别动。\"\n  },\n  \"explanation\": \"用户要求在下一条消息说'开始'后再执行，当前仅讨论，因此不执行任何操作。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "3c8d8531-2956-4a8b-a710-20322ebeaac0",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

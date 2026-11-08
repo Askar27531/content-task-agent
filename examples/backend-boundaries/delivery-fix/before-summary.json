@@ -1,0 +1,77 @@
+{
+  "actual": true,
+  "recorded_at": "2026-11-07T06:41:28.407737+00:00",
+  "latest_stage": "verification",
+  "provider": "ollama",
+  "model": "qwen3:latest",
+  "model_switched": false,
+  "live_scenarios": {
+    "total": 34,
+    "passed": 32,
+    "groups_total": 24,
+    "groups_passed": 22,
+    "script_exit_code": 1,
+    "failures": [
+      {
+        "name": "20-video-script-supported",
+        "failed_checks": [
+          "completed"
+        ],
+        "session_id": "9694ca61-522e-46b6-bdad-bab300e1383c"
+      },
+      {
+        "name": "23-stop-resume",
+        "failed_checks": [
+          "completed",
+          "saved_once"
+        ],
+        "session_id": "436a333e-ef3f-4101-93a2-84b70c800885"
+      }
+    ]
+  },
+  "trace_audit": {
+    "total": 23,
+    "passed": 23,
+    "scope": "truthful trace, cost arithmetic, actual tool correspondence; not scenario completion"
+  },
+  "mcp_guards": {
+    "total": 9,
+    "passed": 9,
+    "llm_selection_evidence": false
+  },
+  "backend_regression": {
+    "tests": 59,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "browser_boundaries": {
+    "total": 9,
+    "passed": 9,
+    "unexpected": 0,
+    "fixture_stages": [
+      "final",
+      "after"
+    ],
+    "scope": "real persisted result mapping, including incomplete runs; not live task completion"
+  },
+  "browser_regression": {
+    "total": 5,
+    "passed": 5,
+    "unexpected": 0,
+    "demo_tests": 4,
+    "real_persisted_result_tests": 1
+  },
+  "build": {
+    "passed": true,
+    "log": "build.txt",
+    "main_chunk_kb": 988.28,
+    "known_warning": "chunk exceeds 500KB"
+  },
+  "unverified": [
+    "Tavily successful external search",
+    "DeepSeek real requests",
+    "worker hard crash recovery",
+    "SSE forced disconnect recovery"
+  ]
+}

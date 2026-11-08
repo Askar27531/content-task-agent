@@ -1,0 +1,579 @@
+{
+  "workspace": {
+    "session": {
+      "title": "咖啡新品",
+      "status": "draft",
+      "session_id": "cce932be-76b2-4096-8190-398d67a4e1b9",
+      "last_user_activity_at": "2026-11-06T19:36:35.225807+00:00"
+    },
+    "requirements": {
+      "topic": "咖啡新品",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00+08:00",
+      "start_at": "2030-12-01T08:00+08:00",
+      "real_sources_required": false
+    },
+    "plans": [
+      {
+        "label": "高规格内容方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "25e92d9c-4885-4826-80f3-03b9176999ee",
+            "dependencies": [],
+            "tool_call_ids": [
+              "595ece5c-f1d5-44b3-ae67-987078310e3c",
+              "7eb526aa-ab45-4268-a6c1-2a89e008bdae",
+              "560601c1-5f67-4648-af67-f6dfc760912d"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "success",
+            "step_id": "cef14cbd-7e8a-404c-b6d4-30a4c54d14c7",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [
+              "9ba4fa67-93f8-4616-a2b9-d177617dfa8a",
+              "8dbc117d-2201-4d52-84f9-687982a2320c"
+            ]
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "success",
+            "step_id": "a8a0b500-309f-46d2-9087-3605bda16f23",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [
+              "4e1b76f7-6f36-45eb-b185-6abe3a25006a"
+            ]
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "91bdb5f8-7837-48b3-b3a6-eac3d37cd9e0",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "285b6cf9-569c-4a6b-8eca-9c334a800eb9",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "superseded",
+        "summary": "为咖啡新品内容推广活动制定高规格视觉计划，预算10个模拟单位，时间范围从2030-12-01 08:00至2030-12-03 18:00，使用合成素材进行展示。",
+        "version": 1,
+        "requirements": {
+          "topic": "咖啡新品",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00+08:00",
+          "start_at": "2030-12-01T08:00+08:00",
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "采用高规格视觉以提升内容吸引力",
+          "确保内容符合时间安排和预算限制",
+          "使用合成素材以满足用户需求"
+        ],
+        "estimated_cost": "12",
+        "plan_version_id": "4702cf7b-0dd1-4743-a356-0f747fa39650",
+        "production_spec": "premium"
+      },
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "8ac4484d-ebd7-4515-974c-33121ab34a58",
+            "dependencies": [],
+            "tool_call_ids": [
+              "595ece5c-f1d5-44b3-ae67-987078310e3c",
+              "7eb526aa-ab45-4268-a6c1-2a89e008bdae",
+              "560601c1-5f67-4648-af67-f6dfc760912d"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "success",
+            "step_id": "654423ac-d09a-47b7-a086-b09ab07f7a1b",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [
+              "9ba4fa67-93f8-4616-a2b9-d177617dfa8a",
+              "8dbc117d-2201-4d52-84f9-687982a2320c"
+            ]
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "success",
+            "step_id": "2fa4dcfa-6daf-4515-af1e-7f9b95adeab0",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [
+              "994b0845-002f-408b-aa68-b89202fa65bc"
+            ]
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "success",
+            "step_id": "50712e10-c5ef-4983-9837-50020fe404f7",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": [
+              "d1d0dac6-e4bb-406d-874d-f2d0047a8019"
+            ]
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "success",
+            "step_id": "3de9722f-a5a6-4c01-8a2b-ac1c08fae003",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": [
+              "3638af71-da3a-42ae-8c30-1192e5472e9d"
+            ]
+          }
+        ],
+        "status": "completed",
+        "summary": "当前高规格制作超出预算且时间不满足，尝试切换至精简规格以符合预算和时间约束。",
+        "version": 2,
+        "requirements": {
+          "topic": "咖啡新品",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00+08:00",
+          "start_at": "2030-12-01T08:00+08:00",
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "制作成本：12 → 8（预算 10 模拟单位）",
+          "视觉制作规格：premium → simple",
+          "保留有效素材与核心文案，重新估算成本和排期"
+        ],
+        "estimated_cost": "8",
+        "plan_version_id": "e5664ca7-7eb5-489f-817d-f645df0fd1b1",
+        "production_spec": "simple",
+        "previous_estimated_cost": "12"
+      }
+    ],
+    "active_run": {
+      "phase": "delivery",
+      "reason": null,
+      "run_id": "4f761783-493d-4667-a919-47f347d4b29b",
+      "status": "completed",
+      "replans": 1,
+      "script_id": "script-4748d016",
+      "created_at": "2026-11-06T19:35:58.969403+00:00",
+      "last_error": null,
+      "estimate_id": "57bbcb7b-89a6-41a7-9d6c-f4eaa9045b81",
+      "model_rounds": 9,
+      "requirements": {
+        "topic": "咖啡新品",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00+08:00",
+        "start_at": "2030-12-01T08:00+08:00",
+        "real_sources_required": false
+      },
+      "context_calls": 3,
+      "loaded_skills": [
+        "campaign-planning",
+        "script-writing",
+        "proposal-delivery"
+      ],
+      "validation_id": "a266ab71-dc81-46b8-8c0e-a0c57e1ef6d9",
+      "business_calls": 6,
+      "control_status": null,
+      "elapsed_seconds": 35.60900000017136,
+      "plan_version_id": "e5664ca7-7eb5-489f-817d-f645df0fd1b1",
+      "delivery_repairs": 0,
+      "last_tool_failed": false,
+      "effective_start_at": "2030-12-01T08:00+08:00"
+    },
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": "8",
+      "estimate_stale": false,
+      "tool_simulated": "0.55",
+      "estimated_finish": "2030-12-01T16:00:00+08:00",
+      "model_input_tokens": 21005,
+      "model_output_tokens": 1270,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [
+      {
+        "url": null,
+        "title": "从日常场景提炼传播切入点",
+        "summary": "项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。",
+        "material_id": "synthetic-scene",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-06T19:36:04.191920+00:00"
+      },
+      {
+        "url": null,
+        "title": "精简视觉的内容制作方案",
+        "summary": "项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。",
+        "material_id": "synthetic-lean",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-06T19:36:04.191920+00:00"
+      },
+      {
+        "url": null,
+        "title": "两条连贯内容的策划骨架",
+        "summary": "项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。",
+        "material_id": "synthetic-series",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-06T19:36:04.191920+00:00"
+      }
+    ],
+    "proposals": [
+      {
+        "title": "咖啡新品：唤醒你的日常时刻",
+        "version": 1,
+        "saved_at": "2026-11-06T19:36:34.701181+00:00",
+        "proposal_id": "0988e5a9-9721-4cb0-961f-2cc46276ee31",
+        "plan_version_id": "e5664ca7-7eb5-489f-817d-f645df0fd1b1"
+      }
+    ],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 88,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "messages": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "为咖啡新品做内容推广，先采用高规格视觉 premium。制作预算 10 个模拟单位，开始时间2030-12-01 08:00，截止2030-12-03 18:00，均为北京时间，允许合成素材。先展示计划。",
+      "item_id": "c94b2318-e9d3-4884-994e-3d0e5186a8ce",
+      "item_seq": 1,
+      "created_at": "2026-11-06T19:35:12.695479+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "bd8b1538-170a-4493-a974-70c388d64c42",
+      "item_seq": 2,
+      "created_at": "2026-11-06T19:35:31.474985+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "先别开始，解释一下执行过程。",
+      "item_id": "c81df313-9bc8-4f83-a002-1e3e99162263",
+      "item_seq": 3,
+      "created_at": "2026-11-06T19:35:37.003970+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "当前任务尚未执行，需等待明确指令。建议补充需求或查看右侧计划以获取更多信息。",
+      "item_id": "cb319833-aa7c-49b6-a371-48472e098da4",
+      "item_seq": 4,
+      "created_at": "2026-11-06T19:35:45.566430+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "按这份计划开始执行。",
+      "item_id": "b3aeb5af-74b0-4449-b186-980027fc3e45",
+      "item_seq": 5,
+      "created_at": "2026-11-06T19:35:50.666592+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "开始执行这份计划。工具的实际输入、输出、费用和状态会逐项更新。",
+      "item_id": "189602f3-fe8e-4d72-b2bd-919e2516f8fe",
+      "item_seq": 6,
+      "created_at": "2026-11-06T19:35:58.986233+00:00"
+    },
+    {
+      "kind": "tool",
+      "item_id": "af1ca869-7d00-48ca-831f-ab1647c53d70",
+      "item_seq": 7,
+      "created_at": "2026-11-06T19:36:00.683775+00:00",
+      "tool_call_id": "595ece5c-f1d5-44b3-ae67-987078310e3c"
+    },
+    {
+      "kind": "tool",
+      "item_id": "5a49b735-15b4-4a33-a0f1-b5325b230b99",
+      "item_seq": 8,
+      "created_at": "2026-11-06T19:36:02.544731+00:00",
+      "tool_call_id": "7eb526aa-ab45-4268-a6c1-2a89e008bdae"
+    },
+    {
+      "kind": "tool",
+      "item_id": "3e47659b-a042-47d3-a02b-74e9ce74ca0b",
+      "item_seq": 9,
+      "created_at": "2026-11-06T19:36:04.163235+00:00",
+      "tool_call_id": "560601c1-5f67-4648-af67-f6dfc760912d"
+    },
+    {
+      "kind": "tool",
+      "item_id": "ef1733d1-98b8-40fa-976b-be2d85d7e7c8",
+      "item_seq": 10,
+      "created_at": "2026-11-06T19:36:05.618608+00:00",
+      "tool_call_id": "9ba4fa67-93f8-4616-a2b9-d177617dfa8a"
+    },
+    {
+      "kind": "tool",
+      "item_id": "7a355543-f001-4ce5-90b2-a8c67caa629e",
+      "item_seq": 11,
+      "created_at": "2026-11-06T19:36:07.920370+00:00",
+      "tool_call_id": "8dbc117d-2201-4d52-84f9-687982a2320c"
+    },
+    {
+      "kind": "tool",
+      "item_id": "fd8a473a-439d-4ecc-b38b-707f9245004f",
+      "item_seq": 12,
+      "created_at": "2026-11-06T19:36:16.125707+00:00",
+      "tool_call_id": "4e1b76f7-6f36-45eb-b185-6abe3a25006a"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "当前高规格制作超出预算且时间不满足，尝试切换至精简规格以符合预算和时间约束。 已更新右侧计划，正在重新估算；旧结果仍保留。",
+      "item_id": "8a76db82-2547-4783-abd3-6afa5ae87fbb",
+      "item_seq": 13,
+      "created_at": "2026-11-06T19:36:19.509401+00:00"
+    },
+    {
+      "kind": "tool",
+      "item_id": "edf4e88d-436f-4634-a14b-909ac8de7b28",
+      "item_seq": 14,
+      "created_at": "2026-11-06T19:36:20.817537+00:00",
+      "tool_call_id": "994b0845-002f-408b-aa68-b89202fa65bc"
+    },
+    {
+      "kind": "tool",
+      "item_id": "7a16aa17-7508-49a5-89cf-ee9438ac9561",
+      "item_seq": 15,
+      "created_at": "2026-11-06T19:36:28.769120+00:00",
+      "tool_call_id": "d1d0dac6-e4bb-406d-874d-f2d0047a8019"
+    },
+    {
+      "kind": "tool",
+      "item_id": "eb333540-f63d-4851-8049-1162ee453137",
+      "item_seq": 16,
+      "created_at": "2026-11-06T19:36:34.664954+00:00",
+      "tool_call_id": "3638af71-da3a-42ae-8c30-1192e5472e9d"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "方案已保存。制作成本为 **8 个模拟单位**；完整方案、排期与来源已在右侧保留，可放大阅读或导出。",
+      "item_id": "61c0faa9-f2cd-49c7-9e07-0e74205e217d",
+      "item_seq": 17,
+      "created_at": "2026-11-06T19:36:34.746040+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "开始",
+      "item_id": "6bb19d06-cc8c-4d9a-8928-4c1d24b3629f",
+      "item_seq": 18,
+      "created_at": "2026-11-06T19:36:35.225807+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "这份方案已经保存，可以直接阅读或导出。需要新版时，请告诉我修改内容。",
+      "item_id": "7016f4fe-b054-4edf-9e1b-cf1b89e6c1b1",
+      "item_seq": 19,
+      "created_at": "2026-11-06T19:36:37.051294+00:00"
+    }
+  ],
+  "proposals": [
+    {
+      "title": "咖啡新品：唤醒你的日常时刻",
+      "run_id": "4f761783-493d-4667-a919-47f347d4b29b",
+      "version": 1,
+      "markdown": "# 咖啡新品：唤醒你的日常时刻\n\n## 活动目标\n通过简洁、有吸引力的文案，向目标受众传达新品咖啡的核心价值，激发互动与关注。\n\n## 受众与渠道假设\n关注生活品质、追求便捷与舒适体验的都市人群，尤其是通勤者、加班族及咖啡爱好者。\n\n## 内容策略\n写作：采用简洁、有画面感的语言，突出产品便捷性与口感层次，避免冗长描述。发布：通过自有渠道（如社交媒体、官网）发布，确保内容触达目标受众。评论互动：鼓励用户在评论区分享对咖啡的期待，增强参与感，同时为后续产品优化提供反馈。\n\n## 内容与脚本\n# 咖啡新品：唤醒你的日常时刻\n\n**开场**  \n清晨的闹钟响起，你是否总在匆忙中错过一杯好咖啡？或是夜晚加班时，渴望一杯提神又不伤胃的饮品？我们理解你在通勤、阅读或工作间隙对咖啡的期待。\n\n**正文**  \n这款新品咖啡，专为快节奏生活设计，旨在为你提供更便捷、更舒适的饮用体验。无论你是需要提神的早晨，还是需要放松的夜晚，它都能满足你的需求。【待确认：具体信息】的配方，让每一口都充满层次感，带来不一样的味觉享受。\n\n**互动收尾**  \n你期待怎样的一杯咖啡？在评论区告诉我们，我们将根据你的想法，持续优化产品。关注我们，了解更多【待确认：官方入口】，一起探索咖啡的无限可能。\n\n## 制作与活动执行排期\n自然小时、单团队串行；预计完成：2030-12-01T16:00:00+08:00。\n\n| 制作项 | 工期（小时） | 制作成本 |\n| --- | --- | --- |\n| 策划 | 2 | 1 |\n| 文案 | 2 | 2 |\n| 精简视觉 | 3 | 5 |\n| 自有渠道发布与互动执行 | 1 | 0 |\n\n## 制作成本与预算\n制作成本 **8 个模拟单位**；制作预算 **10**。工具和模型开销独立记录，不计入制作预算。\n\n## 素材与来源\n- 从日常场景提炼传播切入点（项目合成素材）：项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。\n- 精简视觉的内容制作方案（项目合成素材）：项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。\n- 两条连贯内容的策划骨架（项目合成素材）：项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。\n\n## 调整与限制\n制作成本和工期采用项目规则估算，活动尚未在现实中执行。合成资料用于创意，不作为真实市场数据。",
+      "saved_at": "2026-11-06T19:36:34.701181+00:00",
+      "materials": [
+        {
+          "url": null,
+          "title": "从日常场景提炼传播切入点",
+          "summary": "项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。",
+          "material_id": "synthetic-scene",
+          "source_type": "synthetic",
+          "retrieved_at": "2026-11-06T19:36:04.191920+00:00"
+        },
+        {
+          "url": null,
+          "title": "精简视觉的内容制作方案",
+          "summary": "项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。",
+          "material_id": "synthetic-lean",
+          "source_type": "synthetic",
+          "retrieved_at": "2026-11-06T19:36:04.191920+00:00"
+        },
+        {
+          "url": null,
+          "title": "两条连贯内容的策划骨架",
+          "summary": "项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。",
+          "material_id": "synthetic-series",
+          "source_type": "synthetic",
+          "retrieved_at": "2026-11-06T19:36:04.191920+00:00"
+        }
+      ],
+      "structured": {
+        "title": "咖啡新品：唤醒你的日常时刻",
+        "budget": {
+          "budget": "10",
+          "production_cost": "8"
+        },
+        "content": "# 咖啡新品：唤醒你的日常时刻\n\n**开场**  \n清晨的闹钟响起，你是否总在匆忙中错过一杯好咖啡？或是夜晚加班时，渴望一杯提神又不伤胃的饮品？我们理解你在通勤、阅读或工作间隙对咖啡的期待。\n\n**正文**  \n这款新品咖啡，专为快节奏生活设计，旨在为你提供更便捷、更舒适的饮用体验。无论你是需要提神的早晨，还是需要放松的夜晚，它都能满足你的需求。【待确认：具体信息】的配方，让每一口都充满层次感，带来不一样的味觉享受。\n\n**互动收尾**  \n你期待怎样的一杯咖啡？在评论区告诉我们，我们将根据你的想法，持续优化产品。关注我们，了解更多【待确认：官方入口】，一起探索咖啡的无限可能。",
+        "audience": "关注生活品质、追求便捷与舒适体验的都市人群，尤其是通勤者、加班族及咖啡爱好者。",
+        "schedule": {
+          "unit": "模拟单位",
+          "hours": "8",
+          "items": [
+            {
+              "cost": "1",
+              "name": "策划",
+              "hours": "2"
+            },
+            {
+              "cost": "2",
+              "name": "文案",
+              "hours": "2"
+            },
+            {
+              "cost": "5",
+              "name": "精简视觉",
+              "hours": "3"
+            },
+            {
+              "cost": "0",
+              "name": "自有渠道发布与互动执行",
+              "hours": "1"
+            }
+          ],
+          "budget": "10",
+          "cost_gap": "0",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "checked_at": "2026-11-06T19:36:34.699092+00:00",
+          "estimate_id": "9b2a2f46-3868-4d49-b43f-fe1bbc8ab6d6",
+          "is_feasible": true,
+          "rules_version": "2026-11-07.2",
+          "time_gap_hours": "0",
+          "production_cost": "8",
+          "production_spec": "simple",
+          "estimated_finish": "2030-12-01T16:00:00+08:00"
+        },
+        "strategy": "写作：采用简洁、有画面感的语言，突出产品便捷性与口感层次，避免冗长描述。发布：通过自有渠道（如社交媒体、官网）发布，确保内容触达目标受众。评论互动：鼓励用户在评论区分享对咖啡的期待，增强参与感，同时为后续产品优化提供反馈。",
+        "objective": "通过简洁、有吸引力的文案，向目标受众传达新品咖啡的核心价值，激发互动与关注。",
+        "source_ids": [
+          "synthetic-scene",
+          "synthetic-series"
+        ]
+      },
+      "proposal_id": "0988e5a9-9721-4cb0-961f-2cc46276ee31",
+      "requirements": {
+        "topic": "咖啡新品",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00+08:00",
+        "start_at": "2030-12-01T08:00+08:00",
+        "real_sources_required": false
+      },
+      "save_estimate": {
+        "unit": "模拟单位",
+        "hours": "8",
+        "items": [
+          {
+            "cost": "1",
+            "name": "策划",
+            "hours": "2"
+          },
+          {
+            "cost": "2",
+            "name": "文案",
+            "hours": "2"
+          },
+          {
+            "cost": "5",
+            "name": "精简视觉",
+            "hours": "3"
+          },
+          {
+            "cost": "0",
+            "name": "自有渠道发布与互动执行",
+            "hours": "1"
+          }
+        ],
+        "budget": "10",
+        "cost_gap": "0",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "checked_at": "2026-11-06T19:36:34.699092+00:00",
+        "estimate_id": "9b2a2f46-3868-4d49-b43f-fe1bbc8ab6d6",
+        "is_feasible": true,
+        "rules_version": "2026-11-07.2",
+        "time_gap_hours": "0",
+        "production_cost": "8",
+        "production_spec": "simple",
+        "estimated_finish": "2030-12-01T16:00:00+08:00"
+      },
+      "plan_version_id": "e5664ca7-7eb5-489f-817d-f645df0fd1b1",
+      "production_cost": "8",
+      "estimated_finish": "2030-12-01T16:00:00+08:00",
+      "final_validation": {
+        "is_valid": true,
+        "content_hash": "bfeb41b92e3620b9673d672088b1d285071af0ba6a366845b40e8704ca982f68",
+        "validation_id": "ef8ac8fd-82c6-49ea-847c-15546548fb6e",
+        "missing_fields": [],
+        "invalid_references": []
+      },
+      "validated_draft_hash": "4f97a8eed1c5279b96a17c9935e04ba5d88ed6d8978af2d82078bf9c9ae831eb"
+    }
+  ]
+}

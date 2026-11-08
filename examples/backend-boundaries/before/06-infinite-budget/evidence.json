@@ -1,0 +1,158 @@
+{
+  "actual": true,
+  "name": "06-infinite-budget",
+  "session_id": "7f122b34-ce42-489d-9430-94f0e6084614",
+  "url": "http://127.0.0.1:5173/sessions/7f122b34-ce42-489d-9430-94f0e6084614",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "0c0deb63-540f-4a79-b184-47b07301b191",
+        "content": "读书会，制作预算Infinity，截止2030-12-03 18:00北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "fc74807f-b021-48f4-b208-1390e79232a5",
+        "processing_id": "a1f46846-3dd9-4e97-8b6e-5ab3f2e25235",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书会",
+        "status": "draft",
+        "session_id": "7f122b34-ce42-489d-9430-94f0e6084614",
+        "last_user_activity_at": "2026-11-07T04:59:08.118519+00:00"
+      },
+      "requirements": {
+        "topic": "读书会",
+        "budget": "Infinity",
+        "deadline": "2030-12-03T18:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "Infinity",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 667,
+        "model_output_tokens": 142,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 7,
+      "pending_changes": null,
+      "mode": "live"
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "7f122b34-ce42-489d-9430-94f0e6084614",
+      "last_user_activity_at": "2026-11-07T04:59:08.118519+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": "Infinity",
+      "deadline": "2030-12-03T18:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "Infinity",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 667,
+      "model_output_tokens": 142,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 7,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书会，制作预算Infinity，截止2030-12-03 18:00北京时间。",
+      "item_id": "fc74807f-b021-48f4-b208-1390e79232a5",
+      "item_seq": 1,
+      "created_at": "2026-11-07T04:59:08.118519+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "已补充：有效的非负制作预算。",
+      "item_id": "0ba98e77-85a9-449c-9335-c8b48a9e5369",
+      "item_seq": 2,
+      "created_at": "2026-11-07T04:59:19.025623+00:00",
+      "processing": false
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T04:59:18.992267+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 586,
+        "output_tokens": 132
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"Infinity\",\n    \"deadline\": \"2030-12-03T18:00+08:00\"\n  },\n  \"evidence\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"制作预算Infinity\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算和截止时间，因此更新了相关字段。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "cc626ae5-3fd5-4cb6-a472-3e2ba8e31384",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T04:59:23.777217+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 10
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "已补充：有效的非负制作预算。"
+      },
+      "request_id": "224e93f1-a2fc-4583-b64c-9b7d3a37b125",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

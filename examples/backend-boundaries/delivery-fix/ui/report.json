@@ -1,0 +1,872 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Agent\\Content-task\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.backend.config.ts"
+    ],
+    "configFile": "D:\\Agent\\Content-task\\playwright.backend.config.ts",
+    "rootDir": "D:/Agent/Content-task/tests/backend-ui",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Agent/Content-task/examples/backend-boundaries/delivery-fix/ui/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/Agent/Content-task/tests/backend-ui",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\Agent\\Content-task\\tests\\backend-ui",
+        "snapshotDir": "D:\\Agent\\Content-task\\tests\\backend-ui",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "browserName": "chromium",
+          "trace": "on",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "examples/backend-boundaries/delivery-fix/ui/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "boundaries.spec.ts",
+      "file": "boundaries.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ambiguous and withdrawn requirements match server issues without showing invalid confirmed budgets",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 286,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\01-vague\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\01-vague\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:22:24",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\01-vague\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:22:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:15.193Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-ambiguous-and-w-7c528-g-invalid-confirmed-budgets\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-ambiguous-and-w-7c528-g-invalid-confirmed-budgets\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-ambiguous-and-w-7c528-g-invalid-confirmed-budgets\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-a8bbe85a515c00b8c18b",
+          "file": "boundaries.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "conditional and bypass messages stay at preview and do not create tools or saved outcomes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 297,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\11-conditional\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\11-conditional\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:34:24",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\11-conditional\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:34:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:16.326Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-conditional-and-10475-ate-tools-or-saved-outcomes\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-conditional-and-10475-ate-tools-or-saved-outcomes\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-conditional-and-10475-ate-tools-or-saved-outcomes\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-16f5c69bc2494f845d93",
+          "file": "boundaries.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "unsupported real video publishing and payment are explained without pretending a text plan can fulfill them",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 215,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\13-unsupported\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\13-unsupported\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:44:22",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\13-unsupported\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:44:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:17.483Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-unsupported-rea-789d5--text-plan-can-fulfill-them\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-unsupported-rea-789d5--text-plan-can-fulfill-them\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-unsupported-rea-789d5--text-plan-can-fulfill-them\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-76c051187efb4a73a79a",
+          "file": "boundaries.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "strict real-source requirement shows incomplete and blocked rather than fabricated material success",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 211,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\14-real-only-implicit\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\14-real-only-implicit\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:55:24",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\14-real-only-implicit\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:55:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:18.526Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-strict-real-sou-c5020-fabricated-material-success\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-strict-real-sou-c5020-fabricated-material-success\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-strict-real-sou-c5020-fabricated-material-success\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-54377a9a961a48744b77",
+          "file": "boundaries.spec.ts",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "zero decimal and scheduling gaps retain successful estimate tools and truthful incomplete status",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 219,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\16-zero-budget\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\16-zero-budget\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:71:24",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\16-zero-budget\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:71:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:19.430Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-zero-decimal-an-4e1f3--truthful-incomplete-status\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-zero-decimal-an-4e1f3--truthful-incomplete-status\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-zero-decimal-an-4e1f3--truthful-incomplete-status\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-4b6e7c07e3ff8ef00de8",
+          "file": "boundaries.spec.ts",
+          "line": 69,
+          "column": 1
+        },
+        {
+          "title": "stale approval and in-flight changes map to the new waiting plan without a false save",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 217,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\21-stale-plan-approval\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\21-stale-plan-approval\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:85:24",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\21-stale-plan-approval\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:85:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:20.350Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-stale-approval--9bd2a-g-plan-without-a-false-save\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-stale-approval--9bd2a-g-plan-without-a-false-save\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-stale-approval--9bd2a-g-plan-without-a-false-save\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-77dfa2102bc0d32d2dc1",
+          "file": "boundaries.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "three generated text scripts and their actual delivery outcome agree with the backend",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 218,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\20-video-script-supported\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\20-video-script-supported\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:95:22",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\20-video-script-supported\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:95:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:21.286Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-three-generated-d9fe2-come-agree-with-the-backend\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-three-generated-d9fe2-come-agree-with-the-backend\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-three-generated-d9fe2-come-agree-with-the-backend\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-fbd8752b4ba9897d7d0c",
+          "file": "boundaries.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "oversize input remains in the composer and actual API validation errors have usable Chinese messages",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 210,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\01-vague\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\01-vague\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:124:14",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\01-vague\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:124:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:22.229Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-oversize-input--72d42-ave-usable-Chinese-messages\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-oversize-input--72d42-ave-usable-Chinese-messages\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-oversize-input--72d42-ave-usable-Chinese-messages\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-54c844ab4ef09bbad267",
+          "file": "boundaries.spec.ts",
+          "line": 123,
+          "column": 1
+        },
+        {
+          "title": "stop and resume preserve successful tools and render the actual save outcome",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 232,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\23-stop-resume\\evidence.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\23-stop-resume\\evidence.json'\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:137:22",
+                    "location": {
+                      "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                      "column": 34,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39mstage \u001b[33m?\u001b[39m \u001b[32m`examples/backend-boundaries/${stage}`\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'examples/backend-boundaries'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  6 |\u001b[39m \u001b[36mfunction\u001b[39m evidence(name\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mif\u001b[39m(stage) \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(\u001b[32m`${root}/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m final\u001b[33m=\u001b[39m\u001b[32m`${root}/final/${name}/evidence.json`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(fs\u001b[33m.\u001b[39mexistsSync(final) \u001b[33m?\u001b[39m final \u001b[33m:\u001b[39m \u001b[32m`${root}/after/${name}/evidence.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                        "column": 34,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, open 'D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\23-stop-resume\\evidence.json'\n\n   5 | const root=stage ? `examples/backend-boundaries/${stage}` : 'examples/backend-boundaries';\n   6 | function evidence(name: string) {\n>  7 |   if(stage) return JSON.parse(fs.readFileSync(`${root}/${name}/evidence.json`,'utf8'));\n     |                                  ^\n   8 |   const final=`${root}/final/${name}/evidence.json`;\n   9 |   return JSON.parse(fs.readFileSync(fs.existsSync(final) ? final : `${root}/after/${name}/evidence.json`,'utf8'));\n  10 | }\n    at evidence (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:7:34)\n    at open (D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:12:14)\n    at D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts:137:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:23.168Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-stop-and-resume-13e80-der-the-actual-save-outcome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-stop-and-resume-13e80-der-the-actual-save-outcome\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\boundaries-stop-and-resume-13e80-der-the-actual-save-outcome\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Agent\\Content-task\\tests\\backend-ui\\boundaries.spec.ts",
+                    "column": 34,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0a85330a59013ae9a19-a99f4ba4e3474996c068",
+          "file": "boundaries.spec.ts",
+          "line": 136,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "delivery-recovery.spec.ts",
+      "file": "delivery-recovery.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "original failed 20-video-script-supported resumes without stale blocked reasons or duplicate work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1769,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:24.265Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\delivery-recovery-original-5b9f5-d-reasons-or-duplicate-work\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6180818799c9b931bdf3-52fad5fdadb81832eaca",
+          "file": "delivery-recovery.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "original failed 23-stop-resume resumes without stale blocked reasons or duplicate work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T15:24:26.232Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Agent\\Content-task\\examples\\backend-boundaries\\delivery-fix\\ui\\artifacts\\delivery-recovery-original-cce8d-d-reasons-or-duplicate-work\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6180818799c9b931bdf3-d056f327cb6df2f5058b",
+          "file": "delivery-recovery.spec.ts",
+          "line": 9,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-07T15:24:14.796Z",
+    "duration": 13371.34,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 9,
+    "flaky": 0
+  }
+}

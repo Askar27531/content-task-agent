@@ -1,0 +1,130 @@
+{
+  "session_id": "9eff2773-fb50-41a5-86e4-a18e6c2606af",
+  "actual_deepseek_and_tavily": true,
+  "checks": {
+    "budget_estimates_are_actual_12_then_8": true,
+    "both_costs_equal_decimal_item_sums": true,
+    "first_is_infeasible_with_gap_2": true,
+    "replacement_is_feasible_within_budget": true,
+    "saved_cost_and_schedule_valid": true,
+    "dependency_and_actual_result_checks": true,
+    "single_failure_is_still_failed": true,
+    "failed_attempt_has_no_script_artifact": true,
+    "only_one_business_failure": true,
+    "failure_retry_uses_new_attempt": true,
+    "failure_is_not_charged_simulated_fee": true,
+    "automatic_without_resume_messages": true,
+    "one_source_search_result_preserved": true,
+    "successful_script_reused_after_replan": true,
+    "replan_was_an_actual_model_decision": true,
+    "replan_has_new_version_and_old_superseded": true,
+    "order_source_failure_retry_estimate_check_save": true,
+    "save_has_actual_passed_check": true,
+    "save_check_hash_matches_actual_validation": true,
+    "saved_script_is_successful_artifact": true,
+    "new_estimate_and_save_reference_current_plan": true,
+    "budget_is_never_changed_to_fit_result": true,
+    "completed_means_exactly_one_actual_save": true,
+    "simulated_tool_fees_are_separate_and_exact": true,
+    "real_sources_in_saved_document": true,
+    "provider_not_switched": true,
+    "all_external_scenario_fact_audits_pass": true
+  },
+  "passed": true,
+  "costs": {
+    "budget": "10",
+    "observed_estimates": [
+      "12",
+      "8"
+    ],
+    "saved_production": "8",
+    "production_gap_before": "2",
+    "tool_simulated": "0.55",
+    "model_price": null,
+    "external_search_price": null
+  },
+  "step_dependencies": [
+    {
+      "plan": 1,
+      "step": "materials",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    },
+    {
+      "plan": 1,
+      "step": "script",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    },
+    {
+      "plan": 1,
+      "step": "estimate",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    },
+    {
+      "plan": 2,
+      "step": "materials",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    },
+    {
+      "plan": 2,
+      "step": "script",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    },
+    {
+      "plan": 2,
+      "step": "estimate",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    },
+    {
+      "plan": 2,
+      "step": "validate",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    },
+    {
+      "plan": 2,
+      "step": "save",
+      "has_successful_tool": true,
+      "parents_have_results": true
+    }
+  ],
+  "operation_ids": {
+    "source": "0abff1a7-35ca-40b2-8148-070ac3759ec4",
+    "failed_script": "95237b93-0c50-4614-be5b-0e0ee8f9afb9",
+    "successful_script": "7ac87093-d4d9-4ab7-8240-c96a11ddb0b7",
+    "estimates": [
+      "d4b32a89-6d34-4c1c-bb08-885d94143e3a",
+      "b47af3e4-d4e7-4912-9572-c445319d73af"
+    ],
+    "save": "74aeaeb3-63f7-496e-b4a5-51bf1c1842df"
+  },
+  "actual_model_replan": [
+    {
+      "at": "2026-11-07T19:38:52.337092+00:00",
+      "kind": "replan",
+      "model": "deepseek-chat",
+      "usage": {
+        "input_tokens": 3219,
+        "output_tokens": 232
+      },
+      "run_id": "6c3b03a2-fb4c-4d63-bb99-35772987a4bc",
+      "provider": "deepseek",
+      "response": {
+        "role": "assistant",
+        "content": "{\"production_spec\": \"simple\", \"reason\": \"premium 规格已核验不可行：制作成本 12 超出预算 10（cost_gap=2），而 time_gap_hours=0 说明时间并未超限，因此唯一被违反的约束是预算。available_improving_candidates 中仅有 simple，且两个规格只改变视觉复杂度、不改变制作项数量，故改用 simple 可降低视觉成本而不影响策划、文案与发布执行等既有产物。\", \"changes\": [\"制作规格由 premium 改为 simple，仅降低视觉复杂度，不改变制作项数量\", \"保留已取得的真实来源素材（web-fe13ae8a28、web-7eab2d07c7），继续禁止合成素材\", \"保留脚本 script-c4f74ae5 与策划、文案、自有渠道发布与互动执行等制作项\", \"按 simple 规格重新估算成本与工时，校验是否满足预算 10 与截止 2030-12-03T18:00:00+08:00\"], \"stop\": false}",
+        "tool_calls": [],
+        "finish_reason": "stop"
+      },
+      "request_id": "b23d9034-9b8c-4af2-bca5-b573c63219fa",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    }
+  ]
+}

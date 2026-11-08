@@ -1,0 +1,162 @@
+{
+  "actual": true,
+  "name": "02-budget-undecided",
+  "session_id": "21bd4372-d7a1-4da8-9663-d6a61b90f09a",
+  "url": "http://127.0.0.1:5173/sessions/21bd4372-d7a1-4da8-9663-d6a61b90f09a",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "budget_unset": true,
+    "deadline_unset": true,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "budget_unset": true,
+    "deadline_unset": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "c0a55479-e601-41a4-8dc1-6ada500dfe77",
+        "content": "做个读书活动方案，预算你先别定，我也不知道多少，时间还没想好。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "9c0ac5ef-166d-459e-b558-cce2d898fdd8",
+        "processing_id": "7b771a71-51de-49cc-bae4-2f8ac4cc01e0",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书活动方案",
+        "status": "draft",
+        "session_id": "21bd4372-d7a1-4da8-9663-d6a61b90f09a",
+        "last_user_activity_at": "2026-11-07T04:58:03.825018+00:00"
+      },
+      "requirements": {
+        "topic": "读书活动方案",
+        "budget": null,
+        "deadline": null,
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": null,
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 668,
+        "model_output_tokens": 97,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 8,
+      "pending_changes": null,
+      "mode": "live"
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书活动方案",
+      "status": "draft",
+      "session_id": "21bd4372-d7a1-4da8-9663-d6a61b90f09a",
+      "last_user_activity_at": "2026-11-07T04:58:03.825018+00:00"
+    },
+    "requirements": {
+      "topic": "读书活动方案",
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 668,
+      "model_output_tokens": 97,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 8,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "做个读书活动方案，预算你先别定，我也不知道多少，时间还没想好。",
+      "item_id": "9c0ac5ef-166d-459e-b558-cce2d898fdd8",
+      "item_seq": 1,
+      "created_at": "2026-11-07T04:58:03.825018+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "内容制作预算（模拟单位）：待补充。活动截止日期与时间：待补充。",
+      "item_id": "27dea199-7dc3-4fdf-af8a-9eaeaaa01584",
+      "item_seq": 2,
+      "created_at": "2026-11-07T04:58:12.746066+00:00",
+      "processing": false
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T04:58:12.712781+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 580,
+        "output_tokens": 76
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书活动方案\"\n  },\n  \"evidence\": {\n    \"topic\": \"做个读书活动方案\"\n  },\n  \"explanation\": \"用户未明确提供预算和时间，因此未更新相关字段。活动主题已明确为'读书活动方案'。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "607d82e9-1c0c-4695-8c73-afe9d32a961a",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T04:58:17.747853+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 21
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "内容制作预算（模拟单位）：待补充。活动截止日期与时间：待补充。"
+      },
+      "request_id": "ed8e1823-47a1-48cc-90f0-a3a4c17a32bb",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

@@ -1,0 +1,158 @@
+{
+  "actual": true,
+  "name": "13-unsupported",
+  "session_id": "f653077f-98dd-4e9c-915b-aa823201f59b",
+  "url": "http://127.0.0.1:5173/sessions/f653077f-98dd-4e9c-915b-aa823201f59b",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "no_current_ready_plan": true,
+    "capability_explained": true,
+    "capability_recorded": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "no_run": true,
+    "no_current_ready_plan": true,
+    "capability_explained": true,
+    "capability_recorded": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "0582067e-c69c-445a-a200-a8593b6f2458",
+        "content": "我不要方案或文案，要你直接生成3条4K成片，登录抖音发出去并付款买广告。预算10，截止2030-12-03 18:00北京时间。做不到就说做不到，别换成文案。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "5367dcaa-3e15-4971-bf61-830362b337e3",
+        "processing_id": "f81bded5-006e-4217-a91e-0f79ac17d768",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "新的内容活动",
+        "status": "draft",
+        "session_id": "f653077f-98dd-4e9c-915b-aa823201f59b",
+        "last_user_activity_at": "2026-11-07T10:05:27.692977+00:00"
+      },
+      "requirements": {
+        "topic": null,
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 855,
+        "model_output_tokens": 152,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 4,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": [
+        "活动主题",
+        "当前没有真实视频或成片生成工具，只能提供文字策划与脚本。",
+        "当前没有外部账号登录或发布工具，不能代为发布活动。",
+        "当前没有支付或广告投放工具，不能代付款或投放广告。"
+      ]
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "f653077f-98dd-4e9c-915b-aa823201f59b",
+      "last_user_activity_at": "2026-11-07T10:05:27.692977+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 855,
+      "model_output_tokens": 152,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动主题",
+      "当前没有真实视频或成片生成工具，只能提供文字策划与脚本。",
+      "当前没有外部账号登录或发布工具，不能代为发布活动。",
+      "当前没有支付或广告投放工具，不能代付款或投放广告。"
+    ]
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "我不要方案或文案，要你直接生成3条4K成片，登录抖音发出去并付款买广告。预算10，截止2030-12-03 18:00北京时间。做不到就说做不到，别换成文案。",
+      "item_id": "5367dcaa-3e15-4971-bf61-830362b337e3",
+      "item_seq": 1,
+      "created_at": "2026-11-07T10:05:27.692977+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "当前请求未完成：活动主题；当前没有真实视频或成片生成工具，只能提供文字策划与脚本。；当前没有外部账号登录或发布工具，不能代为发布活动。；当前没有支付或广告投放工具，不能代付款或投放广告。。没有为本次请求保存新方案；只有你明确接受文字策划/脚本范围后，才会继续生成可执行计划。",
+      "item_id": "47c31342-cabf-4572-b02c-092f39caa4d7",
+      "item_seq": 2,
+      "created_at": "2026-11-07T10:05:38.736292+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T10:05:38.690763+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 855,
+        "output_tokens": 152
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"execute\",\n  \"updates\": {\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03 18:00+08:00\"\n  },\n  \"evidence\": {\n    \"budget\": \"预算10\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"根据您的要求，我将直接生成3条4K成片，登录抖音发出去并付款买广告。预算为10，截止时间为2030-12-03 18:00北京时间。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "d3edb03b-ce51-4e28-a46e-ba7c3848136a",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

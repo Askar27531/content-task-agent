@@ -1,0 +1,47 @@
+[
+  {
+    "attempt": 0,
+    "passed": true,
+    "proxy": "http://127.0.0.1:7890",
+    "tls_verification": true,
+    "protocol": "2025-11-25",
+    "duration_ms": 11389,
+    "tools": [
+      "tavily_search",
+      "tavily_extract",
+      "tavily_crawl",
+      "tavily_map",
+      "tavily_research"
+    ]
+  },
+  {
+    "attempt": 1,
+    "passed": true,
+    "proxy": "http://127.0.0.1:7890",
+    "tls_verification": true,
+    "protocol": "2025-11-25",
+    "duration_ms": 10453,
+    "tools": [
+      "tavily_search",
+      "tavily_extract",
+      "tavily_crawl",
+      "tavily_map",
+      "tavily_research"
+    ]
+  },
+  {
+    "attempt": 2,
+    "passed": true,
+    "proxy": "http://127.0.0.1:7890",
+    "tls_verification": true,
+    "protocol": "2025-11-25",
+    "duration_ms": 9719,
+    "tools": [
+      "tavily_search",
+      "tavily_extract",
+      "tavily_crawl",
+      "tavily_map",
+      "tavily_research"
+    ]
+  }
+]

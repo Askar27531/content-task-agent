@@ -1,0 +1,15 @@
+{
+  "name": "content-studio",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["src/frontend"],
+  "scripts": {
+    "dev": "npm run dev -w @content-studio/web",
+    "build": "npm run build -w @content-studio/web",
+    "typecheck": "npm run typecheck -w @content-studio/web",
+    "test:e2e": "playwright test",
+    "test:ui:live": "playwright test --config playwright.ui-audit.config.ts",
+    "test:ui:boundaries": "playwright test --config playwright.backend.config.ts"
+  },
+  "devDependencies": {"@playwright/test": "1.65.0"}
+}

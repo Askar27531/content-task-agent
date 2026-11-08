@@ -1,0 +1,930 @@
+{
+  "actual": true,
+  "url": "http://127.0.0.1:5173/sessions/a1ec5dd4-87b8-46dc-9388-f7dd011053ee",
+  "submissions": [
+    {
+      "content": "请为本地读书交流会策划内容推广活动，先梳理需求。",
+      "accepted": {
+        "message_id": "72871284-130d-4588-a73b-c9b0dcba2356",
+        "processing_id": "7f900ac1-35f2-4c60-803f-cf906332cc61",
+        "duplicate": false
+      }
+    },
+    {
+      "content": "制作预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00，均北京时间。视觉先采用高规格 premium，允许合成素材。请先给计划。",
+      "accepted": {
+        "message_id": "65789634-4475-434d-96b3-fe6f4a6ed068",
+        "processing_id": "dcf31b91-bb7e-4c30-91bd-b8f03b873779",
+        "duplicate": false
+      }
+    },
+    {
+      "content": "先别开始，只查看计划。",
+      "accepted": {
+        "message_id": "51b1f694-6784-49db-a250-f8f578d2fea1",
+        "processing_id": "ee6dbc79-c649-4bf3-be5e-276b304d395a",
+        "duplicate": false
+      }
+    },
+    {
+      "content": "按这份高规格计划开始执行。",
+      "accepted": {
+        "message_id": "de244ded-9b21-4bae-bfa8-82f6273e3f63",
+        "processing_id": "0c69de81-a391-45bb-ade3-c20e3265c1e0",
+        "duplicate": false
+      }
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "本地读书交流会",
+      "status": "draft",
+      "session_id": "a1ec5dd4-87b8-46dc-9388-f7dd011053ee",
+      "last_user_activity_at": "2026-11-07T04:31:13.230400+00:00"
+    },
+    "requirements": {
+      "topic": "本地读书交流会",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-01T08:00:00+08:00",
+      "real_sources_required": false
+    },
+    "plans": [
+      {
+        "label": "高规格内容方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "92e62b16-afc5-40ab-8fec-6e5269a0fb97",
+            "dependencies": [],
+            "tool_call_ids": [
+              "3309e5e8-645f-4c3f-9048-ec6412ed8076",
+              "a169e15b-9600-4b09-8027-008ece835370",
+              "f9fef12e-175c-4a1d-9aea-f55f66e283dd"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "success",
+            "step_id": "aaa01f6d-6a7b-45bf-afd5-d81b74d17743",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [
+              "f6dde509-48a7-40e3-a1d6-cdfb1b930f93",
+              "e30f954b-a273-42b2-95ba-276c9f3e8667"
+            ]
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "success",
+            "step_id": "74034c72-1727-4067-9e4c-e1f5e79f22c2",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [
+              "19ed943f-0faf-453f-9803-ebd6eb60d1dd"
+            ]
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "b789c9c3-c0ae-48ca-89f7-38a4111f6447",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "887f21e0-b761-4f8b-b18c-6e600e882074",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "superseded",
+        "summary": "为本地读书交流会活动制定高规格视觉计划，包含内容策划、文案创作和素材合成。活动开始时间为2030-12-01 08:00，截止时间为2030-12-03 18:00，预算为10个模拟单位。",
+        "version": 1,
+        "requirements": {
+          "topic": "本地读书交流会",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "使用高规格视觉方案",
+          "计划内容包含文案和素材合成",
+          "活动时间安排符合用户指定"
+        ],
+        "estimated_cost": "12",
+        "plan_version_id": "0c7a17ec-edaa-427c-94eb-cdfa2cfcd59a",
+        "production_spec": "premium"
+      },
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_synthetic_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "6638cf90-4ca9-407e-b931-895bfe304627",
+            "dependencies": [],
+            "tool_call_ids": [
+              "3309e5e8-645f-4c3f-9048-ec6412ed8076",
+              "a169e15b-9600-4b09-8027-008ece835370",
+              "f9fef12e-175c-4a1d-9aea-f55f66e283dd"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "success",
+            "step_id": "2fe53079-a124-4832-8118-70e9ed8d3edc",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [
+              "f6dde509-48a7-40e3-a1d6-cdfb1b930f93",
+              "e30f954b-a273-42b2-95ba-276c9f3e8667"
+            ]
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "success",
+            "step_id": "386a528b-f507-48b3-b6a1-1f2336682216",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [
+              "ee61d6d8-9105-4f4e-ad1d-2ef9b4ab5031"
+            ]
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "success",
+            "step_id": "e3c00b10-059e-47ef-bdd5-572e6ac8f1d4",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": [
+              "87655750-bfa3-439e-968f-eb306f557b02"
+            ]
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "success",
+            "step_id": "e35d978d-f475-48b2-8d01-ba49d27dd402",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": [
+              "77505417-74fd-4479-89e1-fbb682db58e7"
+            ]
+          }
+        ],
+        "status": "completed",
+        "summary": "当前高规格制作超出预算且时间安排紧张，尝试精简规格以符合预算和时间约束。",
+        "version": 2,
+        "requirements": {
+          "topic": "本地读书交流会",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "real_sources_required": false
+        },
+        "change_summary": [
+          "制作成本：12 → 8（预算 10 模拟单位）",
+          "视觉制作规格：premium → simple",
+          "保留有效素材与核心文案，重新估算成本和排期"
+        ],
+        "estimated_cost": "8",
+        "plan_version_id": "e5732f41-49a0-4892-8984-c693630ab5a2",
+        "production_spec": "simple",
+        "previous_estimated_cost": "12"
+      }
+    ],
+    "active_run": {
+      "phase": "delivery",
+      "reason": null,
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "status": "completed",
+      "replans": 1,
+      "script_id": "script-e1994dca",
+      "created_at": "2026-11-07T04:31:26.703378+00:00",
+      "last_error": null,
+      "estimate_id": "5328ea74-492e-45ed-a970-14d772b8b113",
+      "model_rounds": 9,
+      "requirements": {
+        "topic": "本地读书交流会",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "real_sources_required": false
+      },
+      "context_calls": 3,
+      "loaded_skills": [
+        "campaign-planning",
+        "script-writing",
+        "proposal-delivery"
+      ],
+      "validation_id": "80bef0ec-f37a-46e9-9035-8cb3ebaefc7e",
+      "business_calls": 6,
+      "control_status": null,
+      "elapsed_seconds": 36.282000000122935,
+      "plan_version_id": "e5732f41-49a0-4892-8984-c693630ab5a2",
+      "delivery_repairs": 0,
+      "last_tool_failed": false,
+      "effective_start_at": "2030-12-01T08:00:00+08:00"
+    },
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": "8",
+      "estimate_stale": false,
+      "tool_simulated": "0.55",
+      "estimated_finish": "2030-12-01T16:00:00+08:00",
+      "model_input_tokens": 21180,
+      "model_output_tokens": 1335,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [
+      {
+        "url": null,
+        "title": "两条连贯内容的策划骨架",
+        "summary": "项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。",
+        "material_id": "synthetic-series",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+      },
+      {
+        "url": null,
+        "title": "从日常场景提炼传播切入点",
+        "summary": "项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。",
+        "material_id": "synthetic-scene",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+      },
+      {
+        "url": null,
+        "title": "精简视觉的内容制作方案",
+        "summary": "项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。",
+        "material_id": "synthetic-lean",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+      }
+    ],
+    "proposals": [
+      {
+        "title": "本地读书交流会",
+        "version": 1,
+        "saved_at": "2026-11-07T04:32:03.201010+00:00",
+        "proposal_id": "cd251746-e89a-439e-91c8-8e49df64c979",
+        "plan_version_id": "e5732f41-49a0-4892-8984-c693630ab5a2"
+      }
+    ],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 91,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "timeline": {
+    "items": [
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "请为本地读书交流会策划内容推广活动，先梳理需求。",
+        "item_id": "72871284-130d-4588-a73b-c9b0dcba2356",
+        "item_seq": 1,
+        "created_at": "2026-11-07T04:30:21.249262+00:00"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "内容制作预算（模拟单位）：待补充。活动截止日期与时间：待补充。",
+        "item_id": "64498054-e52f-4367-89a2-d3a075d91581",
+        "item_seq": 2,
+        "created_at": "2026-11-07T04:30:29.490580+00:00",
+        "processing": false
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "制作预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00，均北京时间。视觉先采用高规格 premium，允许合成素材。请先给计划。",
+        "item_id": "65789634-4475-434d-96b3-fe6f4a6ed068",
+        "item_seq": 3,
+        "created_at": "2026-11-07T04:30:35.155734+00:00"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+        "item_id": "9e1e6a77-3503-418c-bd19-9a7e55b5980c",
+        "item_seq": 4,
+        "created_at": "2026-11-07T04:30:51.615762+00:00",
+        "processing": false
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "先别开始，只查看计划。",
+        "item_id": "51b1f694-6784-49db-a250-f8f578d2fea1",
+        "item_seq": 5,
+        "created_at": "2026-11-07T04:30:58.313794+00:00"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "当前任务尚未执行，需等待明确指令。建议补充需求或查看右侧计划以获取更多信息。",
+        "item_id": "cfe574f1-dfb5-472c-8771-be4436ea9dad",
+        "item_seq": 6,
+        "created_at": "2026-11-07T04:31:07.316320+00:00",
+        "processing": false
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "按这份高规格计划开始执行。",
+        "item_id": "de244ded-9b21-4bae-bfa8-82f6273e3f63",
+        "item_seq": 7,
+        "created_at": "2026-11-07T04:31:13.230400+00:00"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "开始执行这份计划。工具的实际输入、输出、费用和状态会逐项更新。",
+        "item_id": "b8932f91-82bf-49fc-8968-b21079b467b8",
+        "item_seq": 8,
+        "created_at": "2026-11-07T04:31:26.719587+00:00"
+      },
+      {
+        "kind": "tool",
+        "item_id": "b6ae8d2b-0528-48df-ae32-533e9d76e1a8",
+        "item_seq": 9,
+        "created_at": "2026-11-07T04:31:28.532130+00:00",
+        "tool_call_id": "3309e5e8-645f-4c3f-9048-ec6412ed8076"
+      },
+      {
+        "kind": "tool",
+        "item_id": "27332306-6521-4735-8e44-270a104d1c7e",
+        "item_seq": 10,
+        "created_at": "2026-11-07T04:31:30.389651+00:00",
+        "tool_call_id": "a169e15b-9600-4b09-8027-008ece835370"
+      },
+      {
+        "kind": "tool",
+        "item_id": "2fd76ba7-ab26-4a5f-864f-29ba71b5e48f",
+        "item_seq": 11,
+        "created_at": "2026-11-07T04:31:32.098786+00:00",
+        "tool_call_id": "f9fef12e-175c-4a1d-9aea-f55f66e283dd"
+      },
+      {
+        "kind": "tool",
+        "item_id": "6b14c66b-6a14-4807-9883-f6793af5c834",
+        "item_seq": 12,
+        "created_at": "2026-11-07T04:31:33.638108+00:00",
+        "tool_call_id": "f6dde509-48a7-40e3-a1d6-cdfb1b930f93"
+      },
+      {
+        "kind": "tool",
+        "item_id": "0d2559ef-abe7-485d-aae0-1886b7d917c7",
+        "item_seq": 13,
+        "created_at": "2026-11-07T04:31:36.009667+00:00",
+        "tool_call_id": "e30f954b-a273-42b2-95ba-276c9f3e8667"
+      },
+      {
+        "kind": "tool",
+        "item_id": "1d5e9e14-2fbb-47ce-9d11-4d1fa32669a5",
+        "item_seq": 14,
+        "created_at": "2026-11-07T04:31:44.545151+00:00",
+        "tool_call_id": "19ed943f-0faf-453f-9803-ebd6eb60d1dd"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "当前高规格制作超出预算且时间安排紧张，尝试精简规格以符合预算和时间约束。 已更新右侧计划，正在重新估算；旧结果仍保留。",
+        "item_id": "b499f4a7-c745-4e53-8d8e-0d49bc850b24",
+        "item_seq": 15,
+        "created_at": "2026-11-07T04:31:48.387902+00:00"
+      },
+      {
+        "kind": "tool",
+        "item_id": "f1514b35-0d7e-4040-b11e-0e537e50bf71",
+        "item_seq": 16,
+        "created_at": "2026-11-07T04:31:49.732380+00:00",
+        "tool_call_id": "ee61d6d8-9105-4f4e-ad1d-2ef9b4ab5031"
+      },
+      {
+        "kind": "tool",
+        "item_id": "a2ecb3af-11e9-4d78-ae67-f9ec8063b5b6",
+        "item_seq": 17,
+        "created_at": "2026-11-07T04:31:57.356712+00:00",
+        "tool_call_id": "87655750-bfa3-439e-968f-eb306f557b02"
+      },
+      {
+        "kind": "tool",
+        "item_id": "b195f892-4687-4e34-a611-59e31dcdca89",
+        "item_seq": 18,
+        "created_at": "2026-11-07T04:32:03.145510+00:00",
+        "tool_call_id": "77505417-74fd-4479-89e1-fbb682db58e7"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "方案已保存。制作成本为 **8 个模拟单位**；完整方案、排期与来源已在右侧保留，可放大阅读或导出。",
+        "item_id": "7b113a34-3566-4576-b3c5-0858f6151387",
+        "item_seq": 19,
+        "created_at": "2026-11-07T04:32:03.291676+00:00"
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false
+  },
+  "tool_calls": [
+    {
+      "tool_call_id": "3309e5e8-645f-4c3f-9048-ec6412ed8076",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "92e62b16-afc5-40ab-8fec-6e5269a0fb97",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T04:31:28.534225+00:00",
+      "duration_ms": 31,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "a169e15b-9600-4b09-8027-008ece835370",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "92e62b16-afc5-40ab-8fec-6e5269a0fb97",
+      "tool_name": "read_skill_resource",
+      "display_name": "读取 Skill 参考",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "output": {
+        "body": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "started_at": "2026-11-07T04:31:30.391240+00:00",
+      "duration_ms": 26,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "f9fef12e-175c-4a1d-9aea-f55f66e283dd",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "92e62b16-afc5-40ab-8fec-6e5269a0fb97",
+      "tool_name": "search_synthetic_materials",
+      "display_name": "检索活动素材",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "query": "读书交流会 内容素材"
+      },
+      "output": {
+        "materials": [
+          {
+            "url": null,
+            "title": "两条连贯内容的策划骨架",
+            "summary": "项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。",
+            "material_id": "synthetic-series",
+            "source_type": "synthetic",
+            "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+          },
+          {
+            "url": null,
+            "title": "从日常场景提炼传播切入点",
+            "summary": "项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。",
+            "material_id": "synthetic-scene",
+            "source_type": "synthetic",
+            "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+          },
+          {
+            "url": null,
+            "title": "精简视觉的内容制作方案",
+            "summary": "项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。",
+            "material_id": "synthetic-lean",
+            "source_type": "synthetic",
+            "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+          }
+        ],
+        "source_type": "synthetic"
+      },
+      "started_at": "2026-11-07T04:31:32.100357+00:00",
+      "duration_ms": 29,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "f6dde509-48a7-40e3-a1d6-cdfb1b930f93",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "aaa01f6d-6a7b-45bf-afd5-d81b74d17743",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "script-writing"
+      },
+      "output": {
+        "body": "---\nname: script-writing\ndescription: 根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。\n---\n\n围绕用户的主题、目标和语气生成可直接阅读的脚本。明确标题、开场、正文和互动收尾；若用户给出渠道或篇幅要求，优先遵守。\n\n首个闭环的 premium / simple 仅改变视觉制作复杂度，核心文案相同。生成适合自有渠道发布的标题、主文与互动话术，不在正文强制绑定昂贵拍摄或高规格视觉，以便降级视觉时仍可复用文字。\n\n资料是事实边界：使用给定素材标识，不虚构链接、数据、产品功能、用户评价或已执行的活动。合成资料用于创意结构，不写成真实市场证据。\n\n输入通常只有活动主题，不包含产品详情。此时只能写场景、情绪与普通互动；未知品牌、工艺、成分、性能、价格均用【待确认：具体信息】占位，不能自行填值。例如只有“咖啡新品”不能写“采用冷萃工艺、减少苦涩、快速冲泡”，可写“在通勤或阅读时，你期待怎样的一杯咖啡？”\n\n本轮制作规则仅包括自有渠道文字与视觉发布、无奖励评论互动。不得承诺折扣、抽奖、赠品、免费试饮或购买优惠；这些没有已确认的执行条件与成本。结尾只能邀请评论、关注或了解【待确认：官方入口】，不自拟促销机制。\n\n直接输出正文，不输出调用工具的指令、模型思考或“已保存”声明。素材不足时说明缺少的具体事实。\n\n可选参考：`references/channel-guide.md`。生成器自身不调用其他工具，进一步取材交回外层执行图。\n",
+        "version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41",
+        "skill_id": "script-writing",
+        "resources": [
+          "references/channel-guide.md"
+        ],
+        "description": "根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。"
+      },
+      "started_at": "2026-11-07T04:31:33.640151+00:00",
+      "duration_ms": 29,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "e30f954b-a273-42b2-95ba-276c9f3e8667",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "aaa01f6d-6a7b-45bf-afd5-d81b74d17743",
+      "tool_name": "generate_script",
+      "display_name": "生成内容脚本",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "direction": "premium",
+        "material_ids": [
+          "synthetic-series",
+          "synthetic-scene"
+        ]
+      },
+      "output": {
+        "model": "qwen3:latest",
+        "script": "# 本地读书交流会：在日常中寻找思想的共鸣\n\n你是否曾在通勤途中感到孤独？或是面对书架上的书籍，不知从何下手？本地读书交流会，正是为这样的你而设。我们邀请热爱阅读的你，一起分享书中的感悟，探讨生活中的困惑。无论你是想寻找志同道合的朋友，还是希望在阅读中获得新的启发，这里都有属于你的位置。\n\n活动将于12月1日早上8点正式开始，持续至12月3日。我们期待你的参与，一起在文字中探索世界，也在交流中遇见更好的自己。如果你也热爱阅读，欢迎在评论区留言，告诉我们你最想分享的一本书，或你最期待讨论的话题。让我们共同开启这段思想的旅程。",
+        "script_id": "script-e1994dca",
+        "source_ids": [
+          "synthetic-series",
+          "synthetic-scene"
+        ],
+        "skill_version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41"
+      },
+      "started_at": "2026-11-07T04:31:36.010874+00:00",
+      "duration_ms": 6939,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "19ed943f-0faf-453f-9803-ebd6eb60d1dd",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "74034c72-1727-4067-9e4c-e1f5e79f22c2",
+      "tool_name": "estimate_proposal",
+      "display_name": "核算制作成本与排期",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "production_spec": "premium"
+      },
+      "output": {
+        "unit": "模拟单位",
+        "hours": "11",
+        "items": [
+          {
+            "cost": "1",
+            "name": "策划",
+            "hours": "2"
+          },
+          {
+            "cost": "2",
+            "name": "文案",
+            "hours": "2"
+          },
+          {
+            "cost": "9",
+            "name": "高规格视觉",
+            "hours": "6"
+          },
+          {
+            "cost": "0",
+            "name": "自有渠道发布与互动执行",
+            "hours": "1"
+          }
+        ],
+        "budget": "10",
+        "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+        "cost_gap": "2",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "checked_at": "2026-11-07T04:31:44.573579+00:00",
+        "estimate_id": "486ef318-3de9-4571-976f-dcaa8f05224d",
+        "is_feasible": false,
+        "rules_version": "2026-11-07.2",
+        "time_gap_hours": "0",
+        "plan_version_id": "0c7a17ec-edaa-427c-94eb-cdfa2cfcd59a",
+        "production_cost": "12",
+        "production_spec": "premium",
+        "estimated_finish": "2030-12-01T19:00:00+08:00"
+      },
+      "started_at": "2026-11-07T04:31:44.546770+00:00",
+      "duration_ms": 34,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "ee61d6d8-9105-4f4e-ad1d-2ef9b4ab5031",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "386a528b-f507-48b3-b6a1-1f2336682216",
+      "tool_name": "estimate_proposal",
+      "display_name": "核算制作成本与排期",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "production_spec": "simple"
+      },
+      "output": {
+        "unit": "模拟单位",
+        "hours": "8",
+        "items": [
+          {
+            "cost": "1",
+            "name": "策划",
+            "hours": "2"
+          },
+          {
+            "cost": "2",
+            "name": "文案",
+            "hours": "2"
+          },
+          {
+            "cost": "5",
+            "name": "精简视觉",
+            "hours": "3"
+          },
+          {
+            "cost": "0",
+            "name": "自有渠道发布与互动执行",
+            "hours": "1"
+          }
+        ],
+        "budget": "10",
+        "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+        "cost_gap": "0",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "checked_at": "2026-11-07T04:31:49.761693+00:00",
+        "estimate_id": "5328ea74-492e-45ed-a970-14d772b8b113",
+        "is_feasible": true,
+        "rules_version": "2026-11-07.2",
+        "time_gap_hours": "0",
+        "plan_version_id": "e5732f41-49a0-4892-8984-c693630ab5a2",
+        "production_cost": "8",
+        "production_spec": "simple",
+        "estimated_finish": "2030-12-01T16:00:00+08:00"
+      },
+      "started_at": "2026-11-07T04:31:49.733457+00:00",
+      "duration_ms": 35,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "87655750-bfa3-439e-968f-eb306f557b02",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "e3c00b10-059e-47ef-bdd5-572e6ac8f1d4",
+      "tool_name": "validate_proposal",
+      "display_name": "检查方案完整性",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "draft_id": "draft-15c632dc"
+      },
+      "output": {
+        "draft_id": "draft-15c632dc",
+        "is_valid": true,
+        "content_hash": "e24364e3c88083611ee6b4cbb0e5966980042da6d6653a3a914a6901facd18dd",
+        "validation_id": "80bef0ec-f37a-46e9-9035-8cb3ebaefc7e",
+        "missing_fields": [],
+        "plan_version_id": "e5732f41-49a0-4892-8984-c693630ab5a2",
+        "invalid_references": []
+      },
+      "started_at": "2026-11-07T04:31:57.358600+00:00",
+      "duration_ms": 47,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "77505417-74fd-4479-89e1-fbb682db58e7",
+      "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+      "step_id": "e35d978d-f475-48b2-8d01-ba49d27dd402",
+      "tool_name": "save_proposal",
+      "display_name": "保存活动方案",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "estimate_id": "5328ea74-492e-45ed-a970-14d772b8b113",
+        "validation_id": "80bef0ec-f37a-46e9-9035-8cb3ebaefc7e"
+      },
+      "output": {
+        "saved": true,
+        "version": 1,
+        "proposal_id": "cd251746-e89a-439e-91c8-8e49df64c979",
+        "production_cost": "8",
+        "estimated_finish": "2030-12-01T16:00:00+08:00"
+      },
+      "started_at": "2026-11-07T04:32:03.147771+00:00",
+      "duration_ms": 53,
+      "error": null,
+      "attempt": 1
+    }
+  ],
+  "proposal": {
+    "title": "本地读书交流会",
+    "run_id": "a54c576a-15fe-4b65-b40f-1b8195f25f46",
+    "version": 1,
+    "markdown": "# 本地读书交流会\n\n## 活动目标\n通过组织本地读书交流会，促进阅读爱好者的互动与思想交流，营造一个分享与探讨的平台。\n\n## 受众与渠道假设\n热爱阅读、希望与他人分享阅读体验、寻求思想共鸣的本地居民。\n\n## 内容策略\n写作：以简洁、有吸引力的方式呈现活动信息，突出活动的意义与参与价值。发布：通过自有渠道进行发布，确保信息触达目标受众。评论互动：鼓励参与者在评论区留言，分享他们最想讨论的书籍或话题，增强互动性与参与感。\n\n## 内容与脚本\n# 本地读书交流会：在日常中寻找思想的共鸣\n\n你是否曾在通勤途中感到孤独？或是面对书架上的书籍，不知从何下手？本地读书交流会，正是为这样的你而设。我们邀请热爱阅读的你，一起分享书中的感悟，探讨生活中的困惑。无论你是想寻找志同道合的朋友，还是希望在阅读中获得新的启发，这里都有属于你的位置。\n\n活动将于12月1日早上8点正式开始，持续至12月3日。我们期待你的参与，一起在文字中探索世界，也在交流中遇见更好的自己。如果你也热爱阅读，欢迎在评论区留言，告诉我们你最想分享的一本书，或你最期待讨论的话题。让我们共同开启这段思想的旅程。\n\n## 制作与活动执行排期\n自然小时、单团队串行；预计完成：2030-12-01T16:00:00+08:00。\n\n| 制作项 | 工期（小时） | 制作成本 |\n| --- | --- | --- |\n| 策划 | 2 | 1 |\n| 文案 | 2 | 2 |\n| 精简视觉 | 3 | 5 |\n| 自有渠道发布与互动执行 | 1 | 0 |\n\n## 制作成本与预算\n制作成本 **8 个模拟单位**；制作预算 **10**。工具和模型开销独立记录，不计入制作预算。\n\n## 素材与来源\n- 两条连贯内容的策划骨架（项目合成素材）：项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。\n- 从日常场景提炼传播切入点（项目合成素材）：项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。\n- 精简视觉的内容制作方案（项目合成素材）：项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。\n\n## 调整与限制\n制作成本和工期采用项目规则估算，活动尚未在现实中执行。合成资料用于创意，不作为真实市场数据。",
+    "saved_at": "2026-11-07T04:32:03.201010+00:00",
+    "materials": [
+      {
+        "url": null,
+        "title": "两条连贯内容的策划骨架",
+        "summary": "项目合成资料：第一条聚焦问题共鸣，第二条介绍价值与互动。保持核心主题一致，渠道和表达根据活动受众调整。",
+        "material_id": "synthetic-series",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+      },
+      {
+        "url": null,
+        "title": "从日常场景提炼传播切入点",
+        "summary": "项目合成资料：用具体使用场景描述困扰，再用可核验的产品信息回应需求。避免虚构用户评价、数据与产品功能。",
+        "material_id": "synthetic-scene",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+      },
+      {
+        "url": null,
+        "title": "精简视觉的内容制作方案",
+        "summary": "项目合成资料：在预算紧张时使用统一视觉模板和较少制作项，保留核心文案与来源说明。精简范围需明确告知用户。",
+        "material_id": "synthetic-lean",
+        "source_type": "synthetic",
+        "retrieved_at": "2026-11-07T04:31:32.122092+00:00"
+      }
+    ],
+    "structured": {
+      "title": "本地读书交流会",
+      "budget": {
+        "budget": "10",
+        "production_cost": "8"
+      },
+      "content": "# 本地读书交流会：在日常中寻找思想的共鸣\n\n你是否曾在通勤途中感到孤独？或是面对书架上的书籍，不知从何下手？本地读书交流会，正是为这样的你而设。我们邀请热爱阅读的你，一起分享书中的感悟，探讨生活中的困惑。无论你是想寻找志同道合的朋友，还是希望在阅读中获得新的启发，这里都有属于你的位置。\n\n活动将于12月1日早上8点正式开始，持续至12月3日。我们期待你的参与，一起在文字中探索世界，也在交流中遇见更好的自己。如果你也热爱阅读，欢迎在评论区留言，告诉我们你最想分享的一本书，或你最期待讨论的话题。让我们共同开启这段思想的旅程。",
+      "audience": "热爱阅读、希望与他人分享阅读体验、寻求思想共鸣的本地居民。",
+      "schedule": {
+        "unit": "模拟单位",
+        "hours": "8",
+        "items": [
+          {
+            "cost": "1",
+            "name": "策划",
+            "hours": "2"
+          },
+          {
+            "cost": "2",
+            "name": "文案",
+            "hours": "2"
+          },
+          {
+            "cost": "5",
+            "name": "精简视觉",
+            "hours": "3"
+          },
+          {
+            "cost": "0",
+            "name": "自有渠道发布与互动执行",
+            "hours": "1"
+          }
+        ],
+        "budget": "10",
+        "cost_gap": "0",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "checked_at": "2026-11-07T04:32:03.198483+00:00",
+        "estimate_id": "c243ee2f-0769-4fd2-a09b-8eff58c46d92",
+        "is_feasible": true,
+        "rules_version": "2026-11-07.2",
+        "time_gap_hours": "0",
+        "production_cost": "8",
+        "production_spec": "simple",
+        "estimated_finish": "2030-12-01T16:00:00+08:00"
+      },
+      "strategy": "写作：以简洁、有吸引力的方式呈现活动信息，突出活动的意义与参与价值。发布：通过自有渠道进行发布，确保信息触达目标受众。评论互动：鼓励参与者在评论区留言，分享他们最想讨论的书籍或话题，增强互动性与参与感。",
+      "objective": "通过组织本地读书交流会，促进阅读爱好者的互动与思想交流，营造一个分享与探讨的平台。",
+      "source_ids": [
+        "synthetic-series",
+        "synthetic-scene"
+      ]
+    },
+    "proposal_id": "cd251746-e89a-439e-91c8-8e49df64c979",
+    "requirements": {
+      "topic": "本地读书交流会",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-01T08:00:00+08:00",
+      "real_sources_required": false
+    },
+    "save_estimate": {
+      "unit": "模拟单位",
+      "hours": "8",
+      "items": [
+        {
+          "cost": "1",
+          "name": "策划",
+          "hours": "2"
+        },
+        {
+          "cost": "2",
+          "name": "文案",
+          "hours": "2"
+        },
+        {
+          "cost": "5",
+          "name": "精简视觉",
+          "hours": "3"
+        },
+        {
+          "cost": "0",
+          "name": "自有渠道发布与互动执行",
+          "hours": "1"
+        }
+      ],
+      "budget": "10",
+      "cost_gap": "0",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-01T08:00:00+08:00",
+      "checked_at": "2026-11-07T04:32:03.198483+00:00",
+      "estimate_id": "c243ee2f-0769-4fd2-a09b-8eff58c46d92",
+      "is_feasible": true,
+      "rules_version": "2026-11-07.2",
+      "time_gap_hours": "0",
+      "production_cost": "8",
+      "production_spec": "simple",
+      "estimated_finish": "2030-12-01T16:00:00+08:00"
+    },
+    "plan_version_id": "e5732f41-49a0-4892-8984-c693630ab5a2",
+    "production_cost": "8",
+    "estimated_finish": "2030-12-01T16:00:00+08:00",
+    "final_validation": {
+      "is_valid": true,
+      "content_hash": "879130d268825ac0c00bceb64add7a9f5c3822e3ce71ea1bae70c43e018bb06a",
+      "validation_id": "252c9696-f08b-4802-b2f3-abc8279f5167",
+      "missing_fields": [],
+      "invalid_references": []
+    },
+    "validated_draft_hash": "e24364e3c88083611ee6b4cbb0e5966980042da6d6653a3a914a6901facd18dd"
+  },
+  "browser_errors": []
+}

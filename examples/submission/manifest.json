@@ -1,0 +1,51 @@
+{
+  "description": "引用既有真实运行材料；没有重新生成或手写业务输出",
+  "evidence_fields": {
+    "input": "/inputs",
+    "actual_output": ["/workspace", "/state"],
+    "trace": ["/tool_calls", "/state/model_calls", "/events", "/jobs"],
+    "assertions": "/checks"
+  },
+  "cases": [
+    {
+      "name": "combined-replan-repeat",
+      "evidence": "examples/external-live/after/combined-replan-repeat/evidence.json",
+      "saved_proposals": "examples/external-live/after/combined-replan-repeat/saved-proposals.json",
+      "expected_status": "completed",
+      "expected_proposal_count": 1,
+      "coverage": ["normal", "budget_exceeded", "repeated_execution"]
+    },
+    {
+      "name": "deepseek-vague",
+      "evidence": "examples/external-live/after/deepseek-vague/evidence.json",
+      "saved_proposals": "examples/external-live/after/deepseek-vague/saved-proposals.json",
+      "expected_status": "no_run",
+      "expected_proposal_count": 0,
+      "coverage": ["missing_budget", "missing_deadline"]
+    },
+    {
+      "name": "combined-failure-resume",
+      "evidence": "examples/external-live/after/combined-failure-resume/evidence.json",
+      "saved_proposals": "examples/external-live/after/combined-failure-resume/saved-proposals.json",
+      "expected_status": "completed",
+      "expected_proposal_count": 1,
+      "coverage": ["tool_failure", "successful_results_retained", "resume"]
+    },
+    {
+      "name": "audit-auto-failure-replan",
+      "evidence": "examples/external-live/after/audit-auto-failure-replan/evidence.json",
+      "saved_proposals": "examples/external-live/after/audit-auto-failure-replan/saved-proposals.json",
+      "expected_status": "completed",
+      "expected_proposal_count": 1,
+      "coverage": ["tool_failure", "automatic_recovery", "replanning", "budget_exceeded", "dependencies", "actual_status", "successful_results_retained"]
+    },
+    {
+      "name": "deepseek-low-budget",
+      "evidence": "examples/external-live/after/deepseek-low-budget/evidence.json",
+      "saved_proposals": "examples/external-live/after/deepseek-low-budget/saved-proposals.json",
+      "expected_status": "incomplete",
+      "expected_proposal_count": 0,
+      "coverage": ["no_feasible_proposal", "incomplete_reason"]
+    }
+  ]
+}

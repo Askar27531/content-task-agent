@@ -1,0 +1,109 @@
+{
+  "real_tavily": true,
+  "external_service_fixture": false,
+  "checks": {
+    "unicode": true,
+    "invalid_domain": true,
+    "empty_filter": true,
+    "invalid_auth_rejected": true
+  },
+  "passed": true,
+  "responses": {
+    "unicode": {
+      "arguments": {
+        "query": "读书会 阅读推广活动 UNESCO 📚",
+        "max_results": 2,
+        "search_depth": "basic"
+      },
+      "result": {
+        "materials": [
+          {
+            "material_id": "web-8529862883",
+            "title": "国际扫盲日 | UNESCO",
+            "summary": "English\n Français\n Español\n Русский\n العربية\n 中文\n\nUNESCO\n\nLiteracy Day\n\n© UNESCO/Weiwei KANG/Rodrigo Morlesin\n\n© UNESCO/Weiwei KANG/Rodrigo Morlesin\n\n# 国际扫盲日\n\n9月8日\n\n自1967年以来，世界各地每年都在9月8日举行“国际扫盲日”（ILD）庆祝活动，以提醒政策制定者、从业人员和公众，读写能力对于建设更文明、公正、和平、可持续的社会至关重要。\n\n读写能力是所有人的基本人权，它为人们享有其他人权、更多自由、全球公民身份敞开了大门。读写能力为人们获取更全面的知识、技能、价值观、态度、行为奠定基础，从而促进基于尊重平等和反对歧视的持久和平文化、法治、团结、正义、多样性、宽容，并推动个人与自我、他人、地球之间和谐关系。尽管全球已取得一定进展，但截至2024年，全球仍有至少7.39亿青少年和成年人缺乏基本读写能力。同时，每10名儿童中就有4人未达到最低阅读能力水平；而在2023年，全球仍有2.72亿儿童和青少年失学。 [...] 联合国教科文组织全球活动议程\n\n国际扫盲日全球庆祝活动及扫盲奖颁奖典礼将于2026年9月8-9日于墨西哥恰帕斯州举行\n\n English\n French\n Spanish\n\nLiteracy Day 2026 celebration agenda\n\nMexico hosts 2026 UNESCO International Literacy Day celebration\n\nUNESCO International Literacy Prizes 2026 reward six impactful initiatives\n\nFrom exclusion to opportunity: Six literacy initiatives transform lives\n\nHow literacy empowers learners in the Chiapas region of Mexico\n\nRead, write and lead:\n\nMeet the Quechua women of Cusco who are rewriting their stories",
+            "url": "https://www.unesco.org/zh/days/literacy",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T19:21:25.287027+00:00"
+          },
+          {
+            "material_id": "web-d38783ea7f",
+            "title": "​​​​​​​世界图书和版权日 | UNESCO",
+            "summary": "English\n Français\n Español\n Русский\n العربية\n 中文\n\nUNESCO\n\nWBCD_webpage\n\nShutterstock\n\nShutterstock\n\n# ​​​​​​​世界图书和版权日\n\n4月23日\n\n## 书的力量颂\n\n书籍犹如通往另一个世界的窗口——每翻开一页，便引领我们邂逅新的人物、新的文化与思想。每年4月23日，联合国教科文组织都会庆祝世界读书日暨版权日，以此彰显书籍作为代际与跨文化桥梁的力量。\n\ntxt-media_world-book\n\n© Sacha HERON / UNESCO\n\n## 里约热内卢：2025年世界图书之都，拉巴特：2026年世界图书之都\n\n每年，作为世界图书与版权日庆祝活动的一部分，联合国教科文组织与代表图书行业主要领域的国际组织——出版商、书商和图书馆——共同选定一座世界图书之都。获选城市将在主办国乃至全球范围内，面向所有年龄段及社会各界推广图书与阅读。\n\n迄今联合国教科文组织已指定26届世界图书之都，从2001年的西班牙马德里，直至2026年的摩洛哥拉巴特。\n\n通过多语言学习提高读写能力 [...] 通过多语言学习提高读写能力\n\n多语言书籍在读写能力培养中发挥着关键作用——儿童用母语学习阅读和写作效果最佳。联合国教科文组织倡导使用多语言学习材料来提高学习成果。\n\n《我们何以成为人类》\n\n作为2022-2032国际土著语言十年活动的一部分，教科文组织与国际出版商合作，以30多种语言出版了维克多·D.O.桑托斯和安娜·福拉蒂创作的儿童读物《我们何以成为人类》。\n\n各种形式的图书，既让我们增长知识、获取信息，也让我们怡情悦性、解读世界，同时为我们打开一扇通往他者的窗扉。\n\n但是，为了发挥其全部力量，图书必须反映出我们的世界所拥有的语言多样性。可是，目前的情况远非如此：大多数书籍仅以少数几种语言出版。\n\n阿祖莱，联合国教科文组织总干事\n\n## 资源\n\n《世界版权公约》\n\n于1952年在联合国教科文组织的主持下通过，旨在扩大国际版权保护范围。该公约于1971年得到修订。\n\n26个世界图书之都\n\n自2001年以来已获此联合国教科文组织殊荣。\n\n联合国教科文组织创意城市网络中的63个城市\n\n将文学置于可持续发展战略的核心。\n\n联合国教科文组织在最新报告中强调非洲图书产业的\n\n经济与文化潜力 [...] 我们在本网站使用 cookies 以提升您的用户体验。如需了解更多关于我们如何使用 cookies 的信息，请阅读我们的隐私声明",
+            "url": "https://www.unesco.org/zh/days/world-book-and-copyright",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T19:21:25.287027+00:00"
+          }
+        ],
+        "source_type": "web",
+        "empty": false,
+        "partial": false,
+        "missing": [],
+        "query": "读书会 阅读推广活动 UNESCO 📚",
+        "requested_count": 2,
+        "available_count": 2
+      },
+      "duration_ms": 3016
+    },
+    "invalid_domain": {
+      "arguments": {
+        "query": "World Book and Copyright Day",
+        "max_results": 1,
+        "search_depth": "basic",
+        "include_domains": [
+          "no-content-boundary-7f13.invalid"
+        ]
+      },
+      "errors": [
+        {
+          "type": "ValueError",
+          "message": "远程MCP业务失败 HTTP 400：All domains in include_domains are invalid: ['no-content-boundary-7f13.invalid']. Domains must have a valid suffix (e.g., 'tavily.com' instead of 'tavily')."
+        }
+      ],
+      "raw": {
+        "structured_content": {
+          "error": "Search failed",
+          "status": 400,
+          "detail": {
+            "error": "All domains in include_domains are invalid: ['no-content-boundary-7f13.invalid']. Domains must have a valid suffix (e.g., 'tavily.com' instead of 'tavily')."
+          },
+          "documentation": "https://docs.tavily.com/documentation/api-reference/endpoint/search"
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"error\":\"Search failed\",\"status\":400,\"detail\":{\"error\":\"All domains in include_domains are invalid: ['no-content-boundary-7f13.invalid']. Domains must have a valid suffix (e.g., 'tavily.com' instead of 'tavily').\"},\"documentation\":\"https://docs.tavily.com/documentation/api-reference/endpoint/search\"}"
+          }
+        ],
+        "is_error": false
+      }
+    },
+    "empty_filter": {
+      "arguments": {
+        "query": "World Book and Copyright Day",
+        "max_results": 1,
+        "search_depth": "basic",
+        "include_domains": [
+          "no-content-boundary-7f13.com"
+        ]
+      },
+      "result": {
+        "materials": [],
+        "source_type": "web",
+        "empty": true,
+        "partial": false,
+        "missing": [],
+        "query": "World Book and Copyright Day",
+        "requested_count": 1,
+        "available_count": 0
+      },
+      "duration_ms": 3359
+    },
+    "invalid_auth": [
+      {
+        "type": "HTTPStatusError",
+        "message": "Client error '401 Unauthorized' for url 'https://mcp.tavily.com/mcp/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401",
+        "http_status": 401
+      }
+    ]
+  }
+}

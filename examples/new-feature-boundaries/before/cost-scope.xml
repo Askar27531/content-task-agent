@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.581" timestamp="2026-11-08T00:32:46.776513+08:00" hostname="DESKTOP-KUO0FGI"><testcase classname="tests.backend.test_new_feature_boundaries" name="test_old_run_cost_endpoint_matches_its_declared_session_model_scope" time="0.621"><failure message="assert (10 == 40)">tests\backend\test_new_feature_boundaries.py:202: in test_old_run_cost_endpoint_matches_its_declared_session_model_scope
+    assert body['model_input_tokens']==40 and body['model_output_tokens']==60
+E   assert (10 == 40)</failure></testcase></testsuite></testsuites>

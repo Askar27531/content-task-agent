@@ -1,0 +1,31 @@
+[
+  {
+    "name": "13-unsupported",
+    "session_id": "319df612-d438-41f8-8cb9-88144ced3a20",
+    "url": "http://127.0.0.1:5173/sessions/319df612-d438-41f8-8cb9-88144ced3a20",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_current_ready_plan": true,
+      "capability_explained": true,
+      "capability_recorded": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  },
+  {
+    "name": "25-capability-question",
+    "session_id": "6fe7d9b2-a411-4b7f-b36d-73c14825e2b3",
+    "url": "http://127.0.0.1:5173/sessions/6fe7d9b2-a411-4b7f-b36d-73c14825e2b3",
+    "checks": {
+      "no_test_exception": true,
+      "no_run": true,
+      "no_plan": true,
+      "topic_unset": true,
+      "budget_unset": true,
+      "deadline_unset": true,
+      "all_recorded_tools_are_registered": true
+    },
+    "passed": true
+  }
+]

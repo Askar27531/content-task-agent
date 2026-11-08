@@ -1,0 +1,15 @@
+[
+  {
+    "name": "exhausted-resume",
+    "session_id": "4f41ec4a-8e74-4817-8a31-f6a6fa67a397",
+    "checks": {
+      "incomplete_preserved": true,
+      "no_new_run_job": false,
+      "did_not_queue_exhausted_run": false,
+      "only_one_search_attempt": true,
+      "resume_did_not_execute_model_graph": false,
+      "no_harness_error": true
+    },
+    "passed": false
+  }
+]

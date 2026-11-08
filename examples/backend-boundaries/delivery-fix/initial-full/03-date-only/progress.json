@@ -1,0 +1,17 @@
+{
+  "session_id": "4db81896-f85d-4121-98c4-ba8f624cc427",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "73500728-a558-4dac-a3af-71e29e140ffa",
+        "content": "主题读书会，预算10，截止2030-12-03，具体几点还没定，不要替我选时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "841447bc-b74d-4e11-8645-5942d32a0ff4",
+        "processing_id": "bc4f3ff5-cd5b-4130-9345-c95033c9acbb",
+        "duplicate": false
+      }
+    }
+  ]
+}

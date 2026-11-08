@@ -1,0 +1,160 @@
+{
+  "actual": true,
+  "name": "04-range",
+  "session_id": "15157baa-6c46-4747-b0cf-50fe3cd437c8",
+  "url": "http://127.0.0.1:5173/sessions/15157baa-6c46-4747-b0cf-50fe3cd437c8",
+  "checks": {
+    "no_test_exception": true,
+    "no_run": true,
+    "budget_unset": false,
+    "no_plan": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": false,
+  "expected": {
+    "no_run": true,
+    "budget_unset": true,
+    "no_plan": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "9ad5aa5d-1eee-40cb-980f-f74b26fdc3bf",
+        "content": "读书会，预算10或20我还没决定，不要替我选；截止2030-12-03 18:00北京时间。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "0b00b372-0a4d-4c86-a1a0-3eaa76f47ca3",
+        "processing_id": "ba471ffd-0378-483e-aac4-d1744b86a236",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "新的内容活动",
+        "status": "draft",
+        "session_id": "15157baa-6c46-4747-b0cf-50fe3cd437c8",
+        "last_user_activity_at": "2026-11-07T04:58:34.009302+00:00"
+      },
+      "requirements": {
+        "topic": null,
+        "budget": "10或20",
+        "deadline": "截止2030-12-03 18:00北京时间",
+        "start_at": null,
+        "real_sources_required": false
+      },
+      "plans": [],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10或20",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 687,
+        "model_output_tokens": 210,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 8,
+      "pending_changes": null,
+      "mode": "live"
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "15157baa-6c46-4747-b0cf-50fe3cd437c8",
+      "last_user_activity_at": "2026-11-07T04:58:34.009302+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": "10或20",
+      "deadline": "截止2030-12-03 18:00北京时间",
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": "10或20",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 687,
+      "model_output_tokens": 210,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 8,
+    "pending_changes": null,
+    "mode": "live"
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书会，预算10或20我还没决定，不要替我选；截止2030-12-03 18:00北京时间。",
+      "item_id": "0b00b372-0a4d-4c86-a1a0-3eaa76f47ca3",
+      "item_seq": 1,
+      "created_at": "2026-11-07T04:58:34.008786+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "活动主题、制作预算、截止日期与时间尚未提供，请补充完整信息。",
+      "item_id": "d2ea1bd2-0a8e-41c4-aad1-37967cd526b9",
+      "item_seq": 2,
+      "created_at": "2026-11-07T04:58:46.620830+00:00",
+      "processing": false
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T04:58:46.584343+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 597,
+        "output_tokens": 192
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"budget\": \"10或20\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"evidence\": {\n    \"budget\": \"预算10或20我还没决定\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"用户未明确选择预算，因此保留预算字段为'10或20'。截止时间已明确为'2030-12-03 18:00北京时间'，转换为带+08:00的ISO时间格式为'2030-12-03T18:00:00+08:00'。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "b8fed71d-37a7-4542-a6c9-70dc668e1b6d",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T04:58:51.486542+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 18
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "活动主题、制作预算、截止日期与时间尚未提供，请补充完整信息。"
+      },
+      "request_id": "211bda84-bcf1-412e-876e-d920ab061077",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

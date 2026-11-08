@@ -1,0 +1,31 @@
+{
+  "session_id": "ed588cdb-8476-48cd-8116-10dd84386393",
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "575978a0-d22b-41dd-8850-e770355a6454",
+        "content": "读书会方案，精简视觉simple，预算0个模拟单位，截止2030-12-03 18:00北京时间，允许合成资料。先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "1117b1d1-235f-452d-9507-bd24ad038dc0",
+        "processing_id": "c9c3c4a8-2c51-4724-9963-ed626cfcae2f",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "04b5a5ad-a090-45d9-a8f4-4d1d331a9194",
+        "content": "开始",
+        "view_context": {
+          "plan_version_id": "5b1f41d8-e1da-4ac1-a151-a3106773a03a"
+        }
+      },
+      "response": {
+        "message_id": "88d294ef-7442-485a-9574-13bf2059c964",
+        "processing_id": "341e962e-fcf3-47e6-9e59-4bf90fec4cfd",
+        "duplicate": false
+      }
+    }
+  ]
+}

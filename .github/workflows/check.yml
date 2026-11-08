@@ -1,0 +1,42 @@
+name: Local acceptance checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: studio
+          POSTGRES_PASSWORD: studio_dev
+          POSTGRES_DB: content_studio
+        ports: ['5433:5432']
+        options: --health-cmd "pg_isready -U studio -d content_studio" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PYTHONPATH: src/backend
+      CONTENT_STUDIO_DB_TESTS: '1'
+      DATABASE_URL: postgresql+psycopg://studio:studio_dev@127.0.0.1:5433/content_studio
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.lock.txt
+      - run: python -m app.cli initdb
+      - run: ruff check src/backend tests/backend scripts --select E9,F63,F7,F82
+      - run: python -m pytest tests/backend -q --junitxml=examples/ci-backend.xml
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e

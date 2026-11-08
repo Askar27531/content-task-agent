@@ -1,0 +1,233 @@
+{
+  "actual_model": true,
+  "actual_business_mcp": true,
+  "external_service_fixture": false,
+  "real_external_tavily": false,
+  "name": "combined-replan-repeat",
+  "session_id": "c84de667-1540-4118-8d21-4f39cacb3f1d",
+  "checks": {
+    "no_harness_error": false
+  },
+  "passed": false,
+  "inputs": [
+    {
+      "content": "为世界读书日读书会写内容活动方案，预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00北京时间。先用高规格视觉premium。必须使用真实来源，禁止合成素材。先给计划，不要执行。",
+      "receipt": {
+        "message_id": "b93e96a8-ad32-46c0-a496-d266fbd8a622",
+        "processing_id": "1d3a14ea-080b-4f3a-b24d-8f24198ef963",
+        "duplicate": false
+      },
+      "queue": "test-309f6fd2:message",
+      "view_context": {}
+    }
+  ],
+  "before": null,
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "c84de667-1540-4118-8d21-4f39cacb3f1d",
+      "last_user_activity_at": "2026-11-07T17:58:35.502410+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 831,
+      "model_cost_currency": null,
+      "model_output_tokens": 168,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 4,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动主题",
+      "内容制作预算（模拟单位）",
+      "活动截止日期与时间"
+    ]
+  },
+  "state": {
+    "runs": {},
+    "draft": null,
+    "plans": [],
+    "scripts": {},
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "c84de667-1540-4118-8d21-4f39cacb3f1d",
+      "last_user_activity_at": "2026-11-07T17:58:35.502410+00:00"
+    },
+    "timeline": [
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "为世界读书日读书会写内容活动方案，预算10个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00北京时间。先用高规格视觉premium。必须使用真实来源，禁止合成素材。先给计划，不要执行。",
+        "item_id": "b93e96a8-ad32-46c0-a496-d266fbd8a622",
+        "item_seq": 1,
+        "created_at": "2026-11-07T17:58:35.502410+00:00"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "本次处理未完成：模型结构化输出未通过校验：'explanation' is a required property。已取得结果保留，请修正条件或明确续跑。",
+        "item_id": "b2a57ec6-c39a-4903-8af1-7d67d4e0cb94",
+        "item_seq": 2,
+        "created_at": "2026-11-07T17:58:39.129624+00:00"
+      }
+    ],
+    "estimates": {},
+    "materials": [],
+    "proposals": [],
+    "active_run": null,
+    "model_calls": [
+      {
+        "at": "2026-11-07T17:58:39.104239+00:00",
+        "kind": "understand_message",
+        "model": "deepseek-chat",
+        "usage": {
+          "input_tokens": 831,
+          "output_tokens": 168
+        },
+        "run_id": null,
+        "provider": "deepseek",
+        "response": {
+          "role": "assistant",
+          "content": "{\"type\":\"json_object\",\"action\":\"update\",\"updates\":{\"topic\":\"世界读书日读书会\",\"budget\":\"10\",\"start_at\":\"2030-12-01T08:00:00+08:00\",\"deadline\":\"2030-12-03T18:00:00+08:00\",\"real_sources_required\":true},\"evidence\":{\"topic\":\"世界读书日读书会\",\"budget\":\"预算10个模拟单位\",\"start_at\":\"开始2030-12-01 08:00\",\"deadline\":\"截止2030-12-03 18:00北京时间\",\"real_sources_required\":\"必须使用真实来源，禁止合成素材\"},\"uncertain_fields\":[],\"capability_gaps\":[],\"capability_evidence\":{},\"resolve_capabilities\":false}",
+          "tool_calls": [],
+          "finish_reason": "stop"
+        },
+        "request_id": "5a812f95-a9ae-4838-9c04-80e99892f472",
+        "available_tools": []
+      }
+    ],
+    "skill_loads": [],
+    "validations": {},
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 831,
+      "model_cost_currency": null,
+      "model_output_tokens": 168,
+      "model_unknown_usage_calls": 0
+    },
+    "requirements": {
+      "topic": null,
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "model_display": "qwen3:latest · 本地",
+    "pending_patch": null,
+    "fault_consumed": [],
+    "client_messages": {
+      "bc3bb9ec-90fc-4778-a38c-0646204e3832": {
+        "hash": "a853005f2ee5218b890bdf8c4c2b51bdf5befe0f09a75564c44f566732819532",
+        "job_id": "1d3a14ea-080b-4f3a-b24d-8f24198ef963",
+        "message_id": "b93e96a8-ad32-46c0-a496-d266fbd8a622"
+      }
+    },
+    "pending_changes": null,
+    "last_event_seq": 4
+  },
+  "tool_calls": [],
+  "cost_entries": [
+    {
+      "entry_id": "65fce852-1d87-49d5-a6e6-22f050b83467",
+      "charge_key": "model:5a812f95-a9ae-4838-9c04-80e99892f472",
+      "run_id": null,
+      "kind": "understand_message",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 831,
+        "output_tokens": 168
+      },
+      "created_at": "2026-11-07T17:58:37.612152+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "c84de667-1540-4118-8d21-4f39cacb3f1d:1",
+      "session_seq": 1,
+      "session_id": "c84de667-1540-4118-8d21-4f39cacb3f1d",
+      "type": "message.accepted",
+      "occurred_at": "2026-11-07T17:58:35.502410+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 1
+    },
+    {
+      "event_id": "c84de667-1540-4118-8d21-4f39cacb3f1d:2",
+      "session_seq": 2,
+      "session_id": "c84de667-1540-4118-8d21-4f39cacb3f1d",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T17:58:37.614151+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "5a812f95-a9ae-4838-9c04-80e99892f472"
+      },
+      "entity_version": 2
+    },
+    {
+      "event_id": "c84de667-1540-4118-8d21-4f39cacb3f1d:3",
+      "session_seq": 3,
+      "session_id": "c84de667-1540-4118-8d21-4f39cacb3f1d",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T17:58:39.107540+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "5a812f95-a9ae-4838-9c04-80e99892f472"
+      },
+      "entity_version": 3
+    },
+    {
+      "event_id": "c84de667-1540-4118-8d21-4f39cacb3f1d:4",
+      "session_seq": 4,
+      "session_id": "c84de667-1540-4118-8d21-4f39cacb3f1d",
+      "type": "job.failed",
+      "occurred_at": "2026-11-07T17:58:39.129624+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 4
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1d3a14ea-080b-4f3a-b24d-8f24198ef963",
+      "kind": "test-309f6fd2:message",
+      "status": "failed",
+      "lease_epoch": 1,
+      "error": "模型结构化输出未通过校验：'explanation' is a required property"
+    }
+  ],
+  "harness_error": "[\n  {\n    \"type\": \"RuntimeError\",\n    \"message\": \"模型结构化输出未通过校验：'explanation' is a required property\"\n  }\n]",
+  "real_external_deepseek": true
+}

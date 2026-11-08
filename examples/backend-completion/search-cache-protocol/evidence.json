@@ -1,0 +1,1396 @@
+{
+  "actual_model": false,
+  "actual_business_mcp": true,
+  "external_service_fixture": true,
+  "real_external_tavily": false,
+  "name": "search-cache-protocol",
+  "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+  "checks": {
+    "first_actual_result": true,
+    "second_cached": true,
+    "external_once": true,
+    "cache_not_recharged": true,
+    "no_harness_error": true
+  },
+  "passed": true,
+  "inputs": [],
+  "before": null,
+  "workspace": {
+    "session": {
+      "title": "协议缓存验证（不交付活动）",
+      "status": "draft",
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "last_user_activity_at": "2026-11-07T15:01:02.480779+00:00"
+    },
+    "requirements": {
+      "topic": "协议缓存验证（不交付活动）",
+      "budget": "20",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": true
+    },
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_web_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+            "dependencies": [],
+            "tool_call_ids": [
+              "752f2339-c292-4ae3-9554-d81517080cc8",
+              "2fa383fe-c604-4aa3-a50f-58a27126bb42"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "67695d09-4691-44e3-8a1e-d89552d7f16a",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "4e9d1d81-e293-4e3f-8ceb-2c3938e0c3c0",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "0296357a-7c91-4a25-a0c1-4bed3faed552",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "cf5381b6-7934-4bfa-9b15-a656bdf672cc",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "stopped",
+        "summary": "仅验证真实MCP缓存协议，不执行活动",
+        "version": 1,
+        "requirements": {
+          "topic": "协议缓存验证（不交付活动）",
+          "budget": "20",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": null,
+          "real_sources_required": true
+        },
+        "change_summary": [],
+        "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02",
+        "production_spec": "simple"
+      }
+    ],
+    "active_run": {
+      "phase": "research",
+      "reason": "协议缓存验证结束，不代表内容方案完成。",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "status": "incomplete",
+      "last_error": null,
+      "requirements": {
+        "topic": "协议缓存验证（不交付活动）",
+        "budget": "20",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": true
+      },
+      "context_calls": 0,
+      "loaded_skills": [],
+      "business_calls": 2,
+      "control_status": null,
+      "research_force": false,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02",
+      "last_tool_failed": false
+    },
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.10",
+      "estimated_finish": null,
+      "model_input_tokens": null,
+      "model_output_tokens": null,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [
+      {
+        "url": "https://example.invalid/protocol-fixture",
+        "title": "协议测试夹具，非真实外部资料",
+        "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+        "material_id": "web-b9dbd19a36",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T15:01:04.285579+00:00"
+      }
+    ],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 11,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "state": {
+    "runs": {
+      "c245bbb0-5e1b-4f95-8e6a-2151a0c237de": {
+        "run": {
+          "phase": "research",
+          "reason": "协议缓存验证结束，不代表内容方案完成。",
+          "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+          "status": "incomplete",
+          "snapshot": {
+            "mcp": {
+              "tavily_url": "http://127.0.0.1:55864/mcp",
+              "business_url": "http://127.0.0.1:55534/mcp",
+              "tavily_key_env": "BACKEND_TEST_TAVILY_KEY",
+              "external_timeout_seconds": 10
+            },
+            "limits": {
+              "max_replans": 3,
+              "max_model_rounds": 24,
+              "max_context_calls": 12,
+              "max_tool_attempts": 3,
+              "max_business_calls": 30,
+              "run_timeout_seconds": 900
+            },
+            "models": {
+              "deepseek": {
+                "model": "deepseek-chat",
+                "base_url": "https://api.deepseek.com",
+                "currency": "USD",
+                "provider": "deepseek",
+                "max_tokens": 1600,
+                "api_key_env": "DEEPSEEK_API_KEY",
+                "temperature": 0.0,
+                "timeout_seconds": 180,
+                "input_cost_per_million": null,
+                "output_cost_per_million": null
+              },
+              "local_qwen3": {
+                "model": "qwen3:latest",
+                "base_url": "http://127.0.0.1:11434",
+                "currency": "USD",
+                "provider": "ollama",
+                "max_tokens": 1600,
+                "api_key_env": null,
+                "temperature": 0.0,
+                "timeout_seconds": 180,
+                "input_cost_per_million": null,
+                "output_cost_per_million": null
+              }
+            },
+            "search": {
+              "max_results": 4,
+              "min_results": 1,
+              "cache_ttl_seconds": 3600,
+              "material_ttl_seconds": 86400
+            },
+            "skills": [
+              {
+                "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+                "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+                "skill_id": "campaign-planning",
+                "resources": {
+                  "references/content-patterns.md": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n"
+                },
+                "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。",
+                "script_hashes": {}
+              },
+              {
+                "body": "---\nname: constrained-replanning\ndescription: 根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。\n---\n\n先检查真实返回：哪些结果有效、缺少什么、失败是否可重试、预算或排期缺口多少。\n\n根据原因提出有内容意义的替代，例如降低视觉规格、减少制作项、换用允许的素材。解释改变及损失，保留不受影响的素材和脚本。\n\n候选改变后调用 estimate_proposal，未取得新结果前不声称已经满足预算。准确估算返回不可行，不等于估算工具失败。\n\n首个闭环只支持 premium / simple 两个制作规格：差异只在视觉复杂度；在需求、来源和文字交付范围没有变化时，素材与核心文案可保留，视觉成本和排期必须重新估算。不能声称已实现任意数量的海报或视频组合调整。\n\n用户预算、截止时间和必须真实素材的条件不因重规划自动改变。有限尝试内没有可行候选时如实说明当前缺口和已取得结果。\n\n可选参考：`references/tradeoffs.md`。\n",
+                "version": "e969a626d3399db74f771aeb7256dc9074ed7427adc5cead1dd18b6a64508c0e",
+                "skill_id": "constrained-replanning",
+                "resources": {
+                  "references/tradeoffs.md": "# 替代与复用\n\n高规格视觉可换为统一模板，但应保留内容主张，并向用户说明视觉制作范围变化。合成素材可以替代检索失败的真实素材，仅在用户未要求必须真实素材时适用。\n\n主题或事实变化可能使原脚本失效；只调整视觉规格时可继续复用仍匹配的文案。每个替代都用实际估算验证，不能靠修改展示数字完成任务。\n"
+                },
+                "description": "根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。",
+                "script_hashes": {}
+              },
+              {
+                "body": "---\nname: proposal-delivery\ndescription: 将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。\n---\n\n方案需要目标、受众假设、内容策略、完整脚本、制作排期、制作成本及素材来源。使用实际工具返回的费用和日期，不再虚构一次生成或保存。\n\n可按需读取 `assets/proposal-outline.md`。通过 MCP validate_proposal 调用固定脚本检查章节、字段和素材引用，取得与当前内容指纹匹配的检查结果；若缺项，修正后重新检查。\n\n只有实际保存成功才说明已保存；未完成则列出已有产物、失败或不足、费用及下一步。保存的硬性预算、排期、状态及幂等条件由业务服务再次验证。\n",
+                "version": "04e5235079ac1bc22f347f7e4654178897a34799da558546a72541677d0bcf38",
+                "skill_id": "proposal-delivery",
+                "resources": {
+                  "assets/proposal-outline.md": "# 活动主题\n\n## 活动目标\n## 受众与渠道假设\n## 内容策略\n## 内容与脚本\n## 制作及活动执行排期\n## 制作成本与预算\n## 素材与来源\n## 调整、限制与后续建议\n"
+                },
+                "description": "将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。",
+                "script_hashes": {
+                  "scripts/check_required_sections.py": "4cb039306c318bf579336bc512011d237632f31f976698fd71f9f75f70df9916"
+                }
+              },
+              {
+                "body": "---\nname: script-writing\ndescription: 根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。\n---\n\n围绕用户的主题、目标和语气生成可直接阅读的脚本。明确标题、开场、正文和互动收尾；若用户给出渠道或篇幅要求，优先遵守。\n\n首个闭环的 premium / simple 仅改变视觉制作复杂度，核心文案相同。生成适合自有渠道发布的标题、主文与互动话术，不在正文强制绑定昂贵拍摄或高规格视觉，以便降级视觉时仍可复用文字。\n\n资料是事实边界：使用给定素材标识，不虚构链接、数据、产品功能、用户评价或已执行的活动。合成资料用于创意结构，不写成真实市场证据。\n\n输入通常只有活动主题，不包含产品详情。此时只能写场景、情绪与普通互动；未知品牌、工艺、成分、性能、价格均用【待确认：具体信息】占位，不能自行填值。例如只有“咖啡新品”不能写“采用冷萃工艺、减少苦涩、快速冲泡”，可写“在通勤或阅读时，你期待怎样的一杯咖啡？”\n\n本轮制作规则仅包括自有渠道文字与视觉发布、无奖励评论互动。不得承诺折扣、抽奖、赠品、免费试饮或购买优惠；这些没有已确认的执行条件与成本。结尾只能邀请评论、关注或了解【待确认：官方入口】，不自拟促销机制。\n\n直接输出正文，不输出调用工具的指令、模型思考或“已保存”声明。素材不足时说明缺少的具体事实。\n\n可选参考：`references/channel-guide.md`。生成器自身不调用其他工具，进一步取材交回外层执行图。\n",
+                "version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41",
+                "skill_id": "script-writing",
+                "resources": {
+                  "references/channel-guide.md": "# 渠道表达参考\n\n短内容使用一个核心主张，以场景、价值和互动组织段落。长图文可增加清晰的小标题；视频脚本可标示场景和旁白。\n\n没有明确渠道时按通用社交图文起草并说明假设。不要虚构平台流量规则、强制字数或推广效果。\n"
+                },
+                "description": "根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。",
+                "script_hashes": {}
+              }
+            ],
+            "worker": {
+              "poll_seconds": 0.5,
+              "lease_seconds": 60,
+              "heartbeat_seconds": 10
+            },
+            "config_hash": "b97bc4525f8822679dd58fba511a0e38de88fc7c6abe3d2b2e50bf9449d38f0e",
+            "active_model": "local_qwen3",
+            "tool_catalog": {
+              "load_skill": {
+                "type": "function",
+                "function": {
+                  "name": "load_skill",
+                  "parameters": {
+                    "type": "object",
+                    "title": "load_skillArguments",
+                    "required": [
+                      "skill_id"
+                    ],
+                    "properties": {
+                      "skill_id": {
+                        "type": "string",
+                        "title": "Skill Id"
+                      }
+                    }
+                  },
+                  "description": "读取已注册 Skill 的正文和资源目录。可从四类目录自由选择；加载不增加业务工具权限。"
+                }
+              },
+              "save_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "save_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "save_proposalArguments",
+                    "required": [
+                      "validation_id",
+                      "estimate_id"
+                    ],
+                    "properties": {
+                      "estimate_id": {
+                        "type": "string",
+                        "title": "Estimate Id"
+                      },
+                      "validation_id": {
+                        "type": "string",
+                        "title": "Validation Id"
+                      }
+                    }
+                  },
+                  "description": "仅保存已经通过有效结构检查和成本排期估算的当前方案。事务再次检查状态、引用和幂等条件，提交后返回方案标识。"
+                }
+              },
+              "generate_script": {
+                "type": "function",
+                "function": {
+                  "name": "generate_script",
+                  "parameters": {
+                    "type": "object",
+                    "title": "generate_scriptArguments",
+                    "required": [
+                      "material_ids",
+                      "direction"
+                    ],
+                    "properties": {
+                      "direction": {
+                        "type": "string",
+                        "title": "Direction"
+                      },
+                      "material_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "title": "Material Ids"
+                      }
+                    }
+                  },
+                  "description": "依据已检索素材生成真实 LLM 文案，使用本运行固定模型和文案 Skill；生成器不调用其他工具。"
+                }
+              },
+              "estimate_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "estimate_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "estimate_proposalArguments",
+                    "required": [
+                      "production_spec"
+                    ],
+                    "properties": {
+                      "production_spec": {
+                        "enum": [
+                          "premium",
+                          "simple"
+                        ],
+                        "type": "string",
+                        "title": "Production Spec"
+                      }
+                    }
+                  },
+                  "description": "联合估算制作成本、自然小时串行排期、可行性和缺口。premium 为高规格视觉，simple 为精简视觉。返回不可行是准确估算，不是工具失败。"
+                }
+              },
+              "validate_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "validate_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "validate_proposalArguments",
+                    "required": [
+                      "draft_id"
+                    ],
+                    "properties": {
+                      "draft_id": {
+                        "type": "string",
+                        "title": "Draft Id"
+                      }
+                    }
+                  },
+                  "description": "运行方案交付 Skill 的确定性脚本，检查指定交付草稿的必需字段和素材引用，返回 is_valid 及实际检查记录。"
+                }
+              },
+              "read_skill_resource": {
+                "type": "function",
+                "function": {
+                  "name": "read_skill_resource",
+                  "parameters": {
+                    "type": "object",
+                    "title": "read_skill_resourceArguments",
+                    "required": [
+                      "skill_id",
+                      "resource_id"
+                    ],
+                    "properties": {
+                      "skill_id": {
+                        "type": "string",
+                        "title": "Skill Id"
+                      },
+                      "resource_id": {
+                        "type": "string",
+                        "title": "Resource Id"
+                      }
+                    }
+                  },
+                  "description": "按注册资源标识读取 Skill 参考或文本模板，不接受任意文件路径。"
+                }
+              },
+              "search_synthetic_materials": {
+                "type": "function",
+                "function": {
+                  "name": "search_synthetic_materials",
+                  "parameters": {
+                    "type": "object",
+                    "title": "search_synthetic_materialsArguments",
+                    "required": [
+                      "query"
+                    ],
+                    "properties": {
+                      "query": {
+                        "type": "string",
+                        "title": "Query"
+                      }
+                    }
+                  },
+                  "description": "检索项目合成内容素材，返回可使用的真实存在的内部素材标识；不是联网检索。"
+                }
+              }
+            },
+            "selected_model": {
+              "model": "qwen3:latest",
+              "base_url": "http://127.0.0.1:11434",
+              "currency": "USD",
+              "provider": "ollama",
+              "max_tokens": 1600,
+              "api_key_env": null,
+              "temperature": 0.0,
+              "timeout_seconds": 180,
+              "input_cost_per_million": null,
+              "output_cost_per_million": null
+            },
+            "tavily_enabled": true,
+            "fault_injection": {
+              "once_tool": null,
+              "pause_after_failure": false
+            },
+            "production_rules": {
+              "unit": "模拟单位",
+              "version": "2026-11-07.2",
+              "specifications": {
+                "simple": {
+                  "items": [
+                    {
+                      "cost": "1",
+                      "name": "策划",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "2",
+                      "name": "文案",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "5",
+                      "name": "精简视觉",
+                      "hours": "3"
+                    },
+                    {
+                      "cost": "0",
+                      "name": "自有渠道发布与互动执行",
+                      "hours": "1"
+                    }
+                  ],
+                  "label": "精简视觉"
+                },
+                "premium": {
+                  "items": [
+                    {
+                      "cost": "1",
+                      "name": "策划",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "2",
+                      "name": "文案",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "9",
+                      "name": "高规格视觉",
+                      "hours": "6"
+                    },
+                    {
+                      "cost": "0",
+                      "name": "自有渠道发布与互动执行",
+                      "hours": "1"
+                    }
+                  ],
+                  "label": "高规格视觉"
+                }
+              },
+              "tool_simulated_fees": {
+                "load_skill": "0.00",
+                "save_proposal": "0.00",
+                "generate_script": "0.20",
+                "estimate_proposal": "0.10",
+                "validate_proposal": "0.05",
+                "read_skill_resource": "0.00",
+                "search_web_materials": "0.10",
+                "search_synthetic_materials": "0.10"
+              }
+            },
+            "remote_tool_catalog": {
+              "name": "tavily_search",
+              "schema": {
+                "type": "object",
+                "title": "tavily_searchArguments",
+                "required": [
+                  "query"
+                ],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "title": "Query"
+                  },
+                  "max_results": {
+                    "type": "integer",
+                    "title": "Max Results",
+                    "default": 4
+                  }
+                }
+              }
+            },
+            "material_catalog_hash": "995f3ae1bbfdb080e2431fdc838c8684332d97932b9be29858f5a9c34555dc7d"
+          },
+          "last_error": null,
+          "requirements": {
+            "topic": "协议缓存验证（不交付活动）",
+            "budget": "20",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": null,
+            "real_sources_required": true
+          },
+          "context_calls": 0,
+          "loaded_skills": [],
+          "business_calls": 2,
+          "control_status": null,
+          "research_force": false,
+          "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02",
+          "last_tool_failed": false
+        },
+        "materials": [
+          {
+            "url": "https://example.invalid/protocol-fixture",
+            "title": "协议测试夹具，非真实外部资料",
+            "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+            "material_id": "web-b9dbd19a36",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T15:01:04.285579+00:00"
+          }
+        ],
+        "cost_summary": {
+          "budget": null,
+          "model_cost": null,
+          "production": null,
+          "estimate_stale": false,
+          "tool_simulated": "0.10",
+          "estimated_finish": null,
+          "model_input_tokens": null,
+          "model_output_tokens": null,
+          "model_unknown_usage_calls": 0
+        }
+      }
+    },
+    "draft": null,
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_web_materials",
+            "title": "检索活动素材",
+            "status": "success",
+            "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+            "dependencies": [],
+            "tool_call_ids": [
+              "752f2339-c292-4ae3-9554-d81517080cc8",
+              "2fa383fe-c604-4aa3-a50f-58a27126bb42"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "pending",
+            "step_id": "67695d09-4691-44e3-8a1e-d89552d7f16a",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "pending",
+            "step_id": "4e9d1d81-e293-4e3f-8ceb-2c3938e0c3c0",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "pending",
+            "step_id": "0296357a-7c91-4a25-a0c1-4bed3faed552",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": []
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "pending",
+            "step_id": "cf5381b6-7934-4bfa-9b15-a656bdf672cc",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": []
+          }
+        ],
+        "status": "stopped",
+        "summary": "仅验证真实MCP缓存协议，不执行活动",
+        "version": 1,
+        "requirements": {
+          "topic": "协议缓存验证（不交付活动）",
+          "budget": "20",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": null,
+          "real_sources_required": true
+        },
+        "change_summary": [],
+        "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02",
+        "production_spec": "simple"
+      }
+    ],
+    "scripts": {},
+    "session": {
+      "title": "协议缓存验证（不交付活动）",
+      "status": "draft",
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "last_user_activity_at": "2026-11-07T15:01:02.480779+00:00"
+    },
+    "timeline": [
+      {
+        "kind": "tool",
+        "item_id": "708edfeb-c701-490b-9248-4148271732cc",
+        "item_seq": 1,
+        "created_at": "2026-11-07T15:01:04.235057+00:00",
+        "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8"
+      },
+      {
+        "kind": "tool",
+        "item_id": "be339f04-be61-4f5b-bb89-4b16f6e57d02",
+        "item_seq": 2,
+        "created_at": "2026-11-07T15:01:04.330060+00:00",
+        "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42"
+      }
+    ],
+    "estimates": {},
+    "materials": [
+      {
+        "url": "https://example.invalid/protocol-fixture",
+        "title": "协议测试夹具，非真实外部资料",
+        "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+        "material_id": "web-b9dbd19a36",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T15:01:04.285579+00:00"
+      }
+    ],
+    "proposals": [],
+    "active_run": {
+      "phase": "research",
+      "reason": "协议缓存验证结束，不代表内容方案完成。",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "status": "incomplete",
+      "snapshot": {
+        "mcp": {
+          "tavily_url": "http://127.0.0.1:55864/mcp",
+          "business_url": "http://127.0.0.1:55534/mcp",
+          "tavily_key_env": "BACKEND_TEST_TAVILY_KEY",
+          "external_timeout_seconds": 10
+        },
+        "limits": {
+          "max_replans": 3,
+          "max_model_rounds": 24,
+          "max_context_calls": 12,
+          "max_tool_attempts": 3,
+          "max_business_calls": 30,
+          "run_timeout_seconds": 900
+        },
+        "models": {
+          "deepseek": {
+            "model": "deepseek-chat",
+            "base_url": "https://api.deepseek.com",
+            "currency": "USD",
+            "provider": "deepseek",
+            "max_tokens": 1600,
+            "api_key_env": "DEEPSEEK_API_KEY",
+            "temperature": 0.0,
+            "timeout_seconds": 180,
+            "input_cost_per_million": null,
+            "output_cost_per_million": null
+          },
+          "local_qwen3": {
+            "model": "qwen3:latest",
+            "base_url": "http://127.0.0.1:11434",
+            "currency": "USD",
+            "provider": "ollama",
+            "max_tokens": 1600,
+            "api_key_env": null,
+            "temperature": 0.0,
+            "timeout_seconds": 180,
+            "input_cost_per_million": null,
+            "output_cost_per_million": null
+          }
+        },
+        "search": {
+          "max_results": 4,
+          "min_results": 1,
+          "cache_ttl_seconds": 3600,
+          "material_ttl_seconds": 86400
+        },
+        "skills": [
+          {
+            "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+            "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+            "skill_id": "campaign-planning",
+            "resources": {
+              "references/content-patterns.md": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n"
+            },
+            "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。",
+            "script_hashes": {}
+          },
+          {
+            "body": "---\nname: constrained-replanning\ndescription: 根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。\n---\n\n先检查真实返回：哪些结果有效、缺少什么、失败是否可重试、预算或排期缺口多少。\n\n根据原因提出有内容意义的替代，例如降低视觉规格、减少制作项、换用允许的素材。解释改变及损失，保留不受影响的素材和脚本。\n\n候选改变后调用 estimate_proposal，未取得新结果前不声称已经满足预算。准确估算返回不可行，不等于估算工具失败。\n\n首个闭环只支持 premium / simple 两个制作规格：差异只在视觉复杂度；在需求、来源和文字交付范围没有变化时，素材与核心文案可保留，视觉成本和排期必须重新估算。不能声称已实现任意数量的海报或视频组合调整。\n\n用户预算、截止时间和必须真实素材的条件不因重规划自动改变。有限尝试内没有可行候选时如实说明当前缺口和已取得结果。\n\n可选参考：`references/tradeoffs.md`。\n",
+            "version": "e969a626d3399db74f771aeb7256dc9074ed7427adc5cead1dd18b6a64508c0e",
+            "skill_id": "constrained-replanning",
+            "resources": {
+              "references/tradeoffs.md": "# 替代与复用\n\n高规格视觉可换为统一模板，但应保留内容主张，并向用户说明视觉制作范围变化。合成素材可以替代检索失败的真实素材，仅在用户未要求必须真实素材时适用。\n\n主题或事实变化可能使原脚本失效；只调整视觉规格时可继续复用仍匹配的文案。每个替代都用实际估算验证，不能靠修改展示数字完成任务。\n"
+            },
+            "description": "根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。",
+            "script_hashes": {}
+          },
+          {
+            "body": "---\nname: proposal-delivery\ndescription: 将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。\n---\n\n方案需要目标、受众假设、内容策略、完整脚本、制作排期、制作成本及素材来源。使用实际工具返回的费用和日期，不再虚构一次生成或保存。\n\n可按需读取 `assets/proposal-outline.md`。通过 MCP validate_proposal 调用固定脚本检查章节、字段和素材引用，取得与当前内容指纹匹配的检查结果；若缺项，修正后重新检查。\n\n只有实际保存成功才说明已保存；未完成则列出已有产物、失败或不足、费用及下一步。保存的硬性预算、排期、状态及幂等条件由业务服务再次验证。\n",
+            "version": "04e5235079ac1bc22f347f7e4654178897a34799da558546a72541677d0bcf38",
+            "skill_id": "proposal-delivery",
+            "resources": {
+              "assets/proposal-outline.md": "# 活动主题\n\n## 活动目标\n## 受众与渠道假设\n## 内容策略\n## 内容与脚本\n## 制作及活动执行排期\n## 制作成本与预算\n## 素材与来源\n## 调整、限制与后续建议\n"
+            },
+            "description": "将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。",
+            "script_hashes": {
+              "scripts/check_required_sections.py": "4cb039306c318bf579336bc512011d237632f31f976698fd71f9f75f70df9916"
+            }
+          },
+          {
+            "body": "---\nname: script-writing\ndescription: 根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。\n---\n\n围绕用户的主题、目标和语气生成可直接阅读的脚本。明确标题、开场、正文和互动收尾；若用户给出渠道或篇幅要求，优先遵守。\n\n首个闭环的 premium / simple 仅改变视觉制作复杂度，核心文案相同。生成适合自有渠道发布的标题、主文与互动话术，不在正文强制绑定昂贵拍摄或高规格视觉，以便降级视觉时仍可复用文字。\n\n资料是事实边界：使用给定素材标识，不虚构链接、数据、产品功能、用户评价或已执行的活动。合成资料用于创意结构，不写成真实市场证据。\n\n输入通常只有活动主题，不包含产品详情。此时只能写场景、情绪与普通互动；未知品牌、工艺、成分、性能、价格均用【待确认：具体信息】占位，不能自行填值。例如只有“咖啡新品”不能写“采用冷萃工艺、减少苦涩、快速冲泡”，可写“在通勤或阅读时，你期待怎样的一杯咖啡？”\n\n本轮制作规则仅包括自有渠道文字与视觉发布、无奖励评论互动。不得承诺折扣、抽奖、赠品、免费试饮或购买优惠；这些没有已确认的执行条件与成本。结尾只能邀请评论、关注或了解【待确认：官方入口】，不自拟促销机制。\n\n直接输出正文，不输出调用工具的指令、模型思考或“已保存”声明。素材不足时说明缺少的具体事实。\n\n可选参考：`references/channel-guide.md`。生成器自身不调用其他工具，进一步取材交回外层执行图。\n",
+            "version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41",
+            "skill_id": "script-writing",
+            "resources": {
+              "references/channel-guide.md": "# 渠道表达参考\n\n短内容使用一个核心主张，以场景、价值和互动组织段落。长图文可增加清晰的小标题；视频脚本可标示场景和旁白。\n\n没有明确渠道时按通用社交图文起草并说明假设。不要虚构平台流量规则、强制字数或推广效果。\n"
+            },
+            "description": "根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。",
+            "script_hashes": {}
+          }
+        ],
+        "worker": {
+          "poll_seconds": 0.5,
+          "lease_seconds": 60,
+          "heartbeat_seconds": 10
+        },
+        "config_hash": "b97bc4525f8822679dd58fba511a0e38de88fc7c6abe3d2b2e50bf9449d38f0e",
+        "active_model": "local_qwen3",
+        "tool_catalog": {
+          "load_skill": {
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "parameters": {
+                "type": "object",
+                "title": "load_skillArguments",
+                "required": [
+                  "skill_id"
+                ],
+                "properties": {
+                  "skill_id": {
+                    "type": "string",
+                    "title": "Skill Id"
+                  }
+                }
+              },
+              "description": "读取已注册 Skill 的正文和资源目录。可从四类目录自由选择；加载不增加业务工具权限。"
+            }
+          },
+          "save_proposal": {
+            "type": "function",
+            "function": {
+              "name": "save_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "save_proposalArguments",
+                "required": [
+                  "validation_id",
+                  "estimate_id"
+                ],
+                "properties": {
+                  "estimate_id": {
+                    "type": "string",
+                    "title": "Estimate Id"
+                  },
+                  "validation_id": {
+                    "type": "string",
+                    "title": "Validation Id"
+                  }
+                }
+              },
+              "description": "仅保存已经通过有效结构检查和成本排期估算的当前方案。事务再次检查状态、引用和幂等条件，提交后返回方案标识。"
+            }
+          },
+          "generate_script": {
+            "type": "function",
+            "function": {
+              "name": "generate_script",
+              "parameters": {
+                "type": "object",
+                "title": "generate_scriptArguments",
+                "required": [
+                  "material_ids",
+                  "direction"
+                ],
+                "properties": {
+                  "direction": {
+                    "type": "string",
+                    "title": "Direction"
+                  },
+                  "material_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "title": "Material Ids"
+                  }
+                }
+              },
+              "description": "依据已检索素材生成真实 LLM 文案，使用本运行固定模型和文案 Skill；生成器不调用其他工具。"
+            }
+          },
+          "estimate_proposal": {
+            "type": "function",
+            "function": {
+              "name": "estimate_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "estimate_proposalArguments",
+                "required": [
+                  "production_spec"
+                ],
+                "properties": {
+                  "production_spec": {
+                    "enum": [
+                      "premium",
+                      "simple"
+                    ],
+                    "type": "string",
+                    "title": "Production Spec"
+                  }
+                }
+              },
+              "description": "联合估算制作成本、自然小时串行排期、可行性和缺口。premium 为高规格视觉，simple 为精简视觉。返回不可行是准确估算，不是工具失败。"
+            }
+          },
+          "validate_proposal": {
+            "type": "function",
+            "function": {
+              "name": "validate_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "validate_proposalArguments",
+                "required": [
+                  "draft_id"
+                ],
+                "properties": {
+                  "draft_id": {
+                    "type": "string",
+                    "title": "Draft Id"
+                  }
+                }
+              },
+              "description": "运行方案交付 Skill 的确定性脚本，检查指定交付草稿的必需字段和素材引用，返回 is_valid 及实际检查记录。"
+            }
+          },
+          "read_skill_resource": {
+            "type": "function",
+            "function": {
+              "name": "read_skill_resource",
+              "parameters": {
+                "type": "object",
+                "title": "read_skill_resourceArguments",
+                "required": [
+                  "skill_id",
+                  "resource_id"
+                ],
+                "properties": {
+                  "skill_id": {
+                    "type": "string",
+                    "title": "Skill Id"
+                  },
+                  "resource_id": {
+                    "type": "string",
+                    "title": "Resource Id"
+                  }
+                }
+              },
+              "description": "按注册资源标识读取 Skill 参考或文本模板，不接受任意文件路径。"
+            }
+          },
+          "search_synthetic_materials": {
+            "type": "function",
+            "function": {
+              "name": "search_synthetic_materials",
+              "parameters": {
+                "type": "object",
+                "title": "search_synthetic_materialsArguments",
+                "required": [
+                  "query"
+                ],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "title": "Query"
+                  }
+                }
+              },
+              "description": "检索项目合成内容素材，返回可使用的真实存在的内部素材标识；不是联网检索。"
+            }
+          }
+        },
+        "selected_model": {
+          "model": "qwen3:latest",
+          "base_url": "http://127.0.0.1:11434",
+          "currency": "USD",
+          "provider": "ollama",
+          "max_tokens": 1600,
+          "api_key_env": null,
+          "temperature": 0.0,
+          "timeout_seconds": 180,
+          "input_cost_per_million": null,
+          "output_cost_per_million": null
+        },
+        "tavily_enabled": true,
+        "fault_injection": {
+          "once_tool": null,
+          "pause_after_failure": false
+        },
+        "production_rules": {
+          "unit": "模拟单位",
+          "version": "2026-11-07.2",
+          "specifications": {
+            "simple": {
+              "items": [
+                {
+                  "cost": "1",
+                  "name": "策划",
+                  "hours": "2"
+                },
+                {
+                  "cost": "2",
+                  "name": "文案",
+                  "hours": "2"
+                },
+                {
+                  "cost": "5",
+                  "name": "精简视觉",
+                  "hours": "3"
+                },
+                {
+                  "cost": "0",
+                  "name": "自有渠道发布与互动执行",
+                  "hours": "1"
+                }
+              ],
+              "label": "精简视觉"
+            },
+            "premium": {
+              "items": [
+                {
+                  "cost": "1",
+                  "name": "策划",
+                  "hours": "2"
+                },
+                {
+                  "cost": "2",
+                  "name": "文案",
+                  "hours": "2"
+                },
+                {
+                  "cost": "9",
+                  "name": "高规格视觉",
+                  "hours": "6"
+                },
+                {
+                  "cost": "0",
+                  "name": "自有渠道发布与互动执行",
+                  "hours": "1"
+                }
+              ],
+              "label": "高规格视觉"
+            }
+          },
+          "tool_simulated_fees": {
+            "load_skill": "0.00",
+            "save_proposal": "0.00",
+            "generate_script": "0.20",
+            "estimate_proposal": "0.10",
+            "validate_proposal": "0.05",
+            "read_skill_resource": "0.00",
+            "search_web_materials": "0.10",
+            "search_synthetic_materials": "0.10"
+          }
+        },
+        "remote_tool_catalog": {
+          "name": "tavily_search",
+          "schema": {
+            "type": "object",
+            "title": "tavily_searchArguments",
+            "required": [
+              "query"
+            ],
+            "properties": {
+              "query": {
+                "type": "string",
+                "title": "Query"
+              },
+              "max_results": {
+                "type": "integer",
+                "title": "Max Results",
+                "default": 4
+              }
+            }
+          }
+        },
+        "material_catalog_hash": "995f3ae1bbfdb080e2431fdc838c8684332d97932b9be29858f5a9c34555dc7d"
+      },
+      "last_error": null,
+      "requirements": {
+        "topic": "协议缓存验证（不交付活动）",
+        "budget": "20",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": true
+      },
+      "context_calls": 0,
+      "loaded_skills": [],
+      "business_calls": 2,
+      "control_status": null,
+      "research_force": false,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02",
+      "last_tool_failed": false
+    },
+    "model_calls": [],
+    "skill_loads": [],
+    "validations": {},
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.10",
+      "estimated_finish": null,
+      "model_input_tokens": null,
+      "model_output_tokens": null,
+      "model_unknown_usage_calls": 0
+    },
+    "requirements": {
+      "topic": "协议缓存验证（不交付活动）",
+      "budget": "20",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": true
+    },
+    "model_display": "qwen3:latest · 本地",
+    "pending_patch": null,
+    "fault_consumed": [],
+    "client_messages": {},
+    "pending_changes": null,
+    "last_event_seq": 11
+  },
+  "tool_calls": [
+    {
+      "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_name": "search_web_materials",
+      "display_name": "检索真实素材",
+      "server_name": "tavily-remote",
+      "status": "success",
+      "input": {
+        "query": "fixed-cache-fixture"
+      },
+      "output": {
+        "empty": false,
+        "query": "fixed-cache-fixture",
+        "missing": [],
+        "partial": false,
+        "materials": [
+          {
+            "url": "https://example.invalid/protocol-fixture",
+            "title": "协议测试夹具，非真实外部资料",
+            "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+            "material_id": "web-b9dbd19a36",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T15:01:04.285579+00:00"
+          }
+        ],
+        "source_type": "web",
+        "available_count": 1,
+        "requested_count": 4
+      },
+      "started_at": "2026-11-07T15:01:04.236092+00:00",
+      "duration_ms": 62,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_name": "search_web_materials",
+      "display_name": "检索真实素材",
+      "server_name": "tavily-result-cache",
+      "status": "success",
+      "input": {
+        "query": "fixed-cache-fixture"
+      },
+      "output": {
+        "empty": false,
+        "query": "fixed-cache-fixture",
+        "reused": true,
+        "missing": [],
+        "partial": false,
+        "materials": [
+          {
+            "url": "https://example.invalid/protocol-fixture",
+            "title": "协议测试夹具，非真实外部资料",
+            "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+            "material_id": "web-b9dbd19a36",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T15:01:04.285579+00:00"
+          }
+        ],
+        "source_type": "web",
+        "available_count": 1,
+        "requested_count": 4
+      },
+      "started_at": "2026-11-07T15:01:04.330060+00:00",
+      "duration_ms": 16,
+      "error": null,
+      "attempt": 2
+    }
+  ],
+  "cost_entries": [
+    {
+      "entry_id": "75babc28-72db-4327-ab94-0ec9708705a6",
+      "charge_key": "external:752f2339-c292-4ae3-9554-d81517080cc8",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "kind": "external_search",
+      "amount": null,
+      "unit": "Tavily credits",
+      "status": "unknown",
+      "usage": {
+        "result_received": true
+      },
+      "created_at": "2026-11-07T15:01:04.276360+00:00"
+    },
+    {
+      "entry_id": "75294f1d-24e0-4ca4-8017-811df0c7d8d2",
+      "charge_key": "tool:752f2339-c292-4ae3-9554-d81517080cc8",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "kind": "tool_simulated",
+      "amount": "0.100000000000",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "search_web_materials",
+        "reused": false
+      },
+      "created_at": "2026-11-07T15:01:04.301638+00:00"
+    },
+    {
+      "entry_id": "d06d9d76-ba98-4cbe-96ae-98a57bf6ed1b",
+      "charge_key": "tool:2fa383fe-c604-4aa3-a50f-58a27126bb42",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "kind": "tool_simulated",
+      "amount": "0E-12",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "search_web_materials",
+        "reused": true
+      },
+      "created_at": "2026-11-07T15:01:04.349344+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:1",
+      "session_seq": 1,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "workspace.updated",
+      "occurred_at": "2026-11-07T15:01:04.129817+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 1,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:2",
+      "session_seq": 2,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "capabilities.frozen",
+      "occurred_at": "2026-11-07T15:01:04.223613+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 2,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:3",
+      "session_seq": 3,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T15:01:04.242633+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8"
+      },
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8",
+      "entity_version": 3,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:4",
+      "session_seq": 4,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "capabilities.frozen",
+      "occurred_at": "2026-11-07T15:01:04.261198+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 4,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:5",
+      "session_seq": 5,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "external_call.started",
+      "occurred_at": "2026-11-07T15:01:04.278865+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8"
+      },
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8",
+      "entity_version": 5,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:6",
+      "session_seq": 6,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T15:01:04.308437+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8"
+      },
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8",
+      "entity_version": 6,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:7",
+      "session_seq": 7,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T15:01:04.320391+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8"
+      },
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_call_id": "752f2339-c292-4ae3-9554-d81517080cc8",
+      "entity_version": 7,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:8",
+      "session_seq": 8,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T15:01:04.334996+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42"
+      },
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42",
+      "entity_version": 8,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:9",
+      "session_seq": 9,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T15:01:04.351472+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42"
+      },
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42",
+      "entity_version": 9,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:10",
+      "session_seq": 10,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T15:01:04.362897+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42"
+      },
+      "step_id": "fdb6ac73-bb21-4118-87c1-44fa5bb27511",
+      "tool_call_id": "2fa383fe-c604-4aa3-a50f-58a27126bb42",
+      "entity_version": 10,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    },
+    {
+      "event_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05:11",
+      "session_seq": 11,
+      "session_id": "7c7f3683-e94b-4b3c-a5d4-d4b04665ba05",
+      "type": "workspace.updated",
+      "occurred_at": "2026-11-07T15:01:04.369875+00:00",
+      "run_id": "c245bbb0-5e1b-4f95-8e6a-2151a0c237de",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 11,
+      "plan_version_id": "5d7cd663-5404-4f6e-b46b-ec119b6b2f02"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "a471e93c-5c28-4009-965c-b264340731c3",
+      "kind": "test-b8bf99bd:probe",
+      "status": "done",
+      "lease_epoch": 1,
+      "error": null
+    }
+  ],
+  "harness_error": null
+}

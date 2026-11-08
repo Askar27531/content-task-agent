@@ -1,0 +1,87 @@
+{
+  "finding": "Qwen interpreted preview as execute; no tools ran because guard rejected. Fixed semantic examples and preview-before-execution guard.",
+  "actual_sessions": [
+    {
+      "session_id": "f713292f-0cca-40fb-a7f1-44bb0ef3cf28",
+      "timeline": [
+        {
+          "kind": "message",
+          "role": "user",
+          "content": "为咖啡新品做一场内容推广，只先讨论需求。",
+          "item_id": "8d0f3a79-2187-497e-857e-967e11588e9a",
+          "item_seq": 1,
+          "created_at": "2026-11-06T19:11:50.929625+00:00"
+        },
+        {
+          "kind": "message",
+          "role": "assistant",
+          "content": "还没有信息完整、可执行的计划。请先补齐主题、制作预算和活动截止时间。",
+          "item_id": "67de8836-5bd9-4f82-908f-6307d38f94cb",
+          "item_seq": 2,
+          "created_at": "2026-11-06T19:11:58.149253+00:00"
+        }
+      ],
+      "model_calls": [
+        {
+          "at": "2026-11-06T19:11:58.118416+00:00",
+          "kind": "understand_message",
+          "model": "qwen3:latest",
+          "usage": {
+            "input_tokens": 278,
+            "output_tokens": 56
+          },
+          "run_id": null,
+          "provider": "ollama",
+          "response": {
+            "role": "assistant",
+            "content": "{\"action\": \"execute\", \"updates\": {\"topic\": \"咖啡新品内容推广\", \"real_sources_required\": false}, \"explanation\": \"用户要求为咖啡新品做内容推广，并且只先讨论需求，因此开始执行需求讨论流程。\"}",
+            "tool_calls": []
+          },
+          "request_id": "10d13cb2-babe-4166-857d-1ccf35406c51",
+          "available_tools": []
+        }
+      ]
+    },
+    {
+      "session_id": "fee4ffa5-8010-4246-9dcb-ab246d2ccd2d",
+      "timeline": [
+        {
+          "kind": "message",
+          "role": "user",
+          "content": "为咖啡新品做内容推广，先采用高规格视觉 premium。制作预算 10 个模拟单位，开始时间2030-12-01 08:00，截止2030-12-03 18:00，均为北京时间，允许合成素材。先展示计划。",
+          "item_id": "bb2a1bc2-983d-4a1b-a441-6b3206976c9f",
+          "item_seq": 1,
+          "created_at": "2026-11-06T19:11:58.603128+00:00"
+        },
+        {
+          "kind": "message",
+          "role": "assistant",
+          "content": "还没有信息完整、可执行的计划。请先补齐主题、制作预算和活动截止时间。",
+          "item_id": "040ac91b-2b66-49ef-a7ee-10bf5a2c7715",
+          "item_seq": 2,
+          "created_at": "2026-11-06T19:12:04.937648+00:00"
+        }
+      ],
+      "model_calls": [
+        {
+          "at": "2026-11-06T19:12:04.908381+00:00",
+          "kind": "understand_message",
+          "model": "qwen3:latest",
+          "usage": {
+            "input_tokens": 337,
+            "output_tokens": 177
+          },
+          "run_id": null,
+          "provider": "ollama",
+          "response": {
+            "role": "assistant",
+            "content": "{\n  \"action\": \"execute\",\n  \"updates\": {\n    \"topic\": \"咖啡新品\",\n    \"budget\": \"10\",\n    \"deadline\": \"2030-12-03T18:00+08:00\",\n    \"start_at\": \"2030-12-01T08:00+08:00\",\n    \"real_sources_required\": false\n  },\n  \"explanation\": \"用户要求为咖啡新品做内容推广，采用高规格视觉premium，预算为10个模拟单位，开始时间为2030-12-01 08:00，截止时间为2030-12-03 18:00，均为北京时间，允许合成素材。先展示计划。\"\n}",
+            "tool_calls": []
+          },
+          "request_id": "e9389393-42be-4ba8-b6ee-ef7e7eea9abf",
+          "available_tools": []
+        }
+      ]
+    }
+  ]
+}

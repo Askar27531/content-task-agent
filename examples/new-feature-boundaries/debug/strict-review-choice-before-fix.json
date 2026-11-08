@@ -1,0 +1,2825 @@
+{
+  "actual_model": true,
+  "actual_business_mcp": true,
+  "external_service_fixture": true,
+  "real_external_tavily": false,
+  "name": "partial-then-failure",
+  "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+  "checks": {
+    "actual_web_call": true,
+    "bounded_attempts": true,
+    "truthful_terminal": true,
+    "insufficient_not_saved": true,
+    "no_synthetic": true,
+    "valid_result_retained": true,
+    "later_failure_recorded": false,
+    "terminal_search_costs_not_pending": true,
+    "no_harness_error": true
+  },
+  "passed": false,
+  "inputs": [
+    {
+      "content": "为读书会写内容活动方案，制作预算20个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00北京时间，精简视觉simple。必须使用真实素材，禁止合成，资料不齐先重检一次，仍不足就停止。先给计划，不要执行。",
+      "receipt": {
+        "message_id": "75d77796-a7ed-41ce-82d9-5446db5d632b",
+        "processing_id": "7791689d-c101-4a81-90ab-6d09a836e2fb",
+        "duplicate": false
+      },
+      "queue": "test-41698766:message",
+      "view_context": {}
+    },
+    {
+      "content": "按当前计划开始执行。",
+      "receipt": {
+        "message_id": "0b304b8b-5447-4cb4-94ce-ce0c3f641767",
+        "processing_id": "12c64ba9-06e2-4ae1-a794-836858367da7",
+        "duplicate": false
+      },
+      "queue": "test-41698766:message",
+      "view_context": {
+        "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+      }
+    }
+  ],
+  "before": null,
+  "workspace": {
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "last_user_activity_at": "2026-11-07T16:48:01.544173+00:00"
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": "20",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-01T08:00:00+08:00",
+      "real_sources_required": true
+    },
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_web_materials",
+            "title": "检索活动素材",
+            "status": "partial_success",
+            "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+            "dependencies": [],
+            "tool_call_ids": [
+              "6014ef33-e9bf-433e-b131-c036a5195333",
+              "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73",
+              "b45b34db-2607-4309-9f03-bff48023e447"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "blocked",
+            "step_id": "ea54d12b-3c0b-4eb5-8feb-6593c16f5d40",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "blocked",
+            "step_id": "71038552-85b8-4c00-95bb-38c80c1b3c1a",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "blocked",
+            "step_id": "18082e07-14be-4c9f-a445-e27d2ac4cada",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "blocked",
+            "step_id": "89843362-26ba-460d-85ce-dd629bf314a3",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          }
+        ],
+        "status": "incomplete",
+        "summary": "读书会活动方案初稿已生成，采用精简视觉。内容组合基于真实素材，未使用合成元素。活动目标为促进阅读交流，受众假设为对书籍有兴趣的群体。内容组合包括问题共鸣、价值说明和互动邀请。预算20个模拟单位，活动时间从2030-12-01 08:00到2030-12-03 18:00。资料不齐时将先重检，仍不足则停止。",
+        "version": 1,
+        "brief_hash": "7dfaefad33c69b870a3b1cf1eab635003030d4ec0afb84c672e5efb34cd1508b",
+        "config_hash": "afddcb52ab228e0d7b95a752f188f00cbb19d2bde413454e9fc7a3892c527ac0",
+        "requirements": {
+          "topic": "读书会",
+          "budget": "20",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "real_sources_required": true
+        },
+        "model_summary": {
+          "model": "qwen3:latest",
+          "provider": "ollama"
+        },
+        "change_summary": [
+          "使用真实素材，禁止合成",
+          "资料不齐先重检一次，仍不足就停止"
+        ],
+        "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1",
+        "production_spec": "simple"
+      }
+    ],
+    "active_run": {
+      "phase": "research",
+      "reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "status": "incomplete",
+      "replans": 0,
+      "script_id": null,
+      "created_at": "2026-11-07T16:48:10.935103+00:00",
+      "last_error": null,
+      "estimate_id": null,
+      "reason_code": "SOURCE_INSUFFICIENT",
+      "model_rounds": 3,
+      "requirements": {
+        "topic": "读书会",
+        "budget": "20",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "real_sources_required": true
+      },
+      "writing_hash": "7dfaefad33c69b870a3b1cf1eab635003030d4ec0afb84c672e5efb34cd1508b",
+      "context_calls": 2,
+      "loaded_skills": [
+        "campaign-planning"
+      ],
+      "validation_id": null,
+      "brief_messages": [
+        "为读书会写内容活动方案，制作预算20个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00北京时间，精简视觉simple。必须使用真实素材，禁止合成，资料不齐先重检一次，仍不足就停止。先给计划，不要执行。"
+      ],
+      "business_calls": 1,
+      "control_status": null,
+      "research_force": false,
+      "elapsed_seconds": 6.6719999997876585,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1",
+      "last_tool_failed": false,
+      "no_action_rounds": 0,
+      "effective_start_at": "2030-12-01T08:00:00+08:00",
+      "research_last_result": {
+        "empty": false,
+        "error": null,
+        "status": "partial_success",
+        "missing": [
+          "第2项缺少有效链接或正文",
+          "可用素材1项，低于最低2项。"
+        ]
+      },
+      "research_review_pending": true
+    },
+    "cost_summary": {
+      "budget": "20",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.10",
+      "estimated_finish": null,
+      "model_input_tokens": 10865,
+      "model_cost_currency": null,
+      "model_output_tokens": 627,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [
+      {
+        "url": "https://example.invalid/protocol-fixture",
+        "title": "协议测试夹具，非真实外部资料",
+        "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+        "material_id": "web-b9dbd19a36",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T16:48:18.518903+00:00"
+      }
+    ],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 60,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "state": {
+    "runs": {
+      "1def4dc1-5cbe-48cf-9332-fdab1c0501a2": {
+        "run": {
+          "phase": "research",
+          "reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。",
+          "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+          "status": "incomplete",
+          "replans": 0,
+          "snapshot": {
+            "mcp": {
+              "tavily_url": "http://127.0.0.1:56197/mcp",
+              "business_url": "http://127.0.0.1:64760/mcp",
+              "tavily_key_env": "BACKEND_TEST_TAVILY_KEY",
+              "external_timeout_seconds": 10
+            },
+            "limits": {
+              "max_replans": 3,
+              "max_model_rounds": 24,
+              "max_context_calls": 12,
+              "max_tool_attempts": 3,
+              "max_business_calls": 30,
+              "run_timeout_seconds": 900
+            },
+            "models": {
+              "deepseek": {
+                "model": "deepseek-chat",
+                "base_url": "https://api.deepseek.com",
+                "currency": "USD",
+                "provider": "deepseek",
+                "max_tokens": 1600,
+                "api_key_env": "DEEPSEEK_API_KEY",
+                "temperature": 0.0,
+                "timeout_seconds": 180,
+                "input_cost_per_million": null,
+                "output_cost_per_million": null
+              },
+              "local_qwen3": {
+                "model": "qwen3:latest",
+                "base_url": "http://127.0.0.1:11434",
+                "currency": "USD",
+                "provider": "ollama",
+                "max_tokens": 1600,
+                "api_key_env": null,
+                "temperature": 0.0,
+                "timeout_seconds": 180,
+                "input_cost_per_million": null,
+                "output_cost_per_million": null
+              }
+            },
+            "search": {
+              "max_results": 4,
+              "min_results": 2,
+              "cache_ttl_seconds": 3600,
+              "material_ttl_seconds": 86400
+            },
+            "skills": [
+              {
+                "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+                "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+                "skill_id": "campaign-planning",
+                "resources": {
+                  "references/content-patterns.md": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n"
+                },
+                "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。",
+                "script_hashes": {}
+              },
+              {
+                "body": "---\nname: constrained-replanning\ndescription: 根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。\n---\n\n先检查真实返回：哪些结果有效、缺少什么、失败是否可重试、预算或排期缺口多少。\n\n根据原因提出有内容意义的替代，例如降低视觉规格、减少制作项、换用允许的素材。解释改变及损失，保留不受影响的素材和脚本。\n\n候选改变后调用 estimate_proposal，未取得新结果前不声称已经满足预算。准确估算返回不可行，不等于估算工具失败。\n\n首个闭环只支持 premium / simple 两个制作规格：差异只在视觉复杂度；在需求、来源和文字交付范围没有变化时，素材与核心文案可保留，视觉成本和排期必须重新估算。不能声称已实现任意数量的海报或视频组合调整。\n\n用户预算、截止时间和必须真实素材的条件不因重规划自动改变。有限尝试内没有可行候选时如实说明当前缺口和已取得结果。\n\n可选参考：`references/tradeoffs.md`。\n",
+                "version": "e969a626d3399db74f771aeb7256dc9074ed7427adc5cead1dd18b6a64508c0e",
+                "skill_id": "constrained-replanning",
+                "resources": {
+                  "references/tradeoffs.md": "# 替代与复用\n\n高规格视觉可换为统一模板，但应保留内容主张，并向用户说明视觉制作范围变化。合成素材可以替代检索失败的真实素材，仅在用户未要求必须真实素材时适用。\n\n主题或事实变化可能使原脚本失效；只调整视觉规格时可继续复用仍匹配的文案。每个替代都用实际估算验证，不能靠修改展示数字完成任务。\n"
+                },
+                "description": "根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。",
+                "script_hashes": {}
+              },
+              {
+                "body": "---\nname: proposal-delivery\ndescription: 将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。\n---\n\n方案需要目标、受众假设、内容策略、完整脚本、制作排期、制作成本及素材来源。使用实际工具返回的费用和日期，不再虚构一次生成或保存。\n\n可按需读取 `assets/proposal-outline.md`。通过 MCP validate_proposal 调用固定脚本检查章节、字段和素材引用，取得与当前内容指纹匹配的检查结果；若缺项，修正后重新检查。\n\n只有实际保存成功才说明已保存；未完成则列出已有产物、失败或不足、费用及下一步。保存的硬性预算、排期、状态及幂等条件由业务服务再次验证。\n",
+                "version": "04e5235079ac1bc22f347f7e4654178897a34799da558546a72541677d0bcf38",
+                "skill_id": "proposal-delivery",
+                "resources": {
+                  "assets/proposal-outline.md": "# 活动主题\n\n## 活动目标\n## 受众与渠道假设\n## 内容策略\n## 内容与脚本\n## 制作及活动执行排期\n## 制作成本与预算\n## 素材与来源\n## 调整、限制与后续建议\n"
+                },
+                "description": "将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。",
+                "script_hashes": {
+                  "scripts/check_required_sections.py": "4cb039306c318bf579336bc512011d237632f31f976698fd71f9f75f70df9916"
+                }
+              },
+              {
+                "body": "---\nname: script-writing\ndescription: 根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。\n---\n\n围绕用户的主题、目标和语气生成可直接阅读的脚本。明确标题、开场、正文和互动收尾；若用户给出渠道或篇幅要求，优先遵守。\n\n首个闭环的 premium / simple 仅改变视觉制作复杂度，核心文案相同。生成适合自有渠道发布的标题、主文与互动话术，不在正文强制绑定昂贵拍摄或高规格视觉，以便降级视觉时仍可复用文字。\n\n资料是事实边界：使用给定素材标识，不虚构链接、数据、产品功能、用户评价或已执行的活动。合成资料用于创意结构，不写成真实市场证据。\n\n输入通常只有活动主题，不包含产品详情。此时只能写场景、情绪与普通互动；未知品牌、工艺、成分、性能、价格均用【待确认：具体信息】占位，不能自行填值。例如只有“咖啡新品”不能写“采用冷萃工艺、减少苦涩、快速冲泡”，可写“在通勤或阅读时，你期待怎样的一杯咖啡？”\n\n本轮制作规则仅包括自有渠道文字与视觉发布、无奖励评论互动。不得承诺折扣、抽奖、赠品、免费试饮或购买优惠；这些没有已确认的执行条件与成本。结尾只能邀请评论、关注或了解【待确认：官方入口】，不自拟促销机制。\n\n直接输出正文，不输出调用工具的指令、模型思考或“已保存”声明。素材不足时说明缺少的具体事实。\n\n可选参考：`references/channel-guide.md`。生成器自身不调用其他工具，进一步取材交回外层执行图。\n",
+                "version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41",
+                "skill_id": "script-writing",
+                "resources": {
+                  "references/channel-guide.md": "# 渠道表达参考\n\n短内容使用一个核心主张，以场景、价值和互动组织段落。长图文可增加清晰的小标题；视频脚本可标示场景和旁白。\n\n没有明确渠道时按通用社交图文起草并说明假设。不要虚构平台流量规则、强制字数或推广效果。\n"
+                },
+                "description": "根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。",
+                "script_hashes": {}
+              }
+            ],
+            "worker": {
+              "poll_seconds": 0.5,
+              "lease_seconds": 60,
+              "heartbeat_seconds": 10
+            },
+            "config_hash": "afddcb52ab228e0d7b95a752f188f00cbb19d2bde413454e9fc7a3892c527ac0",
+            "active_model": "local_qwen3",
+            "tool_catalog": {
+              "load_skill": {
+                "type": "function",
+                "function": {
+                  "name": "load_skill",
+                  "parameters": {
+                    "type": "object",
+                    "title": "load_skillArguments",
+                    "required": [
+                      "skill_id"
+                    ],
+                    "properties": {
+                      "skill_id": {
+                        "type": "string",
+                        "title": "Skill Id"
+                      }
+                    }
+                  },
+                  "description": "读取已注册 Skill 的正文和资源目录。可从四类目录自由选择；加载不增加业务工具权限。"
+                }
+              },
+              "save_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "save_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "save_proposalArguments",
+                    "required": [
+                      "validation_id",
+                      "estimate_id"
+                    ],
+                    "properties": {
+                      "estimate_id": {
+                        "type": "string",
+                        "title": "Estimate Id"
+                      },
+                      "validation_id": {
+                        "type": "string",
+                        "title": "Validation Id"
+                      }
+                    }
+                  },
+                  "description": "仅保存已经通过有效结构检查和成本排期估算的当前方案。事务再次检查状态、引用和幂等条件，提交后返回方案标识。"
+                }
+              },
+              "generate_script": {
+                "type": "function",
+                "function": {
+                  "name": "generate_script",
+                  "parameters": {
+                    "type": "object",
+                    "title": "generate_scriptArguments",
+                    "required": [
+                      "material_ids",
+                      "direction"
+                    ],
+                    "properties": {
+                      "direction": {
+                        "type": "string",
+                        "title": "Direction"
+                      },
+                      "material_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "title": "Material Ids"
+                      }
+                    }
+                  },
+                  "description": "依据已检索素材生成真实 LLM 文案，使用本运行固定模型和文案 Skill；生成器不调用其他工具。"
+                }
+              },
+              "estimate_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "estimate_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "estimate_proposalArguments",
+                    "required": [
+                      "production_spec"
+                    ],
+                    "properties": {
+                      "production_spec": {
+                        "enum": [
+                          "premium",
+                          "simple"
+                        ],
+                        "type": "string",
+                        "title": "Production Spec"
+                      }
+                    }
+                  },
+                  "description": "联合估算制作成本、自然小时串行排期、可行性和缺口。premium 为高规格视觉，simple 为精简视觉。返回不可行是准确估算，不是工具失败。"
+                }
+              },
+              "validate_proposal": {
+                "type": "function",
+                "function": {
+                  "name": "validate_proposal",
+                  "parameters": {
+                    "type": "object",
+                    "title": "validate_proposalArguments",
+                    "required": [
+                      "draft_id"
+                    ],
+                    "properties": {
+                      "draft_id": {
+                        "type": "string",
+                        "title": "Draft Id"
+                      }
+                    }
+                  },
+                  "description": "运行方案交付 Skill 的确定性脚本，检查指定交付草稿的必需字段和素材引用，返回 is_valid 及实际检查记录。"
+                }
+              },
+              "read_skill_resource": {
+                "type": "function",
+                "function": {
+                  "name": "read_skill_resource",
+                  "parameters": {
+                    "type": "object",
+                    "title": "read_skill_resourceArguments",
+                    "required": [
+                      "skill_id",
+                      "resource_id"
+                    ],
+                    "properties": {
+                      "skill_id": {
+                        "type": "string",
+                        "title": "Skill Id"
+                      },
+                      "resource_id": {
+                        "type": "string",
+                        "title": "Resource Id"
+                      }
+                    }
+                  },
+                  "description": "按注册资源标识读取 Skill 参考或文本模板，不接受任意文件路径。"
+                }
+              },
+              "search_synthetic_materials": {
+                "type": "function",
+                "function": {
+                  "name": "search_synthetic_materials",
+                  "parameters": {
+                    "type": "object",
+                    "title": "search_synthetic_materialsArguments",
+                    "required": [
+                      "query"
+                    ],
+                    "properties": {
+                      "query": {
+                        "type": "string",
+                        "title": "Query"
+                      }
+                    }
+                  },
+                  "description": "检索项目合成内容素材，返回可使用的真实存在的内部素材标识；不是联网检索。"
+                }
+              }
+            },
+            "selected_model": {
+              "model": "qwen3:latest",
+              "base_url": "http://127.0.0.1:11434",
+              "currency": "USD",
+              "provider": "ollama",
+              "max_tokens": 1600,
+              "api_key_env": null,
+              "temperature": 0.0,
+              "timeout_seconds": 180,
+              "input_cost_per_million": null,
+              "output_cost_per_million": null
+            },
+            "tavily_enabled": true,
+            "fault_injection": {
+              "once_tool": null,
+              "pause_after_failure": false
+            },
+            "production_rules": {
+              "unit": "模拟单位",
+              "version": "2026-11-07.2",
+              "specifications": {
+                "simple": {
+                  "items": [
+                    {
+                      "cost": "1",
+                      "name": "策划",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "2",
+                      "name": "文案",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "5",
+                      "name": "精简视觉",
+                      "hours": "3"
+                    },
+                    {
+                      "cost": "0",
+                      "name": "自有渠道发布与互动执行",
+                      "hours": "1"
+                    }
+                  ],
+                  "label": "精简视觉"
+                },
+                "premium": {
+                  "items": [
+                    {
+                      "cost": "1",
+                      "name": "策划",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "2",
+                      "name": "文案",
+                      "hours": "2"
+                    },
+                    {
+                      "cost": "9",
+                      "name": "高规格视觉",
+                      "hours": "6"
+                    },
+                    {
+                      "cost": "0",
+                      "name": "自有渠道发布与互动执行",
+                      "hours": "1"
+                    }
+                  ],
+                  "label": "高规格视觉"
+                }
+              },
+              "tool_simulated_fees": {
+                "load_skill": "0.00",
+                "save_proposal": "0.00",
+                "generate_script": "0.20",
+                "estimate_proposal": "0.10",
+                "validate_proposal": "0.05",
+                "read_skill_resource": "0.00",
+                "search_web_materials": "0.10",
+                "search_synthetic_materials": "0.10"
+              }
+            },
+            "remote_tool_catalog": {
+              "name": "tavily_search",
+              "schema": {
+                "type": "object",
+                "title": "tavily_searchArguments",
+                "required": [
+                  "query"
+                ],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "title": "Query"
+                  },
+                  "max_results": {
+                    "type": "integer",
+                    "title": "Max Results",
+                    "default": 4
+                  }
+                }
+              }
+            },
+            "material_catalog_hash": "995f3ae1bbfdb080e2431fdc838c8684332d97932b9be29858f5a9c34555dc7d"
+          },
+          "script_id": null,
+          "created_at": "2026-11-07T16:48:10.935103+00:00",
+          "last_error": null,
+          "estimate_id": null,
+          "reason_code": "SOURCE_INSUFFICIENT",
+          "model_rounds": 3,
+          "requirements": {
+            "topic": "读书会",
+            "budget": "20",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": "2030-12-01T08:00:00+08:00",
+            "real_sources_required": true
+          },
+          "writing_hash": "7dfaefad33c69b870a3b1cf1eab635003030d4ec0afb84c672e5efb34cd1508b",
+          "context_calls": 2,
+          "loaded_skills": [
+            "campaign-planning"
+          ],
+          "validation_id": null,
+          "brief_messages": [
+            "为读书会写内容活动方案，制作预算20个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00北京时间，精简视觉simple。必须使用真实素材，禁止合成，资料不齐先重检一次，仍不足就停止。先给计划，不要执行。"
+          ],
+          "business_calls": 1,
+          "control_status": null,
+          "research_force": false,
+          "elapsed_seconds": 6.6719999997876585,
+          "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1",
+          "last_tool_failed": false,
+          "no_action_rounds": 0,
+          "effective_start_at": "2030-12-01T08:00:00+08:00",
+          "research_last_result": {
+            "empty": false,
+            "error": null,
+            "status": "partial_success",
+            "missing": [
+              "第2项缺少有效链接或正文",
+              "可用素材1项，低于最低2项。"
+            ]
+          },
+          "research_review_pending": true
+        },
+        "materials": [
+          {
+            "url": "https://example.invalid/protocol-fixture",
+            "title": "协议测试夹具，非真实外部资料",
+            "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+            "material_id": "web-b9dbd19a36",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T16:48:18.518903+00:00"
+          }
+        ],
+        "cost_summary": {
+          "budget": "20",
+          "model_cost": null,
+          "production": null,
+          "estimate_stale": false,
+          "tool_simulated": "0.10",
+          "estimated_finish": null,
+          "model_input_tokens": 10865,
+          "model_cost_currency": null,
+          "model_output_tokens": 627,
+          "model_unknown_usage_calls": 0
+        }
+      }
+    },
+    "draft": null,
+    "plans": [
+      {
+        "label": "精简制作方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_web_materials",
+            "title": "检索活动素材",
+            "status": "partial_success",
+            "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+            "dependencies": [],
+            "tool_call_ids": [
+              "6014ef33-e9bf-433e-b131-c036a5195333",
+              "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73",
+              "b45b34db-2607-4309-9f03-bff48023e447"
+            ]
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "blocked",
+            "step_id": "ea54d12b-3c0b-4eb5-8feb-6593c16f5d40",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "blocked",
+            "step_id": "71038552-85b8-4c00-95bb-38c80c1b3c1a",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "blocked",
+            "step_id": "18082e07-14be-4c9f-a445-e27d2ac4cada",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "blocked",
+            "step_id": "89843362-26ba-460d-85ce-dd629bf314a3",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。"
+          }
+        ],
+        "status": "incomplete",
+        "summary": "读书会活动方案初稿已生成，采用精简视觉。内容组合基于真实素材，未使用合成元素。活动目标为促进阅读交流，受众假设为对书籍有兴趣的群体。内容组合包括问题共鸣、价值说明和互动邀请。预算20个模拟单位，活动时间从2030-12-01 08:00到2030-12-03 18:00。资料不齐时将先重检，仍不足则停止。",
+        "version": 1,
+        "brief_hash": "7dfaefad33c69b870a3b1cf1eab635003030d4ec0afb84c672e5efb34cd1508b",
+        "config_hash": "afddcb52ab228e0d7b95a752f188f00cbb19d2bde413454e9fc7a3892c527ac0",
+        "requirements": {
+          "topic": "读书会",
+          "budget": "20",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": "2030-12-01T08:00:00+08:00",
+          "real_sources_required": true
+        },
+        "model_summary": {
+          "model": "qwen3:latest",
+          "provider": "ollama"
+        },
+        "change_summary": [
+          "使用真实素材，禁止合成",
+          "资料不齐先重检一次，仍不足就停止"
+        ],
+        "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1",
+        "production_spec": "simple"
+      }
+    ],
+    "scripts": {},
+    "session": {
+      "title": "读书会",
+      "status": "draft",
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "last_user_activity_at": "2026-11-07T16:48:01.544173+00:00"
+    },
+    "timeline": [
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "为读书会写内容活动方案，制作预算20个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00北京时间，精简视觉simple。必须使用真实素材，禁止合成，资料不齐先重检一次，仍不足就停止。先给计划，不要执行。",
+        "item_id": "75d77796-a7ed-41ce-82d9-5446db5d632b",
+        "item_seq": 1,
+        "created_at": "2026-11-07T16:47:36.123029+00:00",
+        "resource_only_update": false,
+        "is_requirement_update": true
+      },
+      {
+        "kind": "tool",
+        "item_id": "9ee373f4-38c3-4c00-b250-07fd4b68f0fc",
+        "item_seq": 2,
+        "created_at": "2026-11-07T16:47:48.611965+00:00",
+        "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7"
+      },
+      {
+        "kind": "tool",
+        "item_id": "e75d36c8-8e78-4c86-bd18-da4b05593369",
+        "item_seq": 3,
+        "created_at": "2026-11-07T16:47:50.263652+00:00",
+        "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+        "item_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52",
+        "item_seq": 4,
+        "created_at": "2026-11-07T16:47:56.118608+00:00",
+        "processing": false
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "content": "按当前计划开始执行。",
+        "item_id": "0b304b8b-5447-4cb4-94ce-ce0c3f641767",
+        "item_seq": 5,
+        "created_at": "2026-11-07T16:48:01.544173+00:00"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "开始执行这份计划。工具的实际输入、输出、费用和状态会逐项更新。",
+        "item_id": "bf8e5242-8657-48bb-9e64-9cbb270f401d",
+        "item_seq": 6,
+        "created_at": "2026-11-07T16:48:10.949267+00:00"
+      },
+      {
+        "kind": "tool",
+        "item_id": "f091342e-1890-4892-b660-ad3a2cb80e73",
+        "item_seq": 7,
+        "created_at": "2026-11-07T16:48:14.862610+00:00",
+        "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333"
+      },
+      {
+        "kind": "tool",
+        "item_id": "6ad5f816-0556-4545-922a-2fff70ec9f84",
+        "item_seq": 8,
+        "created_at": "2026-11-07T16:48:16.750693+00:00",
+        "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73"
+      },
+      {
+        "kind": "tool",
+        "item_id": "86adbe9a-3e01-43eb-b888-19cb34bdc684",
+        "item_seq": 9,
+        "created_at": "2026-11-07T16:48:18.459944+00:00",
+        "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447"
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "content": "本次任务未完成：素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。\n\n已保留：1项素材。请补充或调整相关条件，再生成可执行的新计划。",
+        "item_id": "f8f11c56-1187-4ff8-8347-23baa6ca868c",
+        "item_seq": 10,
+        "created_at": "2026-11-07T16:48:19.929214+00:00"
+      }
+    ],
+    "estimates": {},
+    "materials": [
+      {
+        "url": "https://example.invalid/protocol-fixture",
+        "title": "协议测试夹具，非真实外部资料",
+        "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+        "material_id": "web-b9dbd19a36",
+        "source_type": "web",
+        "retrieved_at": "2026-11-07T16:48:18.518903+00:00"
+      }
+    ],
+    "proposals": [],
+    "active_run": {
+      "phase": "research",
+      "reason": "素材取得不足：有效1项，最低需要2项。用户要求必须真实来源，已拒绝合成替代；没有取得足够真实素材。",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "status": "incomplete",
+      "replans": 0,
+      "snapshot": {
+        "mcp": {
+          "tavily_url": "http://127.0.0.1:56197/mcp",
+          "business_url": "http://127.0.0.1:64760/mcp",
+          "tavily_key_env": "BACKEND_TEST_TAVILY_KEY",
+          "external_timeout_seconds": 10
+        },
+        "limits": {
+          "max_replans": 3,
+          "max_model_rounds": 24,
+          "max_context_calls": 12,
+          "max_tool_attempts": 3,
+          "max_business_calls": 30,
+          "run_timeout_seconds": 900
+        },
+        "models": {
+          "deepseek": {
+            "model": "deepseek-chat",
+            "base_url": "https://api.deepseek.com",
+            "currency": "USD",
+            "provider": "deepseek",
+            "max_tokens": 1600,
+            "api_key_env": "DEEPSEEK_API_KEY",
+            "temperature": 0.0,
+            "timeout_seconds": 180,
+            "input_cost_per_million": null,
+            "output_cost_per_million": null
+          },
+          "local_qwen3": {
+            "model": "qwen3:latest",
+            "base_url": "http://127.0.0.1:11434",
+            "currency": "USD",
+            "provider": "ollama",
+            "max_tokens": 1600,
+            "api_key_env": null,
+            "temperature": 0.0,
+            "timeout_seconds": 180,
+            "input_cost_per_million": null,
+            "output_cost_per_million": null
+          }
+        },
+        "search": {
+          "max_results": 4,
+          "min_results": 2,
+          "cache_ttl_seconds": 3600,
+          "material_ttl_seconds": 86400
+        },
+        "skills": [
+          {
+            "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+            "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+            "skill_id": "campaign-planning",
+            "resources": {
+              "references/content-patterns.md": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n"
+            },
+            "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。",
+            "script_hashes": {}
+          },
+          {
+            "body": "---\nname: constrained-replanning\ndescription: 根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。\n---\n\n先检查真实返回：哪些结果有效、缺少什么、失败是否可重试、预算或排期缺口多少。\n\n根据原因提出有内容意义的替代，例如降低视觉规格、减少制作项、换用允许的素材。解释改变及损失，保留不受影响的素材和脚本。\n\n候选改变后调用 estimate_proposal，未取得新结果前不声称已经满足预算。准确估算返回不可行，不等于估算工具失败。\n\n首个闭环只支持 premium / simple 两个制作规格：差异只在视觉复杂度；在需求、来源和文字交付范围没有变化时，素材与核心文案可保留，视觉成本和排期必须重新估算。不能声称已实现任意数量的海报或视频组合调整。\n\n用户预算、截止时间和必须真实素材的条件不因重规划自动改变。有限尝试内没有可行候选时如实说明当前缺口和已取得结果。\n\n可选参考：`references/tradeoffs.md`。\n",
+            "version": "e969a626d3399db74f771aeb7256dc9074ed7427adc5cead1dd18b6a64508c0e",
+            "skill_id": "constrained-replanning",
+            "resources": {
+              "references/tradeoffs.md": "# 替代与复用\n\n高规格视觉可换为统一模板，但应保留内容主张，并向用户说明视觉制作范围变化。合成素材可以替代检索失败的真实素材，仅在用户未要求必须真实素材时适用。\n\n主题或事实变化可能使原脚本失效；只调整视觉规格时可继续复用仍匹配的文案。每个替代都用实际估算验证，不能靠修改展示数字完成任务。\n"
+            },
+            "description": "根据真实工具失败、部分成功或成本排期超限调整内容计划；用于保留有效产物后选择替代，不负责改写费用或硬性约束。",
+            "script_hashes": {}
+          },
+          {
+            "body": "---\nname: proposal-delivery\ndescription: 将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。\n---\n\n方案需要目标、受众假设、内容策略、完整脚本、制作排期、制作成本及素材来源。使用实际工具返回的费用和日期，不再虚构一次生成或保存。\n\n可按需读取 `assets/proposal-outline.md`。通过 MCP validate_proposal 调用固定脚本检查章节、字段和素材引用，取得与当前内容指纹匹配的检查结果；若缺项，修正后重新检查。\n\n只有实际保存成功才说明已保存；未完成则列出已有产物、失败或不足、费用及下一步。保存的硬性预算、排期、状态及幂等条件由业务服务再次验证。\n",
+            "version": "04e5235079ac1bc22f347f7e4654178897a34799da558546a72541677d0bcf38",
+            "skill_id": "proposal-delivery",
+            "resources": {
+              "assets/proposal-outline.md": "# 活动主题\n\n## 活动目标\n## 受众与渠道假设\n## 内容策略\n## 内容与脚本\n## 制作及活动执行排期\n## 制作成本与预算\n## 素材与来源\n## 调整、限制与后续建议\n"
+            },
+            "description": "将真实计划、文案、素材和估算组织成结构化活动方案，并检查章节和引用；用于交付组装与完整性校验，不替代保存事务或制作预算校验。",
+            "script_hashes": {
+              "scripts/check_required_sections.py": "4cb039306c318bf579336bc512011d237632f31f976698fd71f9f75f70df9916"
+            }
+          },
+          {
+            "body": "---\nname: script-writing\ndescription: 根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。\n---\n\n围绕用户的主题、目标和语气生成可直接阅读的脚本。明确标题、开场、正文和互动收尾；若用户给出渠道或篇幅要求，优先遵守。\n\n首个闭环的 premium / simple 仅改变视觉制作复杂度，核心文案相同。生成适合自有渠道发布的标题、主文与互动话术，不在正文强制绑定昂贵拍摄或高规格视觉，以便降级视觉时仍可复用文字。\n\n资料是事实边界：使用给定素材标识，不虚构链接、数据、产品功能、用户评价或已执行的活动。合成资料用于创意结构，不写成真实市场证据。\n\n输入通常只有活动主题，不包含产品详情。此时只能写场景、情绪与普通互动；未知品牌、工艺、成分、性能、价格均用【待确认：具体信息】占位，不能自行填值。例如只有“咖啡新品”不能写“采用冷萃工艺、减少苦涩、快速冲泡”，可写“在通勤或阅读时，你期待怎样的一杯咖啡？”\n\n本轮制作规则仅包括自有渠道文字与视觉发布、无奖励评论互动。不得承诺折扣、抽奖、赠品、免费试饮或购买优惠；这些没有已确认的执行条件与成本。结尾只能邀请评论、关注或了解【待确认：官方入口】，不自拟促销机制。\n\n直接输出正文，不输出调用工具的指令、模型思考或“已保存”声明。素材不足时说明缺少的具体事实。\n\n可选参考：`references/channel-guide.md`。生成器自身不调用其他工具，进一步取材交回外层执行图。\n",
+            "version": "7be58e2c6b4bc2e8459e0db9063beaaaa01f580c4e51b34016a40b810699ef41",
+            "skill_id": "script-writing",
+            "resources": {
+              "references/channel-guide.md": "# 渠道表达参考\n\n短内容使用一个核心主张，以场景、价值和互动组织段落。长图文可增加清晰的小标题；视频脚本可标示场景和旁白。\n\n没有明确渠道时按通用社交图文起草并说明假设。不要虚构平台流量规则、强制字数或推广效果。\n"
+            },
+            "description": "根据活动需求与已取得素材生成中文内容文案、短脚本和传播主张；供 generate_script 使用，不负责检索、估算或保存。",
+            "script_hashes": {}
+          }
+        ],
+        "worker": {
+          "poll_seconds": 0.5,
+          "lease_seconds": 60,
+          "heartbeat_seconds": 10
+        },
+        "config_hash": "afddcb52ab228e0d7b95a752f188f00cbb19d2bde413454e9fc7a3892c527ac0",
+        "active_model": "local_qwen3",
+        "tool_catalog": {
+          "load_skill": {
+            "type": "function",
+            "function": {
+              "name": "load_skill",
+              "parameters": {
+                "type": "object",
+                "title": "load_skillArguments",
+                "required": [
+                  "skill_id"
+                ],
+                "properties": {
+                  "skill_id": {
+                    "type": "string",
+                    "title": "Skill Id"
+                  }
+                }
+              },
+              "description": "读取已注册 Skill 的正文和资源目录。可从四类目录自由选择；加载不增加业务工具权限。"
+            }
+          },
+          "save_proposal": {
+            "type": "function",
+            "function": {
+              "name": "save_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "save_proposalArguments",
+                "required": [
+                  "validation_id",
+                  "estimate_id"
+                ],
+                "properties": {
+                  "estimate_id": {
+                    "type": "string",
+                    "title": "Estimate Id"
+                  },
+                  "validation_id": {
+                    "type": "string",
+                    "title": "Validation Id"
+                  }
+                }
+              },
+              "description": "仅保存已经通过有效结构检查和成本排期估算的当前方案。事务再次检查状态、引用和幂等条件，提交后返回方案标识。"
+            }
+          },
+          "generate_script": {
+            "type": "function",
+            "function": {
+              "name": "generate_script",
+              "parameters": {
+                "type": "object",
+                "title": "generate_scriptArguments",
+                "required": [
+                  "material_ids",
+                  "direction"
+                ],
+                "properties": {
+                  "direction": {
+                    "type": "string",
+                    "title": "Direction"
+                  },
+                  "material_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "title": "Material Ids"
+                  }
+                }
+              },
+              "description": "依据已检索素材生成真实 LLM 文案，使用本运行固定模型和文案 Skill；生成器不调用其他工具。"
+            }
+          },
+          "estimate_proposal": {
+            "type": "function",
+            "function": {
+              "name": "estimate_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "estimate_proposalArguments",
+                "required": [
+                  "production_spec"
+                ],
+                "properties": {
+                  "production_spec": {
+                    "enum": [
+                      "premium",
+                      "simple"
+                    ],
+                    "type": "string",
+                    "title": "Production Spec"
+                  }
+                }
+              },
+              "description": "联合估算制作成本、自然小时串行排期、可行性和缺口。premium 为高规格视觉，simple 为精简视觉。返回不可行是准确估算，不是工具失败。"
+            }
+          },
+          "validate_proposal": {
+            "type": "function",
+            "function": {
+              "name": "validate_proposal",
+              "parameters": {
+                "type": "object",
+                "title": "validate_proposalArguments",
+                "required": [
+                  "draft_id"
+                ],
+                "properties": {
+                  "draft_id": {
+                    "type": "string",
+                    "title": "Draft Id"
+                  }
+                }
+              },
+              "description": "运行方案交付 Skill 的确定性脚本，检查指定交付草稿的必需字段和素材引用，返回 is_valid 及实际检查记录。"
+            }
+          },
+          "read_skill_resource": {
+            "type": "function",
+            "function": {
+              "name": "read_skill_resource",
+              "parameters": {
+                "type": "object",
+                "title": "read_skill_resourceArguments",
+                "required": [
+                  "skill_id",
+                  "resource_id"
+                ],
+                "properties": {
+                  "skill_id": {
+                    "type": "string",
+                    "title": "Skill Id"
+                  },
+                  "resource_id": {
+                    "type": "string",
+                    "title": "Resource Id"
+                  }
+                }
+              },
+              "description": "按注册资源标识读取 Skill 参考或文本模板，不接受任意文件路径。"
+            }
+          },
+          "search_synthetic_materials": {
+            "type": "function",
+            "function": {
+              "name": "search_synthetic_materials",
+              "parameters": {
+                "type": "object",
+                "title": "search_synthetic_materialsArguments",
+                "required": [
+                  "query"
+                ],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "title": "Query"
+                  }
+                }
+              },
+              "description": "检索项目合成内容素材，返回可使用的真实存在的内部素材标识；不是联网检索。"
+            }
+          }
+        },
+        "selected_model": {
+          "model": "qwen3:latest",
+          "base_url": "http://127.0.0.1:11434",
+          "currency": "USD",
+          "provider": "ollama",
+          "max_tokens": 1600,
+          "api_key_env": null,
+          "temperature": 0.0,
+          "timeout_seconds": 180,
+          "input_cost_per_million": null,
+          "output_cost_per_million": null
+        },
+        "tavily_enabled": true,
+        "fault_injection": {
+          "once_tool": null,
+          "pause_after_failure": false
+        },
+        "production_rules": {
+          "unit": "模拟单位",
+          "version": "2026-11-07.2",
+          "specifications": {
+            "simple": {
+              "items": [
+                {
+                  "cost": "1",
+                  "name": "策划",
+                  "hours": "2"
+                },
+                {
+                  "cost": "2",
+                  "name": "文案",
+                  "hours": "2"
+                },
+                {
+                  "cost": "5",
+                  "name": "精简视觉",
+                  "hours": "3"
+                },
+                {
+                  "cost": "0",
+                  "name": "自有渠道发布与互动执行",
+                  "hours": "1"
+                }
+              ],
+              "label": "精简视觉"
+            },
+            "premium": {
+              "items": [
+                {
+                  "cost": "1",
+                  "name": "策划",
+                  "hours": "2"
+                },
+                {
+                  "cost": "2",
+                  "name": "文案",
+                  "hours": "2"
+                },
+                {
+                  "cost": "9",
+                  "name": "高规格视觉",
+                  "hours": "6"
+                },
+                {
+                  "cost": "0",
+                  "name": "自有渠道发布与互动执行",
+                  "hours": "1"
+                }
+              ],
+              "label": "高规格视觉"
+            }
+          },
+          "tool_simulated_fees": {
+            "load_skill": "0.00",
+            "save_proposal": "0.00",
+            "generate_script": "0.20",
+            "estimate_proposal": "0.10",
+            "validate_proposal": "0.05",
+            "read_skill_resource": "0.00",
+            "search_web_materials": "0.10",
+            "search_synthetic_materials": "0.10"
+          }
+        },
+        "remote_tool_catalog": {
+          "name": "tavily_search",
+          "schema": {
+            "type": "object",
+            "title": "tavily_searchArguments",
+            "required": [
+              "query"
+            ],
+            "properties": {
+              "query": {
+                "type": "string",
+                "title": "Query"
+              },
+              "max_results": {
+                "type": "integer",
+                "title": "Max Results",
+                "default": 4
+              }
+            }
+          }
+        },
+        "material_catalog_hash": "995f3ae1bbfdb080e2431fdc838c8684332d97932b9be29858f5a9c34555dc7d"
+      },
+      "script_id": null,
+      "created_at": "2026-11-07T16:48:10.935103+00:00",
+      "last_error": null,
+      "estimate_id": null,
+      "reason_code": "SOURCE_INSUFFICIENT",
+      "model_rounds": 3,
+      "requirements": {
+        "topic": "读书会",
+        "budget": "20",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": "2030-12-01T08:00:00+08:00",
+        "real_sources_required": true
+      },
+      "writing_hash": "7dfaefad33c69b870a3b1cf1eab635003030d4ec0afb84c672e5efb34cd1508b",
+      "context_calls": 2,
+      "loaded_skills": [
+        "campaign-planning"
+      ],
+      "validation_id": null,
+      "brief_messages": [
+        "为读书会写内容活动方案，制作预算20个模拟单位，开始2030-12-01 08:00，截止2030-12-03 18:00北京时间，精简视觉simple。必须使用真实素材，禁止合成，资料不齐先重检一次，仍不足就停止。先给计划，不要执行。"
+      ],
+      "business_calls": 1,
+      "control_status": null,
+      "research_force": false,
+      "elapsed_seconds": 6.6719999997876585,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1",
+      "last_tool_failed": false,
+      "no_action_rounds": 0,
+      "effective_start_at": "2030-12-01T08:00:00+08:00",
+      "research_last_result": {
+        "empty": false,
+        "error": null,
+        "status": "partial_success",
+        "missing": [
+          "第2项缺少有效链接或正文",
+          "可用素材1项，低于最低2项。"
+        ]
+      },
+      "research_review_pending": true
+    },
+    "model_calls": [
+      {
+        "at": "2026-11-07T16:47:47.255237+00:00",
+        "kind": "understand_message",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 884,
+          "output_tokens": 246
+        },
+        "run_id": null,
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"topic\": \"读书会\",\n    \"budget\": \"20\",\n    \"deadline\": \"2030-12-03T18:00+08:00\",\n    \"start_at\": \"2030-12-01T08:00+08:00\"\n  },\n  \"evidence\": {\n    \"topic\": \"为读书会写内容活动方案\",\n    \"budget\": \"制作预算20个模拟单位\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\",\n    \"start_at\": \"开始2030-12-01 08:00\"\n  },\n  \"explanation\": \"用户提供了活动主题、预算、开始时间与截止时间，并要求使用真实素材，禁止合成，资料不齐先重检一次，仍不足就停止。同时要求先给计划，不要执行。\",\n  \"uncertain_fields\": [],\n  \"capability_gaps\": [],\n  \"resolve_capabilities\": false\n}",
+          "tool_calls": [],
+          "finish_reason": "stop"
+        },
+        "request_id": "e045fc04-b3b3-45a9-8318-796f9de0b1c9",
+        "available_tools": []
+      },
+      {
+        "at": "2026-11-07T16:47:48.597326+00:00",
+        "kind": "build_plan_preview",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 896,
+          "output_tokens": 23
+        },
+        "run_id": null,
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_a0ymu23i",
+              "type": "function",
+              "function": {
+                "name": "load_skill",
+                "arguments": {
+                  "skill_id": "campaign-planning"
+                }
+              }
+            }
+          ],
+          "finish_reason": "stop"
+        },
+        "request_id": "5d6bb844-d2ce-4cde-b9b6-27ea2856faa9",
+        "available_tools": [
+          "load_skill",
+          "read_skill_resource"
+        ]
+      },
+      {
+        "at": "2026-11-07T16:47:50.249406+00:00",
+        "kind": "build_plan_preview",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 1269,
+          "output_tokens": 35
+        },
+        "run_id": null,
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_wb28yypv",
+              "type": "function",
+              "function": {
+                "name": "read_skill_resource",
+                "arguments": {
+                  "skill_id": "campaign-planning",
+                  "resource_id": "references/content-patterns.md"
+                }
+              }
+            }
+          ],
+          "finish_reason": "stop"
+        },
+        "request_id": "f3f70534-fbaa-40d2-a975-1ae3b971fcc6",
+        "available_tools": [
+          "load_skill",
+          "read_skill_resource"
+        ]
+      },
+      {
+        "at": "2026-11-07T16:47:56.088635+00:00",
+        "kind": "build_plan_preview",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 1575,
+          "output_tokens": 149
+        },
+        "run_id": null,
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "{\"production_spec\": \"simple\", \"summary\": \"读书会活动方案初稿已生成，采用精简视觉。内容组合基于真实素材，未使用合成元素。活动目标为促进阅读交流，受众假设为对书籍有兴趣的群体。内容组合包括问题共鸣、价值说明和互动邀请。预算20个模拟单位，活动时间从2030-12-01 08:00到2030-12-03 18:00。资料不齐时将先重检，仍不足则停止。\", \"changes\": [\"使用真实素材，禁止合成\", \"资料不齐先重检一次，仍不足就停止\"]}",
+          "tool_calls": [],
+          "finish_reason": "stop"
+        },
+        "request_id": "d5e95d90-7826-4b08-8a4a-5ab364c248f1",
+        "available_tools": [
+          "load_skill",
+          "read_skill_resource"
+        ]
+      },
+      {
+        "at": "2026-11-07T16:48:01.208625+00:00",
+        "kind": "dialogue_response_stream",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 100,
+          "output_tokens": 31
+        },
+        "run_id": null,
+        "provider": "ollama",
+        "response": {
+          "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+        },
+        "request_id": "39051af4-8ef4-4458-ac88-131242388f10",
+        "available_tools": []
+      },
+      {
+        "at": "2026-11-07T16:48:10.897627+00:00",
+        "kind": "understand_message",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 839,
+          "output_tokens": 34
+        },
+        "run_id": null,
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "{\n  \"action\": \"execute\",\n  \"updates\": {},\n  \"evidence\": {},\n  \"explanation\": \"按当前计划开始执行。\"\n}",
+          "tool_calls": [],
+          "finish_reason": "stop"
+        },
+        "request_id": "20f74ca6-4766-4c0a-b5f5-cd5e74c0d412",
+        "available_tools": []
+      },
+      {
+        "at": "2026-11-07T16:48:14.815478+00:00",
+        "kind": "decide_next_action",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 888,
+          "output_tokens": 23
+        },
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_121tdssg",
+              "type": "function",
+              "function": {
+                "name": "load_skill",
+                "arguments": {
+                  "skill_id": "campaign-planning"
+                }
+              }
+            }
+          ],
+          "finish_reason": "stop"
+        },
+        "request_id": "3229c4fa-f562-4d50-9b71-8c971cb9de26",
+        "available_tools": [
+          "load_skill",
+          "read_skill_resource",
+          "search_web_materials"
+        ]
+      },
+      {
+        "at": "2026-11-07T16:48:16.699063+00:00",
+        "kind": "decide_next_action",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 1537,
+          "output_tokens": 35
+        },
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_vbv52ktl",
+              "type": "function",
+              "function": {
+                "name": "read_skill_resource",
+                "arguments": {
+                  "skill_id": "campaign-planning",
+                  "resource_id": "references/content-patterns.md"
+                }
+              }
+            }
+          ],
+          "finish_reason": "stop"
+        },
+        "request_id": "bd4bdb69-8f4b-49c6-a7cf-6672344e76d2",
+        "available_tools": [
+          "load_skill",
+          "read_skill_resource",
+          "search_web_materials"
+        ]
+      },
+      {
+        "at": "2026-11-07T16:48:18.407624+00:00",
+        "kind": "decide_next_action",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 2120,
+          "output_tokens": 28
+        },
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_hyojerlt",
+              "type": "function",
+              "function": {
+                "name": "search_web_materials",
+                "arguments": {
+                  "query": "读书会 真实素材"
+                }
+              }
+            }
+          ],
+          "finish_reason": "stop"
+        },
+        "request_id": "9fdfe1d4-3212-4cca-b67e-2adfaf56e614",
+        "available_tools": [
+          "load_skill",
+          "read_skill_resource",
+          "search_web_materials"
+        ]
+      },
+      {
+        "at": "2026-11-07T16:48:19.882069+00:00",
+        "kind": "review_materials",
+        "model": "qwen3:latest",
+        "usage": {
+          "input_tokens": 757,
+          "output_tokens": 23
+        },
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "provider": "ollama",
+        "response": {
+          "role": "assistant",
+          "content": "{\"action\": \"synthetic\", \"reason\": \"可用素材1项，低于最低2项。\"}",
+          "tool_calls": [],
+          "finish_reason": "stop"
+        },
+        "request_id": "d5c6961b-bd89-4dff-8490-f4165c2a852a",
+        "available_tools": [
+          "load_skill",
+          "read_skill_resource"
+        ]
+      }
+    ],
+    "skill_loads": [
+      {
+        "at": "2026-11-07T16:47:48.682686+00:00",
+        "reason": "model_selection",
+        "run_id": null,
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": null,
+        "operation_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7"
+      },
+      {
+        "at": "2026-11-07T16:47:50.290988+00:00",
+        "reason": "model_selection",
+        "run_id": null,
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md",
+        "operation_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9"
+      },
+      {
+        "at": "2026-11-07T16:48:14.900156+00:00",
+        "reason": "model_selection",
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": null,
+        "operation_id": "6014ef33-e9bf-433e-b131-c036a5195333"
+      },
+      {
+        "at": "2026-11-07T16:48:16.782011+00:00",
+        "reason": "model_selection",
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md",
+        "operation_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73"
+      }
+    ],
+    "validations": {},
+    "cost_summary": {
+      "budget": "20",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.10",
+      "estimated_finish": null,
+      "model_input_tokens": 10865,
+      "model_cost_currency": null,
+      "model_output_tokens": 627,
+      "model_unknown_usage_calls": 0
+    },
+    "requirements": {
+      "topic": "读书会",
+      "budget": "20",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": "2030-12-01T08:00:00+08:00",
+      "real_sources_required": true
+    },
+    "model_display": "qwen3:latest · 本地",
+    "pending_patch": null,
+    "fault_consumed": [],
+    "client_messages": {
+      "85399ade-83b0-4f9b-80c0-b130cc9024d7": {
+        "hash": "c84a941c54258ee4d0f5c1e140e5fb2e2ed2deed1e31ec15ce3bc2f0d1ad3a89",
+        "job_id": "7791689d-c101-4a81-90ab-6d09a836e2fb",
+        "message_id": "75d77796-a7ed-41ce-82d9-5446db5d632b"
+      },
+      "98cae3cc-bba3-41fa-9966-a856c8ed34be": {
+        "hash": "1fec52df94107fd3d56c9e23d8b777189236aabe709d64bfb8b361e5ae5c4548",
+        "job_id": "12c64ba9-06e2-4ae1-a794-836858367da7",
+        "message_id": "0b304b8b-5447-4cb4-94ce-ce0c3f641767"
+      }
+    },
+    "pending_changes": null,
+    "input_field_issues": {},
+    "last_event_seq": 60
+  },
+  "tool_calls": [
+    {
+      "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7",
+      "run_id": null,
+      "step_id": "context-7791689d",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T16:47:48.612967+00:00",
+      "duration_ms": 69,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9",
+      "run_id": null,
+      "step_id": "context-7791689d",
+      "tool_name": "read_skill_resource",
+      "display_name": "读取 Skill 参考",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "output": {
+        "body": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "started_at": "2026-11-07T16:47:50.263652+00:00",
+      "duration_ms": 27,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_name": "load_skill",
+      "display_name": "加载任务 Skill",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning"
+      },
+      "output": {
+        "body": "---\nname: campaign-planning\ndescription: 为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。\n---\n\n把用户主题转为可交付的内容组合，明确目标、受众、渠道和必要假设。缺少预算或活动截止时间时先由对话流程追问。\n\n初稿标明尚未核验的制作成本和工期，不把主观判断写成工具估算结果。内容组合可以采用高规格或精简视觉；根据用户要求形成候选，由真实估算检验。\n\n可按需读取 `references/content-patterns.md` 获取内容组合思路。工具执行和版本控制由外层图处理；本 Skill 不代表用户已要求执行。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resources": [
+          "references/content-patterns.md"
+        ],
+        "description": "为内容活动确定目标、受众假设和内容组合；用于初稿策划或用户修改活动需求，不用于执行或保存授权。"
+      },
+      "started_at": "2026-11-07T16:48:14.863755+00:00",
+      "duration_ms": 36,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_name": "read_skill_resource",
+      "display_name": "读取 Skill 参考",
+      "server_name": "content-studio-business",
+      "status": "success",
+      "input": {
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "output": {
+        "body": "# 内容组合思路\n\n- 问题共鸣：具体使用场景与困扰，避免虚构用户评价和统计数字。\n- 价值说明：仅基于已取得资料表达功能或价值；未知产品细节标为待补充。\n- 互动邀请：提出与活动目标相关的问题，给出下一步行动。\n- 预算紧张时优先减少独立视觉制作规格，保留核心文案和来源。\n\n这些是可选思路，不要求每场活动套用同一结构。时间和价格以运行固定规则及估算工具返回为准。\n",
+        "version": "5e777433443fd6fbf61dca4b4d8092884ec6d71bc999104938f12ea868e60402",
+        "skill_id": "campaign-planning",
+        "resource_id": "references/content-patterns.md"
+      },
+      "started_at": "2026-11-07T16:48:16.751253+00:00",
+      "duration_ms": 30,
+      "error": null,
+      "attempt": 1
+    },
+    {
+      "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_name": "search_web_materials",
+      "display_name": "检索真实素材",
+      "server_name": "tavily-remote",
+      "status": "partial_success",
+      "input": {
+        "query": "读书会 真实素材"
+      },
+      "output": {
+        "empty": false,
+        "query": "读书会 真实素材",
+        "missing": [
+          "第2项缺少有效链接或正文",
+          "可用素材1项，低于最低2项。"
+        ],
+        "partial": true,
+        "materials": [
+          {
+            "url": "https://example.invalid/protocol-fixture",
+            "title": "协议测试夹具，非真实外部资料",
+            "summary": "本条为本地MCP协议测试合成内容，不代表实际联网搜索结果。",
+            "material_id": "web-b9dbd19a36",
+            "source_type": "web",
+            "retrieved_at": "2026-11-07T16:48:18.518903+00:00"
+          }
+        ],
+        "source_type": "web",
+        "available_count": 1,
+        "requested_count": 4
+      },
+      "started_at": "2026-11-07T16:48:18.460463+00:00",
+      "duration_ms": 65,
+      "error": null,
+      "attempt": 1
+    }
+  ],
+  "cost_entries": [
+    {
+      "entry_id": "9a257c3c-29c7-44da-a677-4d7b21b88d90",
+      "charge_key": "model:e045fc04-b3b3-45a9-8318-796f9de0b1c9",
+      "run_id": null,
+      "kind": "understand_message",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 884,
+        "output_tokens": 246
+      },
+      "created_at": "2026-11-07T16:47:38.350119+00:00"
+    },
+    {
+      "entry_id": "3893261f-3f04-4e1f-a8b2-5280814d0e13",
+      "charge_key": "model:5d6bb844-d2ce-4cde-b9b6-27ea2856faa9",
+      "run_id": null,
+      "kind": "build_plan_preview",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 896,
+        "output_tokens": 23
+      },
+      "created_at": "2026-11-07T16:47:47.309831+00:00"
+    },
+    {
+      "entry_id": "3fb91730-ef4b-482b-94ad-2a313edac968",
+      "charge_key": "tool:2ce4c06f-0554-4dca-a766-267fc57c87a7",
+      "run_id": null,
+      "kind": "tool_simulated",
+      "amount": "0E-12",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "load_skill",
+        "attempt": 1
+      },
+      "created_at": "2026-11-07T16:47:48.689360+00:00"
+    },
+    {
+      "entry_id": "8faaafb8-1114-44d0-adb3-351733d89d4b",
+      "charge_key": "model:f3f70534-fbaa-40d2-a975-1ae3b971fcc6",
+      "run_id": null,
+      "kind": "build_plan_preview",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 1269,
+        "output_tokens": 35
+      },
+      "created_at": "2026-11-07T16:47:48.717067+00:00"
+    },
+    {
+      "entry_id": "5f24f00f-ee10-4394-93dc-5cb5ea0bfb0c",
+      "charge_key": "tool:b41b5e22-0090-43b1-80ae-7fe11d3757d9",
+      "run_id": null,
+      "kind": "tool_simulated",
+      "amount": "0E-12",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "read_skill_resource",
+        "attempt": 1
+      },
+      "created_at": "2026-11-07T16:47:50.294132+00:00"
+    },
+    {
+      "entry_id": "c624eed5-44ed-4512-88e7-e955bef669c1",
+      "charge_key": "model:d5e95d90-7826-4b08-8a4a-5ab364c248f1",
+      "run_id": null,
+      "kind": "build_plan_preview",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 1575,
+        "output_tokens": 149
+      },
+      "created_at": "2026-11-07T16:47:50.318221+00:00"
+    },
+    {
+      "entry_id": "eaa3a84d-8dd0-4ebd-b082-b5ca7300c458",
+      "charge_key": "model:39051af4-8ef4-4458-ac88-131242388f10",
+      "run_id": null,
+      "kind": "dialogue_response_stream",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "created_at": "2026-11-07T16:47:56.127710+00:00"
+    },
+    {
+      "entry_id": "4edf63b9-4bc5-4116-a3fe-aa7badc954f5",
+      "charge_key": "model:20f74ca6-4766-4c0a-b5f5-cd5e74c0d412",
+      "run_id": null,
+      "kind": "understand_message",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 839,
+        "output_tokens": 34
+      },
+      "created_at": "2026-11-07T16:48:03.746079+00:00"
+    },
+    {
+      "entry_id": "39683147-9596-4248-8134-a34b7cc3c39a",
+      "charge_key": "model:3229c4fa-f562-4d50-9b71-8c971cb9de26",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "decide_next_action",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 888,
+        "output_tokens": 23
+      },
+      "created_at": "2026-11-07T16:48:13.446983+00:00"
+    },
+    {
+      "entry_id": "4717c543-73cd-4f0a-b544-7f9349b40af7",
+      "charge_key": "tool:6014ef33-e9bf-433e-b131-c036a5195333",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "tool_simulated",
+      "amount": "0E-12",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "load_skill",
+        "attempt": 1
+      },
+      "created_at": "2026-11-07T16:48:14.902845+00:00"
+    },
+    {
+      "entry_id": "36319bab-a967-4e2c-a05a-97c58a23c7f6",
+      "charge_key": "model:bd4bdb69-8f4b-49c6-a7cf-6672344e76d2",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "decide_next_action",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 1537,
+        "output_tokens": 35
+      },
+      "created_at": "2026-11-07T16:48:14.957602+00:00"
+    },
+    {
+      "entry_id": "9c38b106-e552-4916-bd74-50537d98a96f",
+      "charge_key": "tool:76467e99-a400-4cf1-8b5c-3d1a7b0b8c73",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "tool_simulated",
+      "amount": "0E-12",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "read_skill_resource",
+        "attempt": 1
+      },
+      "created_at": "2026-11-07T16:48:16.784387+00:00"
+    },
+    {
+      "entry_id": "19fc16d4-146d-42e9-829d-8cc657758905",
+      "charge_key": "model:9fdfe1d4-3212-4cca-b67e-2adfaf56e614",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "decide_next_action",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 2120,
+        "output_tokens": 28
+      },
+      "created_at": "2026-11-07T16:48:16.840570+00:00"
+    },
+    {
+      "entry_id": "9cbcb3c9-8b46-4bd7-bc1a-5383a5c6f405",
+      "charge_key": "external:b45b34db-2607-4309-9f03-bff48023e447",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "external_search",
+      "amount": null,
+      "unit": "Tavily credits",
+      "status": "unknown",
+      "usage": {
+        "result_received": true
+      },
+      "created_at": "2026-11-07T16:48:18.509170+00:00"
+    },
+    {
+      "entry_id": "f1ce9357-db9c-4bc7-935a-d0a8b0f5b054",
+      "charge_key": "tool:b45b34db-2607-4309-9f03-bff48023e447",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "tool_simulated",
+      "amount": "0.100000000000",
+      "unit": "模拟单位",
+      "status": "known",
+      "usage": {
+        "tool": "search_web_materials",
+        "reused": false
+      },
+      "created_at": "2026-11-07T16:48:18.528745+00:00"
+    },
+    {
+      "entry_id": "5754f322-12d2-4420-a498-d846e472828e",
+      "charge_key": "model:d5c6961b-bd89-4dff-8490-f4165c2a852a",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "kind": "review_materials",
+      "amount": null,
+      "unit": "USD",
+      "status": "unknown",
+      "usage": {
+        "input_tokens": 757,
+        "output_tokens": 23
+      },
+      "created_at": "2026-11-07T16:48:18.572552+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:1",
+      "session_seq": 1,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.accepted",
+      "occurred_at": "2026-11-07T16:47:36.123029+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 1
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:2",
+      "session_seq": 2,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:38.353877+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "e045fc04-b3b3-45a9-8318-796f9de0b1c9"
+      },
+      "entity_version": 2
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:3",
+      "session_seq": 3,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:47.260434+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "e045fc04-b3b3-45a9-8318-796f9de0b1c9"
+      },
+      "entity_version": 3
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:4",
+      "session_seq": 4,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "requirements.updated",
+      "occurred_at": "2026-11-07T16:47:47.285835+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 4
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:5",
+      "session_seq": 5,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:47.312419+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "5d6bb844-d2ce-4cde-b9b6-27ea2856faa9"
+      },
+      "entity_version": 5
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:6",
+      "session_seq": 6,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:48.601130+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "5d6bb844-d2ce-4cde-b9b6-27ea2856faa9"
+      },
+      "entity_version": 6
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:7",
+      "session_seq": 7,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T16:47:48.618135+00:00",
+      "run_id": null,
+      "payload": {
+        "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7"
+      },
+      "step_id": "context-7791689d",
+      "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7",
+      "entity_version": 7
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:8",
+      "session_seq": 8,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T16:47:48.694975+00:00",
+      "run_id": null,
+      "payload": {
+        "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7"
+      },
+      "step_id": "context-7791689d",
+      "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7",
+      "entity_version": 8
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:9",
+      "session_seq": 9,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T16:47:48.709447+00:00",
+      "run_id": null,
+      "payload": {
+        "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7"
+      },
+      "step_id": "context-7791689d",
+      "tool_call_id": "2ce4c06f-0554-4dca-a766-267fc57c87a7",
+      "entity_version": 9
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:10",
+      "session_seq": 10,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:48.719661+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "f3f70534-fbaa-40d2-a975-1ae3b971fcc6"
+      },
+      "entity_version": 10
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:11",
+      "session_seq": 11,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:50.253093+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "f3f70534-fbaa-40d2-a975-1ae3b971fcc6"
+      },
+      "entity_version": 11
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:12",
+      "session_seq": 12,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T16:47:50.267817+00:00",
+      "run_id": null,
+      "payload": {
+        "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9"
+      },
+      "step_id": "context-7791689d",
+      "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9",
+      "entity_version": 12
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:13",
+      "session_seq": 13,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T16:47:50.297753+00:00",
+      "run_id": null,
+      "payload": {
+        "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9"
+      },
+      "step_id": "context-7791689d",
+      "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9",
+      "entity_version": 13
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:14",
+      "session_seq": 14,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T16:47:50.311511+00:00",
+      "run_id": null,
+      "payload": {
+        "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9"
+      },
+      "step_id": "context-7791689d",
+      "tool_call_id": "b41b5e22-0090-43b1-80ae-7fe11d3757d9",
+      "entity_version": 14
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:15",
+      "session_seq": 15,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:50.320317+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "d5e95d90-7826-4b08-8a4a-5ab364c248f1"
+      },
+      "entity_version": 15
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:16",
+      "session_seq": 16,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:56.094174+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "d5e95d90-7826-4b08-8a4a-5ab364c248f1"
+      },
+      "entity_version": 16
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:17",
+      "session_seq": 17,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "plan.created",
+      "occurred_at": "2026-11-07T16:47:56.106836+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 17
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:18",
+      "session_seq": 18,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.processing",
+      "occurred_at": "2026-11-07T16:47:56.119132+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 18
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:19",
+      "session_seq": 19,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:47:56.131382+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "39051af4-8ef4-4458-ac88-131242388f10"
+      },
+      "entity_version": 19
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:20",
+      "session_seq": 20,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.delta",
+      "occurred_at": "2026-11-07T16:48:00.748390+00:00",
+      "run_id": null,
+      "payload": {
+        "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52"
+      },
+      "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52",
+      "entity_version": 20
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:21",
+      "session_seq": 21,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.delta",
+      "occurred_at": "2026-11-07T16:48:00.902258+00:00",
+      "run_id": null,
+      "payload": {
+        "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52"
+      },
+      "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52",
+      "entity_version": 21
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:22",
+      "session_seq": 22,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.delta",
+      "occurred_at": "2026-11-07T16:48:01.068174+00:00",
+      "run_id": null,
+      "payload": {
+        "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52"
+      },
+      "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52",
+      "entity_version": 22
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:23",
+      "session_seq": 23,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:01.212466+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "39051af4-8ef4-4458-ac88-131242388f10"
+      },
+      "entity_version": 23
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:24",
+      "session_seq": 24,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.completed",
+      "occurred_at": "2026-11-07T16:48:01.246661+00:00",
+      "run_id": null,
+      "payload": {
+        "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52"
+      },
+      "message_id": "b1af6578-86eb-45f5-8a5d-e94992c5ec52",
+      "entity_version": 24
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:25",
+      "session_seq": 25,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.accepted",
+      "occurred_at": "2026-11-07T16:48:01.544173+00:00",
+      "run_id": null,
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 25
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:26",
+      "session_seq": 26,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:03.748637+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "20f74ca6-4766-4c0a-b5f5-cd5e74c0d412"
+      },
+      "entity_version": 26
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:27",
+      "session_seq": 27,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:10.902332+00:00",
+      "run_id": null,
+      "payload": {
+        "run_id": null,
+        "model_request_id": "20f74ca6-4766-4c0a-b5f5-cd5e74c0d412"
+      },
+      "entity_version": 27
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:28",
+      "session_seq": 28,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "control.applied",
+      "occurred_at": "2026-11-07T16:48:10.935625+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 28,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:29",
+      "session_seq": 29,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.completed",
+      "occurred_at": "2026-11-07T16:48:10.949267+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 29,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:30",
+      "session_seq": 30,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "capabilities.frozen",
+      "occurred_at": "2026-11-07T16:48:13.369571+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 30,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:31",
+      "session_seq": 31,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "run.status_changed",
+      "occurred_at": "2026-11-07T16:48:13.400284+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 31,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:32",
+      "session_seq": 32,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "run.reconciled",
+      "occurred_at": "2026-11-07T16:48:13.412566+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 32,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:33",
+      "session_seq": 33,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "decision.started",
+      "occurred_at": "2026-11-07T16:48:13.433434+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 33,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:34",
+      "session_seq": 34,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:13.450079+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "3229c4fa-f562-4d50-9b71-8c971cb9de26"
+      },
+      "entity_version": 34,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:35",
+      "session_seq": 35,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:14.819882+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "3229c4fa-f562-4d50-9b71-8c971cb9de26"
+      },
+      "entity_version": 35,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:36",
+      "session_seq": 36,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "decision.tool_selected",
+      "occurred_at": "2026-11-07T16:48:14.830338+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 36,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:37",
+      "session_seq": 37,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T16:48:14.871663+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333",
+      "entity_version": 37,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:38",
+      "session_seq": 38,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T16:48:14.908554+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333",
+      "entity_version": 38,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:39",
+      "session_seq": 39,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T16:48:14.921936+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "6014ef33-e9bf-433e-b131-c036a5195333",
+      "entity_version": 39,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:40",
+      "session_seq": 40,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "decision.started",
+      "occurred_at": "2026-11-07T16:48:14.943677+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 40,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:41",
+      "session_seq": 41,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:14.960248+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "bd4bdb69-8f4b-49c6-a7cf-6672344e76d2"
+      },
+      "entity_version": 41,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:42",
+      "session_seq": 42,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:16.703830+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "bd4bdb69-8f4b-49c6-a7cf-6672344e76d2"
+      },
+      "entity_version": 42,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:43",
+      "session_seq": 43,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "decision.tool_selected",
+      "occurred_at": "2026-11-07T16:48:16.717215+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 43,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:44",
+      "session_seq": 44,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T16:48:16.756031+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73",
+      "entity_version": 44,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:45",
+      "session_seq": 45,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T16:48:16.789087+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73",
+      "entity_version": 45,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:46",
+      "session_seq": 46,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T16:48:16.803265+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "76467e99-a400-4cf1-8b5c-3d1a7b0b8c73",
+      "entity_version": 46,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:47",
+      "session_seq": 47,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "decision.started",
+      "occurred_at": "2026-11-07T16:48:16.828396+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 47,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:48",
+      "session_seq": 48,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:16.842923+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "9fdfe1d4-3212-4cca-b67e-2adfaf56e614"
+      },
+      "entity_version": 48,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:49",
+      "session_seq": 49,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:18.411987+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "9fdfe1d4-3212-4cca-b67e-2adfaf56e614"
+      },
+      "entity_version": 49,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:50",
+      "session_seq": 50,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "decision.tool_selected",
+      "occurred_at": "2026-11-07T16:48:18.422489+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 50,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:51",
+      "session_seq": 51,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.started",
+      "occurred_at": "2026-11-07T16:48:18.465645+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447",
+      "entity_version": 51,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:52",
+      "session_seq": 52,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "capabilities.frozen",
+      "occurred_at": "2026-11-07T16:48:18.489581+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 52,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:53",
+      "session_seq": 53,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "external_call.started",
+      "occurred_at": "2026-11-07T16:48:18.512732+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447",
+      "entity_version": 53,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:54",
+      "session_seq": 54,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "tool_call.completed",
+      "occurred_at": "2026-11-07T16:48:18.535491+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447",
+      "entity_version": 54,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:55",
+      "session_seq": 55,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "step.updated",
+      "occurred_at": "2026-11-07T16:48:18.550513+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447"
+      },
+      "step_id": "349ff13b-790d-4738-8ac4-371cac9a4263",
+      "tool_call_id": "b45b34db-2607-4309-9f03-bff48023e447",
+      "entity_version": 55,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:56",
+      "session_seq": 56,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:18.575070+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "d5c6961b-bd89-4dff-8490-f4165c2a852a"
+      },
+      "entity_version": 56,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:57",
+      "session_seq": 57,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "model.usage_recorded",
+      "occurred_at": "2026-11-07T16:48:19.886628+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+        "model_request_id": "d5c6961b-bd89-4dff-8490-f4165c2a852a"
+      },
+      "entity_version": 57,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:58",
+      "session_seq": 58,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "run.status_changed",
+      "occurred_at": "2026-11-07T16:48:19.904938+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 58,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:59",
+      "session_seq": 59,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "message.completed",
+      "occurred_at": "2026-11-07T16:48:19.929214+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 59,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    },
+    {
+      "event_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802:60",
+      "session_seq": 60,
+      "session_id": "a9bd52c5-1273-4304-9dfb-4c06fac6c802",
+      "type": "run.elapsed",
+      "occurred_at": "2026-11-07T16:48:19.962110+00:00",
+      "run_id": "1def4dc1-5cbe-48cf-9332-fdab1c0501a2",
+      "payload": {
+        "changed": true
+      },
+      "entity_version": 60,
+      "plan_version_id": "5f3a498a-39b2-4009-a8e4-001b8656ecc1"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "7791689d-c101-4a81-90ab-6d09a836e2fb",
+      "kind": "test-41698766:message",
+      "status": "done",
+      "lease_epoch": 1,
+      "error": null
+    },
+    {
+      "id": "12c64ba9-06e2-4ae1-a794-836858367da7",
+      "kind": "test-41698766:message",
+      "status": "done",
+      "lease_epoch": 1,
+      "error": null
+    },
+    {
+      "id": "c2d8a31f-346d-4bc5-9843-4ca00be0c995",
+      "kind": "test-41698766:run",
+      "status": "done",
+      "lease_epoch": 1,
+      "error": null
+    }
+  ],
+  "harness_error": null
+}

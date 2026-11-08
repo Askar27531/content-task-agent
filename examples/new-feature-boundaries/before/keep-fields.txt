@@ -1,0 +1,24 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+_ test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[budget-\u4e3b\u9898\u548c\u9884\u7b97\u4e0d\u53d8-20] _
+tests\backend\test_new_feature_boundaries.py:214: in test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change
+    assert key not in analysis['field_issues'] and analysis['patch'].get(key,value)==value
+E   AssertionError: assert ('budget' not in {'budget': '制作预算尚未明确，请提供单一、非负且有限的模拟单位上限。'})
+_ test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[deadline-\u622a\u6b62\u65f6\u95f4\u6cbf\u7528\u539f\u6765\u7684-2030-12-03T18:00:00+08:00] _
+tests\backend\test_new_feature_boundaries.py:214: in test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change
+    assert key not in analysis['field_issues'] and analysis['patch'].get(key,value)==value
+E   AssertionError: assert ('deadline' not in {'deadline': '请明确活动截止日期及具体时刻，不会自动把‘尽快’或仅有日期补成某个时间。'})
+_ test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[budget-\u9884\u7b97\u4e0d\u53d8\uff0c\u53ea\u4f5c\u5e9f\u65e7\u6587\u6848-20] _
+tests\backend\test_new_feature_boundaries.py:214: in test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change
+    assert key not in analysis['field_issues'] and analysis['patch'].get(key,value)==value
+E   AssertionError: assert ('budget' not in {'budget': '原制作预算已撤回，请重新确认预算。'})
+_ test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[start_at-\u5f00\u59cb\u65f6\u95f4\u4fdd\u6301\u539f\u503c-2030-12-01T08:00:00+08:00] _
+tests\backend\test_new_feature_boundaries.py:214: in test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change
+    assert key not in analysis['field_issues'] and analysis['patch'].get(key,value)==value
+E   AssertionError: assert ('start_at' not in {'start_at': '请明确制作开始日期和具体时刻，或明确采用默认开始时间。'})
+=========================== short test summary info ===========================
+FAILED tests/backend/test_new_feature_boundaries.py::test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[budget-\u4e3b\u9898\u548c\u9884\u7b97\u4e0d\u53d8-20]
+FAILED tests/backend/test_new_feature_boundaries.py::test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[deadline-\u622a\u6b62\u65f6\u95f4\u6cbf\u7528\u539f\u6765\u7684-2030-12-03T18:00:00+08:00]
+FAILED tests/backend/test_new_feature_boundaries.py::test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[budget-\u9884\u7b97\u4e0d\u53d8\uff0c\u53ea\u4f5c\u5e9f\u65e7\u6587\u6848-20]
+FAILED tests/backend/test_new_feature_boundaries.py::test_explicit_keep_existing_fields_does_not_clear_them_during_copy_change[start_at-\u5f00\u59cb\u65f6\u95f4\u4fdd\u6301\u539f\u503c-2030-12-01T08:00:00+08:00]
+4 failed, 37 deselected in 0.82s

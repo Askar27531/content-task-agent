@@ -1,0 +1,9 @@
+{
+  "version": "2026-11-07.2",
+  "unit": "模拟单位",
+  "specifications": {
+    "premium": {"label":"高规格视觉", "items":[{"name":"策划","cost":"1","hours":"2"},{"name":"文案","cost":"2","hours":"2"},{"name":"高规格视觉","cost":"9","hours":"6"},{"name":"自有渠道发布与互动执行","cost":"0","hours":"1"}]},
+    "simple": {"label":"精简视觉", "items":[{"name":"策划","cost":"1","hours":"2"},{"name":"文案","cost":"2","hours":"2"},{"name":"精简视觉","cost":"5","hours":"3"},{"name":"自有渠道发布与互动执行","cost":"0","hours":"1"}]}
+  },
+  "tool_simulated_fees": {"search_synthetic_materials":"0.10","search_web_materials":"0.10","generate_script":"0.20","estimate_proposal":"0.10","validate_proposal":"0.05","save_proposal":"0.00","load_skill":"0.00","read_skill_resource":"0.00"}
+}

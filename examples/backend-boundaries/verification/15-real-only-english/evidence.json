@@ -1,0 +1,584 @@
+{
+  "actual": true,
+  "name": "15-real-only-english",
+  "session_id": "e4081e4b-f0f6-40e6-be5d-4e5f4717e9a1",
+  "url": "http://127.0.0.1:5173/sessions/e4081e4b-f0f6-40e6-be5d-4e5f4717e9a1",
+  "checks": {
+    "no_test_exception": true,
+    "real_required": true,
+    "no_synthetic": true,
+    "not_saved": true,
+    "incomplete": true,
+    "source_missing_reason": true,
+    "all_recorded_tools_are_registered": true
+  },
+  "passed": true,
+  "expected": {
+    "real_required": true,
+    "no_synthetic": true,
+    "not_saved": true,
+    "incomplete": true,
+    "source_missing_reason": true
+  },
+  "inputs": [
+    {
+      "input": {
+        "client_message_id": "b1cd3752-d970-4933-8c06-7a07d717ca05",
+        "content": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。Use only verified external sources with working URLs; synthetic materials are not acceptable. 先给计划。",
+        "view_context": {}
+      },
+      "response": {
+        "message_id": "1a64de53-01ea-45f2-be52-fabe07ca461d",
+        "processing_id": "436341b8-7a70-4381-975e-5bb5b48814e5",
+        "duplicate": false
+      }
+    },
+    {
+      "input": {
+        "client_message_id": "32d650df-22dd-4667-bf4c-af69b0635858",
+        "content": "开始",
+        "view_context": {
+          "plan_version_id": "4e986ac3-fe86-4cb6-a5be-c2c959a19543"
+        }
+      },
+      "response": {
+        "message_id": "65f9256b-7172-4375-9f07-1fb33786f88d",
+        "processing_id": "0110b3d0-6612-4f28-90b6-e5559b78e942",
+        "duplicate": false
+      }
+    }
+  ],
+  "intermediate_snapshots": [
+    {
+      "session": {
+        "title": "读书",
+        "status": "draft",
+        "session_id": "e4081e4b-f0f6-40e6-be5d-4e5f4717e9a1",
+        "last_user_activity_at": "2026-11-07T06:29:47.152892+00:00"
+      },
+      "requirements": {
+        "topic": "读书",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": true
+      },
+      "plans": [
+        {
+          "label": "高规格内容方案",
+          "steps": [
+            {
+              "key": "materials",
+              "goal": "取得适合主题的资料，并保留可追溯来源",
+              "tool": "search_web_materials",
+              "title": "检索活动素材",
+              "status": "pending",
+              "step_id": "e6ae8cf5-1f89-4fa5-9a88-121dcca62945",
+              "dependencies": [],
+              "tool_call_ids": []
+            },
+            {
+              "key": "script",
+              "goal": "使用真实取得的资料形成可用文案",
+              "tool": "generate_script",
+              "title": "生成内容脚本",
+              "status": "pending",
+              "step_id": "580a7fe8-36a6-4544-ad18-569742d258a0",
+              "dependencies": [
+                "materials"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "estimate",
+              "goal": "由规则核验制作预算与活动完成期限",
+              "tool": "estimate_proposal",
+              "title": "核算制作成本与排期",
+              "status": "pending",
+              "step_id": "dbfc9f1a-2866-4cf5-9411-63c09daa6e4d",
+              "dependencies": [
+                "script"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "validate",
+              "goal": "核对必要章节、字段与合法素材引用",
+              "tool": "validate_proposal",
+              "title": "检查方案完整性",
+              "status": "pending",
+              "step_id": "c59670ea-693c-422d-8200-abb5d1665b9c",
+              "dependencies": [
+                "estimate"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "save",
+              "goal": "事务保存当前已检查且可行的方案",
+              "tool": "save_proposal",
+              "title": "保存活动方案",
+              "status": "pending",
+              "step_id": "f7f96855-000c-4601-abf9-af753df22ea9",
+              "dependencies": [
+                "validate"
+              ],
+              "tool_call_ids": []
+            }
+          ],
+          "status": "ready",
+          "summary": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。使用经过验证的外部来源和可工作的URL，不使用合成材料。先提供计划。",
+          "version": 1,
+          "brief_hash": "8ecf21868eac843937a4b0cf5c19f9d2f484256fc137c6358aa425db7ef23534",
+          "requirements": {
+            "topic": "读书",
+            "budget": "10",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": null,
+            "real_sources_required": true
+          },
+          "change_summary": [
+            "使用高规格视觉以符合用户明确要求",
+            "确保所有内容引用真实外部来源并提供可工作的URL"
+          ],
+          "plan_version_id": "4e986ac3-fe86-4cb6-a5be-c2c959a19543",
+          "production_spec": "premium"
+        }
+      ],
+      "active_run": null,
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 1737,
+        "model_output_tokens": 232,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 11,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": []
+    },
+    {
+      "session": {
+        "title": "读书",
+        "status": "draft",
+        "session_id": "e4081e4b-f0f6-40e6-be5d-4e5f4717e9a1",
+        "last_user_activity_at": "2026-11-07T06:30:00.207814+00:00"
+      },
+      "requirements": {
+        "topic": "读书",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": true
+      },
+      "plans": [
+        {
+          "label": "高规格内容方案",
+          "steps": [
+            {
+              "key": "materials",
+              "goal": "取得适合主题的资料，并保留可追溯来源",
+              "tool": "search_web_materials",
+              "title": "检索活动素材",
+              "status": "pending",
+              "step_id": "e6ae8cf5-1f89-4fa5-9a88-121dcca62945",
+              "dependencies": [],
+              "tool_call_ids": []
+            },
+            {
+              "key": "script",
+              "goal": "使用真实取得的资料形成可用文案",
+              "tool": "generate_script",
+              "title": "生成内容脚本",
+              "status": "pending",
+              "step_id": "580a7fe8-36a6-4544-ad18-569742d258a0",
+              "dependencies": [
+                "materials"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "estimate",
+              "goal": "由规则核验制作预算与活动完成期限",
+              "tool": "estimate_proposal",
+              "title": "核算制作成本与排期",
+              "status": "pending",
+              "step_id": "dbfc9f1a-2866-4cf5-9411-63c09daa6e4d",
+              "dependencies": [
+                "script"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "validate",
+              "goal": "核对必要章节、字段与合法素材引用",
+              "tool": "validate_proposal",
+              "title": "检查方案完整性",
+              "status": "pending",
+              "step_id": "c59670ea-693c-422d-8200-abb5d1665b9c",
+              "dependencies": [
+                "estimate"
+              ],
+              "tool_call_ids": []
+            },
+            {
+              "key": "save",
+              "goal": "事务保存当前已检查且可行的方案",
+              "tool": "save_proposal",
+              "title": "保存活动方案",
+              "status": "pending",
+              "step_id": "f7f96855-000c-4601-abf9-af753df22ea9",
+              "dependencies": [
+                "validate"
+              ],
+              "tool_call_ids": []
+            }
+          ],
+          "status": "queued",
+          "summary": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。使用经过验证的外部来源和可工作的URL，不使用合成材料。先提供计划。",
+          "version": 1,
+          "brief_hash": "8ecf21868eac843937a4b0cf5c19f9d2f484256fc137c6358aa425db7ef23534",
+          "requirements": {
+            "topic": "读书",
+            "budget": "10",
+            "deadline": "2030-12-03T18:00:00+08:00",
+            "start_at": null,
+            "real_sources_required": true
+          },
+          "change_summary": [
+            "使用高规格视觉以符合用户明确要求",
+            "确保所有内容引用真实外部来源并提供可工作的URL"
+          ],
+          "plan_version_id": "4e986ac3-fe86-4cb6-a5be-c2c959a19543",
+          "production_spec": "premium"
+        }
+      ],
+      "active_run": {
+        "phase": "research",
+        "reason": null,
+        "run_id": "788fac32-635c-4092-998a-95c5ff47cfc1",
+        "status": "queued",
+        "replans": 0,
+        "script_id": null,
+        "created_at": "2026-11-07T06:30:07.657930+00:00",
+        "estimate_id": null,
+        "model_rounds": 0,
+        "requirements": {
+          "topic": "读书",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": null,
+          "real_sources_required": true
+        },
+        "context_calls": 0,
+        "loaded_skills": [],
+        "validation_id": null,
+        "brief_messages": [
+          "读书活动方案，预算10，截止2030-12-03 18:00北京时间。Use only verified external sources with working URLs; synthetic materials are not acceptable. 先给计划。"
+        ],
+        "business_calls": 0,
+        "control_status": null,
+        "plan_version_id": "4e986ac3-fe86-4cb6-a5be-c2c959a19543",
+        "last_tool_failed": false,
+        "effective_start_at": "2026-11-07T06:30:07.657930+00:00"
+      },
+      "cost_summary": {
+        "budget": "10",
+        "model_cost": null,
+        "production": null,
+        "estimate_stale": false,
+        "tool_simulated": "0.00",
+        "estimated_finish": null,
+        "model_input_tokens": 2545,
+        "model_output_tokens": 265,
+        "model_unknown_usage_calls": 0
+      },
+      "materials": [],
+      "proposals": [],
+      "model_display": "qwen3:latest · 本地",
+      "last_event_seq": 15,
+      "pending_changes": null,
+      "mode": "live",
+      "requirements_issues": []
+    }
+  ],
+  "workspace": {
+    "session": {
+      "title": "读书",
+      "status": "draft",
+      "session_id": "e4081e4b-f0f6-40e6-be5d-4e5f4717e9a1",
+      "last_user_activity_at": "2026-11-07T06:30:00.207814+00:00"
+    },
+    "requirements": {
+      "topic": "读书",
+      "budget": "10",
+      "deadline": "2030-12-03T18:00:00+08:00",
+      "start_at": null,
+      "real_sources_required": true
+    },
+    "plans": [
+      {
+        "label": "高规格内容方案",
+        "steps": [
+          {
+            "key": "materials",
+            "goal": "取得适合主题的资料，并保留可追溯来源",
+            "tool": "search_web_materials",
+            "title": "检索活动素材",
+            "status": "blocked",
+            "step_id": "e6ae8cf5-1f89-4fa5-9a88-121dcca62945",
+            "dependencies": [],
+            "tool_call_ids": [],
+            "blocked_reason": "用户要求必须真实素材，但 Tavily 尚未配置，不能以合成资料冒充真实来源。"
+          },
+          {
+            "key": "script",
+            "goal": "使用真实取得的资料形成可用文案",
+            "tool": "generate_script",
+            "title": "生成内容脚本",
+            "status": "blocked",
+            "step_id": "580a7fe8-36a6-4544-ad18-569742d258a0",
+            "dependencies": [
+              "materials"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "用户要求必须真实素材，但 Tavily 尚未配置，不能以合成资料冒充真实来源。"
+          },
+          {
+            "key": "estimate",
+            "goal": "由规则核验制作预算与活动完成期限",
+            "tool": "estimate_proposal",
+            "title": "核算制作成本与排期",
+            "status": "blocked",
+            "step_id": "dbfc9f1a-2866-4cf5-9411-63c09daa6e4d",
+            "dependencies": [
+              "script"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "用户要求必须真实素材，但 Tavily 尚未配置，不能以合成资料冒充真实来源。"
+          },
+          {
+            "key": "validate",
+            "goal": "核对必要章节、字段与合法素材引用",
+            "tool": "validate_proposal",
+            "title": "检查方案完整性",
+            "status": "blocked",
+            "step_id": "c59670ea-693c-422d-8200-abb5d1665b9c",
+            "dependencies": [
+              "estimate"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "用户要求必须真实素材，但 Tavily 尚未配置，不能以合成资料冒充真实来源。"
+          },
+          {
+            "key": "save",
+            "goal": "事务保存当前已检查且可行的方案",
+            "tool": "save_proposal",
+            "title": "保存活动方案",
+            "status": "blocked",
+            "step_id": "f7f96855-000c-4601-abf9-af753df22ea9",
+            "dependencies": [
+              "validate"
+            ],
+            "tool_call_ids": [],
+            "blocked_reason": "用户要求必须真实素材，但 Tavily 尚未配置，不能以合成资料冒充真实来源。"
+          }
+        ],
+        "status": "incomplete",
+        "summary": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。使用经过验证的外部来源和可工作的URL，不使用合成材料。先提供计划。",
+        "version": 1,
+        "brief_hash": "8ecf21868eac843937a4b0cf5c19f9d2f484256fc137c6358aa425db7ef23534",
+        "requirements": {
+          "topic": "读书",
+          "budget": "10",
+          "deadline": "2030-12-03T18:00:00+08:00",
+          "start_at": null,
+          "real_sources_required": true
+        },
+        "change_summary": [
+          "使用高规格视觉以符合用户明确要求",
+          "确保所有内容引用真实外部来源并提供可工作的URL"
+        ],
+        "plan_version_id": "4e986ac3-fe86-4cb6-a5be-c2c959a19543",
+        "production_spec": "premium"
+      }
+    ],
+    "active_run": {
+      "phase": "research",
+      "reason": "用户要求必须真实素材，但 Tavily 尚未配置，不能以合成资料冒充真实来源。",
+      "run_id": "788fac32-635c-4092-998a-95c5ff47cfc1",
+      "status": "incomplete",
+      "replans": 0,
+      "script_id": null,
+      "created_at": "2026-11-07T06:30:07.657930+00:00",
+      "estimate_id": null,
+      "model_rounds": 0,
+      "requirements": {
+        "topic": "读书",
+        "budget": "10",
+        "deadline": "2030-12-03T18:00:00+08:00",
+        "start_at": null,
+        "real_sources_required": true
+      },
+      "context_calls": 0,
+      "loaded_skills": [],
+      "validation_id": null,
+      "brief_messages": [
+        "读书活动方案，预算10，截止2030-12-03 18:00北京时间。Use only verified external sources with working URLs; synthetic materials are not acceptable. 先给计划。"
+      ],
+      "business_calls": 0,
+      "control_status": null,
+      "elapsed_seconds": 0.09299999987706542,
+      "plan_version_id": "4e986ac3-fe86-4cb6-a5be-c2c959a19543",
+      "last_tool_failed": false,
+      "effective_start_at": "2026-11-07T06:30:07.657930+00:00"
+    },
+    "cost_summary": {
+      "budget": "10",
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 2545,
+      "model_output_tokens": 265,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 20,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": []
+  },
+  "timeline": [
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "读书活动方案，预算10，截止2030-12-03 18:00北京时间。Use only verified external sources with working URLs; synthetic materials are not acceptable. 先给计划。",
+      "item_id": "1a64de53-01ea-45f2-be52-fabe07ca461d",
+      "item_seq": 1,
+      "created_at": "2026-11-07T06:29:47.152892+00:00",
+      "is_requirement_update": true
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。",
+      "item_id": "d93f66c7-34be-4da8-9f61-c4958c11f81e",
+      "item_seq": 2,
+      "created_at": "2026-11-07T06:29:54.913613+00:00",
+      "processing": false
+    },
+    {
+      "kind": "message",
+      "role": "user",
+      "content": "开始",
+      "item_id": "65f9256b-7172-4375-9f07-1fb33786f88d",
+      "item_seq": 3,
+      "created_at": "2026-11-07T06:30:00.207814+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "开始执行这份计划。工具的实际输入、输出、费用和状态会逐项更新。",
+      "item_id": "56cbdc80-5082-4e10-a0d3-88ac66938762",
+      "item_seq": 4,
+      "created_at": "2026-11-07T06:30:07.670368+00:00"
+    },
+    {
+      "kind": "message",
+      "role": "assistant",
+      "content": "本次任务未完成：用户要求必须真实素材，但 Tavily 尚未配置，不能以合成资料冒充真实来源。\n\n尚未取得可复用的素材或脚本。请补充或调整相关条件，再生成可执行的新计划。",
+      "item_id": "8fb1c2a5-5c6b-4f91-88c2-58d8a8ef7ada",
+      "item_seq": 5,
+      "created_at": "2026-11-07T06:30:08.063141+00:00"
+    }
+  ],
+  "model_calls": [
+    {
+      "at": "2026-11-07T06:29:51.427177+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 845,
+        "output_tokens": 113
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"update\",\n  \"updates\": {\n    \"budget\": \"10\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"evidence\": {\n    \"budget\": \"预算10\",\n    \"deadline\": \"截止2030-12-03 18:00北京时间\"\n  },\n  \"explanation\": \"用户提供了预算和截止日期信息，因此更新了相关字段。\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "1f4fc104-e2f7-4457-a751-abf6e62f51e7",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T06:29:54.889960+00:00",
+      "kind": "build_plan_preview",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 792,
+        "output_tokens": 88
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\"production_spec\": \"premium\", \"summary\": \"读书活动方案，预算10，截止2030-12-03 18:00北京时间。使用经过验证的外部来源和可工作的URL，不使用合成材料。先提供计划。\", \"changes\": [\"使用高规格视觉以符合用户明确要求\", \"确保所有内容引用真实外部来源并提供可工作的URL\"]}",
+        "tool_calls": []
+      },
+      "request_id": "cda4424f-4ae7-499b-9e95-103fa2c089e8",
+      "available_tools": [
+        "load_skill",
+        "read_skill_resource"
+      ]
+    },
+    {
+      "at": "2026-11-07T06:29:59.989585+00:00",
+      "kind": "dialogue_response_stream",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "content": "需求完整，执行计划已生成，成本与排期需工具核验。您可提出修改，或回复“开始”启动计划。"
+      },
+      "request_id": "738a5f99-c199-4bb3-94d3-4c2f52cc9531",
+      "available_tools": []
+    },
+    {
+      "at": "2026-11-07T06:30:07.632020+00:00",
+      "kind": "understand_message",
+      "model": "qwen3:latest",
+      "usage": {
+        "input_tokens": 808,
+        "output_tokens": 33
+      },
+      "run_id": null,
+      "provider": "ollama",
+      "response": {
+        "role": "assistant",
+        "content": "{\n  \"action\": \"execute\",\n  \"updates\": {},\n  \"evidence\": {},\n  \"explanation\": \"按当前方案开始执行\"\n}",
+        "tool_calls": []
+      },
+      "request_id": "2acc5bd8-b2c9-46b1-ae15-2fbd51e9e6bf",
+      "available_tools": []
+    }
+  ],
+  "tool_calls": [],
+  "test_error": null
+}

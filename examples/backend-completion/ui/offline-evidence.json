@@ -1,0 +1,54 @@
+{
+  "session_id": "c69d5d15-6063-406d-8d23-b9e9af71440e",
+  "content": "断线恢复检查 1794080575036：这只是状态询问，不要执行，现在还缺什么信息？",
+  "receipt": {
+    "message_id": "e87aa7b0-41dc-4173-a810-230c754e07b3",
+    "processing_id": "df61706a-4237-48d3-883a-2ecfbca945d4",
+    "duplicate": false
+  },
+  "duplicate": {
+    "message_id": "e87aa7b0-41dc-4173-a810-230c754e07b3",
+    "processing_id": "df61706a-4237-48d3-883a-2ecfbca945d4",
+    "duplicate": true
+  },
+  "workspace": {
+    "session": {
+      "title": "新的内容活动",
+      "status": "draft",
+      "session_id": "c69d5d15-6063-406d-8d23-b9e9af71440e",
+      "last_user_activity_at": "2026-11-07T19:42:55.045899+00:00"
+    },
+    "requirements": {
+      "topic": null,
+      "budget": null,
+      "deadline": null,
+      "start_at": null,
+      "real_sources_required": false
+    },
+    "plans": [],
+    "active_run": null,
+    "cost_summary": {
+      "budget": null,
+      "model_cost": null,
+      "production": null,
+      "estimate_stale": false,
+      "tool_simulated": "0.00",
+      "estimated_finish": null,
+      "model_input_tokens": 1117,
+      "model_cost_currency": null,
+      "model_output_tokens": 70,
+      "model_unknown_usage_calls": 0
+    },
+    "materials": [],
+    "proposals": [],
+    "model_display": "qwen3:latest · 本地",
+    "last_event_seq": 5,
+    "pending_changes": null,
+    "mode": "live",
+    "requirements_issues": [
+      "活动主题",
+      "内容制作预算（模拟单位）",
+      "活动截止日期与时间"
+    ]
+  }
+}
